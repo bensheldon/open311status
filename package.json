@@ -2,6 +2,9 @@
     "name": "application-name"
   , "version": "0.0.1"
   , "private": true
+  , "engines": {
+      "node": "0.6.x"
+  }
   , "dependencies": {
       "express": "2.5.8"
     , "jade": ">= 0.0.1"
@@ -13,5 +16,6 @@
     , "mocha": ">=1.0.3"
     , "should": ">=0.6.3"
     , "sinon": ">=1.3.4"
-  }
+  }  
+
 }
