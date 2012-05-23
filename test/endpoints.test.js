@@ -1,6 +1,6 @@
 
 describe('endpoints', function(){
-  var endpoints = require('../endpoints');
+  var endpoints = require('../lib/endpoints');
   
   it('is a valid json doc',  function(done) {
     endpoints.should.be.a('object');
