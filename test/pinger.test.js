@@ -56,6 +56,9 @@ describe('pinger', function(){
         "format": "xml",
         "jurisdiction": "sfgov.org"
       },
+      "bloomington": {
+          "endpoint": "https://bloomington.in.gov/crm/open311/v2/"
+      },
       "toronto": {
           "endpoint": "https://secure.toronto.ca/webwizard/ws/",
           "jurisdiction": "toronto.ca"
@@ -73,7 +76,7 @@ describe('pinger', function(){
             callback(null, { statusCode: 200 }, fs.readFileSync('./test/mocks/san_francisco_services.xml') );
           }
           else {
-            callback(null, { statusCode: 200 }, '{}' );
+            callback(null, { statusCode: 200 }, fs.readFileSync('./test/mocks/bloomington_services.json') );
           }
         });
         done();
@@ -85,13 +88,13 @@ describe('pinger', function(){
       
       it('should request Services from each endpoint in list of endpoints', function(done) {
         pinger.pingServices(function(servicesPings) {
-          request.get.args.length.should.equal(2) // Should make 1 request for each endpoint
+          request.get.args.length.should.equal(3) // Should make 1 request for each endpoint
           done();
         });      
       });
       it('should save to Mongo', function(done) {
         pinger.pingServices(function(requestsPings) {
-          mongoose.Model.prototype.save.args.length.should.equal(2) // Should make 1 save for each endpoint
+          mongoose.Model.prototype.save.args.length.should.equal(3) // Should make 1 save for each endpoint
           done();
         });      
       });
@@ -101,17 +104,31 @@ describe('pinger', function(){
           done();
         });      
       });
+      it('should count the number of services (XML)', function(done) {
+        pinger.pingServices(function(requestsPings) {
+          // Count San Francisco
+          mongoose.Model.prototype.save.thisValues[0].get('servicesCount').should.equal(38);          
+          done();
+        });
+      });
+      it('should count the number of services (JSON)', function(done) {
+        pinger.pingServices(function(requestsPings) {
+          // Count Bloomington
+          mongoose.Model.prototype.save.thisValues[1].get('servicesCount').should.equal(46);  
+          done();
+        });      
+      });
     });
 
     describe('pingRequests', function() {
       beforeEach(function(done) {
         // Stub Request.get()
-        sinon.stub(request, 'get', function(url, callback) {
+        sinon.stub(request, 'get', function(url, callback) {          
           if (url.search(/^https\:\/\/open311.sfgov.org\/V2\/.*/) !== -1) {
             callback(null, { statusCode: 200 }, fs.readFileSync('./test/mocks/san_francisco_requests.xml') );
           }
           else {
-            callback(null, { statusCode: 200 }, '{}' );
+            callback(null, { statusCode: 200 }, fs.readFileSync('./test/mocks/bloomington_requests.json') );
           }
         });
         done();
@@ -123,13 +140,13 @@ describe('pinger', function(){
       
       it('should request Requests from each endpoint in list of endpoints', function(done) {
         pinger.pingRequests(function(requestsPings) {
-          request.get.args.length.should.equal(2) // Should make 1 request for each endpoint
+          request.get.args.length.should.equal(3) // Should make 1 request for each endpoint
           done();
         });      
       });
       it('should save Requests data to Mongo', function(done) {
         pinger.pingRequests(function(requestsPings) {
-          mongoose.Model.prototype.save.args.length.should.equal(2) // Should make 1 save for each endpoint
+          mongoose.Model.prototype.save.args.length.should.equal(3) // Should make 1 save for each endpoint
           done();
         });      
       });
@@ -139,6 +156,13 @@ describe('pinger', function(){
           done();
         });      
       });
+      // it('should count the number of requests', function(done) {
+      //   pinger.pingRequests(function(requestsPings) {
+      //     console.log(mongoose.Model.prototype.save.thisValues[1].requestsCount24Hr);
+      //     // ARGH! WHY UNDEFINED?!!!
+      //     done();
+      //   });      
+      // });
     });
   });
 });
