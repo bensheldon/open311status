@@ -1,5 +1,12 @@
 var sinon = require('sinon')
   , request = require('request');
+  
+var fs = require('fs');
+
+var mongoose = require('mongoose');
+
+/** USE OUR TEST DATABASE **/
+process.env.MONGOHQ = process.env.MONGOHQ_TEST;
 
 describe('fetcher', function(){
   var Pinger = require('../lib/pinger');
@@ -13,7 +20,7 @@ describe('fetcher', function(){
         "jurisdiction": "sfgov.org"
       };
       pinger.formatEndpoint(endpoint, "services")
-        .should.equal('https://open311.sfgov.org/V2/services.xml?jurisdiction=sfgov.org');
+        .should.equal('https://open311.sfgov.org/V2/services.xml?jurisdiction_id=sfgov.org');
       done();
     });
     
@@ -27,72 +34,111 @@ describe('fetcher', function(){
     });
   });
   
-  
-  describe('retrieve', function() {
-    before(function(done) {
-      this.city = {
-        "endpoint": "https://open311.sfgov.org/V2/",
-        "format": "xml",
-        "jurisdiction": "sfgov.org"
-      };
-      done();
-    });
+  describe('ping function', function() {
     
-    afterEach(function(done) {
-      request.get.restore(); // restore our request method
+    beforeEach(function(done) { 
+      // Stub Model.save()
+      sinon.stub(mongoose.Model.prototype, 'save', function(callback) {
+        callback(this);
+      });
       done();
     })
     
-    it('should get response code', function(done) {
-      sinon.stub(request, 'get', function(url, callback) {
-          callback(null, 200, "foobar");
+    afterEach(function(done) {
+      // clean up our stubs
+      mongoose.Model.prototype.save.restore();
+      done();
+    })
+    
+    var endpoints = {
+      'san francisco': {
+        "endpoint": "https://open311.sfgov.org/V2/",
+        "format": "xml",
+        "jurisdiction": "sfgov.org"
+      },
+      "toronto": {
+          "endpoint": "https://secure.toronto.ca/webwizard/ws/",
+          "jurisdiction": "toronto.ca"
+      }
+    };
+    
+    var Pinger = require('../lib/pinger');
+    var pinger = new Pinger(mongoose, endpoints);
+    
+    describe('pingServices', function() {
+      beforeEach(function(done) {
+        // Stub Request.get()
+        sinon.stub(request, 'get', function(url, callback) {
+          if (url.search(/^https\:\/\/open311.sfgov.org\/V2\/.*/) !== -1) {
+            callback(null, { statusCode: 200 }, fs.readFileSync('./test/mocks/san_francisco_services.xml') );
+          }
+          else {
+            callback(null, { statusCode: 200 }, '{}' );
+          }
+        });
+        done();
+      });
+      afterEach(function(done) {
+        request.get.restore();
+        done();
       });
       
-      pinger.retrieve(this.city, 'services', function(results) {
-        results.res.should.equal(200);
-        done();
-      })
+      it('should request Services from each endpoint in list of endpoints', function(done) {
+        pinger.pingServices(function(servicesPings) {
+          request.get.args.length.should.equal(2) // Should make 1 request for each endpoint
+          done();
+        });      
+      });
+      it('should save to Mongo', function(done) {
+        pinger.pingServices(function(requestsPings) {
+          mongoose.Model.prototype.save.args.length.should.equal(2) // Should make 1 save for each endpoint
+          done();
+        });      
+      });
+      it('should save san francisco endpoint to Mongo', function(done) {
+        pinger.pingServices(function(requestsPings) {
+          mongoose.Model.prototype.save.thisValues[0].endpoint.should.equal('san francisco')
+          done();
+        });      
+      });
     });
-    
-    it('should get response body', function(done) {
-      sinon.stub(request, 'get', function(url, callback) {
-          callback(null, 200, "foobar");
+
+    describe('pingRequests', function() {
+      beforeEach(function(done) {
+        // Stub Request.get()
+        sinon.stub(request, 'get', function(url, callback) {
+          if (url.search(/^https\:\/\/open311.sfgov.org\/V2\/.*/) !== -1) {
+            callback(null, { statusCode: 200 }, fs.readFileSync('./test/mocks/san_francisco_requests.xml') );
+          }
+          else {
+            callback(null, { statusCode: 200 }, '{}' );
+          }
+        });
+        done();
+      });
+      afterEach(function(done) {
+        request.get.restore();
+        done();
       });
       
-      pinger.retrieve(this.city, 'services', function(results) {
-        results.body.should.equal("foobar");
-        done();
-      })
-    });
-    
-    it('should measure responseTime', function(done) {
-      var TIMEOUT = 250;
-      
-     sinon.stub(request, 'get', function(url, callback) {
-        setTimeout( function(){
-          callback(null, 200, "foobar");
-        }, TIMEOUT);
+      it('should request Requests from each endpoint in list of endpoints', function(done) {
+        pinger.pingRequests(function(requestsPings) {
+          request.get.args.length.should.equal(2) // Should make 1 request for each endpoint
+          done();
+        });      
       });
-      
-      pinger.retrieve(this.city, 'services', function(results) {
-        results.responseTime.should.be.within(TIMEOUT, TIMEOUT+10);
-        done();
-      })
-    });
-    
-    it('should log errors', function(done) {
-      //this.city.endpoint ="benttp://blark.crom";
-      
-      sinon.stub(request, 'get', function(url, callback) {
-          callback('Error: Invalid protocol', null, null);
+      it('should save Requests data to Mongo', function(done) {
+        pinger.pingRequests(function(requestsPings) {
+          mongoose.Model.prototype.save.args.length.should.equal(2) // Should make 1 save for each endpoint
+          done();
+        });      
       });
-      var spy = sinon.spy(console, "log");
-      
-      pinger.retrieve(this.city, 'services', function(results) {
-        spy.args[0][0].should.equal('Failed to retrieve "https://open311.sfgov.org/V2/services.xml?jurisdiction=sfgov.org"; Error: Invalid protocol');
-        done();
-      })
+      it('should save san francisco endpoint to Mongo', function(done) {
+        pinger.pingRequests(function(requestsPings) {
+          mongoose.Model.prototype.save.thisValues[0].endpoint.should.equal('san francisco')
+          done();
+        });      
+      });
     });
-    
   });
 });
