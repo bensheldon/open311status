@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 /** USE OUR TEST DATABASE **/
 process.env.MONGOHQ = process.env.MONGOHQ_TEST;
 
-describe('fetcher', function(){
+describe('pinger', function(){
   var Pinger = require('../lib/pinger');
   var pinger = new Pinger();
   
