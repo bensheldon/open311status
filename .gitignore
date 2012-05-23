@@ -3,5 +3,5 @@
 profile
 
 # node
-
+.env
 node_modules
