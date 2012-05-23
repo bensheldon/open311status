@@ -16,7 +16,7 @@ else {
   exit();
 }
 mongoose.connect(MONGOHQ);
-var Schemas        = require("../lib/schemas")
+var Schemas        = require("./lib/schemas")
   , ServicesPing   = mongoose.model('ServicesPings', Schemas.ServicesSchema)
   , RequestsPing   = mongoose.model('RequestsPing', Schemas.RequestsPing);
 
@@ -58,7 +58,8 @@ app.configure('production', function(){
 
 app.get('/', function(req, res) {
   res.render('index', { 
-      title: 'Open311 Status' 
+      title: 'Open311 Status'
+    , endpoints: Endpoints
     });
 });
 
