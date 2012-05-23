@@ -156,13 +156,20 @@ describe('pinger', function(){
           done();
         });      
       });
-      // it('should count the number of requests', function(done) {
-      //   pinger.pingRequests(function(requestsPings) {
-      //     console.log(mongoose.Model.prototype.save.thisValues[1].requestsCount24Hr);
-      //     // ARGH! WHY UNDEFINED?!!!
-      //     done();
-      //   });      
-      // });
+      it('should count the number of requests in last 15 min (XML)', function(done) {
+        pinger.pingRequests(function(requestsPings) {
+          mongoose.Model.prototype.save.thisValues[0].get('requestsCount15Min').should.equal(56);
+          // ARGH! WHY UNDEFINED?!!!
+          done();
+        });
+      });
+      it('should count the number of requests in last 15 min (JSON)', function(done) {
+        pinger.pingRequests(function(requestsPings) {
+          mongoose.Model.prototype.save.thisValues[1].get('requestsCount15Min').should.equal(21);
+          // ARGH! WHY UNDEFINED?!!!
+          done();
+        });      
+      });
     });
   });
 });
