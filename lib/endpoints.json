@@ -25,11 +25,6 @@
         "format": "xml",
         "jurisdiction": "dc.gov"
     },
-    "district of columbia": {
-        "endpoint": "http://app.311.dc.gov/CWI/Open311/v2/",
-        "format": "xml",
-        "jurisdiction": "dc.gov"
-    },
     "deleon": {
         "endpoint": "http://seeclickfix.com/de-leon/open311/"
     },
@@ -85,11 +80,6 @@
         "endpoint": "http://seeclickfix.com/russell-springs/open311/"
     },
     "san francisco": {
-        "endpoint": "https://open311.sfgov.org/V2/",
-        "format": "xml",
-        "jurisdiction": "sfgov.org"
-    },
-    "sf": {
         "endpoint": "https://open311.sfgov.org/V2/",
         "format": "xml",
         "jurisdiction": "sfgov.org"
