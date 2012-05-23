@@ -118,6 +118,29 @@ describe('pinger', function(){
           done();
         });      
       });
+      it('should measure the responseTime', function(done) {
+        // only use 1 endpoint to speed things up
+        var endpoints = {
+          "bloomington": {
+              "endpoint": "https://bloomington.in.gov/crm/open311/v2/"
+          }
+        };
+        var pinger = new Pinger(mongoose, endpoints);
+        
+        var TIMEOUT = 75;
+        
+        request.get.restore(); // we're going to re-stub it
+        sinon.stub(request, 'get', function(url, callback) {
+           setTimeout( function(){
+             callback(null, {statusCode: 200}, "[]");
+           }, TIMEOUT);
+         });
+  
+        pinger.pingServices(function(requestsPings) {
+          mongoose.Model.prototype.save.thisValues[0].get('responseTime').should.be.within(TIMEOUT, TIMEOUT+10);  
+          done();
+        });      
+      });
     });
 
     describe('pingRequests', function() {
@@ -170,6 +193,29 @@ describe('pinger', function(){
           done();
         });      
       });
+      it('should measure the responseTime', function(done) {
+         // only use 1 endpoint to speed things up
+         var endpoints = {
+           "bloomington": {
+               "endpoint": "https://bloomington.in.gov/crm/open311/v2/"
+           }
+         };
+         var pinger = new Pinger(mongoose, endpoints);
+
+         var TIMEOUT = 75;
+
+         request.get.restore(); // we're going to re-stub it
+         sinon.stub(request, 'get', function(url, callback) {
+            setTimeout( function(){
+              callback(null, {statusCode: 200}, "[]");
+            }, TIMEOUT);
+          });
+
+         pinger.pingRequests(function(requestsPings) {
+           mongoose.Model.prototype.save.thisValues[0].get('responseTime').should.be.within(TIMEOUT, TIMEOUT+10);  
+           done();
+         });      
+       });
     });
   });
 });
