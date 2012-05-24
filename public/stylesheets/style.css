@@ -1,3 +1,17 @@
+/* @override 
+	http://localhost:3000/stylesheets/style.css */
+
+#servicesPings ul {
+  margin: .5em 0;
+}
+
+#servicesPings li {
+  margin: 0 0 0.4em;
+}
+
+.tooltip {
+  font-size: 1em;
+}
 
 @media (min-width: 979px) {
   body {

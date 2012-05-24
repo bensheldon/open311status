@@ -57,12 +57,28 @@ app.configure('production', function(){
 });
 
 app.get('/', function(req, res) {
-  res.render('index', { 
-      title: 'Open311 Status'
-    , endpoints: Endpoints
+  var endpointCount = Object.keys(Endpoints).length;
+  
+  ServicesPing.find()
+    .limit(endpointCount)
+    .sort('requestedAt', 1)
+    .run(function(err, servicesPings) {
+      
+      res.render('index', { 
+          title: 'Open311 Status'
+        , endpoints: Endpoints
+        , servicesPings: servicesPings
+        });
+                                    
     });
+  
+  
+  
+  
+
 });
 
 app.listen(PORT, function(){
+  
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });

@@ -1,1 +1,25 @@
-h1 Parsing #{JSON.stringify(endpoints)} Endpoints
+div.row-fluid
+  div#info.span12.well 
+    strong Scanning #{Object.keys(endpoints).length} Open311 endpoints every 15 minutes. Last scan at #{servicesPings[0].requestedAt}.  
+      | For endpoint information visit the 
+      a(href="http://wiki.open311.org/GeoReport_v2/Servers") Open311 Wiki
+      | .
+
+div.row-fluid  
+  div#servicesPings.span12
+
+    h2 Services Methods
+    ul
+      - each servicesPing in servicesPings
+        - if (servicesPing.statusCode == 200)
+          li(class="btn btn-important") #{servicesPing.endpoint}
+          = " " 
+        - else
+            - if (servicesPing.responseTime > 999)
+              - var tooltip = "Slow server response: " + servicesPing.responseTime + "ms"
+                li(class="btn btn-warning", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
+                = " " 
+            - else 
+                li(class="btn btn-success") #{servicesPing.endpoint}
+                = " " 
+
