@@ -11,24 +11,26 @@ div.row-fluid
     h2 Services Method
     ul
       - each servicesPing in servicesPings
-        - if (servicesPing.statusCode == 200)
-          li(class="btn btn-important") #{servicesPing.endpoint}
+        - if (servicesPing.statusCode != 200)
+          - var tooltip = "Server responded with " + servicesPing.statusCode
+          li(class="btn btn-danger", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
           = " " 
         - else
-            - if (servicesPing.responseTime > 999)
-              - var tooltip = "Slow server response: " + servicesPing.responseTime + "ms"
-                li(class="btn btn-warning", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
-                = " " 
-            - else 
-                li(class="btn btn-success") #{servicesPing.endpoint}
-                = " " 
+          - if (servicesPing.responseTime > 999)
+            - var tooltip = "Slow server response: " + servicesPing.responseTime + "ms"
+              li(class="btn btn-warning", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
+              = " " 
+          - else 
+              li(class="btn btn-success") #{servicesPing.endpoint}
+              = " " 
 
     h2 Requests Method
       span.label.label-info opened in last 15 minutes
     ul
       - each requestsPing in requestsPings
-        - if (requestsPing.statusCode == 200)
-          li(class="btn btn-important") #{requestsPing.endpoint}
+        - if (requestsPing.statusCode != 200)
+          - var tooltip = "Server responded with " + requestsPing.statusCode
+          li(class="btn btn-danger", rel="tooltip", title=tooltip) #{requestsPing.endpoint}
           = " " 
         - else
             - if (requestsPing.responseTime > 999)
