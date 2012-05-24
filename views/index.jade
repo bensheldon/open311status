@@ -12,7 +12,7 @@ div.row-fluid
     ul
       - each servicesPing in servicesPings
         - if (servicesPing.statusCode != 200)
-          - var tooltip = "Server responded with " + servicesPing.statusCode
+          - var tooltip = 'Server responded with "' + servicesPing.statusCode + '" after ' + servicesPing.responseTime + "ms"
           li(class="btn btn-danger", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
           = " " 
         - else
@@ -29,7 +29,7 @@ div.row-fluid
     ul
       - each requestsPing in requestsPings
         - if (requestsPing.statusCode != 200)
-          - var tooltip = "Server responded with " + requestsPing.statusCode
+          - var tooltip = 'Server responded with "' + requestsPing.statusCode + '" after ' + requestsPing.responseTime + "ms"
           li(class="btn btn-danger", rel="tooltip", title=tooltip) #{requestsPing.endpoint}
           = " " 
         - else
