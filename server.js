@@ -60,22 +60,23 @@ app.get('/', function(req, res) {
   var endpointCount = Object.keys(Endpoints).length;
   
   ServicesPing.find()
-    .limit(endpointCount)
-    .sort('requestedAt', 1)
-    .run(function(err, servicesPings) {
+              .limit(endpointCount)
+              .sort('requestedAt', -1)
+              .run(function(err, servicesPings) {
       
+    RequestsPing.find()
+                .limit(endpointCount)
+                .sort('requestedAt', -1)
+                .run(function(err, requestsPings) {
+    
       res.render('index', { 
           title: 'Open311 Status'
         , endpoints: Endpoints
         , servicesPings: servicesPings
+        , requestsPings: requestsPings
         });
-                                    
-    });
-  
-  
-  
-  
-
+    });                             
+  });
 });
 
 app.listen(PORT, function(){
