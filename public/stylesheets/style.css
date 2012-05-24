@@ -1,16 +1,21 @@
 /* @override 
 	http://localhost:3000/stylesheets/style.css */
 
-#servicesPings ul {
+#status ul {
   margin: .5em 0;
 }
 
-#servicesPings li {
+#status li {
   margin: 0 0 0.4em;
 }
 
 .tooltip {
   font-size: 1em;
+}
+
+#status h2 .label {
+  vertical-align: text-top;
+  margin-left: 5px;
 }
 
 @media (min-width: 979px) {

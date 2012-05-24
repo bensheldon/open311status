@@ -6,9 +6,9 @@ div.row-fluid
       | .
 
 div.row-fluid  
-  div#servicesPings.span12
+  div#status.span12
 
-    h2 Services Methods
+    h2 Services Method
     ul
       - each servicesPing in servicesPings
         - if (servicesPing.statusCode == 200)
@@ -21,5 +21,21 @@ div.row-fluid
                 = " " 
             - else 
                 li(class="btn btn-success") #{servicesPing.endpoint}
+                = " " 
+
+    h2 Requests Method
+      span.label.label-info opened in last 15 minutes
+    ul
+      - each requestsPing in requestsPings
+        - if (requestsPing.statusCode == 200)
+          li(class="btn btn-important") #{requestsPing.endpoint}
+          = " " 
+        - else
+            - if (requestsPing.responseTime > 999)
+              - var tooltip = "Slow server response: " + requestsPing.responseTime + "ms"
+                li(class="btn btn-warning", rel="tooltip", title=tooltip) #{requestsPing.endpoint}
+                = " " 
+            - else 
+                li(class="btn btn-success") #{requestsPing.endpoint}
                 = " " 
 
