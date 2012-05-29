@@ -3,6 +3,12 @@ var express         = require('express')
   
 var PORT = process.env.PORT || 3000;
 
+var HOURS_48   = 48 * 60 * 60 * 1000
+  , MINUTES_15 =      15 * 60 * 1000
+  , MINUTES_5  =       5 * 60 * 1000;
+
+var EVERY5MINUTES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
+
 /** Set up the Database **/
 var mongoose = require('mongoose')
   , Schema = mongoose.Schema
@@ -13,8 +19,8 @@ if (process.env.MONGOHQ) {
 }
 else {
   console.log("missing MONGOHQ environment variable");
-  exit();
 }
+
 mongoose.connect(MONGOHQ);
 var Schemas        = require("./lib/schemas")
   , ServicesPing   = mongoose.model('ServicesPings', Schemas.ServicesSchema)
@@ -36,6 +42,21 @@ var scheduledPings = Scheduler.scheduleJob({ minute: [0, 15, 30, 45] }, function
     console.log('Pinged ' + requestsPings.length + ' requests endpoints.');
   });
 });
+
+// Every hour delete pings older than 48 hours old
+var cleanupPings = Scheduler.scheduleJob({ minute: [0] }, function(){
+  ServicesPing.find()
+              .where('requestedAt').lt(new Date(HOURS_48))
+              .remove(function(servicePings){
+    console.log('Removed ' + servicesPings.length + ' services endpoints older than 48 hours.');               
+  });
+  RequestsPing.find()
+              .where('requestedAt').lt(new Date(HOURS_48))
+              .remove(function(requestsPings){
+    console.log('Removed ' + requestsPings.length + ' requests endpoints older than 48 hours.');               
+  });
+});
+
 
 // Express Configuration
 app.configure(function(){
