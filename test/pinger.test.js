@@ -4,9 +4,7 @@ var sinon = require('sinon')
 var fs = require('fs');
 
 var mongoose = require('mongoose');
-
-/** USE OUR TEST DATABASE **/
-process.env.MONGOHQ = process.env.MONGOHQ_TEST;
+mongoose.connect(process.env.MONGOHQ_TEST);
 
 describe('pinger', function(){
   var Pinger = require('../lib/pinger');
@@ -42,16 +40,16 @@ describe('pinger', function(){
         callback(this);
       });
       done();
-    })
+    });
     
     afterEach(function(done) {
       // clean up our stubs
       mongoose.Model.prototype.save.restore();
       done();
-    })
+    });
     
     var endpoints = {
-      'san francisco': {
+      "san francisco": {
         "endpoint": "https://open311.sfgov.org/V2/",
         "format": "xml",
         "jurisdiction": "sfgov.org"
@@ -65,8 +63,8 @@ describe('pinger', function(){
       }
     };
     
-    var Pinger = require('../lib/pinger');
-    var pinger = new Pinger(mongoose, endpoints);
+    var Pinger = require('../lib/pinger')
+      , pinger = new Pinger(endpoints);
     
     describe('pingServices', function() {
       beforeEach(function(done) {
@@ -125,7 +123,7 @@ describe('pinger', function(){
               "endpoint": "https://bloomington.in.gov/crm/open311/v2/"
           }
         };
-        var pinger = new Pinger(mongoose, endpoints);
+        var pinger = new Pinger(endpoints);
         
         var TIMEOUT = 75;
         
@@ -165,7 +163,7 @@ describe('pinger', function(){
         pinger.pingRequests(function(requestsPings) {
           request.get.args.length.should.equal(3) // Should make 1 request for each endpoint
           done();
-        });      
+        });
       });
       it('should save Requests data to Mongo', function(done) {
         pinger.pingRequests(function(requestsPings) {
@@ -182,14 +180,12 @@ describe('pinger', function(){
       it('should count the number of requests in last 15 min (XML)', function(done) {
         pinger.pingRequests(function(requestsPings) {
           mongoose.Model.prototype.save.thisValues[0].get('requestsCount15Min').should.equal(56);
-          // ARGH! WHY UNDEFINED?!!!
           done();
         });
       });
       it('should count the number of requests in last 15 min (JSON)', function(done) {
         pinger.pingRequests(function(requestsPings) {
           mongoose.Model.prototype.save.thisValues[1].get('requestsCount15Min').should.equal(21);
-          // ARGH! WHY UNDEFINED?!!!
           done();
         });      
       });
@@ -200,7 +196,7 @@ describe('pinger', function(){
                "endpoint": "https://bloomington.in.gov/crm/open311/v2/"
            }
          };
-         var pinger = new Pinger(mongoose, endpoints);
+         var pinger = new Pinger(endpoints);
 
          var TIMEOUT = 75;
 

@@ -22,14 +22,13 @@ else {
 }
 
 mongoose.connect(MONGOHQ);
-var Schemas        = require("./lib/schemas")
-  , ServicesPing   = mongoose.model('ServicesPings', Schemas.ServicesSchema)
-  , RequestsPing   = mongoose.model('RequestsPing', Schemas.RequestsPing);
+var RequestsPing = require('./models/requestsping.js');
+var ServicesPing = require('./models/servicesping.js');
 
 /** Load our Pinger functions to check the endpoints **/
 var Pinger = require('./lib/pinger');
 var Endpoints = require('./lib/endpoints');
-var pinger = new Pinger(mongoose, Endpoints);
+var pinger = new Pinger(Endpoints);
 
 /** Set up our Scheduler **/
 var Scheduler = require('node-schedule');
