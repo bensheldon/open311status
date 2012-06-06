@@ -32,8 +32,8 @@ var pinger = new Pinger(Endpoints);
 
 /** Set up our Scheduler **/
 var Scheduler = require('node-schedule');
-// schedule every 15 minutes
-var scheduledPings = Scheduler.scheduleJob({ minute: [0, 15, 30, 45] }, function(){
+// schedule every 5 minutes
+var scheduledPings = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function(){
   pinger.pingServices(function(servicesPings) {
     console.log('Pinged ' + servicesPings.length + ' services endpoints.');
   });
