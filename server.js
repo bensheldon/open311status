@@ -45,14 +45,14 @@ var scheduledPings = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function()
 // Every hour delete pings older than 48 hours old
 var cleanupPings = Scheduler.scheduleJob({ minute: [0] }, function(){
   ServicesPing.find()
-              .where('requestedAt').lt(new Date(HOURS_48))
-              .remove(function(servicePings){
-    console.log('Removed ' + servicesPings.length + ' services endpoints older than 48 hours.');               
+              .where('requestedAt').lt(new Date( (new Date).getTime() - HOURS_48 ))
+              .remove(function(err, servicesPingsRemoved){
+    console.log('Removed ' + servicesPingsRemoved + ' services pings older than 48 hours.');               
   });
   RequestsPing.find()
-              .where('requestedAt').lt(new Date(HOURS_48))
-              .remove(function(requestsPings){
-    console.log('Removed ' + requestsPings.length + ' requests endpoints older than 48 hours.');               
+              .where('requestedAt').lt(new Date( (new Date).getTime() - HOURS_48 ))
+              .remove(function(err, requestsPingsRemoved){
+    console.log('Removed ' + requestsPingsRemoved + ' requests pings older than 48 hours.');               
   });
 });
 
@@ -94,10 +94,10 @@ app.get('/', function(req, res) {
       // TODO: Find a better way to convert Mongoose docs to objects
       servicesPings = servicesPings.map(function (servicesPing) {
          return servicesPing.toObject();
-       });
-       requestsPings = requestsPings.map(function (requestsPing) {
+      });
+      requestsPings = requestsPings.map(function (requestsPing) {
          return requestsPing.toObject();
-       });
+      });
           
       res.render('index', { 
           title: 'Open311 Status'
@@ -110,6 +110,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen(PORT, function(){
-  
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
