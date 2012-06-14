@@ -44,7 +44,7 @@ div.row-fluid
                     - var tooltip = "Server response: " + endpoint.requests.responseTime + "ms"
                     li(class="btn btn-success", rel="tooltip", title=tooltip) Okay
             td 
-              = endpoint.services.servicesCount
+              a(href=endpoint.services.url)= endpoint.services.servicesCount
             td 
-              = endpoint.requests.requestsCount15Min
+              a(href=endpoint.requests.url)= endpoint.requests.requestsCount15Min
 
