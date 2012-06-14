@@ -16,7 +16,7 @@ div.row-fluid
           th Requests
           th # of SR Types
           th # of Requests 
-            span.label.label-info in last 5 minutes
+            span.label.label-info during last hour
 
       tbody
         - each endpoint, city in endpoints
@@ -47,7 +47,7 @@ div.row-fluid
             td 
               a(data-toggle="modal", data-city=city, href="#servicesModal") #{endpoint.services.servicesCount} types
             td 
-              a(href=endpoint.requests.url)= endpoint.requests.requestsCount15Min
+              a(href=endpoint.requests.url)= endpoint.requests.requestsCount
 
 
 div#servicesModal.modal.hide

@@ -4,10 +4,10 @@ var mongoose = require('mongoose'),
     
 var RequestsPing = new mongoose.Schema({
       endpoint           : { type: String, required: true, lowercase: true, trim: true, index: true },
-      requestsCount15Min : { type: Number, required: true },
+      requestsCount      : { type: Number, required: true },
       responseTime       : { type: Number, required: true },
       requestedAt        : { type: Date, required: true },
-      url				 : { type: String }
+      url                : { type: String }
 });
 
 module.exports = mongoose.model('RequestsPing', RequestsPing);
