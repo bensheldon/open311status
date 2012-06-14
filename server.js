@@ -53,6 +53,8 @@ app.configure('production', function(){
 });
 
 app.get('/', require('./routes/index'));
+app.get('/services/:endpoint', require('./routes/services'));
+
 
 app.listen(PORT, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

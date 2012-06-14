@@ -32,7 +32,6 @@ module.exports = function(req, res) {
     });
   },
   function (err) {
-    console.log(endpointData);
     res.render('index', { 
       title: 'Open311 Status'
     , endpoints: endpointData

@@ -8,7 +8,7 @@ div.row-fluid
 div.row-fluid  
   div#status.span12
 
-    table.table.table-bordered.table-striped
+    table#endpoints.table.table-bordered.table-striped
       thead
         tr
           th Endpoint
@@ -45,7 +45,13 @@ div.row-fluid
                     - var tooltip = "Server response: " + endpoint.requests.responseTime + "ms"
                     li(class="btn btn-success", rel="tooltip", title=tooltip) Okay
             td 
-              a(href=endpoint.services.url)= endpoint.services.servicesCount
+              a(data-toggle="modal", data-city=city, href="#servicesModal") #{endpoint.services.servicesCount} types
             td 
               a(href=endpoint.requests.url)= endpoint.requests.requestsCount15Min
 
+
+div#servicesModal.modal.hide
+  div#servicesAjax
+    div.modal-body loading . . .
+  div.modal-footer
+    button.btn(type="submit", data-dismiss="modal") Close window
