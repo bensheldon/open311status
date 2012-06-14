@@ -7,7 +7,7 @@ var ServicesSchema = new mongoose.Schema({
       responseTime    : { type: Number, required: true },
       servicesCount   : { type: Number, required: true },
       requestedAt     : { type: Date, required: true },
-      url				 : { type: String }
+      url			  : { type: String }
 
 });
 

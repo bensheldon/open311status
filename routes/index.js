@@ -1,5 +1,7 @@
 var RequestsPing = require('../models/requestsping.js')
-  , ServicesPing = require('../models/servicesping.js');
+  , ServicesPing = require('../models/servicesping.js')
+  , ServiceRequest = require('../models/servicerequest.js');
+
 
 var Endpoints = require('../lib/endpoints');
 
@@ -32,9 +34,22 @@ module.exports = function(req, res) {
     });
   },
   function (err) {
-    res.render('index', { 
-      title: 'Open311 Status'
-    , endpoints: endpointData
+    console.log(endpointData.bainbridge.services.requestedAt);
+    var serviceRequests = ServiceRequest.find()
+                                        .where('requested_datetime').lte(new Date(endpointData.bainbridge.services.requestedAt.getTime() - 60*60*1000))
+                                        .limit(50)
+                                        .sort('requested_datetime', -1)
+                                        .run(function(err, serviceRequests) {
+
+      serviceRequests = serviceRequests.map(function(serviceRequest) {
+        return serviceRequest.toObject();
+      });
+
+      res.render('index', { 
+        title: 'Open311 Status'
+      , endpoints: endpointData
+      , serviceRequests: serviceRequests
+      });
     });
   });
 }

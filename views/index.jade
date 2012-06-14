@@ -49,6 +49,31 @@ div.row-fluid
             td 
               a(href=endpoint.requests.url)= endpoint.requests.requestsCount
 
+h2 Service requests
+  sup.label.label-info delayed by 1 hour for slow endpoints
+
+table#service-requests.table.table-bordered.table-striped
+  thead 
+    tr
+      th Endpoint
+      th Type
+      th Description
+      th Image
+      th Created
+  tbody
+    - each serviceRequest in serviceRequests
+      tr
+        td= serviceRequest.endpoint
+        td= serviceRequest.service_name
+        td= serviceRequest.description
+        - if (serviceRequest.media_url)
+          td
+            img(src=serviceRequest.media_url)
+        - else
+          td
+        td= serviceRequest.requested_datetime
+
+
 
 div#servicesModal.modal.hide
   div#servicesAjax

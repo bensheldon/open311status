@@ -1,5 +1,6 @@
 var express         = require('express')
-  , app             = module.exports = express.createServer();
+  , app             = module.exports = express.createServer()
+  , io              = require('socket.io').listen(app);
   
 var PORT = process.env.PORT || 3000;
 
@@ -20,6 +21,8 @@ else {
 mongoose.connect(MONGOHQ);
 var RequestsPing = require('./models/requestsping.js');
 var ServicesPing = require('./models/servicesping.js');
+var ServiceRequest = require('./models/servicerequest.js');
+
 
 /** Load our Pinger functions to check the endpoints **/
 var Pinger = require('./lib/pinger');
@@ -32,6 +35,24 @@ var Scheduler = require('node-schedule');
 var scheduledPings = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function() { pinger.pingAll() });
 // Every hour delete pings older than 48 hours old
 var cleanupPings = Scheduler.scheduleJob({ minute: 0 }, function() { pinger.cleanUp() });
+
+var replayRequests = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function() {
+  var d = new Date();
+  // get all service requests from between 1 hour and 55 minute ago
+  var serviceRequests = ServiceRequest.find()
+                                      .where('requested_datetime').gte(new Date(d.getTime() - 60*60*1000)).lte(new Date(d.getTime() - 55*60*1000))
+                                      .sort('requested_datetime', 1)
+                                      .stream();
+  serviceRequests.on('data', function (serviceRequest) {
+    serviceRequest = serviceRequest.toObject();
+
+    var when = new Date(serviceRequest.requested_datetime.getTime() + 60*60*1000); // add 1 hour
+    Scheduler.scheduleJob(when, function(){
+      io.sockets.emit('serviceRequest', serviceRequest); // emit to socket
+    });
+  })
+});
+
 
 // Express Configuration
 app.configure(function(){
@@ -55,6 +76,17 @@ app.configure('production', function(){
 app.get('/', require('./routes/index'));
 app.get('/services/:endpoint', require('./routes/services'));
 
+
+
+// assuming io is the Socket.IO server object
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
+io.sockets.on('connection', function (socket) {
+  socket.emit('info', { hello: 'world' });
+});
 
 app.listen(PORT, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
