@@ -1,6 +1,6 @@
 div.row-fluid
   div#info.span12.well 
-    strong Scanning #{Object.keys(endpoints).length} Open311 endpoints every 5 minutes. Last scan at #{servicesPings[0].requestedAt}.  
+    strong Scanning #{Object.keys(endpoints).length} Open311 endpoints every 5 minutes. Last scan at #{endpoints.bainbridge.services.requestedAt}.  
       | For endpoint information visit the 
       a(href="http://wiki.open311.org/GeoReport_v2/Servers") Open311 Wiki
       | .
@@ -8,36 +8,43 @@ div.row-fluid
 div.row-fluid  
   div#status.span12
 
-    h2 Services Method
-    ul
-      - each servicesPing in servicesPings
-        - if (servicesPing.statusCode != 200)
-          - var tooltip = 'Server responded with "' + servicesPing.statusCode + '" after ' + servicesPing.responseTime + "ms"
-          li(class="btn btn-danger", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
-          = " " 
-        - else
-          - if (servicesPing.responseTime > 999)
-            - var tooltip = "Slow server response: " + servicesPing.responseTime + "ms"
-              li(class="btn btn-warning", rel="tooltip", title=tooltip) #{servicesPing.endpoint}
-              = " " 
-          - else 
-              li(class="btn btn-success") #{servicesPing.endpoint}
-              = " " 
+    table.table.table-bordered.table-striped
+      thead
+        tr
+          th Endpoint
+          th Services
+          th Requests
+          th # of SR Types
+          th # of Requests
 
-    h2 Requests Method
-      span.label.label-info opened in last 15 minutes
-    ul
-      - each requestsPing in requestsPings
-        - if (requestsPing.statusCode != 200)
-          - var tooltip = 'Server responded with "' + requestsPing.statusCode + '" after ' + requestsPing.responseTime + "ms"
-          li(class="btn btn-danger", rel="tooltip", title=tooltip) #{requestsPing.endpoint}
-          = " " 
-        - else
-            - if (requestsPing.responseTime > 999)
-              - var tooltip = "Slow server response: " + requestsPing.responseTime + "ms"
-                li(class="btn btn-warning", rel="tooltip", title=tooltip) #{requestsPing.endpoint}
-                = " " 
-            - else 
-                li(class="btn btn-success") #{requestsPing.endpoint}
-                = " " 
+      tbody
+        - each endpoint, city in endpoints
+          tr
+            td= city
+            td
+              - if (endpoint.services.statusCode != 200)
+                - var tooltip = 'Server responded with "' + endpoint.services.statusCode + '" after ' + endpoint.services.responseTime + "ms"
+                  li(class="btn btn-danger", rel="tooltip", title=tooltip) Error
+              - else
+                - if (endpoint.services.responseTime > 999)
+                  - var tooltip = "Slow server response: " + endpoint.services.responseTime + "ms"
+                  li(class="btn btn-warning", rel="tooltip", title=tooltip) Slow
+                - else 
+                    - var tooltip = "Server response: " + endpoint.services.responseTime + "ms"
+                    li(class="btn btn-success", rel="tooltip", title=tooltip) Okay
+            td
+              - if (endpoint.requests.statusCode != 200)
+                - var tooltip = 'Server responded with "' + endpoint.requests.statusCode + '" after ' + endpoint.requests.responseTime + "ms"
+                  li(class="btn btn-danger", rel="tooltip", title=tooltip) Error
+              - else
+                - if (endpoint.requests.responseTime > 999)
+                  - var tooltip = "Slow server response: " + endpoint.requests.responseTime + "ms"
+                  li(class="btn btn-warning", rel="tooltip", title=tooltip) Slow
+                - else 
+                    - var tooltip = "Server response: " + endpoint.requests.responseTime + "ms"
+                    li(class="btn btn-success", rel="tooltip", title=tooltip) Okay
+            td 
+              = endpoint.services.servicesCount
+            td 
+              = endpoint.requests.requestsCount15Min
 

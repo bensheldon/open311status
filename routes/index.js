@@ -3,33 +3,39 @@ var RequestsPing = require('../models/requestsping.js')
 
 var Endpoints = require('../lib/endpoints');
 
+var async       = require('async');
+
+
 module.exports = function(req, res) {
-  var endpointCount = Object.keys(Endpoints).length;
-  
-  ServicesPing.find()
-              .limit(endpointCount)
-              .sort('requestedAt', -1)
-              .run(function(err, servicesPings) {
-      
-    RequestsPing.find()
-                .limit(endpointCount)
+  var endpointData = {};
+  // load up our endpoint data
+  async.forEach(Object.keys(Endpoints), function(city, callback) {
+
+    ServicesPing.find()
+                .where('endpoint', city)
+                .limit(1)
                 .sort('requestedAt', -1)
-                .run(function(err, requestsPings) {
-       
-      // TODO: Find a better way to convert Mongoose docs to objects
-      servicesPings = servicesPings.map(function (servicesPing) {
-         return servicesPing.toObject();
+                .run(function(err, servicesPing) {
+        
+      RequestsPing.find()
+                  .where('endpoint', city)
+                  .limit(1)
+                  .sort('requestedAt', -1)
+                  .run(function(err, requestsPing) {
+
+        endpointData[city] = {
+           services: servicesPing[0].toObject()
+         , requests: requestsPing[0].toObject()
+        }
+        callback();
       });
-      requestsPings = requestsPings.map(function (requestsPing) {
-         return requestsPing.toObject();
-      });
-          
-      res.render('index', { 
-          title: 'Open311 Status'
-        , endpoints: Endpoints
-        , servicesPings: servicesPings
-        , requestsPings: requestsPings
-        });
-    });                             
+    });
+  },
+  function (err) {
+    console.log(endpointData);
+    res.render('index', { 
+      title: 'Open311 Status'
+    , endpoints: endpointData
+    });
   });
 }
