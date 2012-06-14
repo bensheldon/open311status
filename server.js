@@ -3,10 +3,6 @@ var express         = require('express')
   
 var PORT = process.env.PORT || 3000;
 
-var HOURS_48   = 48 * 60 * 60 * 1000
-  , MINUTES_15 =      15 * 60 * 1000
-  , MINUTES_5  =       5 * 60 * 1000;
-
 var EVERY5MINUTES = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55];
 
 /** Set up the Database **/
@@ -33,29 +29,9 @@ var pinger = new Pinger(Endpoints);
 /** Set up our Scheduler **/
 var Scheduler = require('node-schedule');
 // schedule every 5 minutes
-var scheduledPings = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function(){
-  pinger.pingServices(function(servicesPings) {
-    console.log('Pinged ' + servicesPings.length + ' services endpoints.');
-  });
-  pinger.pingRequests(function(requestsPings) {
-    console.log('Pinged ' + requestsPings.length + ' requests endpoints.');
-  });
-});
-
+var scheduledPings = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function() { pinger.pingAll() });
 // Every hour delete pings older than 48 hours old
-var cleanupPings = Scheduler.scheduleJob({ minute: [0] }, function(){
-  ServicesPing.find()
-              .where('requestedAt').lt(new Date( (new Date).getTime() - HOURS_48 ))
-              .remove(function(err, servicesPingsRemoved){
-    console.log('Removed ' + servicesPingsRemoved + ' services pings older than 48 hours.');               
-  });
-  RequestsPing.find()
-              .where('requestedAt').lt(new Date( (new Date).getTime() - HOURS_48 ))
-              .remove(function(err, requestsPingsRemoved){
-    console.log('Removed ' + requestsPingsRemoved + ' requests pings older than 48 hours.');               
-  });
-});
-
+var cleanupPings = Scheduler.scheduleJob({ minute: 0 }, function() { pinger.cleanUp() });
 
 // Express Configuration
 app.configure(function(){
@@ -76,38 +52,7 @@ app.configure('production', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', function(req, res) {
-  var endpointCount = Object.keys(Endpoints).length;
-  
-  ServicesPing.find()
-              .limit(endpointCount)
-              .sort('requestedAt', -1)
-              .run(function(err, servicesPings) {
-                
-      
-    RequestsPing.find()
-                .limit(endpointCount)
-                .sort('requestedAt', -1)
-                .run(function(err, requestsPings) {
-       
-       
-      // TODO: Find a better way to convert Mongoose docs to objects
-      servicesPings = servicesPings.map(function (servicesPing) {
-         return servicesPing.toObject();
-      });
-      requestsPings = requestsPings.map(function (requestsPing) {
-         return requestsPing.toObject();
-      });
-          
-      res.render('index', { 
-          title: 'Open311 Status'
-        , endpoints: Endpoints
-        , servicesPings: servicesPings
-        , requestsPings: requestsPings
-        });
-    });                             
-  });
-});
+app.get('/', require('./routes/index'));
 
 app.listen(PORT, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
