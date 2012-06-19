@@ -29,14 +29,15 @@ var Pinger = require('./lib/pinger');
 var Endpoints = require('./lib/endpoints');
 var pinger = new Pinger(Endpoints);
 
-/** Set up our Scheduler **/
-var Scheduler = require('node-schedule');
-// schedule every 5 minutes
-var scheduledPings = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function() { pinger.pingAll() });
-// Every hour delete pings older than 48 hours old
-var cleanupPings = Scheduler.scheduleJob({ minute: 0 }, function() { pinger.cleanUp() });
+/** Set up our Cron **/
+var CronJob = require('cron').CronJob;
 
-var replayRequests = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function() {
+// schedule every 5 minutes
+var scheduledPings = new CronJob('00 */5 * * * *', function() { pinger.pingAll() }, null, true);
+// Every hour delete pings older than 48 hours old
+var cleanupPings = new CronJob('00 00 * * * *', function() { pinger.cleanUp() }, null, true);
+
+var replayRequests = new CronJob('00 */5 * * * *', function() {
   var d = new Date();
   // get all service requests from between 1 hour and 55 minute ago
   var serviceRequests = ServiceRequest.find()
@@ -51,7 +52,7 @@ var replayRequests = Scheduler.scheduleJob({ minute: EVERY5MINUTES }, function()
       io.sockets.emit('serviceRequest', serviceRequest); // emit to socket
     });
   })
-});
+}, null, true);
 
 
 // Express Configuration
