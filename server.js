@@ -48,10 +48,10 @@ var replayRequests = new CronJob('00 */5 * * * *', function() {
     serviceRequest = serviceRequest.toObject();
 
     var when = new Date(serviceRequest.requested_datetime.getTime() + 60*60*1000); // add 1 hour
-    Scheduler.scheduleJob(when, function(){
+    var scheduleEmit = new CronJob(when, function(){
       io.sockets.emit('serviceRequest', serviceRequest); // emit to socket
-    });
-  })
+    }, null, true);
+  });
 }, null, true);
 
 
