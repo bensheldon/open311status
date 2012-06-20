@@ -25,25 +25,25 @@ div.row-fluid
             td
               - if (endpoint.services.statusCode != 200)
                 - var tooltip = 'Server responded with "' + endpoint.services.statusCode + '" after ' + endpoint.services.responseTime + "ms"
-                  li(class="btn btn-danger", rel="tooltip", title=tooltip) Error
+                  li(class="btn btn-mini btn-danger", rel="tooltip", title=tooltip) Error
               - else
                 - if (endpoint.services.responseTime > 999)
                   - var tooltip = "Slow server response: " + endpoint.services.responseTime + "ms"
-                  li(class="btn btn-warning", rel="tooltip", title=tooltip) Slow
+                  li(class="btn btn-mini btn-warning", rel="tooltip", title=tooltip) Slow
                 - else 
                     - var tooltip = "Server response: " + endpoint.services.responseTime + "ms"
-                    li(class="btn btn-success", rel="tooltip", title=tooltip) Okay
+                    li(class="btn btn-mini btn-success", rel="tooltip", title=tooltip) Okay
             td
               - if (endpoint.requests.statusCode != 200)
                 - var tooltip = 'Server responded with "' + endpoint.requests.statusCode + '" after ' + endpoint.requests.responseTime + "ms"
-                  li(class="btn btn-danger", rel="tooltip", title=tooltip) Error
+                  li(class="btn btn-mini btn-danger", rel="tooltip", title=tooltip) Error
               - else
                 - if (endpoint.requests.responseTime > 999)
                   - var tooltip = "Slow server response: " + endpoint.requests.responseTime + "ms"
-                  li(class="btn btn-warning", rel="tooltip", title=tooltip) Slow
+                  li(class="btn btn-mini btn-warning", rel="tooltip", title=tooltip) Slow
                 - else 
                     - var tooltip = "Server response: " + endpoint.requests.responseTime + "ms"
-                    li(class="btn btn-success", rel="tooltip", title=tooltip) Okay
+                    li(class="btn btn-mini btn-success", rel="tooltip", title=tooltip) Okay
             td 
               a(data-toggle="modal", data-city=city, href="#servicesModal") #{endpoint.services.servicesCount} types
             td 
