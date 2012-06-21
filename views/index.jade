@@ -47,7 +47,7 @@ div.row-fluid
             td 
               a(data-toggle="modal", data-city=city, href="#servicesModal") #{endpoint.services.servicesCount} types
             td 
-              a(href=endpoint.requests.url)= endpoint.requests.requestsCount
+              a(data-toggle="modal", data-city=city, href="#serviceRequestsModal")= endpoint.requests.requestsCount
 
 h2 Realtime-ish Service requests
   sup.label.label-info delayed by 1 hour for slow-to-update endpoints
@@ -77,6 +77,12 @@ table#service-requests.table.table-bordered.table-striped
 
 div#servicesModal.modal.hide
   div#servicesAjax
+    div.modal-body loading . . .
+  div.modal-footer
+    button.btn(type="submit", data-dismiss="modal") Close window
+
+div#serviceRequestsModal.modal.hide
+  div#serviceRequestsAjax
     div.modal-body loading . . .
   div.modal-footer
     button.btn(type="submit", data-dismiss="modal") Close window

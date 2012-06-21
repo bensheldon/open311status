@@ -19,6 +19,24 @@ $(document).ready(function() {
   $('#servicesModal').on('hidden', function () {
     $("#servicesAjax").html('<div class="modal-body">loading . . .</div>');
   });
+
+    // ServiceRequests Modal
+  $("#endpoints").on("click", "a[data-toggle=modal]", function() {
+    var target = $(this).attr('data-target') || $(this).attr('href');
+    if (target === "#serviceRequestsModal") {
+      var city = $(this).attr('data-city');
+
+      $.ajax({
+        url: "/servicerequests/" + city,
+      }).done(function ( content ) {
+        $("#serviceRequestsAjax").html(content);
+      });
+    }
+  });
+  // replace with the "loading" prompt after close
+  $('#serviceRequestsModal').on('hidden', function () {
+    $("#serviceRequestsAjax").html('<div class="modal-body">loading . . .</div>');
+  });
 })
 
 

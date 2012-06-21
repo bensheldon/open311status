@@ -77,7 +77,7 @@ app.configure('production', function(){
 
 app.get('/', require('./routes/index'));
 app.get('/services/:endpoint', require('./routes/services'));
-
+app.get('/servicerequests/:endpoint', require('./routes/servicerequests'));
 
 
 // assuming io is the Socket.IO server object
