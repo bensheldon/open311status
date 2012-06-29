@@ -30,25 +30,25 @@ div.row-fluid
             td
               - if (endpoint.servicesPing.statusCode != 200)
                 - var tooltip = 'Server responded with "' + endpoint.servicesPing.statusCode + '" after ' + endpoint.servicesPing.responseTime + "ms"
-                  li(class="btn btn-mini btn-danger", rel="tooltip", title=tooltip) Error
+                  a(class="btn btn-mini btn-danger", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Error
               - else
                 - if (endpoint.servicesPing.responseTime > 999)
                   - var tooltip = "Slow server response: " + endpoint.servicesPing.responseTime + "ms"
-                  li(class="btn btn-mini btn-warning", rel="tooltip", title=tooltip) Slow
+                  a(class="btn btn-mini btn-warning", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Slow
                 - else 
                     - var tooltip = "Server response: " + endpoint.servicesPing.responseTime + "ms"
-                    li(class="btn btn-mini btn-success", rel="tooltip", title=tooltip) Okay
+                    a(class="btn btn-mini btn-success", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Okay
             td
               - if (endpoint.requestsPing.statusCode != 200)
                 - var tooltip = 'Server responded with "' + endpoint.requestsPing.statusCode + '" after ' + endpoint.requestsPing.responseTime + "ms"
-                  li(class="btn btn-mini btn-danger", rel="tooltip", title=tooltip) Error
+                  a(class="btn btn-mini btn-danger", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Error
               - else
                 - if (endpoint.requestsPing.responseTime > 999)
                   - var tooltip = "Slow server response: " + endpoint.requestsPing.responseTime + "ms"
-                  li(class="btn btn-mini btn-warning", rel="tooltip", title=tooltip) Slow
+                  a(class="btn btn-mini btn-warning", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Slow
                 - else 
                     - var tooltip = "Server response: " + endpoint.requestsPing.responseTime + "ms"
-                    li(class="btn btn-mini btn-success", rel="tooltip", title=tooltip) Okay
+                    a(class="btn btn-mini btn-success", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Okay
             td 
               a(data-toggle="modal", data-city=endpoint.endpoint, href="#servicesModal") #{endpoint.servicesPing.servicesCount} types
             td
