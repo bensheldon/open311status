@@ -51,9 +51,9 @@ var cleanupPings = new CronJob('00 00 * * * *', function() { pinger.cleanUp() },
 
 var replayRequests = new CronJob('00 */5 * * * *', function() {
   var d = new Date();
-  // get all service requests from between 1 hour and 55 minute ago
+  // get all service requests from between 24 hours and 23:55 hours:minutes ago
   var serviceRequests = ServiceRequest.find()
-                                      .where('requested_datetime').gte(new Date(d.getTime() - 60*60*1000)).lte(new Date(d.getTime() - 55*60*1000))
+                                      .where('requested_datetime').gte(new Date(d.getTime() - 24*60*60*1000)).lte(new Date(d.getTime() - (23*60+55)*60*1000))
                                       .sort('requested_datetime', 1)
                                       .stream();
   serviceRequests.on('data', function (serviceRequest) {

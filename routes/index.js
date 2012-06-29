@@ -25,7 +25,7 @@ module.exports = function(req, res) {
     },
     function(done) {
       ServiceRequest.find()
-                    .where('requested_datetime').lte(new Date((new Date()).getTime() - 60*60*1000))
+                    .where('requested_datetime').lte(new Date((new Date()).getTime() - 24*60*60*1000))
                     .limit(50)
                     .sort('requested_datetime', -1)
                     .run(function(err, serviceRequests) {
