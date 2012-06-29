@@ -7,10 +7,10 @@ $(document).ready(function() {
     var data = $(element).attr('data-values').split(",");
     $(element).sparkline(data, {
       chartRangeMin: 0, fillColor: "#ddf2fb",
-      height: "31px", lineColor: "#518fc9",
+      height: "20px", lineColor: "#518fc9",
       lineWidth: 1, minSpotColor: "#0b810b",
       maxSpotColor: "#c10202", spotColor: false,
-      spotRadius: 2, width: "138px"
+      spotRadius: 2, width: "150px"
     });
   });
   // Tablesorter
