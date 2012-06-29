@@ -3,8 +3,10 @@ html
   head
     title= title
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/tables.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
+
   body
     include topbar
     div.container
@@ -15,6 +17,8 @@ html
       script(type='text/javascript', src='/javascripts/socket.io.js')
       script(type='text/javascript', src='/bootstrap/js/bootstrap.min.js')
       script(type='text/javascript', src='/javascripts/jquery.sparkline.min.js')
+      script(type='text/javascript', src='/javascripts/jquery.tablesorter.min.js')
+
       script(type='text/javascript', src='/javascripts/scripts.js')
       
       script(src="http://codeforamerica.github.com/cfa_banner/banner.js?type=corner-right&forkUrl=https://github.com/codeforamerica/open311status", id="cfa_banner_script")

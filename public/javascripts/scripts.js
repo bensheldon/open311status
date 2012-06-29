@@ -12,7 +12,15 @@ $(document).ready(function() {
       maxSpotColor: "#c10202", spotColor: false,
       spotRadius: 2, width: "138px"
     });
-
+  });
+  // Tablesorter
+  $("#endpoints").tablesorter({ 
+    headers: { 
+      // don't sort the sparkline
+      4: { 
+          sorter: false 
+      } 
+    } 
   });
 
   // Services Modal
