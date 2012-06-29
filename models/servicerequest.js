@@ -15,7 +15,10 @@ var ServiceRequest = new mongoose.Schema({
 // make sure endpoint+service_request_id is unique
 ServiceRequest.index({ endpoint: 1, service_request_id: 1 }, { unique: true });
 
-ServiceRequest.statics.timeSeries = function timeSeries (endpoint, startDate, endDate, callback) {
+/**
+ * Run some statistics, specifically a time-series grouping and min,max,avg, and totals
+ */
+ServiceRequest.statics.statistics = function statistics (endpoint, startDate, endDate, callback) {
   var startDate = startDate || new Date( (new Date()).getTime() - 48*60*60*1000 );
   var endDate = endDate || new Date();
   var totalHours = Math.ceil( (endDate.getTime() - startDate.getTime())/(60*60*1000));
@@ -51,8 +54,32 @@ ServiceRequest.statics.timeSeries = function timeSeries (endpoint, startDate, en
 	    		}
 	    	}
 	    }
+
+      // do some more statistics min,max,total,avg
+      var min = 0, 
+          max = 0, 
+          total = 0, 
+          avg = 0;
+      for (var i = 0; i < timeSeries.length; i++) {
+        if (timeSeries[i] < min) {
+          min = timeSeries[i];
+        }
+        if (timeSeries[i] > max) {
+          max = timeSeries[i];
+        }
+        total += timeSeries[i];
+      }
+
+      var statistics = {
+          min   : min
+        , max   : max
+        , total : total
+        , avg   : total / timeSeries.length
+        , timeSeries: timeSeries
+      };
+
 	    // initiate the callback with our timeseries as the argument
-	    callback(err, timeSeries);
+	    callback(err, statistics);
 	});
 }
 

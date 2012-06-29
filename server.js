@@ -22,6 +22,7 @@ mongoose.connect(MONGOHQ);
 var RequestsPing = require('./models/requestsping.js');
 var ServicesPing = require('./models/servicesping.js');
 var ServiceRequest = require('./models/servicerequest.js');
+var Endpoint = require('./models/endpoint.js');
 
 
 /** Load our Pinger functions to check the endpoints **/
@@ -33,7 +34,18 @@ var pinger = new Pinger(Endpoints);
 var CronJob = require('cron').CronJob;
 
 // schedule every 5 minutes
-var scheduledPings = new CronJob('00 */5 * * * *', function() { pinger.pingAll() }, null, true);
+var scheduledPings = new CronJob('00 */5 * * * *', 
+  function() { 
+    // ping all our endpoints
+    pinger.pingAll(function() {
+      // aggregate and save that endpoint data
+      Endpoint.generateAll(function(err, endpoints) {
+        // push those updated+aggregated endpoints to the client
+        io.sockets.emit('endpoints', endpoints);
+      });
+    }); 
+  }, null, true);
+
 // Every hour delete pings older than 48 hours old
 var cleanupPings = new CronJob('00 00 * * * *', function() { pinger.cleanUp() }, null, true);
 

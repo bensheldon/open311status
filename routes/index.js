@@ -1,5 +1,4 @@
-var RequestsPing = require('../models/requestsping.js')
-  , ServicesPing = require('../models/servicesping.js')
+var Endpoint = require('../models/endpoint.js')
   , ServiceRequest = require('../models/servicerequest.js');
 
 
@@ -9,46 +8,40 @@ var async       = require('async');
 
 
 module.exports = function(req, res) {
-  var endpointData = {};
-  // load up our endpoint data
-  async.forEach(Object.keys(Endpoints), function(city, callback) {
+  var endpointsData
+    , serviceRequestsData;
 
-    ServicesPing.find()
-                .where('endpoint', city)
-                .limit(1)
-                .sort('requestedAt', -1)
-                .run(function(err, servicesPing) {
-        
-      RequestsPing.find()
-                  .where('endpoint', city)
-                  .limit(1)
-                  .sort('requestedAt', -1)
-                  .run(function(err, requestsPing) {
+  async.parallel([
+    function(done) {
+      Endpoint.find()
+              .sort('endpoint', 1)
+              .run(function(err, endpoints) {
 
-        endpointData[city] = {
-           services: servicesPing[0].toObject()
-         , requests: requestsPing[0].toObject()
-        }
-        callback();
+        endpointsData = endpoints.map(function(endpoint) {
+          return endpoint.toObject();
+        });
+        done();
       });
-    });
-  },
-  function (err) {
-    var serviceRequests = ServiceRequest.find()
-                                        .where('requested_datetime').lte(new Date((new Date()).getTime() - 60*60*1000))
-                                        .limit(50)
-                                        .sort('requested_datetime', -1)
-                                        .run(function(err, serviceRequests) {
+    },
+    function(done) {
+      ServiceRequest.find()
+                    .where('requested_datetime').lte(new Date((new Date()).getTime() - 60*60*1000))
+                    .limit(50)
+                    .sort('requested_datetime', -1)
+                    .run(function(err, serviceRequests) {
 
-      serviceRequests = serviceRequests.map(function(serviceRequest) {
-        return serviceRequest.toObject();
+        serviceRequestsData = serviceRequests.map(function(serviceRequest) {
+          return serviceRequest.toObject();
+        });
+        done();
       });
-
-      res.render('index', { 
+    }
+  ],
+  function(err) {
+    res.render('index', { 
         title: 'Open311 Status'
-      , endpoints: endpointData
-      , serviceRequests: serviceRequests
-      });
+      , endpoints: endpointsData
+      , serviceRequests: serviceRequestsData
     });
   });
 }

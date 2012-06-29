@@ -2,6 +2,19 @@
 $(document).ready(function() {
   $("[rel=tooltip]").tooltip();
 
+  // Sparklines
+  $('#endpoints').find(".sparkline").each( function(index, element) {
+    var data = $(element).attr('data-values').split(",");
+    $(element).sparkline(data, {
+      chartRangeMin: 0, fillColor: "#ddf2fb",
+      height: "31px", lineColor: "#518fc9",
+      lineWidth: 1, minSpotColor: "#0b810b",
+      maxSpotColor: "#c10202", spotColor: false,
+      spotRadius: 2, width: "138px"
+    });
+
+  });
+
   // Services Modal
   $("#endpoints").on("click", "a[data-toggle=modal]", function() {
     var target = $(this).attr('data-target') || $(this).attr('href');
