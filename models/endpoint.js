@@ -54,7 +54,12 @@ Endpoint.statics.generate = function generate (city, callback) {
               .limit(1)
               .sort('requestedAt', -1)
               .run(function(err, servicesPing) {
-          endpoint.servicesPing = servicesPing.toObject();
+          if (servicesPing) {
+            endpoint.servicesPing = servicesPing.toObject();
+          }
+          else {
+            endpoint.servicesPing = null;
+          }
           done();
         });
       },
@@ -65,7 +70,12 @@ Endpoint.statics.generate = function generate (city, callback) {
                     .limit(1)
                     .sort('requestedAt', -1)
                     .run(function(err, requestsPing) {
-          endpoint.requestsPing = requestsPing.toObject();
+          if (requestsPing) {
+            endpoint.requestsPing = requestsPing.toObject();
+          }
+          else {
+            endpoint.requestsPing = null;
+          }
           done();
         });
       },
