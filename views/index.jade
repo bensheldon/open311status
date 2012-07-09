@@ -28,29 +28,38 @@ div.row-fluid
           tr
             td= endpoint.endpoint
             td
-              - if (endpoint.servicesPing.statusCode != 200)
-                - var tooltip = 'Server responded with "' + endpoint.servicesPing.statusCode + '" after ' + endpoint.servicesPing.responseTime + "ms"
-                  a(class="btn btn-mini btn-danger", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Error
-              - else
-                - if (endpoint.servicesPing.responseTime > 999)
-                  - var tooltip = "Slow server response: " + endpoint.servicesPing.responseTime + "ms"
-                  a(class="btn btn-mini btn-warning", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Slow
-                - else 
+              - if (endpoint.servicesPing)
+                - if (endpoint.servicesPing.statusCode != 200)
+                  - var tooltip = 'Server responded with "' + endpoint.servicesPing.statusCode + '" after ' + endpoint.servicesPing.responseTime + "ms"
+                    a(class="btn btn-mini btn-danger", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Error
+                - else
+                  - if (endpoint.servicesPing.responseTime > 999)
+                    - var tooltip = "Slow server response: " + endpoint.servicesPing.responseTime + "ms"
+                    a(class="btn btn-mini btn-warning", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Slow
+                  - else 
                     - var tooltip = "Server response: " + endpoint.servicesPing.responseTime + "ms"
-                    a(class="btn btn-mini btn-success", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Okay
+                      a(class="btn btn-mini btn-success", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Okay
+              - else 
+                - var tooltip = "Server response: Indeterminate"
+                  div(class="btn btn-mini", rel="tooltip", title=tooltip) ? ? ?
             td
-              - if (endpoint.requestsPing.statusCode != 200)
-                - var tooltip = 'Server responded with "' + endpoint.requestsPing.statusCode + '" after ' + endpoint.requestsPing.responseTime + "ms"
-                  a(class="btn btn-mini btn-danger", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Error
+              - if (endpoint.requestsPing)
+                - if (endpoint.requestsPing.statusCode != 200)
+                  - var tooltip = 'Server responded with "' + endpoint.requestsPing.statusCode + '" after ' + endpoint.requestsPing.responseTime + "ms"
+                    a(class="btn btn-mini btn-danger", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Error
+                - else
+                  - if (endpoint.requestsPing.responseTime > 999)
+                    - var tooltip = "Slow server response: " + endpoint.requestsPing.responseTime + "ms"
+                    a(class="btn btn-mini btn-warning", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Slow
+                  - else 
+                      - var tooltip = "Server response: " + endpoint.requestsPing.responseTime + "ms"
+                      a(class="btn btn-mini btn-success", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Okay
               - else
-                - if (endpoint.requestsPing.responseTime > 999)
-                  - var tooltip = "Slow server response: " + endpoint.requestsPing.responseTime + "ms"
-                  a(class="btn btn-mini btn-warning", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Slow
-                - else 
-                    - var tooltip = "Server response: " + endpoint.requestsPing.responseTime + "ms"
-                    a(class="btn btn-mini btn-success", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Okay
-            td 
-              a(data-toggle="modal", data-city=endpoint.endpoint, href="#servicesModal") #{endpoint.servicesPing.servicesCount} types
+                - var tooltip = "Server response: Indeterminate"
+                  div(class="btn btn-mini", rel="tooltip", title=tooltip) ? ? ?
+            td
+              - if(endpoint.servicesPing)
+                a(data-toggle="modal", data-city=endpoint.endpoint, href="#servicesModal") #{endpoint.servicesPing.servicesCount} types
             td
               div(class="sparkline", data-values=endpoint.requests.timeSeries.toString())
             td
