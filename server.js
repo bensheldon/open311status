@@ -91,6 +91,9 @@ app.get('/', require('./routes/index'));
 app.get('/services/:endpoint', require('./routes/services'));
 app.get('/servicerequests/:endpoint', require('./routes/servicerequests'));
 
+/** Rudimentary API **/
+app.get('/endpoints.json', require('./routes/endpoints'));
+
 
 // assuming io is the Socket.IO server object
 io.configure(function () { 
