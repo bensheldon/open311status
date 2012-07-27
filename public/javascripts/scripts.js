@@ -29,6 +29,8 @@ $(document).ready(function() {
     if (target === "#servicesModal") {
    	  var city = $(this).attr('data-city');
 
+      _kmq.push(['record', 'More info: Services ', {"city": city }]);
+
       $.ajax({
         url: "/services/" + city,
       }).done(function ( content ) {
