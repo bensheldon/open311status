@@ -1,6 +1,6 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
+    "name": "open311status"
+  , "version": "0.0.2"
   , "private": true
   , "engines": {
       "node": "0.6.x"
