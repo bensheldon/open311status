@@ -3,8 +3,9 @@
   , "version": "0.0.2"
   , "private": true
   , "engines": {
-      "node": "0.6.x"
-  }
+      "node": "0.8.x"
+    , "npm": "1.1.x"
+    }
   , "dependencies": {
       "express": "2.5.8"
     , "jade": ">= 0.0.1"
