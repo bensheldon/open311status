@@ -1,9 +1,10 @@
 div.row-fluid
   div#info.span12.well 
-    strong Scanning #{endpoints.length} Open311 endpoints every 5 minutes. Last scan at #{endpoints[0].servicesPing.requestedAt}.  
-      | For endpoint information visit the 
-      a(href="http://wiki.open311.org/GeoReport_v2/Servers") Open311 Wiki
-      | .
+    - if (endpoints[0].servicesPing)
+      strong Scanning #{endpoints.length} Open311 endpoints every 5 minutes. Last scan at #{endpoints[0].servicesPing.requestedAt}.  
+        | For endpoint information visit the 
+        a(href="http://wiki.open311.org/GeoReport_v2/Servers") Open311 Wiki
+        | .
 
 div.row-fluid  
   div#status.span12
@@ -69,7 +70,7 @@ div.row-fluid
             td
               = endpoint.requests.max
             td
-              = Math.round(endpoint.requests.avg*100)/100 // Round to 2 decimal places
+              = Math.round(endpoint.requests.avg*100)/100
 
 
 
