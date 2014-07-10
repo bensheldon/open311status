@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.1.1
+before_install:
+  - gem update bundler
+  - bundle config build.nokogiri --use-system-libraries
+install:
+  - bundle install --without production
+  - npm install
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database open311status_test;' -U postgres
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+script:
+  - bundle exec rake
