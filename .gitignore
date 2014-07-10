@@ -14,3 +14,18 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore foreman environment
+.env
+
+# Jetbrains
+.idea
+
+# Simplecov
+/coverage
+
+# Ignore precompiled assets
+/public/assets
+
+# Ignore NPM
+/node_modules
