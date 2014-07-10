@@ -3,6 +3,9 @@ ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'capybara/rspec'
+require 'capybara/poltergeist'
+require 'webmock/rspec'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -40,4 +43,21 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+  # Allow local connections for Poltergeist
+  WebMock.disable_net_connect! allow_localhost: true
+
+  Capybara.default_wait_time = 2
+  poltergist_timeout = 30
+
+  Capybara.server_port = '9876'
+  config.add_setting :node_server_port, :default => '9877'
+
+  # For debugging call `page.driver.debug` to open a browser
+  Capybara.register_driver :poltergeist_debug do |app|
+    Capybara::Poltergeist::Driver.new(app, timeout: poltergist_timeout.seconds, inspector: true)
+  end
+
+  Capybara.default_driver = :poltergeist_debug
+  Capybara.javascript_driver = :poltergeist_debug
 end

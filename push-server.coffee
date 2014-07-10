@@ -25,9 +25,9 @@ server = http.createServer(app)
 sockjs_server.installHandlers server,
   prefix: '/echo'
 
+app.get '/', (req, res) ->
+  res.json status: 'ok'
+
 # 3. Start server
 server.listen PORT, ->
   console.log "Node Server listening port=#{ PORT }"
-
-app.get '/', (req, res) ->
-  res.json status: 'ok'
