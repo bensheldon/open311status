@@ -1,6 +1,8 @@
 class City < ActiveRecord::Base
-  self.inheritance_column = :slug
   class_attribute :properties
+
+  self.inheritance_column = :slug
+  has_many :service_requests
 
   validates :slug, uniqueness: true
 
