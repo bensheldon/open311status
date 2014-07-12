@@ -1,0 +1,27 @@
+[
+  {
+    "service_request_id": "14-01100669",
+    "status": "open",
+    "service_name": "Alley Light Out",
+    "service_code": "4ffa9cad6018277d4000007b",
+    "agency_responsible": "Division of Electrical Operations CDOT",
+    "requested_datetime": "2014-07-12T10:58:43-05:00",
+    "updated_datetime": "2014-07-12T11:08:21-05:00",
+    "address": "1540 W 17TH ST, CHICAGO, IL, 60608",
+    "lat": 41.858724777757864,
+    "long": -87.66475146237676
+  },
+  {
+    "service_request_id": "14-01100627",
+    "status": "open",
+    "status_notes": "Locked",
+    "service_name": "Building Violation",
+    "service_code": "4fd3bd72e750846c530000cd",
+    "agency_responsible": "DOB - Conservation",
+    "requested_datetime": "2014-07-12T10:48:56-05:00",
+    "updated_datetime": "2014-07-12T11:08:20-05:00",
+    "address": "7408 S NORMAL AVE, CHICAGO, IL, 60621",
+    "lat": 41.759712056258536,
+    "long": -87.6369602073906
+  }
+]
