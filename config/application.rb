@@ -19,7 +19,16 @@ module Open311status
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    config.assets.paths << "#{Rails}/vendor/assets/**/*"
+    config.assets.paths << "#{Rails.root}/vendor/assets/**/*"
+
+    custom_paths = %W(
+      #{Rails.root}/lib
+      #{Rails.root}/lib/**
+      #{Rails.root}/app/decorators/collections
+      #{Rails.root}/app/cities
+    )
+    config.autoload_paths += custom_paths
+    config.eager_load_paths += custom_paths
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
