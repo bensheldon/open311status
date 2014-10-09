@@ -83,9 +83,7 @@
         "endpoint": "http://seeclickfix.com/russell-springs/open311/"
     },
     "san francisco": {
-        "endpoint": "https://open311.sfgov.org/V2/",
-        "format": "xml",
-        "jurisdiction": "sfgov.org"
+        "endpoint": "http://mobile311.sfgov.org/open311/v2/"
     },
     "toronto": {
         "endpoint": "https://secure.toronto.ca/webwizard/ws/",
