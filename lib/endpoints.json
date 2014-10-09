@@ -40,6 +40,9 @@
     "grand rapids": {
         "endpoint": "http://grcity.spotreporters.com/open311/v2/"
     },
+    "helsinki": {
+        "endpoint": "https://asiointi.hel.fi/palautews/rest/v1/"
+    },
     "hillsborough": {
         "endpoint": "http://seeclickfix.com/hillsborough/open311/"
     },
@@ -83,9 +86,7 @@
         "endpoint": "http://seeclickfix.com/russell-springs/open311/"
     },
     "san francisco": {
-        "endpoint": "https://open311.sfgov.org/V2/",
-        "format": "xml",
-        "jurisdiction": "sfgov.org"
+        "endpoint": "http://mobile311.sfgov.org/open311/v2/"
     },
     "toronto": {
         "endpoint": "https://secure.toronto.ca/webwizard/ws/",
