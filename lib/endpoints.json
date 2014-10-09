@@ -40,6 +40,9 @@
     "grand rapids": {
         "endpoint": "http://grcity.spotreporters.com/open311/v2/"
     },
+    "helsinki": {
+        "endpoint": "https://asiointi.hel.fi/palautews/rest/v1/"
+    },
     "hillsborough": {
         "endpoint": "http://seeclickfix.com/hillsborough/open311/"
     },
