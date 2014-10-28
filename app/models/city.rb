@@ -1,18 +1,32 @@
 class City < ActiveRecord::Base
-  class_attribute :properties
+  class_attribute :configuration
 
   self.inheritance_column = :slug
   has_many :service_requests
 
   validates :slug, uniqueness: true
 
+  def open311
+    config = { endpoint: endpoint }
+    config[:jurisdiction] = jurisdiction if jurisdiction
+
+    @open311 ||= Open311.new config
+  end
+
+  def method_missing(meth, *args, &block)
+    return configuration.send(meth) if configuration.respond_to? meth
+    super
+  end
+
   class << self
     def instance
       self.where(slug: sti_name).first_or_create
     end
 
-    def configure(slug, properties)
-      self.properties = properties
+    def configure(&block)
+      self.configuration = Struct.new(
+        :name, :state, :endpoint, :jurisdiction
+      ).new.tap { |config| block.call config }
     end
 
     def load
