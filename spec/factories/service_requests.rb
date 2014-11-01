@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :service_request do
+    city
     service_request_id "MyString"
     status "MyString"
   end

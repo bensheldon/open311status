@@ -25,15 +25,18 @@ ActiveRecord::Schema.define(version: 20140712154033) do
   add_index "cities", ["slug"], name: "index_cities_on_slug", unique: true, using: :btree
 
   create_table "service_requests", force: true do |t|
-    t.string   "city_id"
     t.string   "service_request_id"
     t.string   "status"
+    t.datetime "requested_datetime"
+    t.datetime "updated_datetime"
     t.json     "raw_data"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "city_id"
   end
 
   add_index "service_requests", ["city_id", "service_request_id"], name: "index_service_requests_on_city_id_and_service_request_id", unique: true, using: :btree
+  add_index "service_requests", ["city_id"], name: "index_service_requests_on_city_id", using: :btree
   add_index "service_requests", ["status"], name: "index_service_requests_on_status", using: :btree
 
 end

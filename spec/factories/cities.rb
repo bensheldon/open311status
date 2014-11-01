@@ -1,6 +1,6 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
-Cities.send :remove_const, :TestCity
+Cities.send(:remove_const, :TestCity) if defined? Cities::TestCity
 
 unless defined? Cities::TestCity
   module Cities
@@ -16,9 +16,7 @@ unless defined? Cities::TestCity
 end
 
 FactoryGirl.define do
-  factory :city do
-    factory :test_city, class: 'Cities::TestCity' do
-      slug 'test'
-    end
+  factory :city, class: 'Cities::TestCity' do
+    slug 'test'
   end
 end
