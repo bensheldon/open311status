@@ -7,17 +7,18 @@
     , "npm": "1.1.x"
     }
   , "dependencies": {
-      "express": "~>2.5.8"
-    , "jade": "~>0.27.2"
-    , "mongoose": "2.6.3"
-    , "request": "2.9"
-    , "socket.io": "~>0.9.10"
-    , "xml2json": "~>0.2.4"
-    , "async": "~>0.1.22"
-    , "cron": "~>1.0.0"
+      "async": "~>0.1.22"
+    , "cron": "~>1.0.1"
     , "datejs": "~>0.0.2"
-    , "mocha": "~>1.4.3"
-    , "should": "~>0.6.3"
-    , "sinon": "~>1.3.4"
+    , "express": "~>2.5.8"
+    , "jade": "~>0.35.0"
+    , "mongoose": "2.6.3"
+    , "request": "2.27.0"
+    , "socket.io": "~>0.9.16"
+    , "xml2json": "~>0.3.2"
+
+    , "mocha": "~>1.13.0"
+    , "should": "~>1.3.0"
+    , "sinon": "~>1.7.3"
   }
 }
