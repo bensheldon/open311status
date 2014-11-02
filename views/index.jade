@@ -1,12 +1,12 @@
 div.row-fluid
-  div#info.span12.well 
-    - if (endpoints[0].servicesPing)
-      strong Scanning #{endpoints.length} Open311 endpoints every 5 minutes. Last scan at #{endpoints[0].servicesPing.requestedAt}.  
-        | For endpoint information visit the 
+  div#info.span12.well
+    - if (endpoints[0] && endpoints[0].servicesPing)
+      strong Scanning #{endpoints.length} Open311 endpoints every 5 minutes. Last scan at #{endpoints[0].servicesPing.requestedAt}.
+        | For endpoint information visit the
         a(href="http://wiki.open311.org/GeoReport_v2/Servers") Open311 Wiki
         | .
 
-div.row-fluid  
+div.row-fluid
   div#status.span12
 
     table#endpoints.table.table-bordered.table-striped
@@ -16,7 +16,7 @@ div.row-fluid
           th Services
           th Requests
           th Request Types
-          th Submitted Requests  
+          th Submitted Requests
             span.label.label-info 48 hours
           th total
           th min/hour
@@ -37,10 +37,10 @@ div.row-fluid
                   - if (endpoint.servicesPing.responseTime > 999)
                     - var tooltip = "Slow server response: " + endpoint.servicesPing.responseTime + "ms"
                     a(class="btn btn-mini btn-warning", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Slow
-                  - else 
+                  - else
                     - var tooltip = "Server response: " + endpoint.servicesPing.responseTime + "ms"
                       a(class="btn btn-mini btn-success", href=endpoint.servicesPing.url, rel="tooltip", title=tooltip) Okay
-              - else 
+              - else
                 - var tooltip = "Server response: Indeterminate"
                   div(class="btn btn-mini", rel="tooltip", title=tooltip) ? ? ?
             td
@@ -52,7 +52,7 @@ div.row-fluid
                   - if (endpoint.requestsPing.responseTime > 999)
                     - var tooltip = "Slow server response: " + endpoint.requestsPing.responseTime + "ms"
                     a(class="btn btn-mini btn-warning", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Slow
-                  - else 
+                  - else
                       - var tooltip = "Server response: " + endpoint.requestsPing.responseTime + "ms"
                       a(class="btn btn-mini btn-success", href=endpoint.requestsPing.url, rel="tooltip", title=tooltip) Okay
               - else
@@ -74,11 +74,11 @@ div.row-fluid
 
 
 
-h2 Yesterday's Service Requests 
+h2 Yesterday's Service Requests
   sup.label.label-info realtime minus one day
 
 table#service-requests.table.table-bordered.table-striped
-  thead 
+  thead
     tr
       th Endpoint
       th Type
