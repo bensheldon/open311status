@@ -6,28 +6,18 @@ class City < ActiveRecord::Base
 
   validates :slug, uniqueness: true
 
-  def open311
-    config = { endpoint: endpoint }
-    config[:jurisdiction] = jurisdiction if jurisdiction
-
-    @open311 ||= Open311.new config
-  end
-
-  def method_missing(meth, *args, &block)
-    return configuration.send(meth) if configuration.respond_to? meth
-    super
-  end
-
   class << self
     def instance
       self.where(slug: sti_name).first_or_create
     end
 
-    def configure(&block)
-      self.configuration = Struct.new(
-        :name, :state, :endpoint, :jurisdiction
-      ).new.tap { |config| block.call config }
+    def configure
+      self.configuration ||= City::Configuration.new
+      yield(configuration) if block_given?
+      configuration
     end
+
+    alias_method :config, :configure
 
     def load
       Dir[Rails.root.join('app', 'models', 'cities', '*.rb')].each { |f| require_dependency(f) }
@@ -41,5 +31,15 @@ class City < ActiveRecord::Base
     def sti_name
       self.name.demodulize.underscore
     end
+  end
+
+  def method_missing(meth, *args, &block)
+    return configuration.send(meth) if configuration.respond_to? meth
+    super
+  end
+
+  def respond_to?(method_sym, include_private = false)
+    return true if configuration.respond_to?(method_sym)
+    super
   end
 end

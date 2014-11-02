@@ -25,17 +25,19 @@ RSpec.describe CitiesController, :type => :controller do
   let(:valid_session) { {} }
 
   describe "GET index" do
+    let!(:city) { FactoryGirl.create :city }
+
     it "assigns all cities as @cities" do
-      city = FactoryGirl.create :city
       get :index, {}, valid_session
       expect(assigns(:cities)).to eq([city])
     end
   end
 
   describe "GET show" do
+    let!(:city) { FactoryGirl.create :city }
+
     it "assigns the requested city as @city" do
-      city = FactoryGirl.create :city
-      get :show, {:id => city.to_param}, valid_session
+      get :show, { id: city.to_param }, valid_session
       expect(assigns(:city)).to eq(city)
     end
   end
