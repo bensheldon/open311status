@@ -1,7 +1,11 @@
 #!/bin/bash
 
 if [ "$ENV" == "production" ]; then
-  sleep
+  if [ "MAIN_PROCESS" == "node" ] then
+    coffee push-server.coffee
+  else
+    bundle exec rails server thin -p $PORT -e $RACK_ENV
+  fi
 else
   # Local Development
   # Infinite loop otherwise Foreman will stop
