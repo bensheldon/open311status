@@ -26,6 +26,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+gem 'pry-rails'
 gem 'sentry-raven'
 gem 'lograge'
 
@@ -60,7 +61,6 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'guard-rubocop', require: false
   gem 'meta_request' # for use with RailsPanel Chrome Extension
-  gem 'pry-rails'
   gem 'rails_layout'
   gem 'spring'
   gem 'spring-commands-rspec'
