@@ -36,6 +36,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'did_you_mean'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec', '~> 3.0.0'

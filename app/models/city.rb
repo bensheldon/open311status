@@ -19,7 +19,8 @@ class City < ActiveRecord::Base
 
     alias_method :config, :configure
 
-    def load
+    # Loads city configuration data into database
+    def load!
       Dir[Rails.root.join('app', 'models', 'cities', '*.rb')].each { |f| require_dependency(f) }
       Cities.constants(false).map { |klass| Cities.const_get(klass).instance }
     end
