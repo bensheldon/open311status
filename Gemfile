@@ -26,6 +26,15 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+gem 'sentry-raven'
+gem 'lograge'
+
+group :production do
+  gem 'heroku-deflater'
+  gem 'newrelic_rpm'
+  gem 'rails_12factor'
+end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
