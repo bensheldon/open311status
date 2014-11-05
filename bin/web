@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$ENV" == "production" ]; then
-  if [ "MAIN_PROCESS" == "node" ] then
+  if [ "MAIN_PROCESS" == "node" ]; then
     coffee push-server.coffee
   else
     bundle exec rails server thin -p $PORT -e $RACK_ENV
