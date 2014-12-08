@@ -17,7 +17,20 @@ class City
     end
 
     def fetch_service_list
-      response = connection.get 'services.json'
+      service_list_data = Status::Telemetry.process 'service_list', city: city do
+        open311.service_list
+      end
+
+      Array(service_list_data).map do |request_data|
+        city.service_definitions.find_or_initialize_by(service_code: request_data['service_code']).tap do |service_definition|
+          service_definition.raw_data = request_data
+          if service_definition.changed?
+            service_definition.save!
+          else
+            service_definition.touch
+          end
+        end
+      end
     end
 
     def fetch_service_requests(start = nil)
@@ -27,7 +40,9 @@ class City
         start_datetime = city.service_requests.maximum(:requested_datetime) || MAX_AGE.ago
       end
 
-      requests_data = open311.service_requests(start_date: start_datetime.xmlschema)
+      requests_data = Telemetry.process 'service_requests', city: city do
+        open311.service_requests(start_date: start_datetime.xmlschema)
+      end
 
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id

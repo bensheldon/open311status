@@ -1,0 +1,29 @@
+[
+  {
+    "service_code": "001",
+    "service_name":"Cans left out 24x7",
+    "description":"Garbage or recycling cans that have been left out for more than 24 hours after collection. Violators will be cited.",
+    "metadata":true,
+    "type":"realtime",
+    "keywords":"lorem, ipsum, dolor",
+    "group":"sanitation"
+  },
+  {
+    "service_code":"002",
+    "metadata":true,
+    "type":"realtime",
+    "keywords":"lorem, ipsum, dolor",
+    "group":"street",
+    "service_name":"Construction plate shifted",
+    "description":"Metal construction plate covering the street or sidewalk has been moved."
+  },
+  {
+    "service_code":"003",
+    "metadata":true,
+    "type":"realtime",
+    "keywords":"lorem, ipsum, dolor",
+    "group":"street",
+    "service_name":"Curb or curb ramp defect",
+    "description":"Sidewalk curb or ramp has problems such as cracking, missing pieces, holes, and/or chipped curb."
+  }
+]
