@@ -21,7 +21,16 @@ class City
         open311.service_list
       end
 
-      Array(service_list_data)
+      Array(service_list_data).map do |request_data|
+        city.service_definitions.find_or_initialize_by(service_code: request_data['service_code']).tap do |service_definition|
+          service_definition.raw_data = request_data
+          if service_definition.changed?
+            service_definition.save!
+          else
+            service_definition.touch
+          end
+        end
+      end
     end
 
     def fetch_service_requests(start = nil)

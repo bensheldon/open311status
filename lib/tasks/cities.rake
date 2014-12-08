@@ -24,4 +24,23 @@ namespace :cities do
       Rails.logger.info "#{ city.name } had #{ new_service_requests.size } new service requests"
     end
   end
+
+  desc 'Fetch service list/definitions for all cities, or list of individual cities'
+  task :service_list, [:override] => :environment do |task, args|
+    Rails.logger = Logger.new(STDOUT)
+    overrides = Array(args[:override]) + Array(args.extras)
+
+    if overrides.size > 0
+      cities = overrides.map { |slug| City.find_by_slug slug }
+    else
+      cities = City.all
+    end
+
+    cities.each do |city|
+      api = City::Api.new city
+      Rails.logger.info "Collecting service definitions list from #{ city.name }"
+      new_service_list = api.fetch_service_list
+      Rails.logger.info "#{ city.name } has #{ new_service_list.size } service definitions"
+    end
+  end
 end

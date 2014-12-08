@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208020641) do
+ActiveRecord::Schema.define(version: 20141208055159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 20141208020641) do
   end
 
   add_index "cities", ["slug"], name: "index_cities_on_slug", unique: true, using: :btree
+
+  create_table "service_definitions", force: true do |t|
+    t.integer  "city_id"
+    t.string   "service_code"
+    t.json     "raw_data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "service_definitions", ["city_id", "service_code"], name: "index_service_definitions_on_city_id_and_service_code", using: :btree
+  add_index "service_definitions", ["city_id"], name: "index_service_definitions_on_city_id", using: :btree
 
   create_table "service_requests", force: true do |t|
     t.string   "service_request_id"
