@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: cities
+#
+#  id         :integer          not null, primary key
+#  slug       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_cities_on_slug  (slug) UNIQUE
+#
+
 require 'rails_helper'
 
 RSpec.describe City, type: :model do
