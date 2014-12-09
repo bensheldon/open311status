@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'haml-rails'
 
 gem 'open311'
+gem 'groupdate'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
