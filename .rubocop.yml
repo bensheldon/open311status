@@ -1,0 +1,30 @@
+#
+# https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+#
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - config/**/*
+
+Style/LineLength:
+  Max: 150
+
+Style/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 50
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Documentation:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
