@@ -1,5 +1,0 @@
---require should
---require sinon
---reporter spec
---ui bdd
---timeout 500000

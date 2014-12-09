@@ -1,7 +1,0 @@
-# osx noise
-.DS_Store
-profile
-
-# node
-.env
-node_modules
