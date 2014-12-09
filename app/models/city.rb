@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: cities
+#
+#  id         :integer          not null, primary key
+#  slug       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_cities_on_slug  (slug) UNIQUE
+#
+
 class City < ActiveRecord::Base
   class_attribute :configuration
 
@@ -5,6 +19,12 @@ class City < ActiveRecord::Base
   has_many :service_requests
   has_many :service_definitions
   has_many :statuses
+  has_one :service_list_status,
+    -> { where(request_name: 'service_list').order("created_at DESC") },
+    class_name: 'Status'
+  has_one :service_requests_status,
+    -> { where(request_name: 'service_requests').order("created_at DESC") },
+    class_name: 'Status'
 
   validates :slug, uniqueness: true
 
