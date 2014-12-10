@@ -1,0 +1,11 @@
+%tr
+  %td
+    %strong= city.name
+  %td
+    - if city.service_list_status
+      %span{ class: "label label-#{ city.service_list_status.label_class }",
+        data: { toggle: 'tooltip' }, title: city.service_list_status.description } Services API
+  %td
+    - if city.service_requests_status
+      %span{ class: "label label-#{ city.service_requests_status.label_class }",
+        data: { toggle: 'tooltip' }, title: city.service_requests_status.description } Requests API
