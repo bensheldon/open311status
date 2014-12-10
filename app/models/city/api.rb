@@ -40,7 +40,7 @@ class City
         start_datetime = city.service_requests.maximum(:requested_datetime) || MAX_AGE.ago
       end
 
-      requests_data = Telemetry.process 'service_requests', city: city do
+      requests_data = Status::Telemetry.process 'service_requests', city: city do
         open311.service_requests(start_date: start_datetime.xmlschema)
       end
 

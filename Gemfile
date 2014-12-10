@@ -16,6 +16,12 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'haml-rails'
+gem 'font_assets'
+gem 'draper'
+gem 'redcarpet'
+gem 'bourbon', '~> 3.2.3'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
 
 gem 'open311'
 gem 'groupdate'
