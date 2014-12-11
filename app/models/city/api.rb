@@ -44,6 +44,8 @@ class City
         open311.service_requests(start_date: start_datetime.xmlschema)
       end
 
+      # TODO: Page over the results in case we don't get all of the servie requests newer than
+      # the date above
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id
         return nil unless request_data['service_request_id']
