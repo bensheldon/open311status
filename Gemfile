@@ -25,6 +25,7 @@ gem 'font-awesome-rails'
 
 gem 'open311'
 gem 'groupdate'
+gem 'chartkick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -2,6 +2,8 @@
   %td
     %strong= city.name
   %td
+    #{city.service_definitions.count} Service Definitions
+  %td
     - if city.service_list_status
       %span{ class: "label label-#{ city.service_list_status.label_class }",
         data: { toggle: 'tooltip' }, title: city.service_list_status.description } Services API
@@ -9,3 +11,5 @@
     - if city.service_requests_status
       %span{ class: "label label-#{ city.service_requests_status.label_class }",
         data: { toggle: 'tooltip' }, title: city.service_requests_status.description } Requests API
+  %td
+    #{city.service_requests.where('requested_datetime > ?', 2.days.ago).count} Requests Total (48 Hours)
