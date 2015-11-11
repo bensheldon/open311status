@@ -82,6 +82,9 @@
     "roosevelt island": {
         "endpoint": "http://seeclickfix.com/roosevelt-island/open311/"
     },
+    "rostock": {
+        "endpoint": "https://geo.sv.rostock.de/citysdk/"
+    },
     "russell springs": {
         "endpoint": "http://seeclickfix.com/russell-springs/open311/"
     },
