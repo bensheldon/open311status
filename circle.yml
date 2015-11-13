@@ -1,0 +1,8 @@
+test:
+  override:
+    - 'node_modules/.bin/mocha :' # noop
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: open311status
