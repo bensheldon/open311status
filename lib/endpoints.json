@@ -59,7 +59,7 @@
         "endpoint": "http://seeclickfix.com/manor/open311/"
     },
     "new haven": {
-        "endpoint": "http://seeclickfix.com/new-haven/open311/"
+        "endpoint": "https://seeclickfix.com/open311/v2/29/"
     },
     "newark": {
         "endpoint": "http://seeclickfix.com/newark_2/open311/"
