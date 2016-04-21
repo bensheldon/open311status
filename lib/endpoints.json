@@ -28,9 +28,6 @@
         "format": "xml",
         "jurisdiction": "dc.gov"
     },
-    "deleon": {
-        "endpoint": "http://seeclickfix.com/de-leon/open311/"
-    },
     "dunwoody": {
         "endpoint": "https://seeclickfix.com/open311/v2/112/"
     },
@@ -51,9 +48,6 @@
     },
     "huntsville": {
         "endpoint": "https://seeclickfix.com/open311/v2/145/"
-    },
-    "macon": {
-        "endpoint": "http://seeclickfix.com/macon/open311/"
     },
     "manor": {
         "endpoint": "https://seeclickfix.com/open311/v2/33/"
@@ -85,17 +79,11 @@
     "rostock": {
         "endpoint": "https://geo.sv.rostock.de/citysdk/"
     },
-    "russell springs": {
-        "endpoint": "http://seeclickfix.com/russell-springs/open311/"
-    },
     "san francisco": {
         "endpoint": "http://mobile311.sfgov.org/open311/v2/"
     },
     "toronto": {
         "endpoint": "https://secure.toronto.ca/webwizard/ws/",
         "jurisdiction": "toronto.ca"
-    },
-    "tucson": {
-        "endpoint": "http://seeclickfix.com/tucson/open311/"
     }
 }
