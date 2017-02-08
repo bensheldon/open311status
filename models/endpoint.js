@@ -38,10 +38,10 @@ Endpoint.statics.generate = function generate (city, callback) {
 
   this.findOne()
       .where('endpoint', city)
-      .run(function(err, endpoint) {
+      .exec(function(err, endpoint) {
     if (!endpoint) {
       // TODO: there has to be a better/less-self-referential way to do this
-      endpoint =  new (mongoose.model('EndPoint', Endpoint)); 
+      endpoint =  new (mongoose.model('EndPoint', Endpoint));
       endpoint.endpoint = city;
     }
     endpoint.set('info', Endpoints[city]);
@@ -52,8 +52,8 @@ Endpoint.statics.generate = function generate (city, callback) {
         ServicesPing.findOne()
               .where('endpoint', city)
               .limit(1)
-              .sort('requestedAt', -1)
-              .run(function(err, servicesPing) {
+              .sort({'requestedAt': -1})
+              .exec(function(err, servicesPing) {
           if (servicesPing) {
             endpoint.servicesPing = servicesPing.toObject();
           }
@@ -64,12 +64,12 @@ Endpoint.statics.generate = function generate (city, callback) {
         });
       },
       function(done){
-        // load latest RequestsPing 
+        // load latest RequestsPing
         RequestsPing.findOne()
                     .where('endpoint', city)
                     .limit(1)
-                    .sort('requestedAt', -1)
-                    .run(function(err, requestsPing) {
+                    .sort({'requestedAt': -1})
+                    .exec(function(err, requestsPing) {
           if (requestsPing) {
             endpoint.requestsPing = requestsPing.toObject();
           }

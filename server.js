@@ -1,7 +1,7 @@
 var express         = require('express')
   , app             = module.exports = express.createServer()
   , io              = require('socket.io').listen(app);
-  
+
 var PORT = process.env.PORT || 3000;
 var WILLPING = (process.env.WILLPING == "TRUE") ? true : false; // Don't ping by default
 
@@ -37,8 +37,8 @@ if (WILLPING) {
   var CronJob = require('cron').CronJob;
 
   // schedule every 5 minutes
-  var scheduledPings = new CronJob('00 */5 * * * *', 
-    function() { 
+  var scheduledPings = new CronJob('00 */5 * * * *',
+    function() {
       // ping all our endpoints
       pinger.pingAll(function() {
         // aggregate and save that endpoint data
@@ -46,7 +46,7 @@ if (WILLPING) {
           // push those updated+aggregated endpoints to the client
           io.sockets.emit('endpoints', endpoints);
         });
-      }); 
+      });
     }, null, true);
 
   // Every hour delete pings older than 48 hours old
@@ -57,7 +57,7 @@ if (WILLPING) {
     // get all service requests from between 24 hours and 23:55 hours:minutes ago
     var serviceRequests = ServiceRequest.find()
                                         .where('requested_datetime').gte(new Date(d.getTime() - 24*60*60*1000)).lte(new Date(d.getTime() - (23*60+55)*60*1000))
-                                        .sort('requested_datetime', 1)
+                                        .sort({'requested_datetime': 1})
                                         .stream();
     serviceRequests.on('data', function (serviceRequest) {
       serviceRequest = serviceRequest.toObject();
@@ -75,7 +75,7 @@ if (WILLPING) {
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.cookieParser());  
+  app.use(express.cookieParser());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
@@ -97,13 +97,6 @@ app.get('/servicerequests/:endpoint', require('./routes/servicerequests'));
 
 /** Rudimentary API **/
 app.get('/endpoints.json', require('./routes/endpoints'));
-
-
-// assuming io is the Socket.IO server object
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
 
 io.sockets.on('connection', function (socket) {
   socket.emit('info', { hello: 'world' });
