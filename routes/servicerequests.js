@@ -9,8 +9,8 @@ module.exports = function(req, res) {
     ServiceRequest.find()
                   .where('endpoint', city)
                   .limit(200)
-                  .sort('requested_datetime', -1)
-                  .run(function(err, serviceRequests) {
+                  .sort({'requested_datetime': -1})
+                  .exec(function(err, serviceRequests) {
 
       serviceRequests = serviceRequests.map(function(serviceRequest) {
         return serviceRequest.toObject();
@@ -24,7 +24,7 @@ module.exports = function(req, res) {
     });
   }
   else {
-    res.render('servicerequests', { 
+    res.render('servicerequests', {
       endpoint: city
     , serviceRequests: {error: "That is not an endpoint!"}
     });

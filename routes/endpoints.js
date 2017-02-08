@@ -13,8 +13,8 @@ module.exports = function(req, res) {
   async.parallel([
     function(done) {
       Endpoint.find()
-              .sort('endpoint', 1)
-              .run(function(err, endpoints) {
+              .sort('endpoint')
+              .exec(function(err, endpoints) {
 
         endpointsData = endpoints.map(function(endpoint) {
           return endpoint.toObject();
