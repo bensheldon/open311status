@@ -4,6 +4,7 @@ var mongoose = require('mongoose'),
 
 var RequestsPing = new mongoose.Schema({
       endpoint           : { type: String, required: true, lowercase: true, trim: true, index: true },
+      statusCode         : { type: Number, required: true },
       requestsCount      : { type: Number, required: true },
       responseTime       : { type: Number, required: true },
       requestedAt        : { type: Date, required: true },
