@@ -3,6 +3,7 @@ div.row-fluid
     - if (endpoints[0] && endpoints[0].servicesPing)
       strong Scanning #{endpoints.length} Open311 endpoints every 5 minutes. Last scan at #{endpoints[0].servicesPing.requestedAt}.
         | For endpoint information visit the
+        = ' '
         a(href="http://wiki.open311.org/GeoReport_v2/Servers") Open311 Wiki
         | .
 
@@ -17,6 +18,7 @@ div.row-fluid
           th Requests
           th Request Types
           th Submitted Requests
+            = ' '
             span.label.label-info 48 hours
           th total
           th min/hour
@@ -75,6 +77,7 @@ div.row-fluid
 
 
 h2 Yesterday's Service Requests
+  = ' '
   sup.label.label-info realtime minus one day
 
 table#service-requests.table.table-bordered.table-striped
