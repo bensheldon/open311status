@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 
 var ServiceRequest = new mongoose.Schema({
       endpoint           : { type: String, required: true, lowercase: true, trim: true, index: true },
-      service_request_id : { type: String, required: true },   
+      service_request_id : { type: String, required: true },
       requested_datetime : { type: Date, required: true, index: true},
       service_name       : { type: String },
       description        : { type: String },
@@ -56,9 +56,9 @@ ServiceRequest.statics.statistics = function statistics (endpoint, startDate, en
 	    }
 
       // do some more statistics min,max,total,avg
-      var min = 0, 
-          max = 0, 
-          total = 0, 
+      var min = 0,
+          max = 0,
+          total = 0,
           avg = 0;
       for (var i = 0; i < timeSeries.length; i++) {
         if (timeSeries[i] < min) {

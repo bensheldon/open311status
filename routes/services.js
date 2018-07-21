@@ -41,7 +41,7 @@ module.exports = function(req, routeRes) {
     });
   }
   else {
-    res.render('services', { 
+    res.render('services', {
       endpoint: city
     , services: {error: "That is not an endpoint!"}
     });

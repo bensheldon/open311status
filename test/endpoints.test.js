@@ -1,12 +1,12 @@
 
 describe('endpoints', function(){
   var endpoints = require('../lib/endpoints');
-  
+
   it('is a valid json doc',  function(done) {
     endpoints.should.be.a('object');
     done();
   });
-  
+
   describe('san francisco', function() {
     endpoints.should.have.property('san francisco');
     it('has an endpoint URL',  function(done) {
@@ -22,18 +22,18 @@ describe('endpoints', function(){
       done();
     });
   });
-  
+
   describe('all endpoints', function() {
-    
+
     it('have an endpoint URL',  function(done) {
       for(var city in endpoints) {
         city = endpoints[city];
         city.should.have.property('endpoint');
-      }   
+      }
       done();
     });
-    
+
   });
-  
-  
+
+
 })
