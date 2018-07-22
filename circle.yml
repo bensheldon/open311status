@@ -4,12 +4,3 @@ dependencies:
         timeout: 500
   cache_directories:
     - "public/assets"
-
-deployment:
-  production:
-    branch: rails
-    commands:
-      - git push git@heroku.com:open311status-rails.git $CIRCLE_SHA1:refs/heads/master:
-          timeout: 400
-      - heroku run rake db:migrate cities:load --app open311status-rails:
-          timeout: 400
