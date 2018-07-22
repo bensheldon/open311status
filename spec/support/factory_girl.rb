@@ -1,5 +1,5 @@
 RSpec.configure do |config|
   config.before(:all) do
-    FactoryGirl.reload
+    FactoryBot.reload
   end
 end

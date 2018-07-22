@@ -1,11 +1,8 @@
-
- /* Highest precedence */
- @import 'bourbon';
- @import 'partials/variables';
+ @import 'modules/variables';
 
  /* Vendors */
  @import 'bootstrap';
  @import 'font-awesome';
 
- // Sections
- @import 'sections/base';
+ // Partials
+ @import 'partials/base';

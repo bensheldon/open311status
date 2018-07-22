@@ -23,7 +23,7 @@ require 'rails_helper'
 
 RSpec.describe ServiceRequest, type: :model do
   it 'has a valid factory' do
-    expect(FactoryGirl.create :service_request).to be_valid
+    expect(FactoryBot.create :service_request).to be_valid
   end
 
   describe '#raw_data=' do

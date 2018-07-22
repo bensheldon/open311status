@@ -15,7 +15,7 @@
 require 'rails_helper'
 
 RSpec.describe City, type: :model do
-  let(:city) { FactoryGirl.create :city }
+  let(:city) { FactoryBot.create :city }
 
   it 'has a valid factory' do
     expect(city).to be_valid

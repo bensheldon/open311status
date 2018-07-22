@@ -27,7 +27,7 @@ unless defined? Cities::Test
   end
 end
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :city, class: 'Cities::Test' do
     slug 'test'
   end

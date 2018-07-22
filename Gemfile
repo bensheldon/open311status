@@ -1,91 +1,53 @@
 source 'https://rubygems.org'
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
-gem 'thin'
-gem 'pg'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
-
-gem 'haml-rails'
-gem 'font_assets'
-gem 'draper'
-gem 'redcarpet'
-gem 'bourbon', '~> 3.2.3'
+gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
-gem 'font-awesome-rails'
-
-gem 'open311'
-gem 'groupdate'
+gem 'bourbon', '~> 3.2.3'
 gem 'chartkick'
-
-# Use jquery as the JavaScript library
+gem 'coffee-rails', '~> 4.2'
+gem 'draper'
+gem 'font-awesome-rails'
+gem 'font_assets'
+gem 'groupdate'
+gem 'haml-rails'
+gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
-
-gem 'pry-rails'
-gem 'sentry-raven'
 gem 'lograge'
+gem 'open311'
+gem 'pg', '>= 0.18', '< 2.0'
+gem 'pry-rails'
+gem 'puma', '~> 3.11'
+gem 'rails', '~> 5.2.0'
+gem 'redcarpet'
+gem 'sass-rails', '~> 5.0'
+gem 'sentry-raven'
+gem 'uglifier', '>= 1.3.0'
 
-group :production do
+group :production, :staging do
   gem 'heroku-deflater'
-  gem 'newrelic_rpm'
-  gem 'rails_12factor'
-end
-
-group :test do
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'poltergeist'
-  gem 'shoulda-matchers'
-  gem 'timecop'
-  gem 'webmock'
+  gem 'rack-timeout'
 end
 
 group :development, :test do
-  gem 'did_you_mean'
-  gem 'factory_girl_rails'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
-  gem 'rspec', '~> 3.0.0'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails'
 end
 
 group :development do
   gem 'annotate'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'guard-livereload', require: false
-  gem 'guard-rspec', require: false
-  gem 'guard-rubocop', require: false
-  gem 'meta_request' # for use with RailsPanel Chrome Extension
-  gem 'rails_layout'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-commands-rspec'
-  gem 'rack-livereload'
-  gem 'rb-fsevent'
-  gem 'terminal-notifier-guard', require: false
-  gem 'quiet_assets'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :test do
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'launchy', require: false
+  gem 'rails-controller-testing'
+end

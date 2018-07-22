@@ -7,3 +7,8 @@ module FixtureMacros
     File.read Pathname('spec/fixtures/service_list.json')
   end
 end
+
+
+RSpec.configure do |config|
+  config.include(FixtureMacros)
+end
