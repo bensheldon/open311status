@@ -1,4 +1,4 @@
-class CreateServiceDefinitions < ActiveRecord::Migration
+class CreateServiceDefinitions < ActiveRecord::Migration[5.1]
   def change
     create_table :service_definitions do |t|
       t.references :city, index: true
