@@ -17,7 +17,7 @@ class City
     end
 
     def fetch_service_list
-      service_list_data = Status::Telemetry.process 'service_list', city: city do
+      service_list_data = Status::Telemetry.process('service_list', city: city) do
         open311.service_list
       end
 
@@ -44,7 +44,7 @@ class City
         open311.service_requests(start_date: start_datetime.xmlschema)
       end
 
-      # TODO: Page over the results in case we don't get all of the servie requests newer than
+      # TODO: Page over the results in case we don't get all of the service requests newer than
       # the date above
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id

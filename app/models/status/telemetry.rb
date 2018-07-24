@@ -24,7 +24,7 @@ class Status
         status.http_code = 200
       rescue Open311::Error => error
         status.http_code = open311_error_to_http_code(error)
-      rescue Timeout::Error
+      rescue Timeout::Error, StandardError
         status.http_code = 0
       end
 
