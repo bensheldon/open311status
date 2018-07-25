@@ -11,6 +11,14 @@ class StatusDecorator < Draper::Decorator
     end
   end
 
+  def title
+    {
+      success: 'Okay',
+      slow: 'Slow',
+      error: 'Error'
+    }[quality]
+  end
+
   def description
     {
       success: "Server responded in #{duration_ms} ms",
