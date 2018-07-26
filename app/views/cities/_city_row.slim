@@ -3,12 +3,18 @@ tr
     strong= city.name
   td
     - if city.service_list_status
-      btn(class="btn btn-xs btn-#{ city.service_list_status.label_class }"
-        data={ toggle: 'tooltip' } title=city.service_list_status.description)= city.service_list_status.title
+      .text-center
+        btn(class="btn btn-xs btn-#{ city.service_list_status.label_class }"
+          data={ toggle: 'tooltip' } title=city.service_list_status.description)= city.service_list_status.title
+        br
+        small #{time_ago_in_words city.service_list_status.created_at} ago
   td
     - if city.service_requests_status
-      btn(class="btn btn-xs btn-#{ city.service_requests_status.label_class }"
-        data={ toggle: 'tooltip' } title=city.service_requests_status.description)= city.service_list_status.title
+      .text-center
+        btn(class="btn btn-xs btn-#{ city.service_requests_status.label_class }"
+          data={ toggle: 'tooltip' } title=city.service_requests_status.description)= city.service_list_status.title
+        br
+        small #{time_ago_in_words city.service_list_status.created_at} ago
   td
     | #{city.service_definitions.count} types
   td
