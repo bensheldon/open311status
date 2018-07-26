@@ -1,5 +1,7 @@
 class FetchServiceRequestsJob < ApplicationJob
   def perform(city)
+    Raven.extra_context(city: city.slug)
+
     api = City::Api.new city
     Rails.logger.info "Collecting service requests from #{ city.name }"
     new_service_requests = api.fetch_service_requests
