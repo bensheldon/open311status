@@ -1,6 +1,7 @@
 tr
   td
-    strong= city.name
+    strong
+      = link_to city.name, city_path(city)
   td
     - if city.service_list_status
       .text-center

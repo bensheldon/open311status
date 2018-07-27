@@ -1,0 +1,20 @@
+table.table.table-bordered.table-striped
+  thead
+    tr
+      th Endpoint
+      th Service Name
+      th Status
+      th Description
+      th Media
+      th Requested At
+  tbody
+    - service_requests.each do |service_request|
+      tr
+        td= service_request.city.name
+        td= service_request.status
+        td= service_request.raw_data['service_name']
+        td= service_request.raw_data['description']
+        td
+          - if service_request.raw_data['media_url'].present?
+            = image_tag service_request.raw_data['media_url'], class: 'img-responsive'
+        td #{time_ago_in_words(service_request.requested_datetime)} ago

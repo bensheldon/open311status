@@ -56,6 +56,10 @@ class City < ActiveRecord::Base
     end
   end
 
+  def to_param
+    slug
+  end
+
   def method_missing(meth, *args, &block)
     return configuration.send(meth) if configuration.respond_to? meth
     super
