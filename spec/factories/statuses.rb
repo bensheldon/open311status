@@ -19,9 +19,9 @@
 
 FactoryBot.define do
   factory :status do
-    city nil
-    type ""
-    duration_ms 1
-    status 1
+    city
+    request_name "service_requests"
+    duration_ms 15
+    http_code 200
   end
 end

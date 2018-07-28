@@ -42,4 +42,10 @@ namespace :cities do
       Rails.logger.info "#{ city.name } has #{ new_service_list.size } service definitions"
     end
   end
+
+  desc 'Delete service requests and statuses'
+  task cleanup: :environment do |task, args|
+    Status.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
+    ServiceRequest.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
+  end
 end
