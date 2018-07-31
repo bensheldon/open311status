@@ -69,4 +69,8 @@ class City < ActiveRecord::Base
     return true if configuration.respond_to?(method_sym)
     super
   end
+
+  def api
+    @api ||= City::Api.new(self)
+  end
 end

@@ -21,6 +21,10 @@ class City
         open311.service_list
       end
 
+      if service_list_data.is_a?(Hashie::Mash)
+        service_list_data = [service_list_data]
+      end
+
       Array(service_list_data).map do |request_data|
         city.service_definitions.find_or_initialize_by(service_code: request_data['service_code']).tap do |service_definition|
           service_definition.raw_data = request_data
@@ -46,6 +50,10 @@ class City
 
       # TODO: Page over the results in case we don't get all of the service requests newer than
       # the date above
+      if requests_data.is_a?(Hashie::Mash)
+        requests_data = [requests_data]
+      end
+
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id
         return nil unless request_data['service_request_id']
