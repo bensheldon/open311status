@@ -35,7 +35,7 @@ class Status
     end
 
     def open311_error_to_http_code(exception)
-      case exeption
+      case exception
       when Open311::BadRequest
         400
       when Open311::Unauthorized
