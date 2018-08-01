@@ -3,19 +3,21 @@ tr
     strong
       = link_to city.name, city_path(city)
   td
-    - if city.service_list_status
+    - if city.service_list_status.present?
+      - status = city.service_list_status
       .text-center
-        btn(class="btn btn-xs btn-#{ city.service_list_status.label_class }"
-          data={ toggle: 'tooltip' } title=city.service_list_status.description)= city.service_list_status.title
+        btn(class="btn btn-xs btn-#{ status.label_class }"
+          data={ toggle: 'tooltip' } title=status.description)= status.title
         br
-        small #{time_ago_in_words city.service_list_status.created_at} ago
+        small #{time_ago_in_words status.created_at} ago
   td
-    - if city.service_requests_status
+    - if city.service_requests_status.present?
+      - status = city.service_requests_status
       .text-center
-        btn(class="btn btn-xs btn-#{ city.service_requests_status.label_class }"
-          data={ toggle: 'tooltip' } title=city.service_requests_status.description)= city.service_list_status.title
+        btn(class="btn btn-xs btn-#{ status.label_class }"
+          data={ toggle: 'tooltip' } title=status.description)= status.title
         br
-        small #{time_ago_in_words city.service_list_status.created_at} ago
+        small #{time_ago_in_words status.created_at} ago
   td
     | #{city.service_definitions.count} types
   td
