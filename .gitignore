@@ -29,3 +29,4 @@
 
 # Ignore NPM
 /node_modules
+/mongodb
