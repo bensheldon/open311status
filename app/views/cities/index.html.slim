@@ -1,0 +1,33 @@
+.well
+  strong
+    | Scanning #{@cities.size} Open311 endpoints every 10 minutes.
+      For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers">Open311 Wiki</a>.
+
+.panel.panel-default
+  .panel-heading
+    h3.panel-title Service Requests created during previous 48 hours
+  .panel-body
+    = line_chart @cities.map { |city| { name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.now).count } }
+
+.panel.panel-default
+  table.table.table-bordered.table-striped
+    thead
+      tr
+        th Endpoint
+        th Services
+        th Requests
+        th Request Types
+        th
+          | Submitted requests
+          span.label.label-info< 48 hours
+        th Total
+        th Min/Hour
+        th Max/Hour
+        th Avg/Hour
+    tbody
+      - @cities.each do |city|
+        = render 'city_row', city: CityDecorator.new(city)
+
+h3 Recent Service Requests
+.panel.panel-default
+  = render 'service_requests', service_requests: ServiceRequest.includes(:city).order(requested_datetime: :desc).limit(100)

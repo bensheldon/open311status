@@ -1,0 +1,44 @@
+{
+  "name": "Open311Status",
+  "description": "",
+  "website": "",
+  "repository": "https://github.com/codeforamerica/open311status",
+  "scripts": {
+    "postdeploy": "bin/rails db:seed"
+  },
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "HEROKU_PARENT_APP_NAME": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_MAX_THREADS": {
+      "description": "Number of Puma threads to run.",
+      "value": "2"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "Secret key base for Rails.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "Number of Puma processes to run.",
+      "value": "1"
+    }
+  },
+  "stack": "heroku-16",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "10"
+      }
+    }
+  ]
+}

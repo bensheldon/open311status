@@ -1,0 +1,22 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  username: <%= ENV['POSTGRES_USERNAME'] || ENV['USER'] %>
+
+development:
+  database: open311status_development
+  <<: *defaults
+
+test:
+  database: open311status_test
+  min_messages: WARNING
+  <<: *defaults
+
+staging:
+  database: open311status_staging
+  <<: *defaults
+
+production:
+  database: open311status_production
+  <<: *defaults

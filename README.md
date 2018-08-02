@@ -1,22 +1,28 @@
 Open311 Status
 ==============
 
-**http://open311status.herokuapp.com**
+**http://status.open311.org**
 
-Checks and displays the status of various Open311 endpoints. The list of endpoints currently being checked is in [`endpoints.json`](https://github.com/codeforamerica/open311status/blob/master/lib/endpoints.json)
+Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights into:
 
-These are the things this application tries to measure or provide insight into:
+- **Upness**: the API is currently available
+- **Uptime**: the availability of the API over time
+- **Performance**: how quickly the servers respond to API requests
+- **Comprehensiveness**: how fully the API is implemented/adopted; e.g. the number of service types that can be submitted through the API
+- **Utilization**: how much the 311 service being used; e.g. the number of service requests submitted
 
-- **Upness**: are the servers currently running / accessible
-- **Uptime**: Has the server been down recently?
-- **Performance**: how quickly the servers respond; i.e. are they running slow?
-- **Comprehensiveness**: does it seem like the service is fully implemented/userful; i.e. how many service request types are exposed?
-- **Utilization**: is the endpoint actually being used; i.e. how many service requests were submitted) statistics?
+## Development setup
 
-Installation
-------------
+### Requirements
+1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
+2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.5.1`
+3. Install [bundler](https://bundler.io/) (the latest Heroku-compatible version): `gem install bundler`
+4. [Install Postgres](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md). If setting up Postgres.app, you will also need to add the binary to your path. e.g. Add to your `~/.bashrc`:
+`export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`
 
-1. Acquire a [MongoHQ](http://mongohq.com) database. Once acquired, it can be added to a `.env` file if using foreman locally (see `sample.env`). Or add it to your environment if pushing to heroku: `heroku add:config MONGOHQ=mongodb://<username>:<password>@url.mongohq.com:<port>/<database>`
-2. Run it locally using `foreman run node server.js` (you can also just run `node server.js` as long as you have your MongoHQ database added as a local `MONGOHQ` environment variable) or push it to Heroku.
-3. Run with the environment variable `WILLPING=TRUE` to make updates that run every 5 minutes (you may have to wait a bit for data to start appearing).
-4. You can add/remove endpoints in the `/lib/endpoints.json` file.
+### Application Setup
+
+1. Install ruby gem dependencies: `bundle install`
+2. Create the databases and load schema and seeds: `bin/rails db:setup`
+3. Run the tests: `bin/rspec`
+4. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)

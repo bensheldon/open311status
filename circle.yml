@@ -1,8 +1,6 @@
-test:
-  override:
-    - 'node_modules/.bin/mocha :' # noop
-deployment:
-  production:
-    branch: master
-    heroku:
-      appname: open311status
+dependencies:
+  post:
+    - bundle exec rake assets:precompile:
+        timeout: 500
+  cache_directories:
+    - "public/assets"
