@@ -60,9 +60,6 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bourbon (3.2.4)
-      sass (~> 3.2)
-      thor
     builder (3.2.3)
     byebug (10.0.2)
     capybara (3.4.1)
@@ -311,9 +308,9 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  autoprefixer-rails
   bootsnap (>= 1.1.0)
   bootstrap-sass
-  bourbon (~> 3.2.3)
   byebug
   capybara
   chartkick

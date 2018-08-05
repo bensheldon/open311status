@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'autoprefixer-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
-gem 'bourbon', '~> 3.2.3'
 gem 'chartkick'
 gem 'coffee-rails', '~> 4.2'
 gem 'draper'
