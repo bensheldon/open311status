@@ -44,4 +44,16 @@ RSpec.describe City::Api do
       end
     end
   end
+
+  describe '#services_url' do
+    it 'formats correct URL' do
+      expect(api.services_url).to eq 'https://secure.toronto.ca/webwizard/ws/services.xml?jurisdiction_id=toronto.ca'
+    end
+  end
+
+  describe '#requests_url' do
+    it 'formats correct URL' do
+      expect(api.requests_url).to eq 'https://secure.toronto.ca/webwizard/ws/requests.xml?jurisdiction_id=toronto.ca'
+    end
+  end
 end

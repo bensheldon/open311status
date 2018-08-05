@@ -6,16 +6,20 @@ tr
     - if city.service_list_status.present?
       - status = city.service_list_status
       .text-center
-        btn(class="btn btn-xs btn-#{ status.label_class }"
-          data={ toggle: 'tooltip' } title=status.description)= status.title
+        a(class="btn btn-xs btn-#{ status.label_class }"
+          href=city.api.services_url
+          data={ toggle: 'tooltip' }
+          title=status.description)= status.title
         br
         small #{time_ago_in_words status.created_at} ago
   td
     - if city.service_requests_status.present?
       - status = city.service_requests_status
       .text-center
-        btn(class="btn btn-xs btn-#{ status.label_class }"
-          data={ toggle: 'tooltip' } title=status.description)= status.title
+        a(class="btn btn-xs btn-#{ status.label_class }"
+          href=city.api.services_url
+          data={ toggle: 'tooltip' }
+          title=status.description)= status.title
         br
         small #{time_ago_in_words status.created_at} ago
   td

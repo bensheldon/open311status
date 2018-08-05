@@ -22,8 +22,8 @@ class StatusDecorator < Draper::Decorator
   def description
     {
       success: "Server responded in #{duration_ms} ms",
-      slow: "Server slow response #{duration_ms} ms",
-      error: "Server  responded with #{http_code} after #{duration_ms} ms"
+      slow: "Server slow response of #{duration_ms} ms",
+      error: error_description
     }[quality]
   end
 
@@ -33,5 +33,15 @@ class StatusDecorator < Draper::Decorator
       slow: 'warning',
       error: 'danger'
     }[quality]
+  end
+
+  private
+
+  def error_description
+    if status.http_code.present?
+      "Server responded with #{http_code} after #{duration_ms} ms"
+    else
+      "Error processing response after #{duration_ms} ms: '#{error_message}'"
+    end
   end
 end
