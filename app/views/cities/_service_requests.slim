@@ -16,5 +16,5 @@ table.table.table-bordered.table-striped
         td= service_request.raw_data['description']
         td
           - if service_request.raw_data['media_url'].present?
-            = image_tag service_request.raw_data['media_url'], class: 'img-responsive'
+            = image_tag force_https(service_request.raw_data['media_url']), class: 'img-responsive'
         td #{time_ago_in_words(service_request.requested_datetime)} ago
