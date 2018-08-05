@@ -1,6 +1,0 @@
-dependencies:
-  post:
-    - bundle exec rake assets:precompile:
-        timeout: 500
-  cache_directories:
-    - "public/assets"

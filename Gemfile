@@ -52,4 +52,5 @@ group :test do
   gem 'factory_bot_rails'
   gem 'launchy', require: false
   gem 'rails-controller-testing'
+  gem 'rspec_junit_formatter'
 end
