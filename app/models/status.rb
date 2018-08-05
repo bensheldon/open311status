@@ -2,12 +2,13 @@
 #
 # Table name: statuses
 #
-#  id           :integer          not null, primary key
-#  city_id      :integer
-#  request_name :string(255)
-#  duration_ms  :integer
-#  http_code    :integer
-#  created_at   :datetime
+#  id            :bigint(8)        not null, primary key
+#  city_id       :integer
+#  request_name  :string
+#  duration_ms   :integer
+#  http_code     :integer
+#  created_at    :datetime
+#  error_message :text
 #
 # Indexes
 #

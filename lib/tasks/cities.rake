@@ -12,7 +12,7 @@ namespace :cities do
     overrides = Array(args[:override]) + Array(args.extras)
 
     if overrides.size > 0
-      cities = overrides.map { |slug| City.find_by_slug slug }
+      cities = overrides.map { |slug| City.find_by! slug: slug }
     else
       cities = City.all
     end
@@ -28,12 +28,13 @@ namespace :cities do
     overrides = Array(args[:override]) + Array(args.extras)
 
     if overrides.size > 0
-      cities = overrides.map { |slug| City.find_by(slug: slug) }
+      cities = overrides.map { |slug| City.find_by!(slug: slug) }
     else
       cities = City.all
     end
 
     cities.each do |city|
+      puts city
       Raven.extra_context(city: city.slug)
 
       api = City::Api.new city

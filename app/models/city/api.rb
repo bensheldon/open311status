@@ -16,6 +16,22 @@ class City
       @open311 = ::Open311.new api_options
     end
 
+    def services_url
+      uri = URI.parse "#{city.endpoint}services.xml"
+      if city.jurisdiction.present?
+        uri.query = URI.encode_www_form jurisdiction_id: city.jurisdiction
+      end
+      uri.to_s
+    end
+
+    def requests_url
+      uri = URI.parse "#{city.endpoint}requests.xml"
+      if city.jurisdiction.present?
+        uri.query = URI.encode_www_form jurisdiction_id: city.jurisdiction
+      end
+      uri.to_s
+    end
+
     def fetch_service_list
       service_list_data = Status::Telemetry.process('service_list', city: city) do
         open311.service_list

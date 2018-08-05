@@ -13,5 +13,17 @@ RSpec.describe Status::Telemetry do
       expect(status.city).to eq city
       expect(status.http_code).to eq 400
     end
+
+    it 'stores other error messages on the status' do
+      result = described_class.process('service_list', city: city) do
+        raise StandardError, "Test error"
+      end
+
+      status = Status.last
+      expect(result).to be nil
+      expect(status.city).to eq city
+      expect(status.error_message).to eq "StandardError: Test error"
+      expect(status.http_code).to eq nil
+    end
   end
 end

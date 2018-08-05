@@ -24,8 +24,8 @@ class Status
         status.http_code = 200
       rescue Open311::Error => error
         status.http_code = open311_error_to_http_code(error)
-      rescue Timeout::Error, StandardError
-        status.http_code = 0
+      rescue Timeout::Error, StandardError => error
+        status.error_message = "#{error.class}: #{error}"
       end
 
       status.duration_ms = ((Time.now - start) * 1000).to_i
