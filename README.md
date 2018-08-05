@@ -11,7 +11,7 @@ Open311 Status monitors and aggregates the status of dozens of Open311 API endpo
 - **Comprehensiveness**: how fully the API is implemented/adopted; e.g. the number of service types that can be submitted through the API
 - **Utilization**: how much the 311 service being used; e.g. the number of service requests submitted
 
-## Development setup
+## Development
 
 ### Requirements
 1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
