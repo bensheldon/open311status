@@ -1,0 +1,45 @@
+---
+version: 2
+jobs:
+  build:
+    working_directory: ~/open311status
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          BUNDLE_JOBS: 4
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: localhost
+          PGUSER: open311status
+          RAILS_ENV: test
+      - image: postgres:10
+        environment:
+          POSTGRES_USER: open311status
+          POSTGRES_DB: open311status_test
+          POSTGRES_PASSWORD: ""
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
+            - open311status-bundle-v1-
+      - run: bundle check || bundle install --full-index
+      - save_cache:
+          key: open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      # Wait for DB
+      - run: dockerize -wait tcp://localhost:5432 -timeout 1m
+      # Setup the database
+      - run: bin/rails db:test:prepare
+      # Precompile Assets
+      - run: bin/rails assets:precompile
+      # Create place to store test results
+      - run: mkdir ~/rspec
+      # Run the tests
+      - run: bundle exec rspec --format documentation --format RspecJunitFormatter -o ~/rspec/rspec.xml
+      - store_test_results:
+          path: ~/rspec
+      - store_artifacts:
+          path: tmp/screenshots
+          destination: screenshots
