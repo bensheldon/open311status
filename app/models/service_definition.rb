@@ -16,7 +16,7 @@
 #
 
 class ServiceDefinition < ActiveRecord::Base
-  belongs_to :city
+  belongs_to :city, counter_cache: true
 
   def raw_data=(json)
     self[:service_code] = json['service_code']

@@ -1,6 +1,6 @@
 class CitiesController < ApplicationController
   def index
-    @cities = City.all.order(slug: :asc)
+    @cities = City.includes(:service_list_status, :service_requests_status).all.order(slug: :asc)
   end
 
   def show

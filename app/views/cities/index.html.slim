@@ -25,8 +25,7 @@
         th Max/Hour
         th Avg/Hour
     tbody
-      - @cities.each do |city|
-        = render 'city_row', city: CityDecorator.new(city)
+      = render partial: 'city_row', collection: CityDecorator.decorate_collection(@cities), as: :city
 
 h3 Recent Service Requests
 .panel.panel-default

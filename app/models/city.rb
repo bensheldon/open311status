@@ -2,10 +2,11 @@
 #
 # Table name: cities
 #
-#  id         :bigint(8)        not null, primary key
-#  slug       :string
-#  created_at :datetime
-#  updated_at :datetime
+#  id                        :bigint(8)        not null, primary key
+#  service_definitions_count :integer          default(0), not null
+#  slug                      :string
+#  created_at                :datetime
+#  updated_at                :datetime
 #
 # Indexes
 #
@@ -16,14 +17,15 @@ class City < ActiveRecord::Base
   class_attribute :configuration
 
   self.inheritance_column = :slug
+
   has_many :service_requests
   has_many :service_definitions
   has_many :statuses
   has_one :service_list_status,
-    -> { where(request_name: 'service_list').order("created_at DESC") },
+    -> { where(request_name: 'service_list').latest(1) },
     class_name: 'Status'
   has_one :service_requests_status,
-    -> { where(request_name: 'service_requests').order("created_at DESC") },
+    -> { where(request_name: 'service_requests').latest(1) },
     class_name: 'Status'
 
   validates :slug, uniqueness: true
