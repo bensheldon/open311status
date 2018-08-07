@@ -20,4 +20,14 @@ class Status < ActiveRecord::Base
   belongs_to :city
 
   validates :request_name, inclusion: { in: %w[service_list service_requests] }
+
+  scope :latest, ->(count = 1) {
+    rankings = <<~SQL
+      SELECT id, RANK() OVER(PARTITION BY city_id, request_name ORDER BY created_at DESC) rank
+      FROM statuses
+    SQL
+
+    joins("INNER JOIN (#{rankings}) rankings ON rankings.id = statuses.id")
+        .where("rankings.rank <= :count", count: count)
+  }
 end

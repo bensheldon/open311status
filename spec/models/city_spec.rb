@@ -32,4 +32,28 @@ RSpec.describe City, type: :model do
       end
     end
   end
+
+  describe '#service_list_status' do
+    it 'returns most recent status with type=service_list' do
+      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 1.day.ago
+      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 1.day.ago
+      latest_status = FactoryBot.create :status, city: city, request_name: 'service_list'
+      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 2.day.ago
+      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 2.day.ago
+
+      expect(city.service_list_status).to eq latest_status
+    end
+  end
+
+  describe '#service_requests_status' do
+    it 'returns most recent status with type=service_list' do
+      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 1.day.ago
+      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 1.day.ago
+      latest_status = FactoryBot.create :status, city: city, request_name: 'service_requests'
+      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 2.day.ago
+      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 2.day.ago
+
+      expect(city.service_requests_status).to eq latest_status
+    end
+  end
 end

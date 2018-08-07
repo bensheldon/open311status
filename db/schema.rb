@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_05_155604) do
+ActiveRecord::Schema.define(version: 2018_08_07_141658) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_08_05_155604) do
     t.string "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "service_definitions_count", default: 0, null: false
     t.index ["slug"], name: "index_cities_on_slug", unique: true
   end
 
