@@ -14,10 +14,14 @@
 #= require jquery_ujs
 #= require chartkick
 #= require bootstrap
+#= require jquery-tablesorter/jquery.tablesorter
 #= require_tree .
 
 $ ->
   $('[data-toggle="tooltip"]').tooltip()
+
+  $('.tablesorter').tablesorter
+    textAttribute: 'data-sort-value'
 
   $(".sparkline").each (index, element) ->
     data = $(element).attr('data-values').split(",");

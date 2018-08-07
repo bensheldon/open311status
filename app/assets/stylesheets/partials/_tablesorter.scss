@@ -1,0 +1,31 @@
+.tablesorter {
+  .tablesorter-header-inner {
+    position: relative;
+
+    &:after {
+      display: block;
+      font-family: FontAwesome;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .tablesorter-headerUnSorted .tablesorter-header-inner:after {
+    color: #999;
+    content: "\f0dc";
+  }
+
+  .tablesorter-headerAsc .tablesorter-header-inner:after {
+    content: "\f0de";
+  }
+
+  .tablesorter-headerDesc .tablesorter-header-inner:after {
+    content: "\f0dd";
+  }
+
+  // disable tablesorter on this column
+  .tablesorter-headerUnSorted[data-sorter="false"] .tablesorter-header-inner:after {
+    content: "";
+  }
+}
