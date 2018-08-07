@@ -2,8 +2,8 @@
 #
 # Table name: cities
 #
-#  id         :integer          not null, primary key
-#  slug       :string(255)
+#  id         :bigint(8)        not null, primary key
+#  slug       :string
 #  created_at :datetime
 #  updated_at :datetime
 #

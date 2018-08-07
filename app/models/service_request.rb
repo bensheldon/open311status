@@ -2,15 +2,15 @@
 #
 # Table name: service_requests
 #
-#  id                 :integer          not null, primary key
-#  service_request_id :string(255)
-#  status             :string(255)
-#  requested_datetime :datetime
-#  updated_datetime   :datetime
+#  id                 :bigint(8)        not null, primary key
 #  raw_data           :json
+#  requested_datetime :datetime
+#  status             :string
+#  updated_datetime   :datetime
 #  created_at         :datetime
 #  updated_at         :datetime
 #  city_id            :integer
+#  service_request_id :string
 #
 # Indexes
 #

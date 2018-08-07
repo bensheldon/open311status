@@ -2,12 +2,12 @@
 #
 # Table name: service_definitions
 #
-#  id           :integer          not null, primary key
-#  city_id      :integer
-#  service_code :string(255)
+#  id           :bigint(8)        not null, primary key
 #  raw_data     :json
+#  service_code :string
 #  created_at   :datetime
 #  updated_at   :datetime
+#  city_id      :integer
 #
 # Indexes
 #
