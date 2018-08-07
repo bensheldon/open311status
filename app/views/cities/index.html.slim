@@ -10,14 +10,14 @@
     = line_chart @cities.map { |city| { name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.now).count } }
 
 .panel.panel-default
-  table.table.table-bordered.table-striped
+  table.table.table-condensed.table-bordered.table-striped.table-responsive.tablesorter
     thead
       tr
         th Endpoint
         th Services
         th Requests
         th Request Types
-        th
+        th data-sorter='false'
           | Submitted requests
           span.label.label-info< 48 hours
         th Total
