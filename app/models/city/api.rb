@@ -13,6 +13,7 @@ class City
         endpoint: city.endpoint
       }
       api_options[:jurisdiction] = city.jurisdiction if city.jurisdiction
+      api_options[:headers] = city.headers if city.headers
       @open311 = ::Open311.new api_options
     end
 

@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/bensheldon/open311.git
+  revision: dbead4703063d070fa3615fc371d352e3a312ee2
+  branch: api_headers
+  specs:
+    open311 (0.3.1)
+      faraday (~> 0.7)
+      faraday_middleware (~> 0.7)
+      hashie (~> 3.3)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -173,12 +185,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    open311 (0.3.1)
-      faraday (~> 0.7)
-      faraday_middleware (~> 0.7)
-      hashie (~> 3.3)
-      multi_json (~> 1.0)
-      multi_xml (~> 0.4)
     pg (1.0.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -337,7 +343,7 @@ DEPENDENCIES
   launchy
   listen (>= 3.0.5, < 3.2)
   lograge
-  open311
+  open311!
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.11)
