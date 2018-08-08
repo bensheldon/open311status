@@ -1,2 +1,2 @@
-release: bin/rails db:load_schema_or_migrate cities:load
+release: bin/rails heroku:release 
 web: bin/rails server
