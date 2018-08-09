@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :service_definition do
-    city nil
+    city
     service_code "MyString"
   end
 end
