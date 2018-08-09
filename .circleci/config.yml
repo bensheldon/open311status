@@ -28,6 +28,15 @@ jobs:
           key: open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - restore_cache:
+          keys:
+            - open311status-yarn-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+            - open311status-yarn-v1-
+      - run: yarn install
+      - save_cache:
+          key: open311status-yarn-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
       # Wait for DB
       - run: dockerize -wait tcp://localhost:5432 -timeout 1m
       # Setup the database
