@@ -33,6 +33,14 @@
     }
   },
   "stack": "heroku-16",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "addons": [
     {
       "plan": "heroku-postgresql",
