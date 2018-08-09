@@ -19,8 +19,6 @@
 class Status < ActiveRecord::Base
   belongs_to :city
 
-  validates :request_name, inclusion: { in: %w[service_list service_requests] }
-
   scope :latest, ->(count = 1) {
     rankings = <<~SQL
       SELECT id, RANK() OVER(PARTITION BY city_id, request_name ORDER BY created_at DESC) rank
@@ -30,4 +28,10 @@ class Status < ActiveRecord::Base
     joins("INNER JOIN (#{rankings}) rankings ON rankings.id = statuses.id")
         .where("rankings.rank <= :count", count: count)
   }
+  scope :service_list, -> { where(request_name: 'service_list') }
+  scope :service_requests, -> { where(request_name: 'service_requests') }
+  scope :errored, -> { where('http_code >= ?', 400) }
+  scope :time_periods, -> { select("*", "date_trunc('hour', created_at) + INTERVAL '10 min' * FLOOR(date_part('minute', created_at) / 10.0) AS time_period") }
+
+  validates :request_name, inclusion: { in: %w[service_list service_requests] }
 end

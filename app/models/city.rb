@@ -21,12 +21,11 @@ class City < ActiveRecord::Base
   has_many :service_requests
   has_many :service_definitions
   has_many :statuses
-  has_one :service_list_status,
-    -> { where(request_name: 'service_list').latest(1) },
-    class_name: 'Status'
-  has_one :service_requests_status,
-    -> { where(request_name: 'service_requests').latest(1) },
-    class_name: 'Status'
+
+  has_one :service_list_status, -> { service_list.latest(1) }, class_name: 'Status'
+  has_one :service_requests_status, -> { service_requests.latest(1) }, class_name: 'Status'
+  has_many :service_list_statuses, -> { service_list }, class_name: 'Status'
+  has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status'
 
   validates :slug, uniqueness: true
 
@@ -74,5 +73,24 @@ class City < ActiveRecord::Base
 
   def api
     @api ||= City::Api.new(self)
+  end
+
+  def uptime_percent(status_type, start: 2.days.ago)
+    start_floor = start.change(min: 10 * (Time.now().min.to_f / 10).floor)
+
+    query = if status_type == 'service_list'
+              service_list_statuses
+            else
+              service_requests_statuses
+            end
+
+    statuses = query.time_periods
+                    .errored
+                    .where('created_at >= ?', start_floor)
+                    .order("time_period ASC")
+
+    downtime_periods = statuses.group_by { |status| status.time_period }.keys.size
+
+    100 - (downtime_periods.to_f / ((Time.current - start_floor) / 10.minutes)) * 100
   end
 end
