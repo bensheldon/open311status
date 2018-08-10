@@ -56,4 +56,24 @@ RSpec.describe City, type: :model do
       expect(city.service_requests_status).to eq latest_status
     end
   end
+
+  describe '#uptime_percent' do
+    context 'service_list' do
+      it 'calculates uptime' do
+        FactoryBot.create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 37.minutes.ago
+        FactoryBot.create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 27.minutes.ago
+
+        expect(city.uptime_percent('service_list')).to be_within(0.1).of(99.30)
+      end
+    end
+
+    context 'service_requests' do
+      it 'calculates uptime' do
+        FactoryBot.create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 37.minutes.ago
+        FactoryBot.create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 27.minutes.ago
+
+        expect(city.uptime_percent('service_requests')).to be_within(0.1).of(99.30)
+      end
+    end
+  end
 end

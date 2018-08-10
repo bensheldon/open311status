@@ -11,7 +11,10 @@ tr
           data={ toggle: 'tooltip' }
           title=status.description)= status.title
         br
-        small #{time_ago_in_words status.created_at} ago
+        small
+          | #{time_ago_in_words status.created_at} ago
+          br
+          | #{city.uptime_percent('service_list').round(2)} uptime
 
   - status = city.service_requests_status
   - if city.service_requests_status.present?
@@ -22,7 +25,11 @@ tr
           data={ toggle: 'tooltip' }
           title=status.description)= status.title
         br
-        small #{time_ago_in_words status.created_at} ago
+        small
+          | #{time_ago_in_words status.created_at} ago
+          br
+          | #{city.uptime_percent('service_requests').round(2)} uptime
+
   - else
     td
   td
