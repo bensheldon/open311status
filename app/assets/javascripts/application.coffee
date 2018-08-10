@@ -12,6 +12,8 @@
 #
 #= require jquery
 #= require jquery_ujs
+#= requite moment
+#= require Chart.bundle
 #= require chartkick
 #= require bootstrap
 #= require jquery-tablesorter/jquery.tablesorter
