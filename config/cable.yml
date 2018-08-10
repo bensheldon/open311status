@@ -1,0 +1,11 @@
+defaults: &defaults
+  adapter: postgresql
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

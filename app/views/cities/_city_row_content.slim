@@ -1,0 +1,48 @@
+td
+  strong
+    = link_to city.name, city_path(city)
+
+- status = city.service_list_status
+- if city.service_list_status.present?
+  td data-sort-value="#{status.http_code}-#{status.duration_ms}-#{status.error_message}"
+    .text-center
+      a(class="btn btn-xs btn-#{ status.label_class }"
+        href=city.api.services_url
+        data={ toggle: 'tooltip' }
+        title=status.description)= status.title
+      br
+      small
+        | #{time_ago_in_words status.created_at} ago
+        br
+        | #{city.uptime_percent('service_list').round(2)} uptime
+- else
+  td
+
+- status = city.service_requests_status
+- if city.service_requests_status.present?
+  td data-sort-value="#{status.http_code}-#{status.duration_ms}-#{status.error_message}"
+    .text-center
+      a(class="btn btn-xs btn-#{ status.label_class }"
+        href=city.api.requests_url
+        data={ toggle: 'tooltip' }
+        title=status.description)= status.title
+      br
+      small
+        | #{time_ago_in_words status.created_at} ago
+        br
+        | #{city.uptime_percent('service_requests').round(2)} uptime
+- else
+  td
+
+td
+  | #{city.service_definitions_count} types
+td
+  span.sparkline data-values=city.bucketed_service_requests.values.join(',')
+td
+  = city.total_service_requests
+td
+  = city.min_service_requests
+td
+  = city.max_service_requests
+td
+  = city.avg_service_requests

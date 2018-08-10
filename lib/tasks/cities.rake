@@ -34,13 +34,7 @@ namespace :cities do
     end
 
     cities.each do |city|
-      puts city
-      Raven.extra_context(city: city.slug)
-
-      api = City::Api.new city
-      Rails.logger.info "Collecting service definitions list from #{ city.name }"
-      new_service_list = api.fetch_service_list
-      Rails.logger.info "#{ city.name } has #{ new_service_list.size } service definitions"
+      FetchServiceListJob.perform_now(city)
     end
   end
 
