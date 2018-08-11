@@ -53,6 +53,8 @@ raleigh:
   endpoint: "http://seeclickfix.com/raleigh/open311/"
 richmond:
   endpoint: "http://seeclickfix.com/richmond/open311/"
+rostock:
+  endpoint: "https://support.klarschiff-hro.de/citysdk/"
 roosevelt island:
   endpoint: "http://seeclickfix.com/roosevelt-island/open311/"
 russell springs:
