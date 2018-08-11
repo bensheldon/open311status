@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe City::Api do
-  let(:city) { Cities::Toronto.instance }
+  let(:city) { City.instance('toronto')}
   subject(:api) { described_class.new city }
 
   describe '#fetch_service_list' do

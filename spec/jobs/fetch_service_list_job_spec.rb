@@ -1,5 +1,5 @@
 RSpec.describe FetchServiceListJob do
-  let(:city) { Cities::Chicago.instance }
+  let(:city) { City.instance('chicago') }
 
   describe '#perform' do
     it 'fetches service list' do
