@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Status::Telemetry do
-  let(:city) { Cities::SanFrancisco.instance }
+  let(:city) { City.instance('san_francisco') }
+
   describe '.process' do
     it 'coerces open311 exceptions to status' do
       result = described_class.process('service_list', city: city) do

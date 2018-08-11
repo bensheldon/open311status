@@ -16,6 +16,8 @@ module Open311status
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.cities = YAML.load_file Rails.root.join('config', 'cities.yml')
+
     config.paths.add 'app/decorators/collections', eager_load: true
   end
 end

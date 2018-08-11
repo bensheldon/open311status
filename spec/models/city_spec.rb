@@ -7,11 +7,26 @@ RSpec.describe City, type: :model do
     expect(city).to be_valid
   end
 
-  describe '.configuration' do
-    let(:city) { Cities::Test.new }
+  describe 'cities.yml' do
+    it 'is mounted at Rails.application.config.cities' do
+      expect(Rails.configuration.cities).to be_a Hash
+      expect(Rails.configuration.cities.keys.size).to be > 2
+    end
+  end
+
+  describe '.load!' do
+    it 'creates city records in the database' do
+      allow(Rails.configuration).to receive(:cities).and_return({ test: { }})
+
+      expect { described_class.load! }.to change(City, :count).from(0).to(1)
+    end
+  end
+
+  describe '#configuration' do
+    let(:city) { City.instance('san_francisco') }
 
     it 'stores properties on the class' do
-      expect(city.configuration.name).to eq('Test City')
+      expect(city.configuration.name).to eq('San Francisco, CA')
     end
 
     describe 'defines configuration accessors' do

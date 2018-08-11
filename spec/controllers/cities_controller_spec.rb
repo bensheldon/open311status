@@ -4,7 +4,7 @@ RSpec.describe CitiesController, type: :controller do
   render_views
 
   describe "GET index" do
-    let!(:city) { FactoryBot.create :city }
+    let!(:city) { City.instance(:chicago) }
 
     it "assigns all cities as @cities" do
       get :index
@@ -13,7 +13,7 @@ RSpec.describe CitiesController, type: :controller do
   end
 
   describe "GET show" do
-    let!(:city) { FactoryBot.create :city }
+    let!(:city) { City.instance(:chicago) }
 
     it "assigns the requested city as @city" do
       get :show, params: { slug: city.to_param }

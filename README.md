@@ -13,7 +13,26 @@ Open311 Status monitors and aggregates the status of dozens of Open311 API endpo
 
 ## Development
 
-### Requirements
+### Adding new API endpoints
+
+To add a new Open311 endpoint, add their API configuration to the [`config/cities.yml`](config/cities.yml) file. This should include:
+- `slug`: a unique key for the API endpoint.
+    - `name`: the human readable name of the city or location.
+    - `endpoint`: the complete URL of the Open311 api endpoint, ending in a `/`, _without_ `services.xml` or `requests.xml`.
+    - `jurisdiction` (optional): the `?jurisdiction_id=` parameter, if required.
+    - `format` (optional): `xml` or `json`; defaults to `xml`/
+    - `headers` (optional): custom API headers necessary for the API.
+
+Example:
+
+```yml
+bruhl:
+  name: 'Brühl, Deutschland'
+  endpoint: 'https://www.achtet-auf-bruehl.de/georeport/v2/'
+  jurisdiction: 'bruehl.de'
+```
+
+### Application Dependencies
 1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
 2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.5.1`
 3. Install [bundler](https://bundler.io/) (the latest Heroku-compatible version): `gem install bundler`
