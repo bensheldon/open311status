@@ -17,8 +17,8 @@ bloomington:
   jurisdiction: 'bloomington.in.gov'
 bonn:
   name: 'Bonn, Deutschland'
-  endpoint: 'http://anliegen.bonn.de/georeport/v2/'
-  jurisdiction: 'ville.quebec.qc.ca'
+  endpoint: 'https://anliegen.bonn.de/georeport/v2'
+  format: 'json'
 boston:
   name: 'Boston, MA'
   endpoint: "https://mayors24.cityofboston.gov/open311/v2/"
@@ -45,7 +45,7 @@ dc:
 giessen:
   name: 'Gießen, Deutschland'
   endpoint: 'https://maengelmelder.giessen.de/georeport/v2/'
-grand rapids:
+grand_rapids:
   name: 'Grand Rapids, MI'
   endpoint: "http://grcity.spotreporters.com/open311/v2/"
   jurisdiction: 'grcity.us'
@@ -72,6 +72,7 @@ peoria:
 rostok:
   name: 'Rostock, Deutschland'
   endpoint: 'https://geo.sv.rostock.de/citysdk/'
+  format: 'json'
   jurisdiction: 'rostock.de'
 san_francisco:
   name: 'San Francisco, CA'
@@ -83,8 +84,9 @@ siegburg:
   jurisdiction: 'siegburg.de'
 surrey:
   name: 'Surrey, BC'
-  endpoint: 'http://cosmos.surrey.ca/api/open311/'
+  endpoint: 'https://cosmos.surrey.ca/api/open311/'
   jurisdiction: 'surrey.ca'
+  format: 'json'
 toronto:
   name: 'Toronto, ON'
   endpoint: "https://secure.toronto.ca/webwizard/ws/"

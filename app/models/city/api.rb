@@ -14,6 +14,7 @@ class City
       }
       api_options[:jurisdiction] = city.jurisdiction if city.jurisdiction
       api_options[:headers] = city.headers if city.headers
+      api_options[:format] = city.format if city.format
       @open311 = ::Open311.new api_options
     end
 

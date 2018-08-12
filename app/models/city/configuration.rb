@@ -1,12 +1,23 @@
 class City
   class Configuration
-    attr_accessor :name,
-      :endpoint,
-      :jurisdiction,
-      :headers
+    include ActiveModel::Model
 
-    def initialize
-      # defaults go here
+    ATTRIBUTES = [
+        :name,
+        :endpoint,
+        :jurisdiction,
+        :format,
+        :headers,
+    ]
+
+    attr_accessor *ATTRIBUTES
+
+    def format
+      (@format || :xml).to_sym
+    end
+
+    def headers
+      (@headers || {}).symbolize_keys
     end
   end
 end
