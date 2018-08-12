@@ -1,0 +1,14 @@
+- service_request = @service_request
+- provide(:canonical_url) { polymorphic_url(service_request) }
+h2.h4
+  => service_request.city.name
+  - label_class = service_request.status == 'open' ? 'label-warning' : 'label-success'
+  span.label(class=label_class)= service_request.status.presence&.capitalize
+  small<= time_ago_in_words(service_request.requested_datetime).capitalize
+
+h1(style='margin-top: 0')= service_request.raw_data['service_name']
+
+p= service_request.raw_data['description']
+td
+  - if service_request.raw_data['media_url'].present?
+    = image_tag force_https(service_request.raw_data['media_url']), class: 'img-responsive'

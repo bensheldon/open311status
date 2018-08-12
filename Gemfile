@@ -3,6 +3,7 @@ ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'autoprefixer-rails'
+gem 'babosa'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
 gem 'chart-js-rails'

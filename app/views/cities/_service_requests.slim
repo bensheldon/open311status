@@ -17,4 +17,4 @@ table.table.table-condensed.table-bordered.table-striped.table-responsive
         td
           - if service_request.raw_data['media_url'].present?
             = image_tag force_https(service_request.raw_data['media_url']), class: 'img-responsive'
-        td #{time_ago_in_words(service_request.requested_datetime)} ago
+        td= link_to "#{time_ago_in_words(service_request.requested_datetime)} ago", service_request
