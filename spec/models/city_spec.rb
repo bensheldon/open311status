@@ -8,9 +8,17 @@ RSpec.describe City, type: :model do
   end
 
   describe 'cities.yml' do
+    let(:configuration) { Rails.configuration.cities }
+
     it 'is mounted at Rails.application.config.cities' do
-      expect(Rails.configuration.cities).to be_a Hash
-      expect(Rails.configuration.cities.keys.size).to be > 2
+      expect(configuration).to be_a Hash
+      expect(configuration.size).to be > 2
+    end
+
+    it 'has keys with only letters and underscores' do
+      configuration.keys.each do |key|
+        expect(key).to match(/\A[a-z_]*\z/)
+      end
     end
   end
 

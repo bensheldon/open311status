@@ -14,14 +14,7 @@
 #
 
 class City < ActiveRecord::Base
-  CONFIGURATION_PARAMS = [
-      :name,
-      :endpoint,
-      :jurisdiction,
-      :format,
-      :headers,
-  ]
-  delegate *CONFIGURATION_PARAMS, to: :configuration, allow_nil: true
+  delegate *Configuration::ATTRIBUTES, to: :configuration, allow_nil: true
 
   has_many :service_requests
   has_many :service_definitions
@@ -57,7 +50,7 @@ class City < ActiveRecord::Base
   end
 
   def configuration
-    @configuration ||= OpenStruct.new(Rails.configuration.cities[slug])
+    @configuration ||= City::Configuration.new(Rails.configuration.cities[slug])
   end
 
   def uptime_percent(status_type, start: 2.days.ago)
