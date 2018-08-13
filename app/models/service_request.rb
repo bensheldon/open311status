@@ -39,7 +39,8 @@ class ServiceRequest < ActiveRecord::Base
   end
 
   def slug
-    slug = raw_data.fetch('description', '').gsub(/(-|_)/, ' ').squish.encode.to_slug.normalize.to_s.downcase
+    description = raw_data['description'].presence || ''
+    slug = description.gsub(/(-|_)/, ' ').squish.encode.to_slug.normalize.to_s.downcase
     slug = slug[0, SLUG_SIZE].gsub(/-$/, '') if slug.size > SLUG_SIZE
     slug
   end

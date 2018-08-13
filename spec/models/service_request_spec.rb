@@ -25,4 +25,20 @@ RSpec.describe ServiceRequest, type: :model do
       expect(sr.updated_datetime).to eq DateTime.iso8601 json['updated_datetime']
     end
   end
+
+  describe '#slug' do
+    let(:service_request) { FactoryBot.create :service_request }
+
+    it 'sluggifies the description' do
+      service_request.raw_data['description'] = 'Something happened.'
+      expect(service_request.slug).to eq 'something-happened'
+    end
+
+    context 'when description is nil' do
+      specify do
+        service_request.raw_data['description'] = nil
+        expect(service_request.slug).to eq ''
+      end
+    end
+  end
 end
