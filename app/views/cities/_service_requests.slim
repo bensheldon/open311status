@@ -8,14 +8,14 @@ table.table.table-condensed.table-bordered.table-striped.table-responsive
       th Media
       th Requested At
   tbody
-    - service_requests.each do |service_request|
+    - ServiceRequestDecorator.decorate_collection(service_requests).each do |service_request|
       tr
         td= service_request.city.name
         td= service_request.status
         td= service_request.raw_data['service_name']
         td= service_request.raw_data['description']
         td
-          - if service_request.raw_data['media_url'].present?
-            = link_to(service_request.raw_data['media_url']) do
-              = image_tag force_https(service_request.raw_data['media_url']), class: 'img-responsive'
+          - if service_request.media_url.present?
+            = link_to(service_request.media_url) do
+              = image_tag service_request.media_url, class: 'img-responsive'
         td= link_to "#{time_ago_in_words(service_request.requested_datetime)} ago", service_request

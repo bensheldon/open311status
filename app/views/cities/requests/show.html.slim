@@ -1,4 +1,4 @@
-- service_request = @service_request
+- service_request = ServiceRequestDecorator.decorate @service_request
 - provide(:canonical_url) { polymorphic_url(service_request) }
 h2.h4
   => service_request.city.name
@@ -10,5 +10,5 @@ h1(style='margin-top: 0')= service_request.raw_data['service_name']
 
 p= service_request.raw_data['description']
 td
-  - if service_request.raw_data['media_url'].present?
-    = image_tag force_https(service_request.raw_data['media_url']), class: 'img-responsive'
+  - if service_request.media_url.present?
+    = image_tag service_request.media_url, class: 'img-responsive'
