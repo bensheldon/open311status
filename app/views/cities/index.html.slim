@@ -30,3 +30,5 @@
 h3 Recent Service Requests
 .panel.panel-default
   = render 'service_requests', service_requests: ServiceRequest.includes(:city).order(requested_datetime: :desc).limit(100)
+.text-center
+  = link_to "View all Service Requests", requests_path, class: 'btn btn-default'

@@ -13,7 +13,6 @@ namespace :heroku do
   desc 'Heroku postdeploy tasks (runs only on review app creation, after release task)'
   task postdeploy: :environment do
     Rake::Task['db:schema:load'].invoke
-    Rake::Task['cities:load'].invoke
     Rake::Task['db:seed'].invoke
   end
 end
