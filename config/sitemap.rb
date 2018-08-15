@@ -6,7 +6,7 @@ SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.public_path = 'tmp/'
 
 if Rails.env.production?
-  require 'aws-sdk'
+  require 'aws-sdk-s3'
 
   SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
       Rails.application.secrets.s3_bucket_name,
