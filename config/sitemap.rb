@@ -23,7 +23,7 @@ SitemapGenerator::Sitemap.create do
     add city_path(city), changefreq: 'daily'
   end
 
-  ServiceRequest.find_each do |service_request|
+  ServiceRequest.includes(:city).find_each do |service_request|
     add polymorphic_url(service_request, default_url_options), lastmod: service_request.updated_at, changefreq: 'weekly'
   end
 end
