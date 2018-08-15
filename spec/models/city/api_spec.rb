@@ -43,6 +43,22 @@ RSpec.describe City::Api do
         }.to change { ServiceRequest.count }.from(0).to(2)
       end
     end
+
+    context 'service request without service_request_id' do
+      specify 'it skips them' do
+        require 'hashie'
+
+        service_request = Hashie::Mash.new({
+                                               service_request_id: nil
+                                           })
+
+        open311_double = double(Open311, service_requests: [service_request])
+        allow(api).to receive(:open311).and_return(open311_double)
+
+        result = api.fetch_service_requests
+        expect(result).to eq []
+      end
+    end
   end
 
   describe '#services_url' do

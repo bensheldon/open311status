@@ -74,7 +74,7 @@ class City
 
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id
-        return nil unless request_data['service_request_id']
+        next if request_data['service_request_id'].blank?
 
         city.service_requests.find_or_initialize_by(service_request_id: request_data['service_request_id']).tap do |service_request|
           service_request.raw_data = request_data
@@ -84,7 +84,7 @@ class City
             service_request.touch
           end
         end
-      end
+      end.compact
     end
   end
 end
