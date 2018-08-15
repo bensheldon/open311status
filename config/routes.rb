@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'cities#index'
+
   resources :cities, only: [:index, :show], param: :slug do
     scope module: :cities do
       resources :requests, only: [:show], param: :service_request_id do
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :requests, only: [:index]
 
   get '/sitemap.xml.gz', to: redirect("https://#{Rails.application.secrets.s3_bucket_name}.s3.amazonaws.com/sitemaps/sitemap.xml.gz")
 

@@ -206,6 +206,7 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
+    pagy (0.16.0)
     pg (1.0.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -377,6 +378,7 @@ DEPENDENCIES
   lograge
   momentjs-rails
   open311!
+  pagy
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.11)
