@@ -1,3 +1,6 @@
+ruby:
+  provide(:meta_title) { "Open311 Status - All Service Requests" }
+
 = render 'cities/service_requests', service_requests: @service_requests
 
 = pagy_nav_bootstrap(@pagy).html_safe

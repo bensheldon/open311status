@@ -1,5 +1,10 @@
-- service_request = ServiceRequestDecorator.decorate @service_request
-- provide(:canonical_url) { polymorphic_url(service_request) }
+ruby:
+  service_request = ServiceRequestDecorator.decorate @service_request
+
+  provide(:meta_title) { "#{service_request.raw_data.fetch('service_name', 'Service Request')} - #{service_request.city.name} - ##{service_request.raw_data['service_request_id']}" }
+  provide(:meta_description) { service_request.raw_data['description'].presence || "311 service request in #{service_request.city.name}." }
+  provide(:canonical_url) { polymorphic_url(service_request) }
+
 h2.h4
   => service_request.city.name
   - label_class = service_request.status == 'open' ? 'label-warning' : 'label-success'

@@ -16,6 +16,6 @@ table.table.table-condensed.table-bordered.table-striped.table-responsive
         td= service_request.raw_data['description']
         td
           - if service_request.media_url.present?
-            = link_to(service_request.media_url) do
+            = link_to(service_request.media_url, rel: 'noopener nofollow') do
               = image_tag service_request.media_url, class: 'img-responsive'
         td= link_to "#{time_ago_in_words(service_request.requested_datetime)} ago", service_request

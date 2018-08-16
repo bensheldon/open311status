@@ -1,9 +1,9 @@
 doctype html
-html
+html lang='en'
   head
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title= content_for?(:title) ? yield(:title) : 'Open311 Status'
-    meta name="description" content=("#{content_for?(:description) ? yield(:description) : 'Open311status'}")
+    title= content_for?(:meta_title) ? yield(:meta_title) : 'Open311 Status'
+    meta name="description" content=(content_for?(:meta_description) ? yield(:meta_description) : "Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.")
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_pack_tag 'application'
