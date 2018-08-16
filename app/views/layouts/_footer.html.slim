@@ -6,10 +6,16 @@
       ul
         li
           | Learn more about the <strong>Open311 API</strong> at
-          =< link_to "#{ fa_icon 'bullhorn' } Open311.org".html_safe, 'http://www.open311.org/'
+          =< link_to 'http://www.open311.org/', rel: "noopener" do
+            => fa_icon 'bullhorn'
+            | Open311.org
         li
           | Help us <strong>improve the code</strong> at
-          =< link_to "#{ fa_icon 'github-alt' } Github".html_safe, 'https://github.com/codeforamerica/open311status'
+          =< link_to 'https://github.com/codeforamerica/open311status', rel: "noopener" do
+            => fa_icon 'github-alt'
+            | Github
         li
           | Send us an <strong>email</strong> at
-          =< link_to "#{ fa_icon 'paper-plane'} bensheldon@gmail.com".html_safe, 'mailto:bensheldon@gmail.com'
+          =< link_to 'mailto:bensheldon@gmail.com' do
+            => fa_icon 'paper-plane'
+            | bensheldon@gmail.com

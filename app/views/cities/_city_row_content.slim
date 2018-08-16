@@ -8,6 +8,7 @@ td
     .text-center
       a(class="btn btn-xs btn-#{ status.label_class }"
         href=city.api.services_url
+        rel='noopener nofollow'
         data={ toggle: 'tooltip' }
         title=status.description)= status.title
       br
@@ -24,6 +25,7 @@ td
     .text-center
       a(class="btn btn-xs btn-#{ status.label_class }"
         href=city.api.requests_url
+        rel='noopener nofollow'
         data={ toggle: 'tooltip' }
         title=status.description)= status.title
       br
