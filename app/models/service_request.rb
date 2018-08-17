@@ -24,6 +24,10 @@ class ServiceRequest < ActiveRecord::Base
 
   belongs_to :city
 
+  def parameterize
+    { city_slug: city.slug, service_request_id: service_request_id, slug: slug }
+  end
+
   def raw_data=(json)
     super.tap do
       self[:service_request_id] = json['service_request_id']
