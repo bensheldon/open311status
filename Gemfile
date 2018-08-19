@@ -12,6 +12,7 @@ gem 'chartkick'
 gem 'coffee-rails', '~> 4.2'
 gem 'draper'
 gem 'factory_bot_rails'
+gem 'faker'
 gem 'font-awesome-rails'
 gem 'font_assets'
 gem 'groupdate'
@@ -42,7 +43,6 @@ end
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'faker'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
