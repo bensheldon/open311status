@@ -34,6 +34,12 @@ bruhl:
   jurisdiction: 'bruehl.de'
 ```
 
+### Loading real data
+
+By default, running `db:setup` will load cities and generate fake service
+requests. To load cities, run `rake cities:load`. And to load service requests,
+`rake cities:service_requests`
+
 ### Application Dependencies
 1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
 2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.5.1`
@@ -48,8 +54,6 @@ bruhl:
 2. Create the databases and load schema and seeds: `bin/rails db:setup`
 3. Run the tests: `bin/rspec`
 4. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
-5. Load cities: `rake cities:load`
-6. Load service requests: `rake cities:service_requests`
 
 #### Migration guide
 
