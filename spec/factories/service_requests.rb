@@ -12,7 +12,6 @@ FactoryBot.define do
       requested_datetime { 10.minutes.ago }
       lat { Faker::Address.latitude }
       long { Faker::Address.longitude }
-      geometry { "POINT(#{long} #{lat})"}
     end
 
     raw_data do
