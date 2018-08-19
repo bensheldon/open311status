@@ -1,5 +1,5 @@
 defaults: &defaults
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   pool: 20
   username: <%= ENV['POSTGRES_USERNAME'] || ENV['USER'] %>

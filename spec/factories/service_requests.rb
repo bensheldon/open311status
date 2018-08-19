@@ -10,6 +10,9 @@ FactoryBot.define do
       service_name { Faker::Commerce.department(2, true) }
       description { Faker::Lorem.paragraph(1, false, 5) }
       requested_datetime { 10.minutes.ago }
+      lat { Faker::Address.latitude }
+      long { Faker::Address.longitude }
+      geometry { "POINT(#{long} #{lat})"}
     end
 
     raw_data do
@@ -19,6 +22,7 @@ FactoryBot.define do
         'description' => description,
         'status' => status,
         'requested_datetime' => requested_datetime.iso8601,
+        'geometry' => geometry,
       }
     end
   end

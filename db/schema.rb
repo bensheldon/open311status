@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_141658) do
+ActiveRecord::Schema.define(version: 2018_08_19_143420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "postgis"
 
   create_table "cities", force: :cascade do |t|
     t.string "slug"
@@ -42,8 +43,10 @@ ActiveRecord::Schema.define(version: 2018_08_07_141658) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "city_id"
+    t.geography "geometry", limit: {:srid=>4326, :type=>"geometry", :geographic=>true}
     t.index ["city_id", "service_request_id"], name: "index_service_requests_on_city_id_and_service_request_id", unique: true
     t.index ["city_id"], name: "index_service_requests_on_city_id"
+    t.index ["geometry"], name: "index_service_requests_on_geometry", using: :gist
     t.index ["status"], name: "index_service_requests_on_status"
   end
 
