@@ -3,7 +3,7 @@ Open311 Status
 
 **Website**: http://status.open311.org
 
-**Project Backlog**: https://github.com/codeforamerica/open311status/projects/1 
+**Project Backlog**: https://github.com/codeforamerica/open311status/projects/1
 
 Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights into:
 
@@ -44,6 +44,7 @@ bruhl:
 ### Application Setup
 
 1. Install ruby gem dependencies: `bundle install`
-2. Create the databases and load schema and seeds: `bin/rails db:setup`
-3. Run the tests: `bin/rspec`
-4. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
+2. Install node dependencies: `yarn install`
+3. Create the databases and load schema and seeds: `bin/rails db:setup`
+4. Run the tests: `bin/rspec`
+5. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
