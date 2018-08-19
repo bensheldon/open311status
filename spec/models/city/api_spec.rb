@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe City::Api do
-  let(:city) { City.instance('toronto')}
+  let(:city) { City.instance('dc')}
   subject(:api) { described_class.new city }
 
   describe '#fetch_service_list' do
     before do
-      stub_request(:get, 'https://secure.toronto.ca/webwizard/ws/services.xml?jurisdiction_id=toronto.ca')
+      stub_request(:get, "http://app.311.dc.gov/CWI/Open311/v2/services.xml?jurisdiction_id=dc.gov")
           .to_return(status: 200, body: file_fixture("services_giessen.xml").read, headers: {})
     end
 
@@ -20,8 +20,8 @@ RSpec.describe City::Api do
   describe '#fetch_service_requests' do
     context 'single service request' do
       before do
-        stub_request(:get, %r{https://secure\.toronto\.ca/webwizard/ws/requests\.xml\?jurisdiction_id=toronto\.ca&start_date=.*})
-            .to_return(status: 200, body: file_fixture("requests_toronto_single.xml").read, headers: {})
+        stub_request(:get, %r{http://app\.311\.dc\.gov/CWI/Open311/v2/requests\.xml\?jurisdiction_id=dc\.gov&start_date=.*})
+            .to_return(status: 200, body: file_fixture("requests_single.xml").read, headers: {})
       end
 
       specify do
@@ -33,8 +33,8 @@ RSpec.describe City::Api do
 
     context 'multiple service requests' do
       before do
-        stub_request(:get, %r{https://secure\.toronto\.ca/webwizard/ws/requests\.xml\?jurisdiction_id=toronto\.ca&start_date=.*})
-            .to_return(status: 200, body: file_fixture("requests_toronto_multi.xml").read, headers: {})
+        stub_request(:get, %r{http://app\.311\.dc\.gov/CWI/Open311/v2/requests\.xml\?jurisdiction_id=dc\.gov&start_date=.*})
+            .to_return(status: 200, body: file_fixture("requests_many.xml").read, headers: {})
       end
 
       specify do
@@ -63,13 +63,13 @@ RSpec.describe City::Api do
 
   describe '#services_url' do
     it 'formats correct URL' do
-      expect(api.services_url).to eq 'https://secure.toronto.ca/webwizard/ws/services.xml?jurisdiction_id=toronto.ca'
+      expect(api.services_url).to eq "http://app.311.dc.gov/CWI/Open311/v2/services.xml?jurisdiction_id=dc.gov"
     end
   end
 
   describe '#requests_url' do
     it 'formats correct URL' do
-      expect(api.requests_url).to eq 'https://secure.toronto.ca/webwizard/ws/requests.xml?jurisdiction_id=toronto.ca'
+      expect(api.requests_url).to eq "http://app.311.dc.gov/CWI/Open311/v2/requests.xml?jurisdiction_id=dc.gov"
     end
   end
 end
