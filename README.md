@@ -51,7 +51,6 @@ requests. To load cities, run `rake cities:load`. And to load service requests,
 ### Application Setup
 
 1. Install ruby gem dependencies: `bundle install`
-<<<<<<< HEAD
 2. Create the databases and load schema and seeds: `bin/rails db:setup`
 3. Run the tests: `bin/rspec`
 4. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
@@ -59,9 +58,3 @@ requests. To load cities, run `rake cities:load`. And to load service requests,
 #### Migration guide
 
 You may need to run `rake db:gis:setup` to enable PostGIS on your database.
-=======
-2. Install node dependencies: `yarn install`
-3. Create the databases and load schema and seeds: `bin/rails db:setup`
-4. Run the tests: `bin/rspec`
-5. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
->>>>>>> master
