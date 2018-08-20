@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'activerecord-postgis-adapter'
 gem 'autoprefixer-rails'
 gem 'aws-sdk-s3'
 gem 'babosa'

@@ -1,5 +1,5 @@
 defaults: &defaults
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   pool: 20
   username: <%= ENV['POSTGRES_USERNAME'] || ENV['USER'] %>
@@ -20,3 +20,4 @@ staging:
 production:
   database: open311status_production
   <<: *defaults
+  url: <%= ENV.fetch("DATABASE_URL", "").gsub(/postgres/, 'postgis') %>

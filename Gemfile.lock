@@ -49,6 +49,9 @@ GEM
       activemodel (= 5.2.1)
       activesupport (= 5.2.1)
       arel (>= 9.0)
+    activerecord-postgis-adapter (5.2.1)
+      activerecord (~> 5.1)
+      rgeo-activerecord (~> 6.0)
     activestorage (5.2.1)
       actionpack (= 5.2.1)
       activerecord (= 5.2.1)
@@ -260,6 +263,10 @@ GEM
     redcarpet (3.4.0)
     request_store (1.4.1)
       rack (>= 1.4)
+    rgeo (1.1.1)
+    rgeo-activerecord (6.0.0)
+      activerecord (~> 5.0)
+      rgeo (~> 1.0)
     rspec-core (3.8.0)
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.1)
@@ -356,6 +363,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgis-adapter
   annotate
   autoprefixer-rails
   aws-sdk-s3

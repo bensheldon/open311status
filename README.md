@@ -34,17 +34,27 @@ bruhl:
   jurisdiction: 'bruehl.de'
 ```
 
+### Loading real data
+
+By default, running `db:setup` will load cities and generate fake service
+requests. To load cities, run `rake cities:load`. And to load service requests,
+`rake cities:service_requests`
+
 ### Application Dependencies
 1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
 2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.5.1`
 3. Install [bundler](https://bundler.io/) (the latest Heroku-compatible version): `gem install bundler`
 4. [Install Postgres](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md). If setting up Postgres.app, you will also need to add the binary to your path. e.g. Add to your `~/.bashrc`:
-`export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`
+`export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`.
+5. [Install PostGIS](https://postgis.net/install/), the Postgres geospatial extension, if it's not included in your distribution. Postgres.app comes with postgis.
 
 ### Application Setup
 
 1. Install ruby gem dependencies: `bundle install`
-2. Install node dependencies: `yarn install`
-3. Create the databases and load schema and seeds: `bin/rails db:setup`
-4. Run the tests: `bin/rspec`
-5. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
+2. Create the databases and load schema and seeds: `bin/rails db:setup`
+3. Run the tests: `bin/rspec`
+4. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
+
+#### Migration guide
+
+You may need to run `rake db:gis:setup` to enable PostGIS on your database.

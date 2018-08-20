@@ -24,6 +24,11 @@ RSpec.describe ServiceRequest, type: :model do
     it 'extracts :updated_datetime' do
       expect(sr.updated_datetime).to eq DateTime.iso8601 json['updated_datetime']
     end
+
+    it 'extracts a point' do
+      expect(sr.geometry.lat).to eq json['lat']
+      expect(sr.geometry.lon).to eq json['long']
+    end
   end
 
   describe '#slug' do
