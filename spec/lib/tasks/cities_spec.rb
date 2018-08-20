@@ -35,8 +35,8 @@ RSpec.describe "cities:all_service_requests", type: :rake do
       task.invoke(city.slug)
       expect(FetchServiceRequestsRecursivelyJob).to have_received(:perform_now).with(
         city,
-        kind_of(DateTime),
-        kind_of(DateTime)
+        kind_of(String),
+        kind_of(String)
       )
     end
   end
