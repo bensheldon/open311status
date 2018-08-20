@@ -21,7 +21,8 @@ FactoryBot.define do
         'description' => description,
         'status' => status,
         'requested_datetime' => requested_datetime.iso8601,
-        'geometry' => geometry,
+        'lat' => lat,
+        'long' => long,
       }
     end
   end
