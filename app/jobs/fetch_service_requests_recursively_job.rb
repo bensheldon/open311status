@@ -2,6 +2,9 @@ class FetchServiceRequestsRecursivelyJob < ApplicationJob
   INTERVAL = 1.day
 
   def perform(city, start_date = 7.days.ago, end_date = Time.current)
+    start_date = start_date.to_datetime
+    end_date = end_date.to_datetime
+
     Raven.extra_context(city: city.slug)
     api = City::Api.new city
 

@@ -62,9 +62,9 @@ namespace :cities do
 
     cities.each do |city|
       if ENV['ASYNC'].present?
-        FetchServiceRequestsRecursivelyJob.perform_later(city, start_at, end_at)
+        FetchServiceRequestsRecursivelyJob.perform_later(city, start_at.to_json, end_at.to_json)
       else
-        FetchServiceRequestsRecursivelyJob.perform_now(city, start_at, end_at)
+        FetchServiceRequestsRecursivelyJob.perform_now(city, start_at.to_json, end_at.to_json)
       end
     end
   end
