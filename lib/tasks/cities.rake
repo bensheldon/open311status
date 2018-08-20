@@ -46,6 +46,29 @@ namespace :cities do
     end
   end
 
+  desc 'Fetch all service requests for a given date range (recursively)'
+  task :all_service_requests, [:slug] => :environment do |task, args|
+    Rails.logger = Logger.new(STDOUT)
+    
+    overrides = Array(args[:override]) + Array(args.extras)
+    if overrides.size > 0
+      cities = overrides.map { |slug| City.find_by!(slug: slug) }
+    else
+      cities = City.all
+    end
+
+    start_at = ENV.fetch('START_AT').to_datetime.beginning_of_day
+    end_at = ENV.fetch('END_AT').to_datetime.end_of_day
+
+    cities.each do |city|
+      if ENV['ASYNC'].present?
+        FetchServiceRequestsRecursivelyJob.perform_later(city, start_at, end_at)
+      else
+        FetchServiceRequestsRecursivelyJob.perform_now(city, start_at, end_at)
+      end
+    end
+  end
+
   desc 'Delete service requests and statuses'
   task cleanup: :environment do |task, args|
     Status.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
