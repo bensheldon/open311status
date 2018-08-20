@@ -8,7 +8,7 @@ RSpec.describe FetchServiceRequestsRecursivelyJob do
 
       described_class.new.perform(city, 2.days.ago, Time.current)
 
-      expect(api_double).to have_received(:fetch_service_requests).exactly(3).times
+      expect(api_double).to have_received(:fetch_service_requests).at_least(2).times
     end
   end
 end

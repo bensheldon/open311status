@@ -15,7 +15,7 @@
 #  index_service_definitions_on_city_id_and_service_code  (city_id,service_code)
 #
 
-class ServiceDefinition < ActiveRecord::Base
+class ServiceDefinition < ApplicationRecord
   belongs_to :city, counter_cache: true
 
   def raw_data=(json)
