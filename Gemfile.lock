@@ -154,7 +154,7 @@ GEM
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
     hashdiff (0.3.7)
-    hashie (3.5.7)
+    hashie (3.6.0)
     heroku-deflater (0.6.3)
       rack (>= 1.4.5)
     html2haml (2.2.0)
@@ -405,4 +405,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.2
+   1.16.3
