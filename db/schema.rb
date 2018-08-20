@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_07_141658) do
+ActiveRecord::Schema.define(version: 2018_08_20_013552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(version: 2018_08_07_141658) do
     t.datetime "updated_at"
     t.integer "service_definitions_count", default: 0, null: false
     t.index ["slug"], name: "index_cities_on_slug", unique: true
+  end
+
+  create_table "que_jobs", primary_key: ["queue", "priority", "run_at", "job_id"], comment: "3", force: :cascade do |t|
+    t.integer "priority", limit: 2, default: 100, null: false
+    t.datetime "run_at", default: -> { "now()" }, null: false
+    t.bigserial "job_id", null: false
+    t.text "job_class", null: false
+    t.json "args", default: [], null: false
+    t.integer "error_count", default: 0, null: false
+    t.text "last_error"
+    t.text "queue", default: "", null: false
   end
 
   create_table "service_definitions", force: :cascade do |t|

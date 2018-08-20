@@ -18,7 +18,11 @@ namespace :cities do
     end
 
     cities.each do |city|
-      FetchServiceRequestsJob.perform_now(city)
+      if ENV['ASYNC'].present?
+        FetchServiceRequestsJob.perform_later(city)
+      else
+        FetchServiceRequestsJob.perform_now(city)
+      end
     end
   end
 
@@ -34,7 +38,11 @@ namespace :cities do
     end
 
     cities.each do |city|
-      FetchServiceListJob.perform_now(city)
+      if ENV['ASYNC'].present?
+        FetchServiceListJob.perform_later(city)
+      else
+        FetchServiceListJob.perform_now(city)
+      end
     end
   end
 
