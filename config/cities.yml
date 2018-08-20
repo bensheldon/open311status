@@ -3,6 +3,7 @@ alexandria:
   endpoint: "https://request.alexandriava.gov/GeoReport/Service.ashx/"
   # Zlib::DataError: incorrect header check when using default headers that include `deflate`
   headers: { accept_encoding: "" }
+  format: 'xml'
 annaberg_buchholz:
   name: 'Annaberg-Buchholz, Deutschland'
   endpoint: 'http://anliegen.annaberg-buchholz.de/georeport/v2/'
@@ -18,7 +19,6 @@ bloomington:
 bonn:
   name: 'Bonn, Deutschland'
   endpoint: 'https://anliegen.bonn.de/georeport/v2'
-  format: 'json'
 boston:
   name: 'Boston, MA'
   endpoint: "https://mayors24.cityofboston.gov/open311/v2/"
@@ -52,6 +52,8 @@ grand_rapids:
 greenwich:
   name: 'Greenwich, Britain'
   endpoint: 'https://open311.royalgreenwich.gov.uk/'
+  format: 'xml'
+  notes: 'JSON endpoint returns non-standard objects'
 helsinki:
   name: 'Helsinki, Suomi'
   endpoint: "https://asiointi.hel.fi/palautews/rest/v1/"
@@ -72,7 +74,6 @@ peoria:
 rostok:
   name: 'Rostock, Deutschland'
   endpoint: 'https://geo.sv.rostock.de/citysdk/'
-  format: 'json'
   jurisdiction: 'rostock.de'
 san_francisco:
   name: 'San Francisco, CA'
@@ -86,7 +87,6 @@ surrey:
   name: 'Surrey, BC'
   endpoint: 'https://cosmos.surrey.ca/api/open311/'
   jurisdiction: 'surrey.ca'
-  format: 'json'
 toronto:
   name: 'Toronto, ON'
   endpoint: "https://secure.toronto.ca/webwizard/ws/"

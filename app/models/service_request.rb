@@ -21,7 +21,7 @@
 #  index_service_requests_on_status                          (status)
 #
 
-class ServiceRequest < ActiveRecord::Base
+class ServiceRequest < ApplicationRecord
   SLUG_SIZE = 100
 
   belongs_to :city

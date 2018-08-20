@@ -18,7 +18,11 @@ namespace :cities do
     end
 
     cities.each do |city|
-      FetchServiceRequestsJob.perform_now(city)
+      if ENV['ASYNC'].present?
+        FetchServiceRequestsJob.perform_later(city)
+      else
+        FetchServiceRequestsJob.perform_now(city)
+      end
     end
   end
 
@@ -34,7 +38,34 @@ namespace :cities do
     end
 
     cities.each do |city|
-      FetchServiceListJob.perform_now(city)
+      if ENV['ASYNC'].present?
+        FetchServiceListJob.perform_later(city)
+      else
+        FetchServiceListJob.perform_now(city)
+      end
+    end
+  end
+
+  desc 'Fetch all service requests for a given date range (recursively)'
+  task :all_service_requests, [:slug] => :environment do |task, args|
+    Rails.logger = Logger.new(STDOUT)
+    
+    overrides = Array(args[:override]) + Array(args.extras)
+    if overrides.size > 0
+      cities = overrides.map { |slug| City.find_by!(slug: slug) }
+    else
+      cities = City.all
+    end
+
+    start_at = ENV.fetch('START_AT').to_datetime.beginning_of_day
+    end_at = ENV.fetch('END_AT').to_datetime.end_of_day
+
+    cities.each do |city|
+      if ENV['ASYNC'].present?
+        FetchServiceRequestsRecursivelyJob.perform_later(city, start_at.to_json, end_at.to_json)
+      else
+        FetchServiceRequestsRecursivelyJob.perform_now(city, start_at.to_json, end_at.to_json)
+      end
     end
   end
 

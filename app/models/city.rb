@@ -13,7 +13,7 @@
 #  index_cities_on_slug  (slug) UNIQUE
 #
 
-class City < ActiveRecord::Base
+class City < ApplicationRecord
   delegate *Configuration::ATTRIBUTES, to: :configuration, allow_nil: true
 
   has_many :service_requests
