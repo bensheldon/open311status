@@ -20,3 +20,4 @@ staging:
 production:
   database: open311status_production
   <<: *defaults
+  url: <%= ENV.fetch("DATABASE_URL", "").gsub(/postgres/, 'postgis') %>
