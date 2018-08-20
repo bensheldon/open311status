@@ -19,23 +19,4 @@
     <lat>43.691104288</lat>
     <media_url/>
   </request>
-  <request>
-    <service_request_id>101005420894</service_request_id>
-    <status>open</status>
-    <status_notes>In progress - The request has been scheduled.</status_notes>
-    <service_name>Road - Pot hole</service_name>
-    <service_code>CSROWR-12</service_code>
-    <description/>
-    <agency_responsible>311 Toronto</agency_responsible>
-    <service_notice/>
-    <requested_datetime>2018-07-30T00:01:00-04:00</requested_datetime>
-    <updated_datetime/>
-    <expected_datetime>2018-08-03T00:01:00-04:00</expected_datetime>
-    <address>Parkette Pl / Danforth Ave, Scarborough</address>
-    <address_id>13458509</address_id>
-    <zipcode/>
-    <long>-79.267190219</long>
-    <lat>43.695823056</lat>
-    <media_url/>
-</request>
 </service_requests>
