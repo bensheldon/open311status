@@ -22,9 +22,9 @@ class FetchServiceRequestsRecursivelyJob < ApplicationJob
 
     if relative_end_date < end_date
       if ENV['ASYNC'].present?
-        self.class.perform_later(city, relative_start_date, end_date)
+        self.class.perform_later(city, relative_start_date.to_json, end_date.to_json)
       else
-        self.class.perform_now(city, relative_start_date, end_date)
+        self.class.perform_now(city, relative_start_date.to_json, end_date.to_json)
       end
     end
   end
