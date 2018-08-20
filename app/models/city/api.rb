@@ -55,15 +55,39 @@ class City
       end
     end
 
-    def fetch_service_requests(start = nil)
-      if start
-        start_datetime = start
+    def fetch_service_requests(start_param = nil, end_param = nil, collect_telemetry: true)
+      if start_param
+        start_datetime = start_param
       else
         start_datetime = city.service_requests.maximum(:requested_datetime) || MAX_AGE.ago
       end
 
+      if end_param
+        end_datetime = end_param
+      end
+
+      if collect_telemetry
+        requests_data = Status::Telemetry.process 'service_requests', city: city do
+          if end_datetime
+            open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+          else
+            open311.service_requests(start_date: start_datetime.xmlschema)
+          end
+        end
+      else
+        requests_data = if end_datetime
+                          open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+                        else
+                          open311.service_requests(start_date: start_datetime.xmlschema)
+                        end
+      end
+
       requests_data = Status::Telemetry.process 'service_requests', city: city do
-        open311.service_requests(start_date: start_datetime.xmlschema)
+        if end_datetime
+          open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+        else
+          open311.service_requests(start_date: start_datetime.xmlschema)
+        end
       end
 
       # TODO: Page over the results in case we don't get all of the service requests newer than
