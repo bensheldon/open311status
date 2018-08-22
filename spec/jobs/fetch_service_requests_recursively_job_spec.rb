@@ -1,5 +1,5 @@
 RSpec.describe FetchServiceRequestsRecursivelyJob do
-  let(:city) { City.instance(:chicago)}
+  let(:city) { City.instance(:chicago) }
 
   describe '#perform' do
     it 'fetches service requests' do
