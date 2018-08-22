@@ -2,4 +2,5 @@
 require "rubygems"
 require "bundler/setup"
 
+ARGV[0] ||= "./config/environment.rb"
 load Gem.bin_path("que", "que")
