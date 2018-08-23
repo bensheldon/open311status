@@ -5,7 +5,7 @@ class FetchServiceRequestsRecursivelyJob < ApplicationJob
 
   def perform(city, start_at = 7.days.ago, end_at = Time.current, interval = INITIAL_INTERVAL)
     interval = interval.positive? ? interval.second : 1.second
-    api_limit = 50
+    api_limit = city.requests_limit || 50
 
     Raven.extra_context(city: city.slug)
 
@@ -26,11 +26,12 @@ class FetchServiceRequestsRecursivelyJob < ApplicationJob
     Rails.logger.info "#{ city.name } had #{ new_service_requests.size } new service requests between #{start_date} and #{relative_end_date} (until #{end_date}) with interval #{interval}"
 
     if new_service_requests.size < api_limit
-      return self.class.perform_later(city, relative_end_date.to_json, end_date.to_json, (interval * GROWTH_RATE).to_f.round(2))
-    elsif new_service_requests.size == api_limit
-      return self.class.perform_later(city, start_date.to_json, end_date.to_json, (interval * SHRINK_RATE).to_f.round(2))
-    else
-      Rails.logger.warn "API LIMIT for #{city.slug} is too small. Expected: #{api_limit}. Actual: #{new_service_requests.size}"
+      self.class.perform_later(city, relative_end_date.to_json, end_date.to_json, (interval * GROWTH_RATE).to_f.round(2))
+    elsif new_service_requests.size >= api_limit
+      if new_service_requests.size > api_limit
+        Raven.capture_message("API LIMIT for #{city.slug} is too small. Expected: #{api_limit}. Actual: #{new_service_requests.size}")
+      end
+      self.class.perform_later(city, start_date.to_json, end_date.to_json, (interval * SHRINK_RATE).to_f.round(2))
     end
   end
 end

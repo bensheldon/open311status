@@ -55,6 +55,39 @@ class CitiesTasks
         end
       end
 
+      desc 'Fetch API parameters'
+      task :request_metadata, [:slug] => :environment do |task, args|
+        Rails.logger = Logger.new(STDOUT)
+
+        cities = find_cities(args)
+
+        cities.each do |city|
+          service_requests = city.api.fetch_service_requests(1.year.ago)
+
+          limit = service_requests.size
+          requested_datetimes = service_requests.pluck(:requested_datetime).compact
+          requested_datetime_order = if requested_datetimes == requested_datetimes.sort
+                                       :ascending
+                                     elsif requested_datetimes == requested_datetimes.sort.reverse
+                                       :descending
+                                     else
+                                       :not_sorted
+                                     end
+
+          updated_datetimes = service_requests.pluck(:updated_datetime).compact
+          updated_datetime_order = if updated_datetimes == updated_datetimes.sort
+                                       :ascending
+                                     elsif updated_datetimes == updated_datetimes.sort.reverse
+                                       :descending
+                                     else
+                                       :not_sorted
+                                     end
+
+          Rails.logger.info "#{city.name}: requested_datetime(#{requested_datetime_order}), updated_datetime(#{updated_datetime_order}), limit(#{limit})"
+        end
+      end
+
+
       desc 'Delete service requests and statuses'
       task cleanup: :environment do |task, args|
         Status.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
