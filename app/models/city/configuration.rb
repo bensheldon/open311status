@@ -9,6 +9,7 @@ class City
         :format,
         :headers,
         :notes,
+        :requests_limit,
     ]
 
     attr_accessor *ATTRIBUTES
