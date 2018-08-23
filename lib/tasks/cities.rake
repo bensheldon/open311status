@@ -43,8 +43,8 @@ class CitiesTasks
         Rails.logger = Logger.new(STDOUT)
 
         cities = find_cities(args)
-        start_at = ENV.fetch('START_AT').to_datetime.beginning_of_day
-        end_at = ENV.fetch('END_AT').to_datetime.end_of_day
+        start_at = ENV.fetch('START_AT', 7.days.ago).to_datetime.beginning_of_day
+        end_at = ENV.fetch('END_AT', Time.current).to_datetime.end_of_day
 
         cities.each do |city|
           if ENV['ASYNC'].present?
