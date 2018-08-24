@@ -1,4 +1,5 @@
 require 'open311'
+require 'hashie'
 
 class City
   class Api
@@ -59,19 +60,27 @@ class City
       start_datetime = start_param.presence || city.service_requests.maximum(:requested_datetime) || MAX_AGE.ago
       end_datetime = end_param.presence
 
+      start_date = start_datetime.utc.xmlschema
+      end_date = end_datetime.utc.xmlschema if end_datetime.present?
+
+      if city.requests_omit_timezone
+        start_date = start_date.chomp('Z')
+        end_date = end_date.chomp('Z') if end_datetime.present?
+      end
+
       requests_data = if collect_telemetry
                         Status::Telemetry.process 'service_requests', city: city do
                           if end_datetime
-                            open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+                            open311.service_requests(start_date: start_date, end_date: end_date)
                           else
-                            open311.service_requests(start_date: start_datetime.xmlschema)
+                            open311.service_requests(start_date: start_date)
                           end
                         end
                       else
                         if end_datetime
-                          open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+                          open311.service_requests(start_date: start_date, end_date: end_date)
                         else
-                          open311.service_requests(start_date: start_datetime.xmlschema)
+                          open311.service_requests(start_date: start_date)
                         end
                       end
 
