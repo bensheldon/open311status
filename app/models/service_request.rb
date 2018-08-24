@@ -25,6 +25,8 @@ class ServiceRequest < ApplicationRecord
   SLUG_SIZE = 100
 
   belongs_to :city
+  has_one :global_index, as: :searchable, inverse_of: :service_request
+
 
   def parameterize
     { city_slug: city.slug, service_request_id: service_request_id, slug: slug }
