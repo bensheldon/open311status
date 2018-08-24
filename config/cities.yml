@@ -3,36 +3,45 @@ alexandria:
   endpoint: "https://request.alexandriava.gov/GeoReport/Service.ashx/"
   # Zlib::DataError: incorrect header check when using default headers that include `deflate`
   headers: { accept_encoding: "" }
+  format: 'xml'
+  requests_limit: 1000
 annaberg_buchholz:
   name: 'Annaberg-Buchholz, Deutschland'
   endpoint: 'http://anliegen.annaberg-buchholz.de/georeport/v2/'
   jurisdiction: 'annberg-buchholz.de'
+  requests_limit: 50
 baltimore:
   name: 'Baltimore, MD'
   endpoint: "http://311.baltimorecity.gov/open311/v2/"
   jurisdiction: 'baltimorecity.gov'
+  requests_limit: 50
 bloomington:
   name: 'Bloomington, IN'
   endpoint: "https://bloomington.in.gov/crm/open311/v2/"
   jurisdiction: 'bloomington.in.gov'
+  requests_limit: 1000
 bonn:
   name: 'Bonn, Deutschland'
   endpoint: 'https://anliegen.bonn.de/georeport/v2'
-  format: 'json'
+  requests_limit: 50
 boston:
   name: 'Boston, MA'
   endpoint: "https://mayors24.cityofboston.gov/open311/v2/"
+  requests_limit: 50
 brookline:
   name: 'Brookline, MA'
   endpoint: "http://spot.brooklinema.gov/open311/v2/"
   jurisdiction: 'brooklinema.gov'
+  requests_limit: 100
 bruhl:
   name: 'Brühl, Deutschland'
   endpoint: 'https://www.achtet-auf-bruehl.de/georeport/v2/'
   jurisdiction: 'bruehl.de'
+  requests_limit: 100
 chicago:
   name: 'Chicago, IL'
   endpoint: "http://311api.cityofchicago.org/open311/v2/"
+  requests_limit: 50
 columbus:
   name: 'Columbus, IN'
   endpoint: 'http://csr.columbus.in.gov/csr/open311/v2/'
@@ -45,6 +54,7 @@ dc:
 giessen:
   name: 'Gießen, Deutschland'
   endpoint: 'https://maengelmelder.giessen.de/georeport/v2/'
+  requests_limit: 50
 grand_rapids:
   name: 'Grand Rapids, MI'
   endpoint: "http://grcity.spotreporters.com/open311/v2/"
@@ -52,41 +62,48 @@ grand_rapids:
 greenwich:
   name: 'Greenwich, Britain'
   endpoint: 'https://open311.royalgreenwich.gov.uk/'
+  format: 'xml'
+  notes: 'JSON endpoint returns non-standard objects'
+  requests_limit: 6260
 helsinki:
   name: 'Helsinki, Suomi'
   endpoint: "https://asiointi.hel.fi/palautews/rest/v1/"
+  requests_limit: 200
 koln:
   name: 'Köln / Cologne, Deutschland'
   endpoint: 'https://sags-uns.stadt-koeln.de/georeport/v2/'
   jurisdiction: 'stadt-koeln.de'
+  requests_limit: 50
 lamia:
   name: 'Lamía, Elláda'
   endpoint: 'https://participation.citysdk.lamia-city.gr/rest/open311/v1/'
 ottawa:
   name: 'Ottawa, ON'
   endpoint: 'https://city-of-ottawa-prod.apigee.net/open311/v2/'
+  requests_limit: 1000
 peoria:
   name: 'Peoria, IL'
   endpoint: 'https://ureport.peoriagov.org/crm/open311/v2/'
   jurisdiction: 'peoriagov.org'
+  requests_limit: 1000
 rostok:
   name: 'Rostock, Deutschland'
   endpoint: 'https://geo.sv.rostock.de/citysdk/'
-  format: 'json'
   jurisdiction: 'rostock.de'
 san_francisco:
   name: 'San Francisco, CA'
   endpoint: "http://mobile311.sfgov.org/open311/v2/"
   jurisdiction: 'sfgov.org'
+  requests_limit: 50
 siegburg:
   name: 'Siegburg, Deutschland'
   endpoint: 'http://anliegen.siegburg.de/georeport/v2/'
   jurisdiction: 'siegburg.de'
+  requests_limit: 50
 surrey:
   name: 'Surrey, BC'
   endpoint: 'https://cosmos.surrey.ca/api/open311/'
   jurisdiction: 'surrey.ca'
-  format: 'json'
 toronto:
   name: 'Toronto, ON'
   endpoint: "https://secure.toronto.ca/webwizard/ws/"

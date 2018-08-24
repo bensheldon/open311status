@@ -55,26 +55,33 @@ class City
       end
     end
 
-    def fetch_service_requests(start = nil)
-      if start
-        start_datetime = start
-      else
-        start_datetime = city.service_requests.maximum(:requested_datetime) || MAX_AGE.ago
-      end
+    def fetch_service_requests(start_param = nil, end_param = nil, collect_telemetry: true)
+      start_datetime = start_param.presence || city.service_requests.maximum(:requested_datetime) || MAX_AGE.ago
+      end_datetime = end_param.presence
 
-      requests_data = Status::Telemetry.process 'service_requests', city: city do
-        open311.service_requests(start_date: start_datetime.xmlschema)
-      end
+      requests_data = if collect_telemetry
+                        Status::Telemetry.process 'service_requests', city: city do
+                          if end_datetime
+                            open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+                          else
+                            open311.service_requests(start_date: start_datetime.xmlschema)
+                          end
+                        end
+                      else
+                        if end_datetime
+                          open311.service_requests(start_date: start_datetime.xmlschema, end_date: end_datetime.xmlschema)
+                        else
+                          open311.service_requests(start_date: start_datetime.xmlschema)
+                        end
+                      end
 
-      # TODO: Page over the results in case we don't get all of the service requests newer than
-      # the date above
       if requests_data.is_a?(Hashie::Mash)
         requests_data = [requests_data]
       end
 
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id
-        return nil unless request_data['service_request_id']
+        next if request_data['service_request_id'].blank?
 
         city.service_requests.find_or_initialize_by(service_request_id: request_data['service_request_id']).tap do |service_request|
           service_request.raw_data = request_data
@@ -84,7 +91,7 @@ class City
             service_request.touch
           end
         end
-      end
+      end.compact
     end
   end
 end

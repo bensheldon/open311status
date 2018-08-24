@@ -1,13 +1,15 @@
+ruby:
+  provide(:meta_title) { "Open311 Status - 311 API monitoring and analysis" }
 .well
   strong
     | Scanning #{@cities.size} Open311 endpoints every 10 minutes.
-      For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers">Open311 Wiki</a>.
+      For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers" rel="noopener">Open311 Wiki</a>.
 
 .panel.panel-default
   .panel-heading
     h3.panel-title Service Requests created during previous 48 hours
   .panel-body
-    = line_chart @cities.map { |city| { name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.now).count } }
+    = line_chart @cities.map { |city| { name: city.name, data: city.bucketed_service_requests } }
 
 .panel.panel-default
   table.table.table-condensed.table-bordered.table-striped.table-responsive.tablesorter(data-controller="cities")
@@ -25,8 +27,10 @@
         th Max/Hour
         th Avg/Hour
     tbody
-      = render partial: 'city_row_content', layout: 'city_row', collection: CityDecorator.decorate_collection(@cities), as: :city
+      = render partial: 'city_row_content', layout: 'city_row', collection: @cities, as: :city
 
 h3 Recent Service Requests
 .panel.panel-default
   = render 'service_requests', service_requests: ServiceRequest.includes(:city).order(requested_datetime: :desc).limit(100)
+.text-center
+  = link_to "View all Service Requests", requests_path, class: 'btn btn-default'

@@ -3,13 +3,26 @@
 FactoryBot.define do
   factory :service_request do
     city
+
+    transient do
+      service_request_id { SecureRandom.uuid }
+      status { ['open', 'closed'].sample }
+      service_name { Faker::Commerce.department(2, true) }
+      description { Faker::Lorem.paragraph(1, false, 5) }
+      requested_datetime { 10.minutes.ago }
+      lat { Faker::Address.latitude }
+      long { Faker::Address.longitude }
+    end
+
     raw_data do
       {
-        'service_request_id' => SecureRandom.uuid,
-        'service_name' => 'test',
-        'description' => 'test',
-        'status' => 'open',
-        'requested_datetime' => 10.minutes.ago.iso8601,
+        'service_request_id' => service_request_id,
+        'service_name' => service_name,
+        'description' => description,
+        'status' => status,
+        'requested_datetime' => requested_datetime.iso8601,
+        'lat' => lat,
+        'long' => long,
       }
     end
   end

@@ -1,4 +1,8 @@
-- city = @city
+ruby:
+  city = @city
+
+  provide(:meta_title) { "Open311 Status - #{city.name}" }
+  provide(:meta_description) { "Open311 Status monitors the 311 API endpoint for #{city.name}, providing benchmarks and insights." }
 
 h1= @city.name
 

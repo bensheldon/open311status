@@ -4,6 +4,10 @@ class CityDecorator < Draper::Decorator
   decorates_association :service_list_status
   decorates_association :service_requests_status
 
+  def bucketed_service_requests=(buckets)
+    @bucketed_service_requests = buckets
+  end
+
   def bucketed_service_requests
     @bucketed_service_requests ||= service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count
   end

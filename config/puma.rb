@@ -4,7 +4,7 @@
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 #
-threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }.to_i
 threads threads_count, threads_count
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
@@ -12,8 +12,8 @@ threads threads_count, threads_count
 port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
-#
-environment ENV.fetch("RAILS_ENV") { "development" }
+rails_environment = ENV.fetch("RAILS_ENV") { "development" }
+environment rails_environment
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
@@ -21,14 +21,34 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # Workers do not work on JRuby or Windows (both of which do not support
 # processes).
 #
-# workers ENV.fetch("WEB_CONCURRENCY") { 2 }
+workers_count = ENV.fetch("WEB_CONCURRENCY") { 0 }.to_i
+workers workers_count
 
 # Use the `preload_app!` method when specifying a `workers` number.
 # This directive tells Puma to first boot the application and load code
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
-# preload_app!
+preload_app!
+
+on_worker_boot do
+  Que.mode = if ENV['QUE_EXECUTABLE_ONLY'].present?
+               :off
+             else
+               :async
+             end
+end
+
+# If there are no worker processes, we still need to bootstrap these
+if workers_count.zero?
+  Que.mode = if rails_environment == 'test'
+               :sync
+             elsif ENV['QUE_EXECUTABLE_ONLY'].present?
+               :off
+             else
+               :async
+             end
+end
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart

@@ -16,7 +16,7 @@
 #  index_statuses_on_city_id_and_request_name  (city_id,request_name)
 #
 
-class Status < ActiveRecord::Base
+class Status < ApplicationRecord
   belongs_to :city
 
   scope :latest, ->(count = 1) {

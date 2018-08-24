@@ -1,0 +1,15 @@
+nav.navbar.navbar-default
+  .container
+    .navbar-header
+      button.navbar-toggle(data-target=".navbar-collapse" data-toggle="collapse" type="button")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to 'Open311 Status', root_path, class: 'navbar-brand'
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li= link_to github_url, target: '_blank', rel: 'noopener' do
+          => fa_icon 'github-alt'
+          | Github
+

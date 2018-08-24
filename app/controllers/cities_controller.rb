@@ -1,6 +1,11 @@
 class CitiesController < ApplicationController
   def index
-    @cities = City.includes(:service_list_status, :service_requests_status).all.order(slug: :asc)
+    cities = City.includes(:service_list_status, :service_requests_status).all.order(slug: :asc)
+    @cities = CityDecorator.decorate_collection(cities)
+
+    sr_buckets = ServiceRequest.where(city_id: @cities.pluck(:id)).group(:city_id).group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count
+    sr_buckets_by_city = sr_buckets.each_with_object({}) { |(key, value), memo| memo[key.first] ||= {}; memo[key.first][key.second] = value }
+    @cities.each { |city| city.bucketed_service_requests = sr_buckets_by_city[city.id] }
   end
 
   def show

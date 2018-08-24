@@ -8,12 +8,14 @@ class City
         :jurisdiction,
         :format,
         :headers,
+        :notes,
+        :requests_limit,
     ]
 
     attr_accessor *ATTRIBUTES
 
     def format
-      (@format || :xml).to_sym
+      (@format || :json).to_sym
     end
 
     def headers

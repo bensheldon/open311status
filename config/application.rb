@@ -18,6 +18,11 @@ module Open311status
 
     config.cities = YAML.load_file Rails.root.join('config', 'cities.yml')
 
+    config.action_mailer.deliver_later_queue_name = 'default'
+    config.action_mailer.default_url_options = {
+      host: Rails.application.secrets.default_host
+    }
+
     config.paths.add 'app/decorators/collections', eager_load: true
   end
 end

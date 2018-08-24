@@ -3,6 +3,7 @@
 # Table name: service_requests
 #
 #  id                 :bigint(8)        not null, primary key
+#  geometry           :geography({:srid geometry, 4326
 #  raw_data           :json
 #  requested_datetime :datetime
 #  status             :string
@@ -16,13 +17,20 @@
 #
 #  index_service_requests_on_city_id                         (city_id)
 #  index_service_requests_on_city_id_and_service_request_id  (city_id,service_request_id) UNIQUE
+#  index_service_requests_on_geometry                        (geometry) USING gist
 #  index_service_requests_on_status                          (status)
 #
 
-class ServiceRequest < ActiveRecord::Base
+class ServiceRequest < ApplicationRecord
   SLUG_SIZE = 100
 
   belongs_to :city
+  has_one :global_index, as: :searchable, inverse_of: :service_request
+
+
+  def parameterize
+    { city_slug: city.slug, service_request_id: service_request_id, slug: slug }
+  end
 
   def raw_data=(json)
     super.tap do
@@ -30,6 +38,7 @@ class ServiceRequest < ActiveRecord::Base
       self[:status] = json['status']
       self[:requested_datetime] = DateTime.iso8601(json['requested_datetime']) if json['requested_datetime'].present?
       self[:updated_datetime] = DateTime.iso8601(json['updated_datetime']) if json['updated_datetime'].present?
+      self[:geometry] = "POINT(#{json['long']} #{json['lat']})" if json['lat'].present?
     end
   rescue => e
     Raven.capture_exception e,
