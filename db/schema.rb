@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_20_013552) do
+ActiveRecord::Schema.define(version: 2018_08_24_024352) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_trgm"
   enable_extension "plpgsql"
   enable_extension "postgis"
 
@@ -71,5 +72,26 @@ ActiveRecord::Schema.define(version: 2018_08_20_013552) do
     t.index ["city_id", "request_name"], name: "index_statuses_on_city_id_and_request_name"
     t.index ["city_id"], name: "index_statuses_on_city_id"
   end
+
+
+  create_view "global_indices", materialized: true,  sql_definition: <<-SQL
+      WITH service_request_indices AS (
+           SELECT ('ServiceRequest-'::text || service_requests.id) AS id,
+              'ServiceRequest'::text AS searchable_type,
+              (service_requests.id)::integer AS searchable_id,
+              ((((COALESCE((service_requests.raw_data ->> 'description'::text), ''::text) || ' '::text) || COALESCE((service_requests.raw_data ->> 'service_name'::text), ''::text)) || ' '::text) || COALESCE((cities.slug)::text, ''::text)) AS content
+             FROM (service_requests
+               LEFT JOIN cities ON ((cities.id = service_requests.city_id)))
+          )
+   SELECT service_request_indices.id,
+      service_request_indices.searchable_type,
+      service_request_indices.searchable_id,
+      service_request_indices.content
+     FROM service_request_indices;
+  SQL
+
+  add_index "global_indices", "to_tsvector('english'::regconfig, content)", name: "index_global_indices_on_to_tsvector_english_content", using: :gin
+  add_index "global_indices", ["content"], name: "index_global_indices_on_content_gist_trgm_ops", opclass: :gist_trgm_ops, using: :gist
+  add_index "global_indices", ["id"], name: "index_global_indices_on_id", unique: true
 
 end

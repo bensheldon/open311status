@@ -5,3 +5,5 @@ City.all.each do |city|
                          city: city,
                          requested_datetime: Random.rand(10_000).minutes.ago
 end
+
+GlobalIndex.refresh
