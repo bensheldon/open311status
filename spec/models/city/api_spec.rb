@@ -18,6 +18,18 @@ RSpec.describe City::Api do
   end
 
   describe '#fetch_service_requests' do
+    it 'Sets timezone to "Z" when passing through start and end times' do
+      open311_double = double(Open311, service_requests: [])
+      allow(api).to receive(:open311).and_return(open311_double)
+
+      start_at = "2018/01/01".to_datetime
+      end_at = "2018/01/02".to_datetime
+
+      result = api.fetch_service_requests(start_at, end_at)
+
+      expect(open311_double).to have_received(:service_requests).with(start_date: "2018-01-01T00:00:00Z", end_date: "2018-01-02T00:00:00Z")
+    end
+
     context 'single service request' do
       before do
         stub_request(:get, %r{http://app\.311\.dc\.gov/CWI/Open311/v2/requests\.xml\?jurisdiction_id=dc\.gov&start_date=.*})
