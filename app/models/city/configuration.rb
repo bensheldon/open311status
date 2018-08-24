@@ -10,6 +10,7 @@ class City
         :headers,
         :notes,
         :requests_limit,
+        :requests_omit_timezone,
     ]
 
     attr_accessor *ATTRIBUTES

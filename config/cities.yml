@@ -42,6 +42,7 @@ chicago:
   name: 'Chicago, IL'
   endpoint: "http://311api.cityofchicago.org/open311/v2/"
   requests_limit: 50
+  requests_omit_timezone: true
 columbus:
   name: 'Columbus, IN'
   endpoint: 'http://csr.columbus.in.gov/csr/open311/v2/'
