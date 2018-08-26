@@ -3,17 +3,18 @@
 # Table name: statuses
 #
 #  id            :bigint(8)        not null, primary key
-#  city_id       :integer
-#  request_name  :string
 #  duration_ms   :integer
-#  http_code     :integer
-#  created_at    :datetime
 #  error_message :text
+#  http_code     :integer
+#  request_name  :string
+#  created_at    :datetime
+#  city_id       :integer
 #
 # Indexes
 #
-#  index_statuses_on_city_id                   (city_id)
-#  index_statuses_on_city_id_and_request_name  (city_id,request_name)
+#  index_statuses_on_city_id                                  (city_id)
+#  index_statuses_on_city_id_and_request_name                 (city_id,request_name)
+#  index_statuses_on_city_id_and_request_name_and_created_at  (city_id,request_name,created_at DESC)
 #
 
 class Status < ApplicationRecord

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_24_024352) do
+ActiveRecord::Schema.define(version: 2018_08_26_150559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2018_08_24_024352) do
     t.integer "http_code"
     t.datetime "created_at"
     t.text "error_message"
+    t.index ["city_id", "request_name", "created_at"], name: "index_statuses_on_city_id_and_request_name_and_created_at", order: { created_at: :desc }
     t.index ["city_id", "request_name"], name: "index_statuses_on_city_id_and_request_name"
     t.index ["city_id"], name: "index_statuses_on_city_id"
   end

@@ -49,6 +49,9 @@ GEM
       activemodel (= 5.2.1)
       activesupport (= 5.2.1)
       arel (>= 9.0)
+    activerecord-explain-analyze (0.1.0)
+      activerecord (>= 4)
+      pg
     activerecord-postgis-adapter (5.2.1)
       activerecord (~> 5.1)
       rgeo-activerecord (~> 6.0)
@@ -368,6 +371,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-explain-analyze
   activerecord-postgis-adapter
   annotate
   autoprefixer-rails
@@ -429,4 +433,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
