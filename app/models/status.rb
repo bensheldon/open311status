@@ -12,8 +12,6 @@
 #
 # Indexes
 #
-#  index_statuses_on_city_id                                  (city_id)
-#  index_statuses_on_city_id_and_request_name                 (city_id,request_name)
 #  index_statuses_on_city_id_and_request_name_and_created_at  (city_id,request_name,created_at DESC)
 #
 
