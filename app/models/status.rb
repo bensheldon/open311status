@@ -20,15 +20,29 @@
 class Status < ApplicationRecord
   belongs_to :city
 
-  scope :latest, ->(count = 1) {
-    rankings = <<~SQL
-      SELECT id, RANK() OVER(PARTITION BY city_id, request_name ORDER BY created_at DESC) rank
-      FROM statuses
+  scope :latest_by_city, ->(request_name, count: 1) do
+    # This scope is complex. The table_reference (which is `cities`) is aliased to be
+    # the model's table (`statuses`) so that when this scope is used as in an association
+    # the eagerloaded foreign key query (`WHERE statuses.city_id` IN ...) will work properly.
+    #
+    # SELECT <columns>
+    # FROM <table reference>
+    #      JOIN LATERAL <subquery>
+    #      ON TRUE;
+    #
+    query = select('subquery.*').from('(SELECT *, id AS city_id FROM cities) AS statuses')
+
+    join_sql = <<~SQL
+      JOIN LATERAL (
+        SELECT * FROM statuses AS sub_statuses
+        WHERE sub_statuses.city_id = statuses.city_id
+          AND sub_statuses.request_name = :request_name
+        ORDER BY created_at DESC LIMIT :count
+      ) AS subquery ON TRUE
     SQL
 
-    joins("INNER JOIN (#{rankings}) rankings ON rankings.id = statuses.id")
-        .where("rankings.rank <= :count", count: count)
-  }
+    query.joins(sanitize_sql_array([join_sql, { request_name: request_name, count: count }]))
+  end
   scope :service_list, -> { where(request_name: 'service_list') }
   scope :service_requests, -> { where(request_name: 'service_requests') }
   scope :errored, -> { where('http_code >= ?', 400) }

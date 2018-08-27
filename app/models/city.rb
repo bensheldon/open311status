@@ -20,8 +20,8 @@ class City < ApplicationRecord
   has_many :service_definitions
   has_many :statuses
 
-  has_one :service_list_status, -> { service_list.latest(1) }, class_name: 'Status'
-  has_one :service_requests_status, -> { service_requests.latest(1) }, class_name: 'Status'
+  has_one :service_list_status, -> { latest_by_city(:service_list) }, class_name: 'Status'
+  has_one :service_requests_status, -> { latest_by_city(:service_requests) }, class_name: 'Status'
   has_many :service_list_statuses, -> { service_list }, class_name: 'Status'
   has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status'
 
