@@ -20,10 +20,10 @@ end
 
 SitemapGenerator::Sitemap.create do
   City.find_each do |city|
-    add city_path(city, default_url_options), changefreq: 'daily'
+    add city_path(city), changefreq: 'daily'
   end
 
   ServiceRequest.includes(:city).find_each do |service_request|
-    add service_request_path(service_request, default_url_options), lastmod: service_request.updated_at, changefreq: 'weekly'
+    add service_request_path(service_request), lastmod: service_request.updated_at, changefreq: 'weekly'
   end
 end
