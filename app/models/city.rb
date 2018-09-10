@@ -24,6 +24,14 @@ class City < ApplicationRecord
   has_one :service_requests_status, -> { latest_by_city(:service_requests) }, class_name: 'Status'
   has_many :service_list_statuses, -> { service_list }, class_name: 'Status'
   has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status'
+  has_many :service_list_status_errors, -> {
+    start_floor = 2.days.ago.change(min: 10 * (Time.now().min.to_f / 10).floor)
+    service_list.time_periods.errored.where('created_at >= ?', start_floor).order("time_period ASC")
+  }, class_name: 'Status'
+  has_many :service_request_status_errors, -> {
+    start_floor = 2.days.ago.change(min: 10 * (Time.now().min.to_f / 10).floor)
+    service_requests.time_periods.errored.where('created_at >= ?', start_floor).order("time_period ASC")
+  }, class_name: 'Status'
 
   validates :slug, uniqueness: true
 
@@ -56,16 +64,11 @@ class City < ApplicationRecord
   def uptime_percent(status_type, start: 2.days.ago)
     start_floor = start.change(min: 10 * (Time.now().min.to_f / 10).floor)
 
-    query = if status_type == 'service_list'
-              service_list_statuses
-            else
-              service_requests_statuses
-            end
-
-    statuses = query.time_periods
-                    .errored
-                    .where('created_at >= ?', start_floor)
-                    .order("time_period ASC")
+    statuses = if status_type == 'service_list'
+                 service_list_status_errors
+               else
+                 service_request_status_errors
+              end
 
     downtime_periods = statuses.group_by { |status| status.time_period }.keys.size
 

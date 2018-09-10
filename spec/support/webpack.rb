@@ -55,6 +55,6 @@ RSpec.configure do |config|
   end
 
   config.before(:each, :js) do
-    WebpackTestBuild.run_webpack_if_necessary
+    WebpackTestBuild.run_webpack_if_outdated
   end
 end
