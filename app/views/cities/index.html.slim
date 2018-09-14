@@ -12,22 +12,23 @@ ruby:
     = line_chart @cities.map { |city| { name: city.name, data: city.bucketed_service_requests } }
 
 .panel.panel-default
-  table.table.table-condensed.table-bordered.table-striped.table-responsive.tablesorter(data-controller="cities")
-    thead
-      tr
-        th Endpoint
-        th Services
-        th Requests
-        th Request Types
-        th data-sorter='false'
-          | Submitted requests
-          span.label.label-info< 48 hours
-        th Total
-        th Min/Hour
-        th Max/Hour
-        th Avg/Hour
-    tbody
-      = render partial: 'city_row_content', layout: 'city_row', collection: @cities, as: :city
+  .table-responsive
+    table.table.table-condensed.table-bordered.table-striped.tablesorter(data-controller="cities")
+      thead
+        tr
+          th Endpoint
+          th Services
+          th Requests
+          th Request Types
+          th data-sorter='false'
+            | Submitted requests
+            span.label.label-info< 48 hours
+          th Total
+          th Min/Hour
+          th Max/Hour
+          th Avg/Hour
+      tbody
+        = render partial: 'city_row_content', layout: 'city_row', collection: @cities, as: :city
 
 h3 Recent Service Requests
 .panel.panel-default
