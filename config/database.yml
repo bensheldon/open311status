@@ -3,6 +3,10 @@ defaults: &defaults
   encoding: unicode
   pool: 20
   username: <%= ENV['POSTGRES_USERNAME'] || ENV['USER'] %>
+  connect_timeout: 1
+  checkout_timeout: 1
+  variables:
+    statement_timeout: 2500 # ms
 
 development:
   database: open311status_development
