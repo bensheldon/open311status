@@ -6,7 +6,7 @@ defaults: &defaults
   connect_timeout: 1
   checkout_timeout: 1
   variables:
-    statement_timeout: 2500 # ms
+    statement_timeout: <%= ENV.fetch('POSTGRES_STATEMENT_TIMEOUT', '2500') %> # ms
 
 development:
   database: open311status_development
