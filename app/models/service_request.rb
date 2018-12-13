@@ -24,6 +24,7 @@
 #
 
 class ServiceRequest < ApplicationRecord
+  include OrderQuery
   SLUG_SIZE = 100
 
   belongs_to :city

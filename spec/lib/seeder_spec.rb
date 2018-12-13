@@ -1,13 +1,7 @@
+require 'rails_helper'
+
 RSpec.describe Seeder do
   let(:seeder) { described_class.new }
-
-  around do |example|
-    ActiveRecord::Base.transaction do
-      example.run
-
-      raise ActiveRecord::Rollback
-    end
-  end
 
   describe '#call' do
     it 'creates new records' do
