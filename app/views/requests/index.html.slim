@@ -1,6 +1,17 @@
 ruby:
   provide(:meta_title) { "Open311 Status - All Service Requests" }
 
-= render 'cities/service_requests', service_requests: @service_requests
+= render 'cities/service_requests', service_requests: @pager.records
 
-= pagy_nav_bootstrap(@pagy).html_safe
+nav
+  ul.pager
+    - if @pager.older?
+      li.next
+        a href=requests_path(before_id: @pager.records.last.id)
+          '  Older requests
+          span aria-hidden="true" &rarr;
+    - if @pager.newer?
+      li.previous
+        a href=requests_path(after_id: @pager.records.first.id)
+          span aria-hidden="true" &larr;
+          '  Newer requests

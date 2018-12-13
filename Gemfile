@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'activerecord-explain-analyze'
 gem 'activerecord-postgis-adapter'
@@ -26,7 +25,7 @@ gem 'jquery-tablesorter'
 gem 'lograge'
 gem 'momentjs-rails'
 gem 'open311', github: 'bensheldon/open311', branch: 'api_headers'
-gem 'pagy'
+gem 'order_query', '~> 0.4.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'pry-rails'
 gem 'puma', '~> 3.11'

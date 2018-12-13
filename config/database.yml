@@ -5,8 +5,6 @@ defaults: &defaults
   username: <%= ENV['POSTGRES_USERNAME'] || ENV['USER'] %>
   connect_timeout: 1
   checkout_timeout: 1
-  variables:
-    statement_timeout: <%= ENV.fetch('POSTGRES_STATEMENT_TIMEOUT', '2500') %> # ms
 
 development:
   database: open311status_development
@@ -25,3 +23,5 @@ production:
   database: open311status_production
   <<: *defaults
   url: <%= ENV.fetch("DATABASE_URL", "").gsub(/postgres/, 'postgis') %>
+  variables:
+    statement_timeout: <%= ENV.fetch('POSTGRES_STATEMENT_TIMEOUT', '2500') %> # ms

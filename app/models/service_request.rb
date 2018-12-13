@@ -24,10 +24,13 @@
 #
 
 class ServiceRequest < ApplicationRecord
+  include OrderQuery
   SLUG_SIZE = 100
 
   belongs_to :city
   has_one :global_index, as: :searchable, inverse_of: :service_request
+
+  order_query :order_requested, [:requested_datetime, :desc, { unique: false, nulls: :last }]
 
   def parameterize
     { city_slug: city.slug, service_request_id: service_request_id, slug: slug }

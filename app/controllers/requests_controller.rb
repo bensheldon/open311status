@@ -1,7 +1,8 @@
 class RequestsController < ApplicationController
-  include Pagy::Backend
-
   def index
-    @pagy, @service_requests = pagy(ServiceRequest.includes(:city).order(requested_datetime: :desc))
+    @pager = ServiceRequestsPager.new(
+      before_id: params[:before_id],
+      after_id: params[:after_id]
+    )
   end
 end
