@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/bensheldon/open311.git
+  remote: git://github.com/bensheldon/open311.git
   revision: dbead4703063d070fa3615fc371d352e3a312ee2
   branch: api_headers
   specs:
@@ -218,7 +218,6 @@ GEM
     order_query (0.4.1)
       activerecord (>= 5.0, < 6.0)
       activesupport (>= 5.0, < 6.0)
-    pagy (0.16.0)
     pg (1.0.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -406,7 +405,6 @@ DEPENDENCIES
   momentjs-rails
   open311!
   order_query (~> 0.4.1)
-  pagy
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 3.11)

@@ -1,6 +1,4 @@
 class RequestsController < ApplicationController
-  include Pagy::Backend
-
   def index
     @pager = ServiceRequestsPager.new(
       before_id: params[:before_id],
