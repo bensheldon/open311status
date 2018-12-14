@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'activerecord-explain-analyze'
 gem 'activerecord-postgis-adapter'
@@ -30,12 +31,14 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'pry-rails'
 gem 'puma', '~> 3.11'
 gem 'que', '~> 0.14'
+gem 'rack-host-redirect'
 gem 'rails', '~> 5.2.0'
 gem 'redcarpet'
 gem 'sass-rails', '~> 5.0'
 gem 'scenic'
 gem 'sentry-raven'
 gem 'sitemap_generator'
+gem 'slim', '~> 3.0.9'
 gem 'slim-rails'
 gem 'textacular'
 gem 'uglifier', '>= 1.3.0'
