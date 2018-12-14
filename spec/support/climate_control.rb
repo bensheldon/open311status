@@ -5,5 +5,5 @@ module ClimateControlSupport
 end
 
 RSpec.configure do |config|
-  config.include(ClimateControlSupport)
+  config.include ClimateControlSupport
 end
