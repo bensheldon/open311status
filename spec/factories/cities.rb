@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :city do
-    slug 'chicago'
+    slug { 'chicago' }
 
     initialize_with { City.instance(slug) }
   end

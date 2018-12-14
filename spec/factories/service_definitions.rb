@@ -3,6 +3,6 @@
 FactoryBot.define do
   factory :service_definition do
     city
-    service_code "MyString"
+    service_code { "MyString" }
   end
 end
