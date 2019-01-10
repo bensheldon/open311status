@@ -13,6 +13,8 @@ Open311 Status monitors and aggregates the status of dozens of Open311 API endpo
 - **Comprehensiveness**: how fully the API is implemented/adopted; e.g. the number of service types that can be submitted through the API
 - **Utilization**: how much the 311 service being used; e.g. the number of service requests submitted
 
+![Demo Image](https://raw.githubusercontent.com/codeforamerica/open311status/master/SCREENSHOT.png)
+
 ## Development
 
 ### Adding new API endpoints
