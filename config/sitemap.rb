@@ -19,6 +19,9 @@ else
 end
 
 SitemapGenerator::Sitemap.create do
+  add root_path, changefreq: 'hourly'
+  add about_path, changefreq: 'weekly'
+
   City.find_each do |city|
     add city_path(city), changefreq: 'daily'
   end
