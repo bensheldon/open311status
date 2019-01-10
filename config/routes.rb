@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'cities#index'
+  get 'about', to: 'pages#about'
 
   resources :cities, only: [:index, :show], param: :slug do
     scope module: :cities do

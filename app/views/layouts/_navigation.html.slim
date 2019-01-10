@@ -9,6 +9,9 @@ nav.navbar.navbar-default
       = link_to 'Open311 Status', root_path, class: 'navbar-brand'
     .collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
+        li= link_to about_path
+          => fa_icon 'question-circle'
+          | About
         li= link_to github_url, target: '_blank', rel: 'noopener' do
           => fa_icon 'github-alt'
           | Github
