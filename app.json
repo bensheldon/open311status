@@ -32,7 +32,6 @@
       "value": "1"
     }
   },
-  "stack": "heroku-16",
   "buildpacks": [
     {
       "url": "heroku/nodejs"
@@ -43,10 +42,7 @@
   ],
   "addons": [
     {
-      "plan": "heroku-postgresql",
-      "options": {
-        "version": "10"
-      }
+      "plan": "heroku-postgresql"
     }
   ]
 }
