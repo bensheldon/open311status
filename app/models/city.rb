@@ -18,22 +18,22 @@
 class City < ApplicationRecord
   delegate(*Configuration::ATTRIBUTES, to: :configuration, allow_nil: true)
 
-  has_many :service_requests
-  has_many :service_definitions
-  has_many :statuses
+  has_many :service_requests, dependent: :destroy
+  has_many :service_definitions, dependent: :destroy
+  has_many :statuses, dependent: :destroy
 
-  has_one :service_list_status, -> { latest_by_city(:service_list) }, class_name: 'Status'
-  has_one :service_requests_status, -> { latest_by_city(:service_requests) }, class_name: 'Status'
-  has_many :service_list_statuses, -> { service_list }, class_name: 'Status'
-  has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status'
+  has_one :service_list_status, -> { latest_by_city(:service_list) }, class_name: 'Status', inverse_of: :city
+  has_one :service_requests_status, -> { latest_by_city(:service_requests) }, class_name: 'Status', inverse_of: :city
+  has_many :service_list_statuses, -> { service_list }, class_name: 'Status', inverse_of: :city
+  has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status', inverse_of: :city
   has_many :service_list_status_errors, lambda {
     start_floor = 2.days.ago.change(min: 10 * (Time.now.min.to_f / 10).floor)
     service_list.time_periods.errored.where('created_at >= ?', start_floor).order("time_period ASC")
-  }, class_name: 'Status'
+  }, class_name: 'Status', inverse_of: :city
   has_many :service_request_status_errors, lambda {
     start_floor = 2.days.ago.change(min: 10 * (Time.now.min.to_f / 10).floor)
     service_requests.time_periods.errored.where('created_at >= ?', start_floor).order("time_period ASC")
-  }, class_name: 'Status'
+  }, class_name: 'Status', inverse_of: :city
 
   validates :slug, uniqueness: true
 

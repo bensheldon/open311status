@@ -30,7 +30,7 @@ class ServiceRequest < ApplicationRecord
   SLUG_SIZE = 100
 
   belongs_to :city
-  has_one :global_index, as: :searchable, inverse_of: :service_request
+  has_one :global_index, as: :searchable, inverse_of: :service_request # rubocop:disable Rails/HasManyOrHasOneDependent
 
   order_query :order_requested, [:requested_datetime, :desc, { unique: false, nulls: :last }]
 
