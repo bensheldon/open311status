@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'open311'
 
 class Status
@@ -17,18 +19,18 @@ class Status
 
     def process
       response = nil
-      start = Time.now
+      start = Time.current
 
       begin
         response = yield
         status.http_code = 200
       rescue Open311::Error => error
         status.http_code = open311_error_to_http_code(error)
-      rescue Timeout::Error, StandardError => error
+      rescue StandardError => error
         status.error_message = "#{error.class}: #{error}"
       end
 
-      status.duration_ms = ((Time.now - start) * 1000).to_i
+      status.duration_ms = ((Time.current - start) * 1000).to_i
       status.save!
 
       response

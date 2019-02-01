@@ -1,7 +1,17 @@
 #
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 #
+require: rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Exclude
+    - Include
+
 AllCops:
+  TargetRubyVersion: 2.6.0
+  DisplayCopNames: true
+  DisplayStyleGuide: true
   Include:
     - Rakefile
     - config.ru
@@ -10,21 +20,99 @@ AllCops:
     - db/**/*
     - config/**/*
 
-Style/LineLength:
-  Max: 150
+Rails:
+  Enabled: true
 
-Style/MethodLength:
-  CountComments: false  # count full line comments?
-  Max: 50
+Rails/SkipsModelValidations:
+  Enabled: false
 
-Style/AlignParameters:
+Rails/FilePath:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
+
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ClassLength:
+  CountComments: false  # count full line comments?
+  Max: 200
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 100
+
+Metrics/LineLength:
+  Max: 500
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
 Documentation:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/lib/tasks/*
+    - spec/features/*
+    - spec/requests/*
+    - spec/system/*
+    - spec/routing/*
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/NumericLiterals:
   Enabled: false
 
 Style/PercentLiteralDelimiters:
   Enabled: false
 
-Style/NumericLiterals:
+Style/RegexpLiteral:
   Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ServiceRequestsPager
   LIMIT = 10
 
@@ -39,12 +41,14 @@ class ServiceRequestsPager
   def index_record
     id = @after_id || @before_id
     return if id.blank?
+
     @_index_record ||= ServiceRequest.find(id)
   end
 
   def index_point
     return if index_record.blank?
-    @_order_point ||= ServiceRequest.order_requested_at(index_record)
+
+    @_index_point ||= ServiceRequest.order_requested_at(index_record)
   end
 
   def index_position

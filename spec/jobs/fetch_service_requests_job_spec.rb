@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 RSpec.describe FetchServiceRequestsJob do
-  let(:city) { City.instance(:chicago)}
+  let(:city) { City.instance(:chicago) }
 
   describe '#perform' do
     it 'fetches service requests' do

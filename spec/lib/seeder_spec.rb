@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Seeder do
@@ -5,7 +7,7 @@ RSpec.describe Seeder do
 
   describe '#call' do
     it 'creates new records' do
-      expect { seeder.call }.to change { ServiceRequest.count }.from(0)
+      expect { seeder.call }.to change(ServiceRequest, :count).from(0)
     end
   end
 end

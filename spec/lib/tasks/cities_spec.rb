@@ -1,18 +1,20 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "cities:cleanup", type: :rake do
+RSpec.describe "cities:cleanup", type: :rake do # rubocop:disable RSpec/MultipleDescribes
   include_context "rake"
 
-  let(:city) { City.instance('san_francisco')}
+  let(:city) { City.instance('san_francisco') }
 
   it 'deletes old service requests and statuses' do
-    service_requests = FactoryBot.create_list :service_request, 2, city: city, created_at: 3.days.ago
-    statuses = FactoryBot.create_list :status, 2, city: city, created_at: 3.days.ago
+    FactoryBot.create_list :service_request, 2, city: city, created_at: 3.days.ago
+    FactoryBot.create_list :status, 2, city: city, created_at: 3.days.ago
 
-    expect {
+    expect do
       task.invoke
-    }.to change { ServiceRequest.count }.from(2).to(0)
-        .and change { Status.count }.from(2).to(0)
+    end.to change(ServiceRequest, :count).from(2).to(0)
+                                         .and change(Status, :count).from(2).to(0)
   end
 end
 

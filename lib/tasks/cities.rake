@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 class CitiesTasks
   include Rake::DSL
 
   def initialize
     namespace :cities do
       desc 'Load all cities into the database'
-      task :load => :environment do |t, args|
+      task load: :environment do |_t, _args|
         Rails.logger = Logger.new(STDOUT)
         Rails.logger.info "Populating database with cities"
         City.load!
       end
 
       desc 'Fetch service requests for all cities, or list of individual cities'
-      task :service_requests, [:slug] => :environment do |task, args|
+      task :service_requests, [:slug] => :environment do |_task, args|
         Rails.logger = Logger.new(STDOUT)
         cities = find_cities(args)
 
@@ -25,7 +27,7 @@ class CitiesTasks
       end
 
       desc 'Fetch service list/definitions for all cities, or list of individual cities'
-      task :service_list, [:slug] => :environment do |task, args|
+      task :service_list, [:slug] => :environment do |_task, args|
         Rails.logger = Logger.new(STDOUT)
         cities = find_cities(args)
 
@@ -39,7 +41,7 @@ class CitiesTasks
       end
 
       desc 'Fetch all service requests for a given date range (recursively)'
-      task :all_service_requests, [:slug] => :environment do |task, args|
+      task :all_service_requests, [:slug] => :environment do |_task, args|
         Rails.logger = Logger.new(STDOUT)
 
         cities = find_cities(args)
@@ -56,7 +58,7 @@ class CitiesTasks
       end
 
       desc 'Fetch API parameters'
-      task :request_metadata, [:slug] => :environment do |task, args|
+      task :request_metadata, [:slug] => :environment do |_task, args|
         Rails.logger = Logger.new(STDOUT)
 
         cities = find_cities(args)
@@ -76,20 +78,19 @@ class CitiesTasks
 
           updated_datetimes = service_requests.pluck(:updated_datetime).compact
           updated_datetime_order = if updated_datetimes == updated_datetimes.sort
-                                       :ascending
-                                     elsif updated_datetimes == updated_datetimes.sort.reverse
-                                       :descending
-                                     else
-                                       :not_sorted
-                                     end
+                                     :ascending
+                                   elsif updated_datetimes == updated_datetimes.sort.reverse
+                                     :descending
+                                   else
+                                     :not_sorted
+                                   end
 
           Rails.logger.info "#{city.name}: requested_datetime(#{requested_datetime_order}), updated_datetime(#{updated_datetime_order}), limit(#{limit})"
         end
       end
 
-
       desc 'Delete service requests and statuses'
-      task cleanup: :environment do |task, args|
+      task cleanup: :environment do |_task, _args|
         Status.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
         ServiceRequest.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
       end
@@ -101,7 +102,7 @@ class CitiesTasks
   def find_cities(args)
     slugs = Array(args[:slug]) + Array(args.extras)
 
-    if slugs.size > 0
+    if !slugs.empty?
       slugs.map { |slug| City.find_by!(slug: slug) }
     else
       City.all

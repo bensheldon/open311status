@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StatusDecorator < Draper::Decorator
   delegate_all
 
@@ -15,7 +17,7 @@ class StatusDecorator < Draper::Decorator
     {
       success: 'Okay',
       slow: 'Slow',
-      error: 'Error'
+      error: 'Error',
     }[quality]
   end
 
@@ -23,7 +25,7 @@ class StatusDecorator < Draper::Decorator
     {
       success: "Server responded in #{duration_ms} ms",
       slow: "Server slow response of #{duration_ms} ms",
-      error: error_description
+      error: error_description,
     }[quality]
   end
 
@@ -31,7 +33,7 @@ class StatusDecorator < Draper::Decorator
     {
       success: 'success',
       slow: 'warning',
-      error: 'danger'
+      error: 'danger',
     }[quality]
   end
 

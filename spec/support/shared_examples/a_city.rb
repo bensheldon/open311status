@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'uri'
 
 RSpec.shared_examples 'a city' do
@@ -12,7 +14,7 @@ RSpec.shared_examples 'a city' do
 
   describe '#endpoint' do
     it 'is valid URL' do
-      expect(city.endpoint).to match URI.regexp
+      expect(city.endpoint).to match URI::DEFAULT_PARSER.make_regexp
     end
   end
 end

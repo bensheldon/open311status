@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe City, type: :model do
@@ -16,15 +18,13 @@ RSpec.describe City, type: :model do
     end
 
     it 'has keys with only letters and underscores' do
-      configuration.keys.each do |key|
-        expect(key).to match(/\A[a-z_]*\z/)
-      end
+      expect(configuration.keys).to all match(/\A[a-z_]*\z/)
     end
   end
 
   describe '.load!' do
     it 'creates city records in the database' do
-      allow(Rails.configuration).to receive(:cities).and_return({ test: { }})
+      allow(Rails.configuration).to receive(:cities).and_return(test: {})
 
       expect { described_class.load! }.to change(City, :count).from(0).to(1)
     end
@@ -61,8 +61,8 @@ RSpec.describe City, type: :model do
       FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 1.day.ago
       FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 1.day.ago
       latest_status = FactoryBot.create :status, city: city, request_name: 'service_list'
-      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 2.day.ago
-      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 2.day.ago
+      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 2.days.ago
+      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 2.days.ago
 
       expect(city.service_list_status).to eq latest_status
     end
@@ -73,15 +73,15 @@ RSpec.describe City, type: :model do
       FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 1.day.ago
       FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 1.day.ago
       latest_status = FactoryBot.create :status, city: city, request_name: 'service_requests'
-      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 2.day.ago
-      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 2.day.ago
+      FactoryBot.create :status, city: city, request_name: 'service_requests', created_at: 2.days.ago
+      FactoryBot.create :status, city: city, request_name: 'service_list', created_at: 2.days.ago
 
       expect(city.service_requests_status).to eq latest_status
     end
   end
 
   describe '#uptime_percent' do
-    context 'service_list' do
+    describe 'service_list' do
       it 'calculates uptime' do
         FactoryBot.create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 37.minutes.ago
         FactoryBot.create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 27.minutes.ago
@@ -90,7 +90,7 @@ RSpec.describe City, type: :model do
       end
     end
 
-    context 'service_requests' do
+    describe 'service_requests' do
       it 'calculates uptime' do
         FactoryBot.create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 37.minutes.ago
         FactoryBot.create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 27.minutes.ago

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'open311'
 require 'hashie'
 
 class City
   class Api
-    attr_reader :city, :open311
+    attr_reader :city
 
     MAX_AGE = 2.days
 
@@ -11,27 +13,26 @@ class City
       @city = city
 
       api_options = {
-        endpoint: city.endpoint
+        endpoint: city.endpoint,
       }
       api_options[:jurisdiction] = city.jurisdiction if city.jurisdiction
       api_options[:headers] = city.headers if city.headers
       api_options[:format] = city.format if city.format
-      @open311 = ::Open311.new api_options
+    end
+
+    def open311
+      @_open311 ||= ::Open311.new api_options
     end
 
     def services_url
       uri = URI.parse "#{city.endpoint}services.xml"
-      if city.jurisdiction.present?
-        uri.query = URI.encode_www_form jurisdiction_id: city.jurisdiction
-      end
+      uri.query = URI.encode_www_form jurisdiction_id: city.jurisdiction if city.jurisdiction.present?
       uri.to_s
     end
 
     def requests_url
       uri = URI.parse "#{city.endpoint}requests.xml"
-      if city.jurisdiction.present?
-        uri.query = URI.encode_www_form jurisdiction_id: city.jurisdiction
-      end
+      uri.query = URI.encode_www_form jurisdiction_id: city.jurisdiction if city.jurisdiction.present?
       uri.to_s
     end
 
@@ -40,9 +41,7 @@ class City
         open311.service_list
       end
 
-      if service_list_data.is_a?(Hashie::Mash)
-        service_list_data = [service_list_data]
-      end
+      service_list_data = [service_list_data] if service_list_data.is_a?(Hashie::Mash)
 
       Array(service_list_data).map do |request_data|
         city.service_definitions.find_or_initialize_by(service_code: request_data['service_code']).tap do |service_definition|
@@ -76,17 +75,13 @@ class City
                             open311.service_requests(start_date: start_date)
                           end
                         end
+                      elsif end_datetime
+                        open311.service_requests(start_date: start_date, end_date: end_date)
                       else
-                        if end_datetime
-                          open311.service_requests(start_date: start_date, end_date: end_date)
-                        else
-                          open311.service_requests(start_date: start_date)
-                        end
+                        open311.service_requests(start_date: start_date)
                       end
 
-      if requests_data.is_a?(Hashie::Mash)
-        requests_data = [requests_data]
-      end
+      requests_data = [requests_data] if requests_data.is_a?(Hashie::Mash)
 
       Array(requests_data).map do |request_data|
         # Some Service Requests may not have a service_request_id

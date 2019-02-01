@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: service_requests
@@ -44,7 +46,7 @@ class ServiceRequest < ApplicationRecord
       self[:updated_datetime] = DateTime.iso8601(json['updated_datetime']) if json['updated_datetime'].present?
       self[:geometry] = "POINT(#{json['long']} #{json['lat']})" if json['lat'].present?
     end
-  rescue => e
+  rescue StandardError => e
     Raven.capture_exception e,
       extra: {
         data: json,
