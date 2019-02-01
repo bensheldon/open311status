@@ -1,15 +1,15 @@
+# frozen_string_literal: true
+
 class CityDecorator < Draper::Decorator
   delegate_all
 
   decorates_association :service_list_status
   decorates_association :service_requests_status
 
-  def bucketed_service_requests=(buckets)
-    @bucketed_service_requests = buckets
-  end
+  attr_writer :bucketed_service_requests
 
   def bucketed_service_requests
-    @bucketed_service_requests ||= service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count
+    @_bucketed_service_requests ||= service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count
   end
 
   def total_service_requests

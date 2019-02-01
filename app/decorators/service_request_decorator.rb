@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class ServiceRequestDecorator < Draper::Decorator
   delegate_all
 
   def media_url
     url = raw_data['media_url']
-    return unless url.present?
+    return if url.blank?
 
     uri = URI.parse(url)
     uri.scheme = 'https'

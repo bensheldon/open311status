@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Capybara.server = :puma, { Silent: true }
 
 RSpec.configure do |config|

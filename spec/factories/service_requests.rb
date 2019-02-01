@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryBot.define do
@@ -6,7 +8,7 @@ FactoryBot.define do
 
     transient do
       service_request_id { SecureRandom.uuid }
-      status { ['open', 'closed'].sample }
+      status { %w[open closed].sample }
       service_name { Faker::Commerce.department(2, true) }
       description { Faker::Lorem.paragraph(1, false, 5) }
       requested_datetime { 10.minutes.ago }

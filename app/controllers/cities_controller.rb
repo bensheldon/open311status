@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CitiesController < ApplicationController
   def index
     cities = City.includes(:service_list_status, :service_requests_status, :service_list_status_errors, :service_request_status_errors).all.order(slug: :asc)

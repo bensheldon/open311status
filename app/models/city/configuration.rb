@@ -1,19 +1,21 @@
+# frozen_string_literal: true
+
 class City
   class Configuration
     include ActiveModel::Model
 
     ATTRIBUTES = [
-        :name,
-        :endpoint,
-        :jurisdiction,
-        :format,
-        :headers,
-        :notes,
-        :requests_limit,
-        :requests_omit_timezone,
-    ]
+      :name,
+      :endpoint,
+      :jurisdiction,
+      :format,
+      :headers,
+      :notes,
+      :requests_limit,
+      :requests_omit_timezone,
+    ].freeze
 
-    attr_accessor *ATTRIBUTES
+    attr_accessor(*ATTRIBUTES)
 
     def format
       (@format || :json).to_sym

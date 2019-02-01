@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Cities', type: :system do
@@ -14,7 +16,7 @@ RSpec.describe 'Cities', type: :system do
 
   it 'shows all cities on frontpage' do
     visit root_path
-    
+
     City.all.each do |city|
       expect(page).to have_text city.name
     end
