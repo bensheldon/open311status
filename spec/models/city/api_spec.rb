@@ -22,12 +22,12 @@ RSpec.describe City::Api do
 
   describe '#fetch_service_requests' do
     describe 'start and end dates' do
-      let(:open311_double) { instance_double(Open311::Client, service_requests: []) }
+      let(:open311_double) { instance_double(::Open311::Client, service_requests: []) }
       let(:start_at) { "2018/01/01".to_datetime }
       let(:end_at) { "2018/01/02".to_datetime }
 
       before do
-        allow(Open311).to receive(:new).and_return(open311_double)
+        allow(Open311::Client).to receive(:new).and_return(open311_double)
       end
 
       it 'Sets timezone to "Z" when passing through start and end times' do
@@ -84,7 +84,7 @@ RSpec.describe City::Api do
         )
 
         open311_double = instance_double(Open311::Client, service_requests: [service_request])
-        allow(Open311).to receive(:new).and_return(open311_double)
+        allow(Open311::Client).to receive(:new).and_return(open311_double)
 
         result = api.fetch_service_requests
         expect(result).to eq []

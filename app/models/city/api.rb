@@ -11,17 +11,19 @@ class City
 
     def initialize(city)
       @city = city
-
-      api_options = {
-        endpoint: city.endpoint,
-      }
-      api_options[:jurisdiction] = city.jurisdiction if city.jurisdiction
-      api_options[:headers] = city.headers if city.headers
-      api_options[:format] = city.format if city.format
     end
 
     def open311
-      @_open311 ||= ::Open311.new api_options
+      @_open311 ||= begin
+        api_options = {
+            endpoint: city.endpoint,
+        }
+        api_options[:jurisdiction] = city.jurisdiction if city.jurisdiction
+        api_options[:headers] = city.headers if city.headers
+        api_options[:format] = city.format if city.format
+
+        ::Open311::Client.new(api_options)
+      end
     end
 
     def services_url
@@ -38,10 +40,12 @@ class City
 
     def fetch_service_list
       service_list_data = Status::Telemetry.process('service_list', city: city) do
+        puts "CALL"
         open311.service_list
       end
 
       service_list_data = [service_list_data] if service_list_data.is_a?(Hashie::Mash)
+
 
       Array(service_list_data).map do |request_data|
         city.service_definitions.find_or_initialize_by(service_code: request_data['service_code']).tap do |service_definition|
