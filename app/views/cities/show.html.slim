@@ -10,7 +10,7 @@ h1= @city.name
   .panel-heading
     h3.panel-title Service Requests created during previous 48 hours
   .panel-body
-    = line_chart [{ name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.now).count }]
+    = line_chart [{ name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count }]
 
 .panel.panel-default.with-nav-tabs
   .panel-heading

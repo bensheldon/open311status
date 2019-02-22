@@ -2,30 +2,30 @@
   .tablesorter-header-inner {
     position: relative;
 
-    &:after {
+    &::after {
       display: block;
-      font-family: FontAwesome;
+      font-family: FontAwesome; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
       position: absolute;
       right: 0;
       top: 0;
     }
   }
 
-  .tablesorter-headerUnSorted .tablesorter-header-inner:after {
+  .tablesorter-headerUnSorted .tablesorter-header-inner::after {
     color: #999;
     content: "\f0dc";
   }
 
-  .tablesorter-headerAsc .tablesorter-header-inner:after {
+  .tablesorter-headerAsc .tablesorter-header-inner::after {
     content: "\f0de";
   }
 
-  .tablesorter-headerDesc .tablesorter-header-inner:after {
+  .tablesorter-headerDesc .tablesorter-header-inner::after {
     content: "\f0dd";
   }
 
   // disable tablesorter on this column
-  .tablesorter-headerUnSorted[data-sorter="false"] .tablesorter-header-inner:after {
+  .tablesorter-headerUnSorted[data-sorter="false"] .tablesorter-header-inner::after {
     content: "";
   }
 }
