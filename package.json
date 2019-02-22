@@ -13,6 +13,8 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
     "webpack-dev-server": "2.11.2"
   }
 }

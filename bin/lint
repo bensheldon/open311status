@@ -15,4 +15,10 @@ chdir APP_ROOT do
 
   puts "\n== Running ES Lint Autocorrect =="
   system! 'yarn run eslint --fix app/javascript'
+
+  puts "\n== Slim Lint =="
+  system! 'bundle exec slim-lint app/views/'
+
+  puts "\n== Stylelint =="
+  system! 'yarn run stylelint --ignore-pattern="app/assets/stylesheets/vendor/*" --fix app/assets/stylesheets'
 end

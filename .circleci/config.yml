@@ -25,20 +25,21 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
-            - open311status-bundle-v1-
-      - run: bundle check || bundle install --path=vendor/bundle --jobs=4 --retry=3 --full-index
+            - open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "Gemfile.lock" }}
+            - open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-
+      - run: bundle install --jobs=4 --retry=3 --full-index && bundle clean
       - save_cache:
-          key: open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
+          key: open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "Gemfile.lock" }}
           paths:
+            - ~/.bundle
             - ./vendor/bundle
       - restore_cache:
           keys:
-            - open311status-yarn-v1-{{ arch }}-{{ checksum "yarn.lock" }}
-            - open311status-yarn-v1-
+            - open311status-yarn-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "yarn.lock" }}
+            - open311status-yarn-{{ .Environment.CACHE_VERSION }}-{{ arch }}-
       - run: yarn install
       - save_cache:
-          key: open311status-yarn-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+          key: open311status-yarn-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
             - ./node_modules
@@ -49,12 +50,10 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
-            - open311status-bundle-v1-
+            - open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "Gemfile.lock" }}
       - restore_cache:
           keys:
-            - open311status-yarn-v1-{{ arch }}-{{ checksum "yarn.lock" }}
-            - open311status-yarn-v1-
+            - open311status-yarn-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "yarn.lock" }}
       - run: dockerize -wait tcp://localhost:5432 -timeout 1m
       - run: bin/rails db:test:prepare
       - run: bin/rails assets:precompile
@@ -72,12 +71,10 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - open311status-bundle-v1-{{ arch }}-{{ checksum "Gemfile.lock" }}
-            - open311status-bundle-v1-
+            - open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "Gemfile.lock" }}
       - restore_cache:
           keys:
-            - open311status-yarn-v1-{{ arch }}-{{ checksum "yarn.lock" }}
-            - open311status-yarn-v1-
+            - open311status-yarn-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "yarn.lock" }}
       - run: bin/lint
 
 workflows:
