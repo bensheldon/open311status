@@ -16,7 +16,7 @@ class City
     def open311
       @_open311 ||= begin
         api_options = {
-            endpoint: city.endpoint,
+          endpoint: city.endpoint,
         }
         api_options[:jurisdiction] = city.jurisdiction if city.jurisdiction
         api_options[:headers] = city.headers if city.headers
@@ -40,12 +40,10 @@ class City
 
     def fetch_service_list
       service_list_data = Status::Telemetry.process('service_list', city: city) do
-        puts "CALL"
         open311.service_list
       end
 
       service_list_data = [service_list_data] if service_list_data.is_a?(Hashie::Mash)
-
 
       Array(service_list_data).map do |request_data|
         city.service_definitions.find_or_initialize_by(service_code: request_data['service_code']).tap do |service_definition|
