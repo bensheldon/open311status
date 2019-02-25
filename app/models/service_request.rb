@@ -33,6 +33,7 @@ class ServiceRequest < ApplicationRecord
   has_one :global_index, as: :searchable, inverse_of: :service_request # rubocop:disable Rails/HasManyOrHasOneDependent
 
   order_query :order_requested, [:requested_datetime, :desc, { unique: false, nulls: :last }]
+  scope :by_requested_datetime, -> { order("requested_datetime DESC NULLS LAST") }
 
   def parameterize
     { city_slug: city.slug, service_request_id: service_request_id, slug: slug }
