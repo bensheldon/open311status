@@ -23,7 +23,7 @@ h1= @city.name
           | Service Definitions
   .panel-body.tab-content
     div role="tabpanel" class="tab-pane active" id="service_requests"
-      = render 'service_requests', service_requests: @city.service_requests.all.order(requested_datetime: :desc).limit(100)
+      = render 'service_requests', service_requests: @service_requests
 
     div role="tabpanel" class="tab-pane" id="service_definitions"
       table.table.table-bordered.table-striped

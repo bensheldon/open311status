@@ -27,7 +27,7 @@ jobs:
           keys:
             - open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "Gemfile.lock" }}
             - open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-
-      - run: bundle install --jobs=4 --retry=3 --full-index && bundle clean
+      - run: bundle install --full-index && bundle clean
       - save_cache:
           key: open311status-bundle-{{ .Environment.CACHE_VERSION }}-{{ arch }}-{{ checksum "Gemfile.lock" }}
           paths:
