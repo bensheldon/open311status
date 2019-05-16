@@ -44,7 +44,7 @@ requests. To load cities, run `rake cities:load`. And to load service requests,
 
 ### Application Dependencies
 1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
-2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.5.3`
+2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.6.1`
 3. Install [bundler](https://bundler.io/) (the latest Heroku-compatible version): `gem install bundler`
 4. [Install Postgres](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md). If setting up Postgres.app, you will also need to add the binary to your path. e.g. Add to your `~/.bashrc`:
 `export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`.
