@@ -22,8 +22,8 @@ class City < ApplicationRecord
   has_many :service_definitions, dependent: :destroy
   has_many :statuses, dependent: :destroy
 
-  has_one :service_list_status, -> { latest_by_city(:service_list) }, class_name: 'Status', inverse_of: :city
-  has_one :service_requests_status, -> { latest_by_city(:service_requests) }, class_name: 'Status', inverse_of: :city
+  has_one :service_list_status, -> { latest_by_city(1).where(request_name: :service_list).order(created_at: :desc) }, class_name: 'Status', inverse_of: :city
+  has_one :service_requests_status, -> { latest_by_city(1).where(request_name: :service_requests).order(created_at: :desc) }, class_name: 'Status', inverse_of: :city
   has_many :service_list_statuses, -> { service_list }, class_name: 'Status', inverse_of: :city
   has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status', inverse_of: :city
   has_many :service_list_status_errors, lambda {

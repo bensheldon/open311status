@@ -20,28 +20,20 @@
 class Status < ApplicationRecord
   belongs_to :city
 
-  scope :latest_by_city, lambda { |request_name, count: 1|
-    # This scope is complex. The table_reference (which is `cities`) is aliased to be
-    # the model's table (`statuses`) so that when this scope is used as in an association
-    # the eagerloaded foreign key query (`WHERE statuses.city_id` IN ...) will work properly.
-    #
-    # SELECT <columns>
-    # FROM <table reference>
-    #      JOIN LATERAL <subquery>
-    #      ON TRUE;
-    #
-    query = select('subquery.*').from('(SELECT *, id AS city_id FROM cities) AS statuses')
-
-    join_sql = <<~SQL
-      JOIN LATERAL (
-        SELECT * FROM statuses AS sub_statuses
-        WHERE sub_statuses.city_id = statuses.city_id
-          AND sub_statuses.request_name = :request_name
-        ORDER BY created_at DESC LIMIT :count
-      ) AS subquery ON TRUE
-    SQL
-
-    query.joins(sanitize_sql_array([join_sql, { request_name: request_name, count: count }]))
+  scope :latest_by_city, lambda { |count = 1|
+    where(arel_table[:id].in(Arel.sql(
+                               <<~SQL
+                                 SELECT latest_statuses.id
+                                 FROM cities
+                                 LEFT JOIN LATERAL (
+                                   SELECT id
+                                   FROM statuses
+                                   WHERE statuses.city_id = cities.id
+                                   ORDER BY created_at DESC
+                                   LIMIT #{sanitize_sql_array(['?', count])}
+                                 ) latest_statuses ON true
+                               SQL
+                             )))
   }
   scope :service_list, -> { where(request_name: 'service_list') }
   scope :service_requests, -> { where(request_name: 'service_requests') }
