@@ -2,7 +2,6 @@ defaults: &defaults
   adapter: postgis
   encoding: unicode
   pool: 20
-  username: <%= ENV['POSTGRES_USERNAME'] || ENV['USER'] %>
   connect_timeout: 1
   checkout_timeout: 1
 
