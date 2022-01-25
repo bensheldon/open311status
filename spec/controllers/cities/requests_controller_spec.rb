@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Cities::RequestsController, type: :controller do
-  let(:service_request) { FactoryBot.create :service_request }
+  let(:service_request) { create :service_request }
 
   describe '#show' do
     it 'assigns the service_request' do

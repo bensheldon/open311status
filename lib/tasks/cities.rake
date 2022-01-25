@@ -7,14 +7,14 @@ class CitiesTasks
     namespace :cities do
       desc 'Load all cities into the database'
       task load: :environment do |_t, _args|
-        Rails.logger = Logger.new(STDOUT)
+        Rails.logger = Logger.new($stdout)
         Rails.logger.info "Populating database with cities"
         City.load!
       end
 
       desc 'Fetch service requests for all cities, or list of individual cities'
       task :service_requests, [:slug] => :environment do |_task, args|
-        Rails.logger = Logger.new(STDOUT)
+        Rails.logger = Logger.new($stdout)
         cities = find_cities(args)
 
         cities.each do |city|
@@ -28,7 +28,7 @@ class CitiesTasks
 
       desc 'Fetch service list/definitions for all cities, or list of individual cities'
       task :service_list, [:slug] => :environment do |_task, args|
-        Rails.logger = Logger.new(STDOUT)
+        Rails.logger = Logger.new($stdout)
         cities = find_cities(args)
 
         cities.each do |city|
@@ -42,7 +42,7 @@ class CitiesTasks
 
       desc 'Fetch all service requests for a given date range (recursively)'
       task :all_service_requests, [:slug] => :environment do |_task, args|
-        Rails.logger = Logger.new(STDOUT)
+        Rails.logger = Logger.new($stdout)
 
         cities = find_cities(args)
         start_at = ENV.fetch('START_AT', 7.days.ago).to_datetime.beginning_of_day
@@ -59,7 +59,7 @@ class CitiesTasks
 
       desc 'Fetch API parameters'
       task :request_metadata, [:slug] => :environment do |_task, args|
-        Rails.logger = Logger.new(STDOUT)
+        Rails.logger = Logger.new($stdout)
 
         cities = find_cities(args)
 
@@ -102,10 +102,10 @@ class CitiesTasks
   def find_cities(args)
     slugs = Array(args[:slug]) + Array(args.extras)
 
-    if !slugs.empty?
-      slugs.map { |slug| City.find_by!(slug: slug) }
-    else
+    if slugs.empty?
       City.all
+    else
+      slugs.map { |slug| City.find_by!(slug: slug) }
     end
   end
 end

@@ -74,6 +74,6 @@ class City < ApplicationRecord
 
     downtime_periods = statuses.group_by(&:time_period).keys.size
 
-    100 - (downtime_periods.to_f / ((Time.current - start_floor) / 10.minutes)) * 100
+    100 - ((downtime_periods.to_f / ((Time.current - start_floor) / 10.minutes)) * 100)
   end
 end

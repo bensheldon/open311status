@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 require 'fileutils'
-include FileUtils
+require 'optparse'
+
+options = {}
+OptionParser.new do |opt|
+  opt.on('-n', '--nofix', 'Do not fix') { |o| options[:nofix] = o }
+end.parse!
 
 # path to your application root.
 APP_ROOT = File.expand_path('..', __dir__)
@@ -9,16 +14,16 @@ def system!(*args)
   system(*args) || abort("\n== Command #{args} failed ==")
 end
 
-chdir APP_ROOT do
-  puts "\n== Running Rubocop Autocorrect =="
-  system! 'bin/rubocop --safe-auto-correct'
+FileUtils.chdir APP_ROOT do
+  puts "\n== Running Rubocop =="
+  system! "bundle exec rubocop #{options[:nofix] ? '--parallel' : '--auto-correct'}"
 
-  puts "\n== Running ES Lint Autocorrect =="
-  system! 'yarn run eslint --fix app/javascript'
+  puts "\n== Running ES Lint =="
+  system! "yarn run eslint #{options[:nofix] ? '' : '--fix'} app/javascript"
 
   puts "\n== Slim Lint =="
   system! 'bundle exec slim-lint app/views/'
 
   puts "\n== Stylelint =="
-  system! 'yarn run stylelint --ignore-pattern="app/assets/stylesheets/vendor/*" --fix app/assets/stylesheets'
+  system! "yarn run stylelint --ignore-pattern=\"app/assets/stylesheets/vendor/*\" #{options[:nofix] ? '' : '--fix'} app/assets/stylesheets"
 end

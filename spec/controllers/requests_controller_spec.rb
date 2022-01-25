@@ -7,7 +7,7 @@ RSpec.describe RequestsController, type: :controller do
 
   describe "GET index" do
     let!(:city) { City.instance(:chicago) }
-    let!(:service_requests) { FactoryBot.create_list :service_request, 5 }
+    let!(:service_requests) { create_list :service_request, 5 }
 
     it "assigns a pager" do
       get :index

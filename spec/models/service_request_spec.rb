@@ -4,12 +4,12 @@ require 'rails_helper'
 
 RSpec.describe ServiceRequest, type: :model do
   it 'has a valid factory' do
-    expect(FactoryBot.create(:service_request)).to be_valid
+    expect(create(:service_request)).to be_valid
   end
 
   describe '#raw_data=' do
     let(:json) { JSON.parse(service_requests_json).first }
-    let(:sr) { ServiceRequest.new raw_data: json }
+    let(:sr) { described_class.new raw_data: json }
 
     it 'extracts :service_request_id' do
       expect(sr.service_request_id).to eq json['service_request_id']
@@ -34,7 +34,7 @@ RSpec.describe ServiceRequest, type: :model do
   end
 
   describe '#slug' do
-    let(:service_request) { FactoryBot.create :service_request }
+    let(:service_request) { create :service_request }
 
     it 'sluggifies the description' do
       service_request.raw_data['description'] = 'Something happened.'
