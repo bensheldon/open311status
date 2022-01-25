@@ -6,8 +6,8 @@ class Status
   class Telemetry
     attr_accessor :request_name, :city, :status
 
-    def self.process(request_name, options = {})
-      new(request_name, options).process { yield }
+    def self.process(request_name, options = {}, &block)
+      new(request_name, options).process(&block)
     end
 
     def initialize(request_name, options = {})
@@ -24,10 +24,10 @@ class Status
       begin
         response = yield
         status.http_code = 200
-      rescue Open311::Error => error
-        status.http_code = open311_error_to_http_code(error)
-      rescue StandardError => error
-        status.error_message = "#{error.class}: #{error}"
+      rescue Open311::Error => e
+        status.http_code = open311_error_to_http_code(e)
+      rescue StandardError => e
+        status.error_message = "#{e.class}: #{e}"
       end
 
       status.duration_ms = ((Time.current - start) * 1000).to_i

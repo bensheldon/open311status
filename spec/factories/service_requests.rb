@@ -9,8 +9,8 @@ FactoryBot.define do
     transient do
       service_request_id { SecureRandom.uuid }
       status { %w[open closed].sample }
-      service_name { Faker::Commerce.department(2, true) }
-      description { Faker::Lorem.paragraph(1, false, 5) }
+      service_name { Faker::Commerce.department(max: 2, fixed_amount: true) }
+      description { Faker::Lorem.paragraph(sentence_count: 1, supplemental: false, random_sentences_to_add: 5) }
       requested_datetime { 10.minutes.ago }
       lat { Faker::Address.latitude }
       long { Faker::Address.longitude }

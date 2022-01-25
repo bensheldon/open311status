@@ -30,7 +30,7 @@ class ServiceRequest < ApplicationRecord
   SLUG_SIZE = 100
 
   belongs_to :city
-  has_one :global_index, as: :searchable, inverse_of: :service_request # rubocop:disable Rails/HasManyOrHasOneDependent
+  has_one :global_index, as: :searchable, inverse_of: :service_request
 
   order_query :order_requested, [:requested_datetime, :desc, { unique: false, nulls: :last }]
   scope :by_requested_datetime, -> { order("requested_datetime DESC NULLS LAST") }
@@ -49,9 +49,9 @@ class ServiceRequest < ApplicationRecord
     end
   rescue StandardError => e
     Raven.capture_exception e,
-      extra: {
-        data: json,
-      }
+                            extra: {
+                              data: json,
+                            }
   end
 
   def slug

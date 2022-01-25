@@ -32,7 +32,7 @@ class Status < ApplicationRecord
     #
     query = select('subquery.*').from('(SELECT *, id AS city_id FROM cities) AS statuses')
 
-    join_sql = <<~SQL
+    join_sql = <<~SQL.squish
       JOIN LATERAL (
         SELECT * FROM statuses AS sub_statuses
         WHERE sub_statuses.city_id = statuses.city_id

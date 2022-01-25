@@ -3,7 +3,7 @@
 # https://robots.thoughtbot.com/test-rake-tasks-like-a-boss
 require "rake"
 
-shared_context "rake", type: :rake do
+shared_context "with rake", type: :rake do
   subject(:task)  { rake[task_name] }
 
   let(:rake)      { Rake::Application.new }

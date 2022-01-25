@@ -3,13 +3,13 @@
 require 'rails_helper'
 
 RSpec.describe "cities:cleanup", type: :rake do # rubocop:disable RSpec/MultipleDescribes
-  include_context "rake"
+  include_context "with rake"
 
   let(:city) { City.instance('san_francisco') }
 
   it 'deletes old service requests and statuses' do
-    FactoryBot.create_list :service_request, 2, city: city, created_at: 3.days.ago
-    FactoryBot.create_list :status, 2, city: city, created_at: 3.days.ago
+    create_list :service_request, 2, city: city, created_at: 3.days.ago
+    create_list :status, 2, city: city, created_at: 3.days.ago
 
     expect do
       task.invoke
@@ -19,7 +19,7 @@ RSpec.describe "cities:cleanup", type: :rake do # rubocop:disable RSpec/Multiple
 end
 
 RSpec.describe "cities:service_list", type: :rake do
-  include_context "rake"
+  include_context "with rake"
 
   let!(:city) { City.instance('san_francisco') }
   let!(:another_city) { City.instance('chicago') }
@@ -43,7 +43,7 @@ RSpec.describe "cities:service_list", type: :rake do
 end
 
 RSpec.describe "cities:service_requests", type: :rake do
-  include_context "rake"
+  include_context "with rake"
 
   let!(:city) { City.instance('san_francisco') }
   let!(:another_city) { City.instance('chicago') }
@@ -81,7 +81,7 @@ RSpec.describe "cities:service_requests", type: :rake do
 end
 
 RSpec.describe "cities:all_service_requests", type: :rake do
-  include_context "rake"
+  include_context "with rake"
 
   let!(:city) { City.instance('san_francisco') }
   let!(:another_city) { City.instance('chicago') }

@@ -6,7 +6,7 @@ RSpec.describe ServiceRequestDecorator, type: :decorator do
   subject(:decorated) { described_class.decorate service_request }
 
   let(:city) { City.instance(:chicago) }
-  let(:service_request) { FactoryBot.create :service_request }
+  let(:service_request) { create :service_request }
 
   describe '#media_url' do
     it 'is nil when invalid' do

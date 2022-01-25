@@ -16,33 +16,33 @@ linters:
     # templates isn't well-formatted, so we ignore them.
     # WARNING: If you define this list in your own .slim-lint.yml file, you'll
     # be overriding the list defined here.
-    ignored_cops:
-      - Layout/AlignArray
-      - Layout/AlignHash
-      - Layout/AlignParameters
-      - Layout/EmptyLineAfterGuardClause
-      - Layout/FirstParameterIndentation
-      - Layout/IndentArray
-      - Layout/IndentationConsistency
-      - Layout/IndentationWidth
-      - Layout/InitialIndentation
-      - Layout/MultilineArrayBraceLayout
-      - Layout/MultilineAssignmentLayout
-      - Layout/MultilineHashBraceLayout
-      - Layout/MultilineMethodCallBraceLayout
-      - Layout/MultilineMethodCallIndentation
-      - Layout/MultilineMethodDefinitionBraceLayout
-      - Layout/MultilineOperationIndentation
-      - Layout/TrailingBlankLines
-      - Layout/TrailingWhitespace
-      - Lint/BlockAlignment
-      - Lint/EndAlignment
-      - Lint/Void
-      - Metrics/BlockLength
-      - Metrics/BlockNesting
-      - Metrics/LineLength
-      - Naming/FileName
-      - Style/FrozenStringLiteralComment
-      - Style/IfUnlessModifier
-      - Style/Next
-      - Style/WhileUntilModifier
+#    ignored_cops:
+#      - Layout/AlignArray
+#      - Layout/AlignHash
+#      - Layout/AlignParameters
+#      - Layout/EmptyLineAfterGuardClause
+#      - Layout/FirstParameterIndentation
+#      - Layout/IndentArray
+#      - Layout/IndentationConsistency
+#      - Layout/IndentationWidth
+#      - Layout/InitialIndentation
+#      - Layout/MultilineArrayBraceLayout
+#      - Layout/MultilineAssignmentLayout
+#      - Layout/MultilineHashBraceLayout
+#      - Layout/MultilineMethodCallBraceLayout
+#      - Layout/MultilineMethodCallIndentation
+#      - Layout/MultilineMethodDefinitionBraceLayout
+#      - Layout/MultilineOperationIndentation
+#      - Layout/TrailingBlankLines
+#      - Layout/TrailingWhitespace
+#      - Lint/BlockAlignment
+#      - Lint/EndAlignment
+#      - Lint/Void
+#      - Layout/BlockLength
+#      - Layout/BlockNesting
+#      - Layout/LineLength
+#      - Naming/FileName
+#      - Style/FrozenStringLiteralComment
+#      - Style/IfUnlessModifier
+#      - Style/Next
+#      - Style/WhileUntilModifier

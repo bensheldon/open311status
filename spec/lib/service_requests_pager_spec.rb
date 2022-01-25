@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe ServiceRequestsPager do
   let!(:service_requests) do
     (0...20).map do |i|
-      FactoryBot.create :service_request, requested_datetime: Time.current - i.second
+      create :service_request, requested_datetime: Time.current - i.second
     end
   end
 
