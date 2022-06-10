@@ -11,7 +11,7 @@ RSpec.describe ServiceRequestDecorator, type: :decorator do
   describe '#media_url' do
     it 'is nil when invalid' do
       decorated.raw_data['media_url'] = false
-      expect(decorated.media_url).to eq nil
+      expect(decorated.media_url).to be_nil
     end
 
     it 'upgrades to https' do
