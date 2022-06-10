@@ -12,7 +12,7 @@ RSpec.describe Status::Telemetry do
       end
 
       status = Status.last
-      expect(result).to be nil
+      expect(result).to be_nil
       expect(status.city).to eq city
       expect(status.http_code).to eq 400
     end
@@ -23,10 +23,10 @@ RSpec.describe Status::Telemetry do
       end
 
       status = Status.last
-      expect(result).to be nil
+      expect(result).to be_nil
       expect(status.city).to eq city
       expect(status.error_message).to eq "StandardError: Test error"
-      expect(status.http_code).to eq nil
+      expect(status.http_code).to be_nil
     end
   end
 end
