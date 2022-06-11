@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_11_013909) do
+ActiveRecord::Schema.define(version: 2022_06_11_143549) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "pgcrypto"
@@ -107,6 +108,9 @@ ActiveRecord::Schema.define(version: 2022_06_11_013909) do
     t.index ["created_at"], name: "index_statuses_on_created_at"
   end
 
+  add_foreign_key "service_definitions", "cities", on_delete: :cascade
+  add_foreign_key "service_requests", "cities", on_delete: :cascade
+  add_foreign_key "statuses", "cities", on_delete: :cascade
 
   create_view "global_indices", materialized: true, sql_definition: <<-SQL
       WITH service_request_indices AS (
