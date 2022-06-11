@@ -2,15 +2,15 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# Note that this schema.rb definition is the authoritative source for your
-# database schema. If you need to create the application database on another
-# system, you should be using db:schema:load, not running all the migrations
-# from scratch. The latter is a flawed and unsustainable approach (the more migrations
-# you'll amass, the slower it'll run and the greater likelihood for issues).
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_11_155020) do
+ActiveRecord::Schema.define(version: 2022_06_11_013727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2018_12_11_155020) do
     t.index ["city_id", "requested_datetime"], name: "index_service_requests_on_city_id_and_requested_datetime", order: { requested_datetime: "DESC NULLS LAST" }
     t.index ["city_id", "service_request_id"], name: "index_service_requests_on_city_id_and_service_request_id", unique: true
     t.index ["city_id"], name: "index_service_requests_on_city_id"
+    t.index ["created_at"], name: "index_service_requests_on_created_at"
     t.index ["geometry"], name: "index_service_requests_on_geometry", using: :gist
     t.index ["requested_datetime"], name: "index_service_requests_on_requested_datetime", order: "DESC NULLS LAST"
     t.index ["status"], name: "index_service_requests_on_status"
@@ -72,10 +73,11 @@ ActiveRecord::Schema.define(version: 2018_12_11_155020) do
     t.datetime "created_at"
     t.text "error_message"
     t.index ["city_id", "request_name", "created_at"], name: "index_statuses_on_city_id_and_request_name_and_created_at", order: { created_at: :desc }
+    t.index ["created_at"], name: "index_statuses_on_created_at"
   end
 
 
-  create_view "global_indices", materialized: true,  sql_definition: <<-SQL
+  create_view "global_indices", materialized: true, sql_definition: <<-SQL
       WITH service_request_indices AS (
            SELECT ('ServiceRequest-'::text || service_requests.id) AS id,
               'ServiceRequest'::text AS searchable_type,
@@ -90,7 +92,6 @@ ActiveRecord::Schema.define(version: 2018_12_11_155020) do
       service_request_indices.content
      FROM service_request_indices;
   SQL
-
   add_index "global_indices", "to_tsvector('english'::regconfig, content)", name: "index_global_indices_on_to_tsvector_english_content", using: :gin
   add_index "global_indices", ["content"], name: "index_global_indices_on_content_gist_trgm_ops", opclass: :gist_trgm_ops, using: :gist
   add_index "global_indices", ["id"], name: "index_global_indices_on_id", unique: true
