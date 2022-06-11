@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_11_144051) do
+ActiveRecord::Schema.define(version: 2022_06_11_150832) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
@@ -55,17 +55,6 @@ ActiveRecord::Schema.define(version: 2022_06_11_144051) do
     t.index ["finished_at"], name: "index_good_jobs_jobs_on_finished_at", where: "((retried_good_job_id IS NULL) AND (finished_at IS NOT NULL))"
     t.index ["queue_name", "scheduled_at"], name: "index_good_jobs_on_queue_name_and_scheduled_at", where: "(finished_at IS NULL)"
     t.index ["scheduled_at"], name: "index_good_jobs_on_scheduled_at", where: "(finished_at IS NULL)"
-  end
-
-  create_table "que_jobs", primary_key: ["queue", "priority", "run_at", "job_id"], comment: "3", force: :cascade do |t|
-    t.integer "priority", limit: 2, default: 100, null: false
-    t.datetime "run_at", default: -> { "now()" }, null: false
-    t.bigserial "job_id", null: false
-    t.text "job_class", null: false
-    t.json "args", default: [], null: false
-    t.integer "error_count", default: 0, null: false
-    t.text "last_error"
-    t.text "queue", default: "", null: false
   end
 
   create_table "service_definitions", force: :cascade do |t|

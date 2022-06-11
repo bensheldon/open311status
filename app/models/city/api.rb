@@ -85,7 +85,7 @@ class City
 
       requests_data = [requests_data] if requests_data.is_a?(Hashie::Mash)
 
-      Array(requests_data).map do |request_data|
+      Array(requests_data).filter_map do |request_data|
         # Some Service Requests may not have a service_request_id
         next if request_data['service_request_id'].blank?
 
@@ -97,7 +97,7 @@ class City
             service_request.touch
           end
         end
-      end.compact
+      end
     end
   end
 end

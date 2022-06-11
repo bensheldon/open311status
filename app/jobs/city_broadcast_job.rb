@@ -3,9 +3,10 @@
 class CityBroadcastJob < ApplicationJob
   def perform(city)
     @city = city
-    ActionCable.server.broadcast "cities",
-                                 city_id: @city.id,
-                                 city_html: render_city
+    ActionCable.server.broadcast("cities", {
+                                   city_id: @city.id,
+                                   city_html: render_city,
+                                 })
   end
 
   private

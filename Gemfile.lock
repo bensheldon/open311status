@@ -130,15 +130,13 @@ GEM
     childprocess (4.1.0)
     climate_control (1.1.1)
     coderay (1.1.3)
-    coffee-rails (4.2.2)
+    coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
+      railties (>= 5.2.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    composite_primary_keys (13.0.3)
-      activerecord (~> 6.1.0)
     concurrent-ruby (1.1.10)
     crack (0.4.5)
       rexml
@@ -177,7 +175,7 @@ GEM
       raabro (~> 1.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    good_job (2.9.3)
+    good_job (2.15.1)
       activejob (>= 5.2.0)
       activerecord (>= 5.2.0)
       concurrent-ruby (>= 1.0.2)
@@ -220,10 +218,9 @@ GEM
       rexml
     launchy (2.5.0)
       addressable (~> 2.7)
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
+    listen (3.7.1)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     lograge (0.12.0)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -238,6 +235,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.15.0)
     momentjs-rails (2.29.1.1)
       railties (>= 3.1)
@@ -246,6 +244,9 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.2.3)
     nio4r (2.5.8)
+    nokogiri (1.13.6)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.6-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.6-x86_64-linux)
@@ -265,7 +266,6 @@ GEM
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
-    que (0.14.3)
     raabro (1.4.0)
     racc (1.6.0)
     rack (2.2.3.1)
@@ -360,23 +360,19 @@ GEM
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
-    ruby_dep (1.5.0)
     ruby_parser (3.19.1)
       sexp_processor (~> 4.16)
     rubyzip (2.3.2)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    sass-rails (5.1.0)
-      railties (>= 5.2.0)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (>= 1.1, < 3)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     scenic (1.6.0)
       activerecord (>= 4.0.0)
       railties (>= 4.0.0)
@@ -391,9 +387,9 @@ GEM
     sexp_processor (4.16.1)
     sitemap_generator (6.2.1)
       builder (~> 3.0)
-    slim (3.0.9)
+    slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
-      tilt (>= 1.3.3, < 2.1)
+      tilt (>= 2.0.6, < 2.1)
     slim-rails (3.5.1)
       actionpack (>= 3.1)
       railties (>= 3.1)
@@ -407,7 +403,7 @@ GEM
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
-    sprockets (3.7.2)
+    sprockets (4.0.3)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.4.2)
@@ -450,6 +446,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  ruby
   x86_64-linux
 
 DEPENDENCIES
@@ -466,8 +463,7 @@ DEPENDENCIES
   chart-js-rails
   chartkick
   climate_control
-  coffee-rails (~> 4.2)
-  composite_primary_keys
+  coffee-rails
   draper
   factory_bot_rails
   faker
@@ -481,7 +477,7 @@ DEPENDENCIES
   jquery-tablesorter
   kramdown
   launchy
-  listen (>= 3.0.5, < 3.2)
+  listen
   lograge
   momentjs-rails
   open311!
@@ -489,7 +485,6 @@ DEPENDENCIES
   pg
   pry-rails
   puma
-  que (~> 0.14)
   rack-host-redirect
   rack-timeout
   rails (~> 6.1.0)
@@ -500,17 +495,17 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
-  sass-rails (~> 5.0)
+  sass-rails
   scenic
   selenium-webdriver
   sentry-raven
   sitemap_generator
-  slim (~> 3.0.9)
+  slim
   slim-rails
   slim_lint
   spring
   spring-commands-rspec
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   textacular
   timecop
   uglifier (>= 1.3.0)
@@ -519,7 +514,7 @@ DEPENDENCIES
   webpacker
 
 RUBY VERSION
-   ruby 2.7.5p203
+   ruby 3.0.4p208
 
 BUNDLED WITH
-   2.3.6
+   2.3.5
