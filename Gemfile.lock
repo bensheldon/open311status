@@ -185,8 +185,6 @@ GEM
       railties (>= 5.1)
     hashdiff (1.0.1)
     hashie (3.6.0)
-    heroku-deflater (0.6.3)
-      rack (>= 1.4.5)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -461,7 +459,6 @@ DEPENDENCIES
   font_assets
   groupdate
   haml-rails
-  heroku-deflater
   jbuilder (~> 2.5)
   jquery-rails
   jquery-tablesorter

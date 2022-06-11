@@ -47,7 +47,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 
 group :production, :staging do
-  gem 'heroku-deflater'
   gem 'rack-timeout'
 end
 
