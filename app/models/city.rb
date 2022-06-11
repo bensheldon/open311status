@@ -7,8 +7,8 @@
 #  id                        :bigint(8)        not null, primary key
 #  service_definitions_count :integer          default(0), not null
 #  slug                      :string
-#  created_at                :datetime
-#  updated_at                :datetime
+#  created_at                :datetime         not null
+#  updated_at                :datetime         not null
 #
 # Indexes
 #
@@ -18,9 +18,9 @@
 class City < ApplicationRecord
   delegate(*Configuration::ATTRIBUTES, to: :configuration, allow_nil: true)
 
-  has_many :service_requests, dependent: :destroy
-  has_many :service_definitions, dependent: :destroy
-  has_many :statuses, dependent: :destroy
+  has_many :service_requests
+  has_many :service_definitions
+  has_many :statuses
 
   has_one :service_list_status, -> { latest_by_city(:service_list) }, class_name: 'Status', inverse_of: :city
   has_one :service_requests_status, -> { latest_by_city(:service_requests) }, class_name: 'Status', inverse_of: :city
