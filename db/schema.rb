@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2022_06_11_013909) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "pgcrypto"
@@ -91,6 +90,7 @@ ActiveRecord::Schema.define(version: 2022_06_11_013909) do
     t.index ["city_id", "requested_datetime"], name: "index_service_requests_on_city_id_and_requested_datetime", order: { requested_datetime: "DESC NULLS LAST" }
     t.index ["city_id", "service_request_id"], name: "index_service_requests_on_city_id_and_service_request_id", unique: true
     t.index ["city_id"], name: "index_service_requests_on_city_id"
+    t.index ["created_at"], name: "index_service_requests_on_created_at"
     t.index ["geometry"], name: "index_service_requests_on_geometry", using: :gist
     t.index ["requested_datetime"], name: "index_service_requests_on_requested_datetime", order: "DESC NULLS LAST"
     t.index ["status"], name: "index_service_requests_on_status"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 2022_06_11_013909) do
     t.datetime "created_at"
     t.text "error_message"
     t.index ["city_id", "request_name", "created_at"], name: "index_statuses_on_city_id_and_request_name_and_created_at", order: { created_at: :desc }
+    t.index ["created_at"], name: "index_statuses_on_created_at"
   end
 
 
