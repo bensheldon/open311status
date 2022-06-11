@@ -7,7 +7,7 @@ alexandria:
   requests_limit: 1000
 annaberg_buchholz:
   name: 'Annaberg-Buchholz, Deutschland'
-  endpoint: 'http://anliegen.annaberg-buchholz.de/georeport/v2/'
+  endpoint: 'https://anliegen.annaberg-buchholz.de/georeport/v2/'
   jurisdiction: 'annberg-buchholz.de'
   requests_limit: 50
 baltimore:
@@ -89,16 +89,16 @@ peoria:
   requests_limit: 1000
 rostok:
   name: 'Rostock, Deutschland'
-  endpoint: 'https://geo.sv.rostock.de/citysdk/'
+  endpoint: 'https://www.klarschiff-hro.de/backoffice/citysdk/'
   jurisdiction: 'rostock.de'
 san_francisco:
   name: 'San Francisco, CA'
-  endpoint: "http://mobile311.sfgov.org/open311/v2/"
+  endpoint: "https://mobile311.sfgov.org/open311/v2/"
   jurisdiction: 'sfgov.org'
   requests_limit: 50
 siegburg:
   name: 'Siegburg, Deutschland'
-  endpoint: 'http://anliegen.siegburg.de/georeport/v2/'
+  endpoint: 'https://anliegen.siegburg.de/georeport/v2/'
   jurisdiction: 'siegburg.de'
   requests_limit: 50
 surrey:
