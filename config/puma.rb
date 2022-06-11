@@ -31,23 +31,21 @@ workers workers_count
 #
 preload_app!
 
-on_worker_boot do
-  Que.mode = if ENV['QUE_EXECUTABLE_ONLY'].present?
-               :off
-             else
-               :async
-             end
+before_fork do
+  GoodJob.shutdown
 end
 
-# If there are no worker processes, we still need to bootstrap these
-if workers_count.zero?
-  Que.mode = if rails_environment == 'test'
-               :sync
-             elsif ENV['QUE_EXECUTABLE_ONLY'].present?
-               :off
-             else
-               :async
-             end
+on_worker_boot do
+  GoodJob.restart
+end
+
+on_worker_shutdown do
+  GoodJob.shutdown
+end
+
+MAIN_PID = Process.pid
+at_exit do
+  GoodJob.shutdown if Process.pid == MAIN_PID
 end
 
 # Allow puma to be restarted by `rails restart` command.

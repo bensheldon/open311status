@@ -16,7 +16,7 @@ end
 
 FileUtils.chdir APP_ROOT do
   puts "\n== Running Rubocop =="
-  system! "bundle exec rubocop #{options[:nofix] ? '--parallel' : '--auto-correct'}"
+  system! "bundle exec rubocop #{options[:nofix] ? '--parallel' : '--autocorrect'}"
 
   puts "\n== Running ES Lint =="
   system! "yarn run eslint #{options[:nofix] ? '' : '--fix'} app/javascript"
