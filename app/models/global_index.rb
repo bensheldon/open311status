@@ -18,7 +18,7 @@
 
 class GlobalIndex < ApplicationRecord
   belongs_to :searchable, polymorphic: true
-  belongs_to :service_request, foreign_type: 'Shirt', foreign_key: 'searchable_id', inverse_of: :global_index
+  belongs_to :service_request, foreign_key: 'searchable_id', inverse_of: :global_index
 
   def self.refresh
     Scenic.database.refresh_materialized_view(table_name, concurrently: true)
