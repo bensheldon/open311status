@@ -1,0 +1,56 @@
+# fly.toml file generated for brompt on 2022-09-03T07:48:07-07:00
+
+app = "open311status"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[build]
+dockerfile = "Dockerfile.fly"
+
+[build.args]
+BUNDLER_VERSION = "2.3.19"
+NODE_VERSION = "12.13.1"
+RUBY_VERSION = "3.0.4"
+
+[deploy]
+release_command = "bin/rails db:prepare"
+strategy = "bluegreen"
+
+[env]
+PORT = "8080"
+SERVER_COMMAND = "bin/rails server"
+
+[experimental]
+allowed_public_ports = []
+auto_rollback = true
+
+[[services]]
+http_checks = []
+internal_port = 8080
+processes = ["app"]
+protocol = "tcp"
+script_checks = []
+[services.concurrency]
+hard_limit = 25
+soft_limit = 20
+type = "connections"
+
+[[services.ports]]
+force_https = true
+handlers = ["http"]
+port = 80
+
+[[services.ports]]
+handlers = ["tls", "http"]
+port = 443
+
+[[services.tcp_checks]]
+grace_period = "1s"
+interval = "15s"
+restart_limit = 0
+timeout = "2s"
+
+[[statics]]
+guest_path = "/app/public"
+url_prefix = "/"
