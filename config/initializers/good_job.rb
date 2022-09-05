@@ -1,5 +1,4 @@
 Rails.application.configure do
-  config.active_job.queue_adapter = :good_job
   config.good_job.on_thread_error = ->(exception) { Raven.capture_exception(exception) }
 
   config.good_job.preserve_job_records = true
