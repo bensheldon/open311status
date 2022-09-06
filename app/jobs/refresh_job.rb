@@ -5,6 +5,6 @@ class RefreshJob < ApplicationJob
     Rails.application.load_tasks
     Rake::Task['cities:service_requests'].invoke
     Rake::Task['cities:service_list'].invoke
-    Rake::Task['db:views:refresh'].reenable
+    Rake::Task['db:views:refresh'].invoke
   end
 end
