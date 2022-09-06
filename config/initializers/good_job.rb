@@ -20,6 +20,13 @@ Rails.application.configure do
         description: "Update Sitemap",
       },
     }
+
+    GoodJob::Engine.middleware.use(Rack::Auth::Basic) do |provided_username, provided_password|
+      username, password = ENV.fetch('GOOD_JOB_AUTH', '').split(':')
+      return false if username.blank? || password.blank?
+
+      ActiveSupport::SecurityUtils.secure_compare(username, provided_username) &&
+        ActiveSupport::SecurityUtils.secure_compare(password, provided_password)
+    end
   end
 end
-

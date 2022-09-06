@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :requests, only: [:index]
 
+  mount GoodJob::Engine => 'good_job'
+
   get '/sitemap.xml.gz', to: redirect("https://#{Rails.application.secrets.s3_bucket_name}.s3.amazonaws.com/sitemaps/sitemap.xml.gz")
 
   resolve "ServiceRequest" do |service_request, options|
@@ -34,4 +36,3 @@ Rails.application.routes.named_routes.url_helpers_module.module_eval do
     slug_city_request_url(service_request.city.slug, service_request.service_request_id, service_request.slug, options)
   end
 end
-
