@@ -62,9 +62,6 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'slim_lint', require: false
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'spring-watcher-listen'
   gem 'web-console', '>= 3.3.0'
   gem 'webmock'
 end
