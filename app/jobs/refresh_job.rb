@@ -2,9 +2,10 @@
 
 class RefreshJob < ApplicationJob
   def perform
-    Rails.application.load_tasks
-    Rake::Task['cities:service_requests'].invoke
-    Rake::Task['cities:service_list'].invoke
-    Rake::Task['db:views:refresh'].invoke
+    City.all.each do |city|
+      FetchServiceRequestsJob.perform_later(city)
+      FetchServiceListJob.perform_later(city)
+    end
+    GlobalIndex.refresh # TODO: this should ideally happen after all the jobs are done
   end
 end
