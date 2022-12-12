@@ -2,15 +2,15 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Cities', type: :system do
+RSpec.describe 'Cities' do
   include ActionView::Helpers::DateHelper
 
   before do
     City.load!
 
     City.all.each do |city|
-      create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 10.minutes.ago
-      create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 10.minutes.ago
+      create(:status, request_name: 'service_list', city: city, http_code: 500, created_at: 10.minutes.ago)
+      create(:status, request_name: 'service_requests', city: city, http_code: 500, created_at: 10.minutes.ago)
     end
   end
 
@@ -23,7 +23,7 @@ RSpec.describe 'Cities', type: :system do
   end
 
   it 'has a permalink for a request' do
-    service_request = create :service_request, city: City.instance(:chicago)
+    service_request = create(:service_request, city: City.instance(:chicago))
 
     visit root_path
     expect(page).to have_text service_request.raw_data['description']

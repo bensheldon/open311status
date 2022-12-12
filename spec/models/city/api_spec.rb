@@ -22,7 +22,7 @@ RSpec.describe City::Api do
 
   describe '#fetch_service_requests' do
     describe 'start and end dates' do
-      let(:open311_double) { instance_double(::Open311::Client, service_requests: []) }
+      let(:open311_double) { instance_double(Open311::Client, service_requests: []) }
       let(:start_at) { "2018/01/01".to_datetime }
       let(:end_at) { "2018/01/02".to_datetime }
 

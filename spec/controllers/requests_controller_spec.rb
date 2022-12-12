@@ -2,12 +2,12 @@
 
 require 'rails_helper'
 
-RSpec.describe RequestsController, type: :controller do
+RSpec.describe RequestsController do
   render_views
 
   describe "GET index" do
     let!(:city) { City.instance(:chicago) }
-    let!(:service_requests) { create_list :service_request, 5 }
+    let!(:service_requests) { create_list(:service_request, 5) }
 
     it "assigns a pager" do
       get :index

@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe City, type: :model do
-  let(:city) { create :city }
+RSpec.describe City do
+  let(:city) { create(:city) }
 
   it 'has a valid factory' do
     expect(city).to be_valid
@@ -58,11 +58,11 @@ RSpec.describe City, type: :model do
 
   describe '#service_list_status' do
     it 'returns most recent status with type=service_list' do
-      create :status, city: city, request_name: 'service_requests', created_at: 1.day.ago
-      create :status, city: city, request_name: 'service_list', created_at: 1.day.ago
-      latest_status = create :status, city: city, request_name: 'service_list'
-      create :status, city: city, request_name: 'service_requests', created_at: 2.days.ago
-      create :status, city: city, request_name: 'service_list', created_at: 2.days.ago
+      create(:status, city: city, request_name: 'service_requests', created_at: 1.day.ago)
+      create(:status, city: city, request_name: 'service_list', created_at: 1.day.ago)
+      latest_status = create(:status, city: city, request_name: 'service_list')
+      create(:status, city: city, request_name: 'service_requests', created_at: 2.days.ago)
+      create(:status, city: city, request_name: 'service_list', created_at: 2.days.ago)
 
       expect(city.service_list_status).to eq latest_status
     end
@@ -70,11 +70,11 @@ RSpec.describe City, type: :model do
 
   describe '#service_requests_status' do
     it 'returns most recent status with type=service_list' do
-      create :status, city: city, request_name: 'service_requests', created_at: 1.day.ago
-      create :status, city: city, request_name: 'service_list', created_at: 1.day.ago
-      latest_status = create :status, city: city, request_name: 'service_requests'
-      create :status, city: city, request_name: 'service_requests', created_at: 2.days.ago
-      create :status, city: city, request_name: 'service_list', created_at: 2.days.ago
+      create(:status, city: city, request_name: 'service_requests', created_at: 1.day.ago)
+      create(:status, city: city, request_name: 'service_list', created_at: 1.day.ago)
+      latest_status = create(:status, city: city, request_name: 'service_requests')
+      create(:status, city: city, request_name: 'service_requests', created_at: 2.days.ago)
+      create(:status, city: city, request_name: 'service_list', created_at: 2.days.ago)
 
       expect(city.service_requests_status).to eq latest_status
     end
@@ -83,8 +83,8 @@ RSpec.describe City, type: :model do
   describe '#uptime_percent' do
     describe 'service_list' do
       it 'calculates uptime' do
-        create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 37.minutes.ago
-        create :status, request_name: 'service_list', city: city, http_code: 500, created_at: 27.minutes.ago
+        create(:status, request_name: 'service_list', city: city, http_code: 500, created_at: 37.minutes.ago)
+        create(:status, request_name: 'service_list', city: city, http_code: 500, created_at: 27.minutes.ago)
 
         expect(city.uptime_percent('service_list')).to be_within(0.1).of(99.30)
       end
@@ -92,8 +92,8 @@ RSpec.describe City, type: :model do
 
     describe 'service_requests' do
       it 'calculates uptime' do
-        create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 37.minutes.ago
-        create :status, request_name: 'service_requests', city: city, http_code: 500, created_at: 27.minutes.ago
+        create(:status, request_name: 'service_requests', city: city, http_code: 500, created_at: 37.minutes.ago)
+        create(:status, request_name: 'service_requests', city: city, http_code: 500, created_at: 27.minutes.ago)
 
         expect(city.uptime_percent('service_requests')).to be_within(0.1).of(99.30)
       end

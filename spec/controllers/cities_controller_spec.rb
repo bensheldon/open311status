@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe CitiesController, type: :controller do
+RSpec.describe CitiesController do
   render_views
 
   describe "GET index" do
