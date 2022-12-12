@@ -104,7 +104,7 @@ jobs:
       - name: Run tests
         run: RAILS_ENV=test DISABLE_SPRING=1 bin/rspec
       - name: Archive system spec screenshots
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: screenshots
