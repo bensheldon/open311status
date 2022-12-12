@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe Cities::RequestsController, type: :controller do
-  let(:service_request) { create :service_request }
+RSpec.describe Cities::RequestsController do
+  let(:service_request) { create(:service_request) }
 
   describe '#show' do
     it 'assigns the service_request' do

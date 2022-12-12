@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe PagesController, type: :controller do
+RSpec.describe PagesController do
   describe '#about' do
     specify do
       get :about

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe ServiceDefinition, type: :model do
+RSpec.describe ServiceDefinition do
   it 'has a valid factory' do
     expect(create(:service_definition)).to be_valid
   end

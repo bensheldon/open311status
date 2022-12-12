@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe ServiceRequest, type: :model do
+RSpec.describe ServiceRequest do
   it 'has a valid factory' do
     expect(create(:service_request)).to be_valid
   end
@@ -34,7 +34,7 @@ RSpec.describe ServiceRequest, type: :model do
   end
 
   describe '#slug' do
-    let(:service_request) { create :service_request }
+    let(:service_request) { create(:service_request) }
 
     it 'sluggifies the description' do
       service_request.raw_data['description'] = 'Something happened.'

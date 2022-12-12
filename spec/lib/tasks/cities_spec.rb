@@ -8,8 +8,8 @@ RSpec.describe "cities:cleanup", type: :rake do # rubocop:disable RSpec/Multiple
   let(:city) { City.instance('san_francisco') }
 
   it 'deletes old service requests and statuses' do
-    create_list :service_request, 2, city: city, created_at: 3.days.ago
-    create_list :status, 2, city: city, created_at: 3.days.ago
+    create_list(:service_request, 2, city: city, created_at: 3.days.ago)
+    create_list(:status, 2, city: city, created_at: 3.days.ago)
 
     expect do
       task.invoke
