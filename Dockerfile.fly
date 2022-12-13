@@ -29,6 +29,7 @@ RUN echo "Installing node $(cat .node-version)" \
     && npm install -g n \
     && n $(cat .node-version)
 RUN npm install -g yarn
+RUN yarn install
 
 COPY . /project
 
