@@ -46,7 +46,7 @@ class Status < ApplicationRecord
       ) AS subquery ON TRUE
     SQL
 
-    query.joins(sanitize_sql_array([join_sql, { request_name: request_name, count: count }]))
+    query.joins(sanitize_sql_array([join_sql, { request_name:, count: }]))
   }
   scope :service_list, -> { where(request_name: 'service_list') }
   scope :service_requests, -> { where(request_name: 'service_requests') }

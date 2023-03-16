@@ -8,11 +8,11 @@ class Seeder
       ActiveRecord::Base.transaction(requires_new: true) do
         3.times do
           FactoryBot.create :service_request,
-                            city: city,
+                            city:,
                             requested_datetime: Random.rand(10_000).minutes.ago
 
-          FactoryBot.create :status, :services, city: city, created_at: Random.rand(10_000).minutes.ago
-          FactoryBot.create :status, :requests, city: city, created_at: Random.rand(10_000).minutes.ago
+          FactoryBot.create :status, :services, city:, created_at: Random.rand(10_000).minutes.ago
+          FactoryBot.create :status, :requests, city:, created_at: Random.rand(10_000).minutes.ago
         end
       end
     end
@@ -21,7 +21,7 @@ class Seeder
     ActiveRecord::Base.transaction(requires_new: true) do
       50.times do
         FactoryBot.create :service_request,
-                          city: city,
+                          city:,
                           requested_datetime: Random.rand(10_000).minutes.ago
       end
     end

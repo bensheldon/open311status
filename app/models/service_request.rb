@@ -41,7 +41,7 @@ class ServiceRequest < ApplicationRecord
   scope :by_requested_datetime, -> { order("requested_datetime DESC NULLS LAST") }
 
   def parameterize
-    { city_slug: city.slug, service_request_id: service_request_id, slug: slug }
+    { city_slug: city.slug, service_request_id:, slug: }
   end
 
   def raw_data=(json)

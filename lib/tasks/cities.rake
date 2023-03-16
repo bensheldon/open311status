@@ -105,7 +105,7 @@ class CitiesTasks
     if slugs.empty?
       City.all
     else
-      slugs.map { |slug| City.find_by!(slug: slug) }
+      slugs.map { |slug| City.find_by!(slug:) }
     end
   end
 end
