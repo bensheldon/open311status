@@ -39,7 +39,7 @@ class City < ApplicationRecord
 
   class << self
     def instance(slug)
-      where(slug: slug).first_or_create
+      where(slug:).first_or_create
     end
 
     # Loads city configuration data into database

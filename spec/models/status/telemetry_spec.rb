@@ -7,7 +7,7 @@ RSpec.describe Status::Telemetry do
 
   describe '.process' do
     it 'coerces open311 exceptions to status' do
-      result = described_class.process('service_list', city: city) do
+      result = described_class.process('service_list', city:) do
         raise Open311::BadRequest
       end
 
@@ -18,7 +18,7 @@ RSpec.describe Status::Telemetry do
     end
 
     it 'stores other error messages on the status' do
-      result = described_class.process('service_list', city: city) do
+      result = described_class.process('service_list', city:) do
         raise StandardError, "Test error"
       end
 

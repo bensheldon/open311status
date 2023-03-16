@@ -6,15 +6,15 @@ class Status
   class Telemetry
     attr_accessor :request_name, :city, :status
 
-    def self.process(request_name, options = {}, &block)
-      new(request_name, options).process(&block)
+    def self.process(request_name, options = {}, &)
+      new(request_name, options).process(&)
     end
 
     def initialize(request_name, options = {})
       self.request_name = request_name
       self.city = options.fetch :city
 
-      self.status = city.statuses.new request_name: request_name
+      self.status = city.statuses.new(request_name:)
     end
 
     def process

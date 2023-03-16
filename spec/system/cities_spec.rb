@@ -9,8 +9,8 @@ RSpec.describe 'Cities' do
     City.load!
 
     City.all.each do |city|
-      create(:status, request_name: 'service_list', city: city, http_code: 500, created_at: 10.minutes.ago)
-      create(:status, request_name: 'service_requests', city: city, http_code: 500, created_at: 10.minutes.ago)
+      create(:status, request_name: 'service_list', city:, http_code: 500, created_at: 10.minutes.ago)
+      create(:status, request_name: 'service_requests', city:, http_code: 500, created_at: 10.minutes.ago)
     end
   end
 

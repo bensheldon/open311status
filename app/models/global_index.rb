@@ -25,7 +25,7 @@ class GlobalIndex < ApplicationRecord
   end
 
   def self.query(content)
-    basic_search(content: content)
+    basic_search(content:)
   end
 
   private

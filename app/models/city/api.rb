@@ -39,7 +39,7 @@ class City
     end
 
     def fetch_service_list
-      service_list_data = Status::Telemetry.process('service_list', city: city) do
+      service_list_data = Status::Telemetry.process('service_list', city:) do
         open311.service_list
       end
 
@@ -70,17 +70,17 @@ class City
       end
 
       requests_data = if collect_telemetry
-                        Status::Telemetry.process 'service_requests', city: city do
+                        Status::Telemetry.process('service_requests', city:) do
                           if end_datetime
-                            open311.service_requests(start_date: start_date, end_date: end_date)
+                            open311.service_requests(start_date:, end_date:)
                           else
-                            open311.service_requests(start_date: start_date)
+                            open311.service_requests(start_date:)
                           end
                         end
                       elsif end_datetime
-                        open311.service_requests(start_date: start_date, end_date: end_date)
+                        open311.service_requests(start_date:, end_date:)
                       else
-                        open311.service_requests(start_date: start_date)
+                        open311.service_requests(start_date:)
                       end
 
       requests_data = [requests_data] if requests_data.is_a?(Hashie::Mash)

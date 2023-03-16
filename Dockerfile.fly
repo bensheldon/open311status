@@ -1,4 +1,4 @@
-FROM ruby:3.0.4-bullseye
+FROM ruby:3.2.1-bullseye
 
 ENV BUNDLE_JOBS=4
 ENV BUNDLE_RETRY=3
