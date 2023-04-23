@@ -5,8 +5,8 @@ html lang='en'
     title= content_for?(:meta_title) ? yield(:meta_title) : 'Open311 Status'
     meta name="description" content=(content_for?(:meta_description) ? yield(:meta_description) : "Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.")
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'sprockets', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = javascript_pack_tag 'application'
     = csrf_meta_tags
     - if content_for? :canonical_url
       link ref="canonical" href=yield(:canonical_url)

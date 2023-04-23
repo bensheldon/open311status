@@ -18,12 +18,6 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Running Rubocop =="
   system! "bundle exec rubocop #{options[:nofix] ? '--parallel' : '--autocorrect'}"
 
-  puts "\n== Running ES Lint =="
-  system! "yarn run eslint #{options[:nofix] ? '' : '--fix'} app/javascript"
-
   puts "\n== Slim Lint =="
   system! 'bundle exec slim-lint app/views/'
-
-  puts "\n== Stylelint =="
-  system! "yarn run stylelint --ignore-pattern=\"app/assets/stylesheets/vendor/*\" #{options[:nofix] ? '' : '--fix'} app/assets/stylesheets"
 end
