@@ -1,4 +1,4 @@
-FROM ruby:3.2.1-bullseye
+FROM ruby:3.2.2-bullseye
 
 ENV BUNDLE_JOBS=4
 ENV BUNDLE_RETRY=3
@@ -14,6 +14,7 @@ RUN apt-get update -qq \
       nodejs \
       npm \
       postgresql-client \
+      esbuild \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /project

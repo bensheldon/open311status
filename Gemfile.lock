@@ -204,6 +204,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-tablesorter (1.27.2)
       railties (>= 3.2)
+    jsbundling-rails (1.1.1)
+      railties (>= 6.0.0)
     json (2.6.3)
     kramdown (2.4.0)
       rexml
@@ -273,8 +275,6 @@ GEM
     racc (1.6.2)
     rack (2.2.6.4)
     rack-host-redirect (1.3.0)
-      rack
-    rack-proxy (0.7.6)
       rack
     rack-test (2.1.0)
       rack (>= 1.3)
@@ -385,7 +385,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    semantic_range (3.0.0)
     sentry-raven (2.13.0)
       faraday (>= 0.7.6, < 1.0)
     sitemap_generator (6.3.0)
@@ -428,11 +427,6 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
-    webpacker (5.4.4)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     webrick (1.8.1)
     websocket (1.2.9)
     websocket-driver (0.7.5)
@@ -472,6 +466,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-tablesorter
+  jsbundling-rails
   kramdown
   launchy
   listen
@@ -505,7 +500,6 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
   webmock
-  webpacker
 
 RUBY VERSION
    ruby 3.2.2p53

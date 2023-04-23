@@ -102,7 +102,7 @@ jobs:
       - name: Compile assets
         run: bin/rails assets:precompile
       - name: Run tests
-        run: RAILS_ENV=test DISABLE_SPRING=1 bin/rspec
+        run: RAILS_ENV=test bin/rspec
       - name: Archive system spec screenshots
         uses: actions/upload-artifact@v3
         if: failure()
