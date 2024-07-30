@@ -59,6 +59,10 @@ class ServiceRequest < ApplicationRecord
                             }
   end
 
+  def raw_data
+    super || {}
+  end
+
   def slug
     description = raw_data['description'].presence || ''
     slug = description.gsub(/(-|_)/, ' ').squish.encode.to_slug.normalize.to_s.downcase

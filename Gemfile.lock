@@ -443,8 +443,6 @@ GEM
       websocket (~> 1.0)
     sentry-raven (2.13.0)
       faraday (>= 0.7.6, < 1.0)
-    sitemap_generator (6.3.0)
-      builder (~> 3.0)
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
@@ -552,7 +550,6 @@ DEPENDENCIES
   scenic
   selenium-webdriver
   sentry-raven
-  sitemap_generator
   slim
   slim-rails
   slim_lint

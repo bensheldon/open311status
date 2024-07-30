@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_30_143512) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_30_192533) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_trgm"
   enable_extension "pgcrypto"
@@ -133,6 +133,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_30_143512) do
     t.datetime "updated_at", null: false
     t.bigint "city_id"
     t.geography "geometry", limit: {:srid=>4326, :type=>"geometry", :geographic=>true}
+    t.index ["city_id", "created_at", "id"], name: "index_service_requests_on_city_id_and_created_at_and_id"
     t.index ["city_id", "requested_datetime"], name: "index_service_requests_on_city_id_and_requested_datetime", order: { requested_datetime: "DESC NULLS LAST" }
     t.index ["city_id", "service_request_id"], name: "index_service_requests_on_city_id_and_service_request_id", unique: true
     t.index ["city_id"], name: "index_service_requests_on_city_id"

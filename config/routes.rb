@@ -16,7 +16,10 @@ Rails.application.routes.draw do
 
   mount GoodJob::Engine => 'good_job'
 
-  get '/sitemap.xml.gz', to: redirect("https://#{Rails.application.secrets.s3_bucket_name}.s3.amazonaws.com/sitemaps/sitemap.xml.gz")
+  get '/sitemap.xml', to: 'sitemaps#index', defaults: { format: 'xml' }, as: :sitemap
+  get '/sitemaps/static.xml', to: 'sitemaps#static', defaults: { format: 'xml' }, as: :static_sitemap
+  get '/sitemaps/:slug.xml', to: 'sitemaps#city_index', defaults: { format: 'xml' }, as: :city_sitemap_index
+  get '/sitemaps/:slug/:date.xml', to: 'sitemaps#city_day', defaults: { format: 'xml' }, as: :city_day_sitemap
 
   resolve "ServiceRequest" do |service_request, options|
     service_request.parameterize.merge(controller: 'cities/requests', action: 'show').merge(options)
