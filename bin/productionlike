@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+ENV["SECRET_KEY_BASE"] = "1"
+ENV["RAILS_SERVE_STATIC_FILES"] = "1"
+ENV["RAILS_ENV"] = "production"
+ENV["RAILS_FORCE_SSL"] = "0"
+
+APP_PATH = File.expand_path('../config/application', __dir__)
+require_relative '../config/boot'
+require 'rails/commands'
+

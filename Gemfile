@@ -42,8 +42,8 @@ gem 'sentry-raven'
 gem 'sitemap_generator'
 gem 'slim'
 gem 'slim-rails'
+gem 'terser'
 gem 'textacular'
-gem 'uglifier', '>= 1.3.0'
 
 group :production, :staging do
   gem 'rack-timeout'
