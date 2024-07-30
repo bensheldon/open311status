@@ -4,7 +4,7 @@
   "website": "",
   "repository": "https://github.com/codeforamerica/open311status",
   "scripts": {
-    "postdeploy": "POSTGRES_STATEMENT_TIMEOUT=90s bin/rails heroku:postdeploy"
+    "postdeploy": "POSTGRES_STATEMENT_TIMEOUT=90s bin/rails db:prepare
   },
   "env": {
     "HEROKU_APP_NAME": {
