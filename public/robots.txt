@@ -8,4 +8,4 @@
 #
 
 User-agent: *
-Sitemap: https://status.open311.org/sitemap.xml.gz
+Sitemap: https://status.open311.org/sitemap.xml

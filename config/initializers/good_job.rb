@@ -14,11 +14,6 @@ Rails.application.configure do
         class: 'RefreshJob',
         description: "Update open311 statuses",
       },
-      sitemap: {
-        cron: '0 7 * * *',
-        class: 'SitemapJob',
-        description: "Update Sitemap",
-      },
     }
 
     GoodJob::Engine.middleware.use(Rack::Auth::Basic) do |provided_username, provided_password|
