@@ -4,42 +4,20 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
-    env:
-      BUNDLE_JOBS: 4
-      BUNDLE_RETRY: 3
-      BUNDLE_PATH: "vendor/bundle"
-      BUNDLE_BUILD__SASSC: "--disable-march-tune-native"
-      BUNDLE_FROZEN: "true"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      # Dependencies
       - name: "Ruby: Install Ruby"
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: "Javascript: Set Node version"
-        id: node-version
-        run: echo "::set-output name=value::$(cat .node-version)"
-      - name: "Javascript: Install Node"
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.node-version.outputs.value }}
-      - name: "Javascript: Set Yarn cache location"
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: "Javascript: Cache packages"
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version-file: .node-version
+          cache: yarn
       - name: "Javascript: Install packages"
         run: yarn install --pure-lockfile
-      # /Dependencies
-
       - name: Run Linters
         run: bin/lint --nofix
 
@@ -50,12 +28,6 @@ jobs:
       PGHOST: localhost
       PGUSER: open311status
       RAILS_ENV: test
-      BUNDLE_JOBS: 4
-      BUNDLE_RETRY: 3
-      BUNDLE_PATH: "vendor/bundle"
-      BUNDLE_BUILD__SASSC: "--disable-march-tune-native"
-      BUNDLE_FROZEN: "true"
-
     services:
       postgres:
         image: postgis/postgis:10-2.5
@@ -70,33 +42,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      # Dependencies
       - name: "Ruby: Install Ruby"
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: "Javascript: Set Node version"
-        id: node-version
-        run: echo "::set-output name=value::$(cat .node-version)"
-      - name: "Javascript: Install Node"
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ steps.node-version.outputs.value }}
-      - name: "Javascript: Set Yarn cache location"
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: "Javascript: Cache packages"
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version-file: .node-version
+          cache: yarn
       - name: "Javascript: Install packages"
         run: yarn install --pure-lockfile
-      # /Dependencies
-
       - name: Setup test database
         run: bin/rails db:test:prepare
       - name: Compile assets
@@ -109,15 +65,3 @@ jobs:
         with:
           name: screenshots
           path: tmp/screenshots/
-
-  deploy_flyio:
-    name: "Deploy to Fly.io"
-    if: github.ref == 'refs/heads/main'
-    needs: [test, lint]
-    runs-on: ubuntu-latest
-    env:
-      FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
