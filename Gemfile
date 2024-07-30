@@ -34,7 +34,7 @@ gem 'pg'
 gem 'pry-rails'
 gem 'puma'
 gem 'rack-host-redirect'
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.1'
 gem 'sass-rails'
 gem 'scenic'
 gem 'sentry-raven'
@@ -49,7 +49,6 @@ group :production, :staging do
 end
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
@@ -58,9 +57,12 @@ group :development do
   gem 'annotate'
   gem 'listen'
   gem 'rubocop'
+  gem 'rubocop-capybara'
+  gem 'rubocop-factory_bot'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'rubocop-rspec_rails'
   gem 'slim_lint', require: false
   gem 'web-console', '>= 3.3.0'
   gem 'webmock'

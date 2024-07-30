@@ -4,7 +4,7 @@ class Seeder
   def call
     City.load!
 
-    City.all.each do |city|
+    City.find_each do |city|
       ActiveRecord::Base.transaction(requires_new: true) do
         3.times do
           FactoryBot.create :service_request,

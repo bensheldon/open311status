@@ -91,8 +91,8 @@ class CitiesTasks
 
       desc 'Delete service requests and statuses'
       task cleanup: :environment do |_task, _args|
-        Status.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
-        ServiceRequest.where('created_at < ?', 48.hours.ago).find_each(&:destroy)
+        Status.where(created_at: ...48.hours.ago).find_each(&:destroy)
+        ServiceRequest.where(created_at: ...48.hours.ago).find_each(&:destroy)
       end
     end
   end

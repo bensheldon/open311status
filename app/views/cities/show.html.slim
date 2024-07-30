@@ -32,7 +32,7 @@ h1= @city.name
             th Service Name
             th Description
         tbody
-          - @city.service_definitions.all.each do |service_definition|
+          - @city.service_definitions.find_each do |service_definition|
             tr
               td= service_definition.raw_data['service_name']
               td= service_definition.raw_data['description']

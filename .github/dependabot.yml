@@ -1,10 +1,30 @@
 version: 2
 updates:
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "weekly"
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "all"
+    groups:
+      bundler-lint:
+        patterns:
+          - "rubocop"
+          - "rubocop-*"
+          - "slim_lint"
+      bundler-dev:
+        dependency-type: "development"
+        update-types:
+          - minor
+          - patch
+      bundler-all:
+        update-types:
+          - minor
+          - patch
+        exclude-patterns:
+          - rails
