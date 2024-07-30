@@ -1,12 +1,10 @@
 # frozen_string_literal: true
-module MarkdownHandler
-  def self.erb
-    @_erb ||= ActionView::Template.registered_template_handler(:erb)
-  end
 
-  def self.call(template, source)
-    compiled_source = erb.call(template, source)
-    "Kramdown::Document.new(begin;#{compiled_source};end, auto_ids: false).to_html.html_safe"
+# https://gist.github.com/mattlenz/3185536
+
+module MarkdownHandler
+  def self.call(_template, source)
+    "#{Kramdown::Document.new(source, auto_ids: false).to_html.inspect}.html_safe"
   end
 end
 
