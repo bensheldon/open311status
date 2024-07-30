@@ -441,8 +441,12 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-raven (2.13.0)
-      faraday (>= 0.7.6, < 1.0)
+    sentry-rails (5.18.2)
+      railties (>= 5.0)
+      sentry-ruby (~> 5.18.2)
+    sentry-ruby (5.18.2)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
     slim (5.2.1)
       temple (~> 0.10.0)
       tilt (>= 2.1.0)
@@ -549,7 +553,7 @@ DEPENDENCIES
   sass-rails
   scenic
   selenium-webdriver
-  sentry-raven
+  sentry-rails
   slim
   slim-rails
   slim_lint

@@ -9,7 +9,7 @@ class FetchServiceRequestsRecursivelyJob < ApplicationJob
     interval = interval.positive? ? interval.second : 1.second
     api_limit = city.requests_limit || 50
 
-    Raven.extra_context(city: city.slug)
+    Sentry.set_context(:city, { slug: city.slug })
 
     start_date = start_at.to_datetime
     end_date = end_at.to_datetime
