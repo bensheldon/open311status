@@ -2,7 +2,7 @@
 
 class RefreshJob < ApplicationJob
   def perform
-    City.all.each do |city|
+    City.find_each do |city|
       FetchServiceRequestsJob.perform_later(city)
       FetchServiceListJob.perform_later(city)
     end

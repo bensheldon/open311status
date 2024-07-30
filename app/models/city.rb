@@ -28,11 +28,11 @@ class City < ApplicationRecord
   has_many :service_requests_statuses, -> { service_requests }, class_name: 'Status', inverse_of: :city
   has_many :service_list_status_errors, lambda {
     start_floor = 2.days.ago.change(min: 10 * (Time.now.min.to_f / 10).floor)
-    service_list.time_periods.errored.where('created_at >= ?', start_floor).order("time_period ASC")
+    service_list.time_periods.errored.where(created_at: start_floor..).order("time_period ASC")
   }, class_name: 'Status', inverse_of: :city
   has_many :service_request_status_errors, lambda {
     start_floor = 2.days.ago.change(min: 10 * (Time.now.min.to_f / 10).floor)
-    service_requests.time_periods.errored.where('created_at >= ?', start_floor).order("time_period ASC")
+    service_requests.time_periods.errored.where(created_at: start_floor..).order("time_period ASC")
   }, class_name: 'Status', inverse_of: :city
 
   validates :slug, uniqueness: true
@@ -45,7 +45,7 @@ class City < ApplicationRecord
     # Loads city configuration data into database
     def load!
       configs = Rails.configuration.cities
-      configs.each do |slug, _city_config|
+      configs.each_key do |slug|
         instance(slug)
       end
     end

@@ -8,7 +8,7 @@ RSpec.describe 'Cities' do
   before do
     City.load!
 
-    City.all.each do |city|
+    City.find_each do |city|
       create(:status, request_name: 'service_list', city:, http_code: 500, created_at: 10.minutes.ago)
       create(:status, request_name: 'service_requests', city:, http_code: 500, created_at: 10.minutes.ago)
     end
@@ -17,7 +17,7 @@ RSpec.describe 'Cities' do
   it 'shows all cities on frontpage' do
     visit root_path
 
-    City.all.each do |city|
+    City.find_each do |city|
       expect(page).to have_text city.name
     end
   end

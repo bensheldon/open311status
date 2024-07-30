@@ -1,9 +1,9 @@
 /* global $ */
 
-import ActionCable from 'actioncable';
+import { createConsumer } from "@rails/actioncable"
 import { Controller } from 'stimulus';
 
-const cable = ActionCable.createConsumer();
+const cable = createConsumer();
 
 export default class extends Controller {
   static targets = ['city'];

@@ -3,9 +3,11 @@
 #
 require:
   - rubocop-capybara
+  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-rspec_rails
 
 inherit_mode:
   merge:
@@ -24,6 +26,9 @@ AllCops:
     - bin/**/*
     - db/**/*
     - config/**/*
+
+Capybara/ClickLinkOrButtonStyle:
+  Enabled: false
 
 Rails:
   Enabled: true

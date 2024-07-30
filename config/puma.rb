@@ -9,7 +9,7 @@ threads threads_count, threads_count
 
 # Specifies the `port` that Puma will listen on to receive requests; default is 3000.
 #
-port        ENV.fetch("PORT") { 3000 }
+port ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 rails_environment = ENV.fetch("RAILS_ENV") { "development" }
@@ -31,16 +31,18 @@ workers workers_count
 #
 preload_app!
 
-before_fork do
-  GoodJob.shutdown
-end
+if workers_count > 0
+  before_fork do
+    GoodJob.shutdown
+  end
 
-on_worker_boot do
-  GoodJob.restart
-end
+  on_worker_boot do
+    GoodJob.restart
+  end
 
-on_worker_shutdown do
-  GoodJob.shutdown
+  on_worker_shutdown do
+    GoodJob.shutdown
+  end
 end
 
 MAIN_PID = Process.pid
