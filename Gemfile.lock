@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/bensheldon/activerecord-has_some_of_many.git
+  revision: 6e0fec013f760ef6b2408b3b18bdc161a3ddef87
+  branch: main
+  specs:
+    activerecord-has_some_of_many (1.0.0)
+      rails (>= 7.0.0.alpha)
+
+GIT
   remote: https://github.com/bensheldon/open311.git
   revision: dbead4703063d070fa3615fc371d352e3a312ee2
   branch: api_headers
@@ -493,6 +501,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-explain-analyze
+  activerecord-has_some_of_many!
   activerecord-postgis-adapter
   annotate
   autoprefixer-rails
