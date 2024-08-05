@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/bensheldon/activerecord-has_some_of_many.git
-  revision: 6e0fec013f760ef6b2408b3b18bdc161a3ddef87
+  revision: 94230afabb34d42bc60dccd859b72af91e6aa9ce
   branch: main
   specs:
-    activerecord-has_some_of_many (1.0.0)
+    activerecord-has_some_of_many (1.0.1)
       rails (>= 7.0.0.alpha)
 
 GIT
