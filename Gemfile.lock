@@ -199,7 +199,7 @@ GEM
       railties (>= 3.2, < 8.0)
     font_assets (0.1.14)
       rack
-    fugit (1.11.0)
+    fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
     globalid (1.2.1)
