@@ -5,7 +5,7 @@ ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'activerecord-explain-analyze'
-gem 'activerecord-has_some_of_many', github: 'bensheldon/activerecord-has_some_of_many', branch: 'main'
+gem 'activerecord-has_some_of_many'
 gem 'activerecord-postgis-adapter'
 gem 'autoprefixer-rails'
 gem 'aws-sdk-s3'
@@ -32,7 +32,6 @@ gem 'momentjs-rails'
 gem 'open311', github: 'bensheldon/open311', branch: 'api_headers'
 gem 'order_query'
 gem 'pg'
-gem 'pry-rails'
 gem 'puma'
 gem 'rack-host-redirect'
 gem 'rails', '~> 7.1'
