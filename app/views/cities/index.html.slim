@@ -1,37 +1,37 @@
 ruby:
   provide(:meta_title) { "Open311 Status - 311 API monitoring and analysis" }
-.well
+.well.mb-3
   strong
     | Scanning #{@cities.size} Open311 endpoints every 10 minutes.
       For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers" rel="noopener">Open311 Wiki</a>.
 
-.panel.panel-default
-  .panel-heading
-    h3.panel-title Service Requests created during previous 48 hours
-  .panel-body
+.card.card-default.mb-3
+  .card-header
+    h3.card-title Service Requests created during previous 48 hours
+  .card-body
     = line_chart @cities.map { |city| { name: city.name, data: city.bucketed_service_requests } }
 
-.panel.panel-default
-  .table-responsive
-    table.table.table-condensed.table-bordered.table-striped.tablesorter(data-controller="cities")
-      thead
-        tr
-          th Endpoint
-          th Services
-          th Requests
-          th Request Types
-          th data-sorter='false'
-            | Submitted requests
-            span.label.label-info< 48 hours
-          th Total
-          th Min/Hour
-          th Max/Hour
-          th Avg/Hour
-      tbody
-        = render partial: 'city_row_content', layout: 'city_row', collection: @cities, as: :city
+.card.card-default.mb-3.card-table
+  table.table.table-sm.table-bordered.table-striped.tablesorter(data-controller="cities")
+    thead
+      tr
+        th Endpoint
+        th Services
+        th Requests
+        th Request Types
+        th data-sorter='false'
+          | Submitted requests
+          span.badge.badge-info< 48 hours
+        th Total
+        th Min/Hour
+        th Max/Hour
+        th Avg/Hour
+    tbody
+      = render partial: 'city_row_content', layout: 'city_row', collection: @cities, as: :city
 
 h3 Recent Service Requests
-.panel.panel-default
+.card.card-default.card-table
   = render 'service_requests', service_requests: @service_requests
-.text-center
-  = link_to "View all Service Requests", requests_path, class: 'btn btn-default'
+
+.text-center.mt-3
+  = link_to "View all Service Requests", requests_path, class: 'btn btn-outline-dark'

@@ -12,15 +12,14 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= requite moment
+#= require moment
 #= require Chart.bundle
 #= require chartkick
-#= require bootstrap
 #= require jquery-tablesorter/jquery.tablesorter
 #= require_tree .
 
 $ ->
-  $('[data-toggle="tooltip"]').tooltip()
-
-  $('.tablesorter').tablesorter
-    textAttribute: 'data-sort-value'
+  tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  console.log(tooltipTriggerList)
+  tooltipList = Array.from(tooltipTriggerList).map (tooltipTriggerEl) =>
+    new bootstrap.Tooltip(tooltipTriggerEl)
