@@ -6,10 +6,10 @@ td
 - if city.service_list_status.present?
   td data-sort-value="#{status.http_code}-#{status.duration_ms}-#{status.error_message}"
     .text-center
-      a(class="btn btn-xs btn-#{ status.label_class }"
+      a(class="btn btn-sm btn-#{ status.label_class }"
         href=city.api.services_url
         rel='noopener nofollow'
-        data={ toggle: 'tooltip' }
+        data={ 'bs-toggle': 'tooltip' }
         title=status.description)= status.title
       br
       small
@@ -23,10 +23,10 @@ td
 - if city.service_requests_status.present?
   td data-sort-value="#{status.http_code}-#{status.duration_ms}-#{status.error_message}"
     .text-center
-      a(class="btn btn-xs btn-#{ status.label_class }"
+      a(class="btn btn-sm btn-#{ status.label_class }"
         href=city.api.requests_url
         rel='noopener nofollow'
-        data={ toggle: 'tooltip' }
+        data={ 'bs-toggle': 'tooltip' }
         title=status.description)= status.title
       br
       small

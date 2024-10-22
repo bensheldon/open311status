@@ -6,33 +6,24 @@ ruby:
 
 h1= @city.name
 
-.panel.panel-default
-  .panel-heading
-    h3.panel-title Service Requests created during previous 48 hours
-  .panel-body
+.card.card-default.mb-3
+  .card-header
+    h3.card-title Service Requests created during previous 48 hours
+  .card-body
     = line_chart [{ name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count }]
 
-.panel.panel-default.with-nav-tabs
-  .panel-heading
-    ul.nav.nav-tabs.nav-justified
-      li.active role="presentation"
-        a href="#service_requests" aria-controls="service_requests" role="tab" data-toggle="tab"
+.card.mb-3
+  .card-header
+    ul.nav.nav-tabs.card-header-tabs
+      li.nav-item role="presentation"
+        button class="nav-link active" id="service-requests-tab" data-bs-toggle="tab" data-bs-target="#service-requests-contents" type="button" role="tab" aria-controls="service-requests-contents" aria-selected="false"
           | Service Requests
-      li role="presentation"
-        a href="#service_definitions" aria-controls="service_definitions" role="tab" data-toggle="tab"
+      li.nav-item role="presentation"
+        button class="nav-link" id="service-definitions-tab" data-bs-toggle="tab" data-bs-target="#service-definitions-contents" type="button" role="tab" aria-controls="service-definitions-contents" aria-selected="false"
           | Service Definitions
-  .panel-body.tab-content
-    div role="tabpanel" class="tab-pane active" id="service_requests"
-      = render 'service_requests', service_requests: @service_requests
-
-    div role="tabpanel" class="tab-pane" id="service_definitions"
-      table.table.table-bordered.table-striped
-        thead
-          tr
-            th Service Name
-            th Description
-        tbody
-          - @city.service_definitions.find_each do |service_definition|
-            tr
-              td= service_definition.raw_data['service_name']
-              td= service_definition.raw_data['description']
+  .card-body
+    .tab-content
+      div class="tab-pane show active" id="service-requests-contents" role="tabpanel" aria-labelledby="service-requests-tab" tabindex="0"
+        = render 'service_requests', service_requests: @service_requests
+      div class="tab-pane" id="service-definitions-contents" role="tabpanel" aria-labelledby="home-tab" tabindex="0"
+        = render 'service_definitions', service_definitions: @city.service_definitions

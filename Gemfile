@@ -11,7 +11,7 @@ gem 'autoprefixer-rails'
 gem 'aws-sdk-s3'
 gem 'babosa'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'bootstrap-sass'
+gem 'bootstrap', '~> 5.3.0'
 gem 'chart-js-rails'
 gem 'chartkick'
 gem 'coffee-rails'

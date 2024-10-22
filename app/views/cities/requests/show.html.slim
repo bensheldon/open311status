@@ -7,8 +7,8 @@ ruby:
 
 h2.h4
   => service_request.city.name
-  - label_class = service_request.status == 'open' ? 'label-warning' : 'label-success'
-  span.label(class=label_class)= service_request.status.presence&.capitalize
+  - badge_class = service_request.status == 'open' ? 'badge-warning' : 'badge-success'
+  span.badge(class=badge_class)= service_request.status.presence&.capitalize
   small<= time_ago_in_words(service_request.requested_datetime).capitalize
 
 h1(style='margin-top: 0')= service_request.raw_data['service_name']

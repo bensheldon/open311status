@@ -4,14 +4,14 @@ ruby:
 = render 'cities/service_requests', service_requests: @pager.records
 
 nav
-  ul.pager
-    - if @pager.older?
-      li.next
-        a href=requests_path(before_id: @pager.records.last.id)
-          '  Older requests
-          span aria-hidden="true" &rarr;
+  ul.pagination.justify-content-center
     - if @pager.newer?
-      li.previous
-        a href=requests_path(after_id: @pager.records.first.id)
+      li.page-item
+        a.page-link href=requests_path(after_id: @pager.records.first.id)
           span aria-hidden="true" &larr;
           '  Newer requests
+    - if @pager.older?
+      li.page-item
+        a.page-link href=requests_path(before_id: @pager.records.last.id)
+          '  Older requests
+          span aria-hidden="true" &rarr;
