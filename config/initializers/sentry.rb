@@ -10,6 +10,7 @@ if defined? Sentry
     ]
 
     # use Rails' parameter filter to sanitize the event
+    require "active_support/parameter_filter"
     filter = ActiveSupport::ParameterFilter.new(Rails.application.config.filter_parameters - [:name, :filename])
     config.before_send = lambda do |event, _hint|
       filter.filter(event.to_hash)
