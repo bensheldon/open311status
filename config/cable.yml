@@ -1,5 +1,5 @@
 defaults: &defaults
-  adapter: postgresql
+  adapter: enhanced_postgresql
 
 development:
   <<: *defaults
