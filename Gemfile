@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem "actioncable-enhanced-postgresql-adapter"
 gem 'activerecord-explain-analyze'
 gem 'activerecord-has_some_of_many'
 gem 'activerecord-postgis-adapter'
