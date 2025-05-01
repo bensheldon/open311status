@@ -110,8 +110,8 @@ GEM
     autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
     aws-eventstream (1.3.2)
-    aws-partitions (1.1086.0)
-    aws-sdk-core (3.222.1)
+    aws-partitions (1.1095.0)
+    aws-sdk-core (3.222.3)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
@@ -121,7 +121,7 @@ GEM
     aws-sdk-kms (1.99.0)
       aws-sdk-core (~> 3, >= 3.216.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.183.0)
+    aws-sdk-s3 (1.184.0)
       aws-sdk-core (~> 3, >= 3.216.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.5)
@@ -134,8 +134,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
-    bootstrap (5.3.3)
-      autoprefixer-rails (>= 9.1.0)
+    bootstrap (5.3.5)
       popper_js (>= 2.11.8, < 3)
     builder (3.3.0)
     capybara (3.40.0)
@@ -149,7 +148,7 @@ GEM
       xpath (~> 3.2)
     chart-js-rails (0.1.7)
       railties (> 3.1)
-    chartkick (5.1.4)
+    chartkick (5.1.5)
     childprocess (5.1.0)
       logger (~> 1.5)
     climate_control (1.2.0)
@@ -161,7 +160,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.0)
+    connection_pool (2.5.3)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -191,9 +190,9 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.17.1)
-    ffi (1.17.1-arm64-darwin)
-    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.2)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
     font-awesome-rails (4.7.0.9)
       railties (>= 3.2, < 9.0)
     font_assets (0.1.14)
@@ -203,7 +202,7 @@ GEM
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    good_job (4.9.3)
+    good_job (4.10.0)
       activejob (>= 6.1.0)
       activerecord (>= 6.1.0)
       concurrent-ruby (>= 1.3.1)
@@ -266,10 +265,10 @@ GEM
       railties (>= 3.1)
     msgpack (1.8.0)
     multi_json (1.15.0)
-    multi_xml (0.7.1)
+    multi_xml (0.7.2)
       bigdecimal (~> 3.1)
     multipart-post (2.4.1)
-    net-imap (0.5.6)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -279,12 +278,12 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.7)
+    nokogiri (1.18.8)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.7-arm64-darwin)
+    nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.7-x86_64-linux-gnu)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
     order_query (0.5.5)
       activerecord (>= 5.0, < 8.1)
@@ -298,7 +297,7 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
-    psych (5.2.3)
+    psych (5.2.4)
       date
       stringio
     public_suffix (6.0.1)
@@ -455,14 +454,15 @@ GEM
       rexml (~> 3.2)
       rubocop (>= 1.0, < 2.0)
       slim (>= 3.0, < 6.0)
-    sprockets (4.2.1)
+    sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
+      logger
       rack (>= 2.2.4, < 4)
     sprockets-rails (3.5.2)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    stringio (3.1.6)
+    stringio (3.1.7)
     temple (0.10.3)
     terser (1.2.5)
       execjs (>= 0.3.0, < 3)
@@ -511,7 +511,7 @@ DEPENDENCIES
   aws-sdk-s3
   babosa
   bootsnap (>= 1.1.0)
-  bootstrap (~> 5.3.0)
+  bootstrap (~> 5.3.5)
   capybara
   chart-js-rails
   chartkick
@@ -522,7 +522,7 @@ DEPENDENCIES
   faker
   font-awesome-rails
   font_assets
-  good_job (~> 4.9)
+  good_job (~> 4.10)
   groupdate
   jbuilder (~> 2.13)
   jquery-rails
