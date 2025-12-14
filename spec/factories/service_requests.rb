@@ -2,6 +2,36 @@
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
+# == Schema Information
+#
+# Table name: service_requests
+#
+#  id                 :bigint           not null, primary key
+#  geometry           :geography        geometry, 4326
+#  raw_data           :json
+#  requested_datetime :datetime
+#  status             :string
+#  updated_datetime   :datetime
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  city_id            :bigint
+#  service_request_id :string
+#
+# Indexes
+#
+#  index_service_requests_on_city_id                         (city_id)
+#  index_service_requests_on_city_id_and_created_at_and_id   (city_id,created_at,id)
+#  index_service_requests_on_city_id_and_requested_datetime  (city_id,requested_datetime DESC NULLS LAST)
+#  index_service_requests_on_city_id_and_service_request_id  (city_id,service_request_id) UNIQUE
+#  index_service_requests_on_created_at                      (created_at)
+#  index_service_requests_on_geometry                        (geometry) USING gist
+#  index_service_requests_on_requested_datetime              (requested_datetime)
+#  index_service_requests_on_status                          (status)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (city_id => cities.id) ON DELETE => cascade
+#
 FactoryBot.define do
   factory :service_request do
     city

@@ -1,7 +1,7 @@
 #
 # https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 #
-require:
+plugins:
   - rubocop-capybara
   - rubocop-factory_bot
   - rubocop-performance

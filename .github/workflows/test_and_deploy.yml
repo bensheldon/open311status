@@ -15,9 +15,9 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-          cache: yarn
+          cache: npm
       - name: "Javascript: Install packages"
-        run: yarn install --pure-lockfile
+        run: npm clean-install
       - name: Run Linters
         run: bin/lint --nofix
 
@@ -50,9 +50,9 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-          cache: yarn
+          cache: npm
       - name: "Javascript: Install packages"
-        run: yarn install --pure-lockfile
+        run: npm clean-install
       - name: Setup test database
         run: bin/rails db:test:prepare
       - name: Compile assets

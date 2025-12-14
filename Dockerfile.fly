@@ -25,12 +25,11 @@ RUN gem update --system \
     && gem install bundler -v $(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -1 | tr -d " ") \
     && bundle install
 
-COPY .node-version package.json yarn.lock /project/
+COPY .node-version package.json package-lock.json /project/
 RUN echo "Installing node $(cat .node-version)" \
     && npm install -g n \
     && n $(cat .node-version)
-RUN npm install -g yarn
-RUN yarn install
+RUN npm clean-install
 
 COPY . /project
 
