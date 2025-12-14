@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby file: '.ruby-version'
 
 gem "actioncable-enhanced-postgresql-adapter"
 gem 'activerecord-explain-analyze'
@@ -35,7 +36,7 @@ gem 'order_query'
 gem 'pg'
 gem 'puma'
 gem 'rack-host-redirect'
-gem 'rails', '~> 7.2.3'
+gem 'rails', '~> 8.1.0'
 gem 'sass-rails'
 gem 'scenic'
 gem 'sentry-rails'
@@ -54,7 +55,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate'
+  gem 'annotaterb'
   gem 'listen'
   gem 'rubocop'
   gem 'rubocop-capybara'

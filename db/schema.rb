@@ -10,93 +10,93 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_30_192533) do
+ActiveRecord::Schema[8.1].define(version: 2024_07_30_192533) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pg_catalog.plpgsql"
   enable_extension "pg_trgm"
   enable_extension "pgcrypto"
-  enable_extension "plpgsql"
   enable_extension "postgis"
 
   create_table "cities", force: :cascade do |t|
-    t.string "slug"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "service_definitions_count", default: 0, null: false
+    t.string "slug"
+    t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_cities_on_slug", unique: true
   end
 
   create_table "good_job_batches", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.integer "callback_priority"
+    t.text "callback_queue_name"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.text "description"
-    t.jsonb "serialized_properties"
+    t.datetime "discarded_at"
+    t.datetime "enqueued_at"
+    t.datetime "finished_at"
+    t.text "on_discard"
     t.text "on_finish"
     t.text "on_success"
-    t.text "on_discard"
-    t.text "callback_queue_name"
-    t.integer "callback_priority"
-    t.datetime "enqueued_at"
-    t.datetime "discarded_at"
-    t.datetime "finished_at"
+    t.jsonb "serialized_properties"
+    t.datetime "updated_at", null: false
   end
 
   create_table "good_job_executions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.uuid "active_job_id", null: false
-    t.text "job_class"
-    t.text "queue_name"
-    t.jsonb "serialized_params"
-    t.datetime "scheduled_at"
-    t.datetime "finished_at"
-    t.text "error"
-    t.integer "error_event", limit: 2
-    t.text "error_backtrace", array: true
-    t.uuid "process_id"
+    t.datetime "created_at", null: false
     t.interval "duration"
+    t.text "error"
+    t.text "error_backtrace", array: true
+    t.integer "error_event", limit: 2
+    t.datetime "finished_at"
+    t.text "job_class"
+    t.uuid "process_id"
+    t.text "queue_name"
+    t.datetime "scheduled_at"
+    t.jsonb "serialized_params"
+    t.datetime "updated_at", null: false
     t.index ["active_job_id", "created_at"], name: "index_good_job_executions_on_active_job_id_and_created_at"
     t.index ["process_id", "created_at"], name: "index_good_job_executions_on_process_id_and_created_at"
   end
 
   create_table "good_job_processes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.jsonb "state"
     t.integer "lock_type", limit: 2
+    t.jsonb "state"
+    t.datetime "updated_at", null: false
   end
 
   create_table "good_job_settings", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.text "key"
+    t.datetime "updated_at", null: false
     t.jsonb "value"
     t.index ["key"], name: "index_good_job_settings_on_key", unique: true
   end
 
   create_table "good_jobs", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.text "queue_name"
-    t.integer "priority"
-    t.jsonb "serialized_params"
-    t.datetime "scheduled_at"
-    t.datetime "performed_at"
-    t.datetime "finished_at"
-    t.text "error"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.uuid "active_job_id"
-    t.text "concurrency_key"
-    t.text "cron_key"
-    t.uuid "retried_good_job_id"
-    t.datetime "cron_at"
-    t.uuid "batch_id"
     t.uuid "batch_callback_id"
-    t.boolean "is_discrete"
-    t.integer "executions_count"
-    t.text "job_class"
+    t.uuid "batch_id"
+    t.text "concurrency_key"
+    t.datetime "created_at", null: false
+    t.datetime "cron_at"
+    t.text "cron_key"
+    t.text "error"
     t.integer "error_event", limit: 2
+    t.integer "executions_count"
+    t.datetime "finished_at"
+    t.boolean "is_discrete"
+    t.text "job_class"
     t.text "labels", array: true
-    t.uuid "locked_by_id"
     t.datetime "locked_at"
+    t.uuid "locked_by_id"
+    t.datetime "performed_at"
+    t.integer "priority"
+    t.text "queue_name"
+    t.uuid "retried_good_job_id"
+    t.datetime "scheduled_at"
+    t.jsonb "serialized_params"
+    t.datetime "updated_at", null: false
     t.index ["active_job_id", "created_at"], name: "index_good_jobs_on_active_job_id_and_created_at"
     t.index ["batch_callback_id"], name: "index_good_jobs_on_batch_callback_id", where: "(batch_callback_id IS NOT NULL)"
     t.index ["batch_id"], name: "index_good_jobs_on_batch_id", where: "(batch_id IS NOT NULL)"
@@ -115,24 +115,24 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_30_192533) do
 
   create_table "service_definitions", force: :cascade do |t|
     t.bigint "city_id"
-    t.string "service_code"
-    t.json "raw_data"
     t.datetime "created_at", null: false
+    t.json "raw_data"
+    t.string "service_code"
     t.datetime "updated_at", null: false
     t.index ["city_id", "service_code"], name: "index_service_definitions_on_city_id_and_service_code"
     t.index ["city_id"], name: "index_service_definitions_on_city_id"
   end
 
   create_table "service_requests", force: :cascade do |t|
+    t.bigint "city_id"
+    t.datetime "created_at", null: false
+    t.geography "geometry", limit: {srid: 4326, type: "geometry", geographic: true}
+    t.json "raw_data"
+    t.datetime "requested_datetime"
     t.string "service_request_id"
     t.string "status"
-    t.datetime "requested_datetime"
-    t.datetime "updated_datetime"
-    t.json "raw_data"
-    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "city_id"
-    t.geography "geometry", limit: {:srid=>4326, :type=>"geometry", :geographic=>true}
+    t.datetime "updated_datetime"
     t.index ["city_id", "created_at", "id"], name: "index_service_requests_on_city_id_and_created_at_and_id"
     t.index ["city_id", "requested_datetime"], name: "index_service_requests_on_city_id_and_requested_datetime", order: { requested_datetime: "DESC NULLS LAST" }
     t.index ["city_id", "service_request_id"], name: "index_service_requests_on_city_id_and_service_request_id", unique: true
@@ -145,11 +145,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_30_192533) do
 
   create_table "statuses", force: :cascade do |t|
     t.bigint "city_id"
-    t.string "request_name"
-    t.integer "duration_ms"
-    t.integer "http_code"
     t.datetime "created_at"
+    t.integer "duration_ms"
     t.text "error_message"
+    t.integer "http_code"
+    t.string "request_name"
     t.index ["city_id", "request_name", "created_at"], name: "index_statuses_on_city_id_and_request_name_and_created_at", order: { created_at: :desc }
     t.index ["created_at"], name: "index_statuses_on_created_at"
   end

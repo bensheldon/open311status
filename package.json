@@ -1,13 +1,15 @@
 {
-  "engines": {
-    "node": "20.12.2"
-  },
+  "name": "open311status",
+  "private": true,
+  "type": "module",
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds --public-path=assets --target=es2016"
   },
   "dependencies": {
-    "@rails/actioncable": "~>7.1.3",
-    "esbuild": "^0.25.0",
+    "@rails/actioncable": "~>8.1.0",
     "stimulus": "~> 1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
   }
 }

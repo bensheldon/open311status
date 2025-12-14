@@ -1,5 +1,20 @@
 # frozen_string_literal: true
 
+# == Schema Information
+#
+# Table name: global_indices
+#
+#  id              :text
+#  content         :text
+#  searchable_type :text
+#  searchable_id   :integer
+#
+# Indexes
+#
+#  index_global_indices_on_content_gist_trgm_ops        (content) USING gist
+#  index_global_indices_on_id                           (id) UNIQUE
+#  index_global_indices_on_to_tsvector_english_content  (to_tsvector('english'::regconfig, content)) USING gin
+#
 require 'rails_helper'
 
 RSpec.describe GlobalIndex do
