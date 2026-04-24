@@ -178,7 +178,7 @@ GEM
       request_store (>= 1.0)
       ruby2_keywords
     drb (2.2.3)
-    erb (6.0.2)
+    erb (6.0.4)
     erubi (1.13.1)
     et-orbi (1.4.0)
       tzinfo
