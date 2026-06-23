@@ -27,9 +27,6 @@ AllCops:
     - db/**/*
     - config/**/*
 
-Capybara/ClickLinkOrButtonStyle:
-  Enabled: false
-
 Rails:
   Enabled: true
 

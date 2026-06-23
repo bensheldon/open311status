@@ -15,7 +15,7 @@ class CitiesController < ApplicationController
   end
 
   def show
-    @city = City.find_by!(slug: params[:slug])
+    @city = City.find_by!(slug: params.expect(:slug))
     @service_requests = @city.service_requests.all.by_requested_datetime.limit(100)
   end
 end
