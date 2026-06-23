@@ -10,7 +10,7 @@ class SitemapsController < ApplicationController
   end
 
   def city_index
-    @city = City.find_by!(slug: params[:slug])
+    @city = City.find_by!(slug: params.expect(:slug))
 
     oldest_service_request = @city.service_requests.order(:created_at, :id).limit(1).pick(:created_at)&.to_date || Date.current
     @dates = oldest_service_request..Date.current
@@ -21,7 +21,7 @@ class SitemapsController < ApplicationController
   end
 
   def city_day
-    @city = City.find_by!(slug: params[:slug])
+    @city = City.find_by!(slug: params.expect(:slug))
     @date = Date.parse(params[:date])
     @service_requests = @city.service_requests.where(requested_datetime: @date.all_day)
 

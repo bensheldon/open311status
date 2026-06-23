@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+
+puts "\n== Updating NPM =="
+system "npm upgrade", exception: true
+
+if system("which mise")
+  puts "\n== Updating Mise cache =="
+  system "mise cache clean", exception: true
+
+  puts "\n== Upgrading Ruby =="
+  latest_ruby = `mise ls-remote ruby`
+    .lines
+    .map(&:strip)
+    .select { |v| v.match?(/^\d+\.\d+\.\d+$/) }
+    .last
+  raise "Could not determine latest Ruby version" unless latest_ruby
+
+  current_ruby = File.read(".ruby-version").strip
+  puts "Current: #{current_ruby}, Latest available: #{latest_ruby}"
+
+  if current_ruby != latest_ruby
+    system "mise install ruby@#{latest_ruby}", exception: true
+
+    File.write(".ruby-version", "#{latest_ruby}\n")
+    puts "Updated .ruby-version to #{latest_ruby}"
+
+    puts "Re-executing bin/upgrade under Ruby #{latest_ruby}..."
+    exec("mise", "exec", "--", "ruby", __FILE__)
+  else
+    puts "Ruby #{current_ruby} is already the latest stable version"
+  end
+
+  puts "\n== Upgrading Node =="
+  latest_node = `mise ls-remote node`
+    .lines
+    .map(&:strip)
+    .select { |v| v.match?(/^\d+\.\d+\.\d+$/) }
+    .select { |v| v.split(".").first.to_i.even? }
+    .last
+  raise "Could not determine latest Node version" unless latest_node
+
+  current_node = File.read(".node-version").strip
+  puts "Current: #{current_node}, Latest LTS available: #{latest_node}"
+
+  if current_node != latest_node
+    system "mise install node@#{latest_node}", exception: true
+
+    File.write(".node-version", "#{latest_node}\n")
+    puts "Updated .node-version to #{latest_node}"
+  else
+    puts "Node #{current_node} is already the latest LTS stable version"
+  end
+end
+
+puts "\n== Updating Rubygems and system Bundler =="
+system "gem update --system && gem update bundler", exception: true
+
+puts "\n== Updating Gemfile Bundler =="
+# output looks like "bundler (2.7.2, 2.7.1, 2.7.0, ...)
+bundler_version = `gem search '^bundler$' --all`.match(/bundler \(([\d.]*),/)[1]
+raise "Problem fetching bundler version" unless bundler_version
+system "bundle update --bundler #{bundler_version}", exception: true
+
+puts "\n== Updating Gems =="
+system "bundle update --all", exception: true
