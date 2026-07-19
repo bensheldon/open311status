@@ -1,11 +1,18 @@
 # frozen_string_literal: true
 
 class RefreshJob < ApplicationJob
-  def perform
-    City.find_each do |city|
-      FetchServiceRequestsJob.perform_later(city)
-      FetchServiceListJob.perform_later(city)
+  class OnFinishJob < ApplicationJob
+    def perform(_batch, _context)
+      GlobalIndex.refresh
     end
-    GlobalIndex.refresh # TODO: this should ideally happen after all the jobs are done
+  end
+
+  def perform
+    GoodJob::Batch.enqueue(self, on_finish: OnFinishJob) do
+      City.find_each do |city|
+        FetchServiceRequestsJob.perform_later(city)
+        FetchServiceListJob.perform_later(city)
+      end
+    end
   end
 end
