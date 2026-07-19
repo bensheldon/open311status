@@ -63,6 +63,10 @@ class City < ApplicationRecord
     @_configuration ||= City::Configuration.new(Rails.configuration.cities[slug])
   end
 
+  def broadcast_status_update
+    broadcast_update_later_to("cities", partial: "cities/city_row_content", locals: { city: CityDecorator.decorate(self) })
+  end
+
   def uptime_percent(status_type, start: 2.days.ago)
     start_floor = start.change(min: 10 * (Time.now.min.to_f / 10).floor)
 

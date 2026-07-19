@@ -47,7 +47,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -68,6 +67,7 @@ end
 group :test do
   gem 'capybara'
   gem 'climate_control'
+  gem 'cuprite'
   gem 'launchy', require: false
   gem 'rails-controller-testing'
   gem 'rspec_junit_formatter'

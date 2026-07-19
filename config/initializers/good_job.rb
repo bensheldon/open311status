@@ -5,16 +5,19 @@ Rails.application.configure do
   config.good_job.retry_on_unhandled_error = false
   config.good_job.cleanup_interval_seconds = 600
   config.good_job.cleanup_interval_jobs = 20
+  config.good_job.enable_cron = true
+  
+  config.good_job.cron = {
+    refresh: {
+      cron: '*/10 * * * *',
+      class: 'RefreshJob',
+      description: "Update open311 statuses",
+      enabled_by_default: -> { Rails.env.production? },
+    },
+  }
 
   if Rails.env.production?
     config.good_job.execution_mode = :async
-    config.good_job.cron = {
-      refresh: {
-        cron: '*/10 * * * *',
-        class: 'RefreshJob',
-        description: "Update open311 statuses",
-      },
-    }
 
     GoodJob::Engine.middleware.use(Rack::Auth::Basic) do |provided_username, provided_password|
       username, password = ENV.fetch('GOOD_JOB_AUTH', '').split(':')
