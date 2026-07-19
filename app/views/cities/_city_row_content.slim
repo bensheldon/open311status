@@ -39,7 +39,7 @@ td
 td
   | #{city.service_definitions_count} types
 td
-  span.sparkline data-values=city.bucketed_service_requests.values.join(',')
+  span.sparkline data-controller="sparkline" data-sparkline-values-value=city.bucketed_service_requests.values.to_json
 td
   = city.total_service_requests
 td

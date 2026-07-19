@@ -8,6 +8,6 @@ class FetchServiceRequestsJob < ApplicationJob
     new_service_requests = api.fetch_service_requests
     Rails.logger.info "#{city.name} had #{new_service_requests.size} new service requests"
 
-    CityBroadcastJob.perform_now(city)
+    city.broadcast_status_update
   end
 end

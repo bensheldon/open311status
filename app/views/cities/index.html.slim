@@ -13,7 +13,8 @@ ruby:
     div data-controller="line-chart" data-line-chart-series-value=series_data
 
 .card.card-default.mb-3.card-table
-  table.table.table-sm.table-bordered.table-striped(data-controller="cities")
+  = turbo_stream_from "cities"
+  table.table.table-sm.table-bordered.table-striped
     thead
       tr
         th Endpoint
