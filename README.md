@@ -50,6 +50,20 @@ requests. To load cities, run `rake cities:load`. And to load service requests,
 `export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`.
 5. [Install PostGIS](https://postgis.net/install/), the Postgres geospatial extension, if it's not included in your distribution. Postgres.app comes with postgis.
 
+### JavaScript
+
+JavaScript is managed via [importmap-rails](https://github.com/rails/importmap-rails) — no Node.js or build step required. Vendor packages (Chart.js, Bootstrap, Stimulus, Turbo, ActionCable) are downloaded to `vendor/javascript/` and served directly by Rails.
+
+To add or update a package:
+```sh
+bin/importmap pin <package>
+```
+
+To remove a package:
+```sh
+bin/importmap unpin <package>
+```
+
 ### Application Setup
 
 1. Install ruby gem dependencies: `bundle install`

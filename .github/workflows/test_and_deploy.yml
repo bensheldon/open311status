@@ -11,13 +11,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .node-version
-          cache: npm
-      - name: "Javascript: Install packages"
-        run: npm clean-install
       - name: Run Linters
         run: bin/lint --nofix
 
@@ -46,13 +39,6 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version-file: .node-version
-          cache: npm
-      - name: "Javascript: Install packages"
-        run: npm clean-install
       - name: Setup test database
         run: bin/rails db:test:prepare
       - name: Compile assets
