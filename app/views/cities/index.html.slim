@@ -9,10 +9,11 @@ ruby:
   .card-header
     h3.card-title Service Requests created during previous 48 hours
   .card-body
-    = line_chart @cities.map { |city| { name: city.name, data: city.bucketed_service_requests } }
+    - series_data = @cities.map { |city| { name: city.name, data: city.bucketed_service_requests } }.to_json
+    div data-controller="line-chart" data-line-chart-series-value=series_data
 
 .card.card-default.mb-3.card-table
-  table.table.table-sm.table-bordered.table-striped.tablesorter(data-controller="cities")
+  table.table.table-sm.table-bordered.table-striped(data-controller="cities")
     thead
       tr
         th Endpoint

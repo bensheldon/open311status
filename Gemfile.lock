@@ -149,19 +149,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    chart-js-rails (0.1.7)
-      railties (> 3.1)
-    chartkick (5.2.1)
     childprocess (5.1.0)
       logger (~> 1.5)
     climate_control (1.2.0)
-    coffee-rails (5.0.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 5.2.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.3.7)
     connection_pool (3.0.2)
     crack (1.0.1)
@@ -218,6 +208,10 @@ GEM
     hashie (3.6.0)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
+    importmap-rails (2.2.3)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.8.2)
     irb (1.18.0)
       pp (>= 0.6.0)
@@ -228,14 +222,6 @@ GEM
       actionview (>= 7.0.0)
       activesupport (>= 7.0.0)
     jmespath (1.6.2)
-    jquery-rails (4.6.1)
-      rails-dom-testing (>= 1, < 3)
-      railties (>= 4.2.0)
-      thor (>= 0.14, < 2.0)
-    jquery-tablesorter (1.28.0)
-      railties (>= 3.2)
-    jsbundling-rails (1.3.1)
-      railties (>= 6.0.0)
     json (2.20.0)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
@@ -270,8 +256,6 @@ GEM
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    momentjs-rails (2.29.4.1)
-      railties (>= 3.1)
     msgpack (1.8.3)
     multi_json (1.21.1)
     multi_xml (0.9.1)
@@ -483,6 +467,8 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
+    stimulus-rails (1.3.4)
+      railties (>= 6.0.0)
     stringio (3.2.0)
     temple (0.10.4)
     terser (1.2.7)
@@ -494,6 +480,9 @@ GEM
     timecop (0.9.11)
     timeout (0.6.1)
     tsort (0.2.0)
+    turbo-rails (2.0.23)
+      actionpack (>= 7.1.0)
+      railties (>= 7.1.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.2.0)
@@ -535,10 +524,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 5.3.8)
   capybara
-  chart-js-rails
-  chartkick
   climate_control
-  coffee-rails
   draper
   factory_bot_rails
   faker
@@ -546,15 +532,12 @@ DEPENDENCIES
   font_assets
   good_job (~> 4.14)
   groupdate
+  importmap-rails
   jbuilder (~> 2.13)
-  jquery-rails
-  jquery-tablesorter
-  jsbundling-rails
   kramdown
   launchy
   listen
   lograge
-  momentjs-rails
   open311!
   order_query
   pg
@@ -579,9 +562,11 @@ DEPENDENCIES
   slim
   slim-rails
   slim_lint
+  stimulus-rails
   terser
   textacular
   timecop
+  turbo-rails
   web-console (>= 3.3.0)
   webmock
 

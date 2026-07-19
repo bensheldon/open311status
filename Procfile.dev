@@ -1,2 +1,1 @@
 web: unset PORT && bin/rails server
-js: npm run build --watch

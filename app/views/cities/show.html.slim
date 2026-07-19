@@ -10,7 +10,8 @@ h1= @city.name
   .card-header
     h3.card-title Service Requests created during previous 48 hours
   .card-body
-    = line_chart [{ name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count }]
+    - series_data = [{ name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count }].to_json
+    div data-controller="line-chart" data-line-chart-series-value=series_data
 
 .card.mb-3
   .card-header
