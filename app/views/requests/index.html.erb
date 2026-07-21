@@ -1,0 +1,24 @@
+<% provide(:meta_title) { "Open311 Status - All Service Requests" } %>
+
+<%= render 'cities/service_requests', service_requests: @pager.records %>
+
+<nav>
+  <ul class="pagination justify-content-center">
+    <% if @pager.newer? %>
+      <li class="page-item">
+        <a class="page-link" href="<%= requests_path(after_id: @pager.records.first.id) %>">
+          <span aria-hidden="true">&larr;</span>
+          Newer requests
+        </a>
+      </li>
+    <% end %>
+    <% if @pager.older? %>
+      <li class="page-item">
+        <a class="page-link" href="<%= requests_path(before_id: @pager.records.last.id) %>">
+          Older requests
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</nav>

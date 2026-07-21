@@ -1,0 +1,14 @@
+<%# Rails flash messages styled for Bootstrap 5.0 %>
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <% alert_class = "alert alert-#{name.to_s == 'notice' ? 'success' : 'danger'} alert-dismissible fade show" %>
+    <div class="<%= alert_class %>" role="alert">
+      <button class="close" data-bs-dismiss="alert" type="button" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div id="flash_<%= name %>">
+        <%= msg %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

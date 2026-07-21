@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Service Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% service_definitions.find_each do |service_definition| %>
+      <tr>
+        <td><%= service_definition.raw_data['service_name'] %></td>
+        <td><%= service_definition.raw_data['description'] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

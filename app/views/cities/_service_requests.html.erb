@@ -1,0 +1,30 @@
+<table class="table table-condensed table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Service Name</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Media</th>
+      <th>Requested At</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% ServiceRequestDecorator.decorate_collection(service_requests).each do |service_request| %>
+      <tr>
+        <td><%= service_request.city.name %></td>
+        <td><%= service_request.raw_data['service_name'] %></td>
+        <td><%= service_request.status %></td>
+        <td><%= service_request.raw_data['description'] %></td>
+        <td>
+          <% if service_request.media_url.present? %>
+            <%= link_to(service_request.media_url, rel: 'noopener nofollow') do %>
+              <%= image_tag service_request.media_url, class: 'img-responsive', alt: service_request.raw_data['service_name'] %>
+            <% end %>
+          <% end %>
+        </td>
+        <td><%= link_to "#{time_ago_in_words(service_request.requested_datetime)} ago", service_request %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

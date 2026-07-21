@@ -1,0 +1,50 @@
+<td>
+  <strong>
+    <%= link_to city.name, city_path(city) %>
+  </strong>
+</td>
+
+<% status = city.service_list_status %>
+<% if status.present? %>
+  <td data-sort-value="<%= status.http_code %>-<%= status.duration_ms %>-<%= status.error_message %>">
+    <div class="text-center">
+      <% button_class = "btn btn-sm btn-#{status.label_class}" %>
+      <a class="<%= button_class %>" href="<%= city.api.services_url %>" rel="noopener nofollow" data-bs-toggle="tooltip" title="<%= status.description %>"><%= status.title %></a>
+      <br>
+      <small>
+        <%= time_ago_in_words status.created_at %> ago
+        <br>
+        <%= city.uptime_percent('service_list').round(2) %> uptime
+      </small>
+    </div>
+  </td>
+<% else %>
+  <td></td>
+<% end %>
+
+<% status = city.service_requests_status %>
+<% if status.present? %>
+  <td data-sort-value="<%= status.http_code %>-<%= status.duration_ms %>-<%= status.error_message %>">
+    <div class="text-center">
+      <% button_class = "btn btn-sm btn-#{status.label_class}" %>
+      <a class="<%= button_class %>" href="<%= city.api.requests_url %>" rel="noopener nofollow" data-bs-toggle="tooltip" title="<%= status.description %>"><%= status.title %></a>
+      <br>
+      <small>
+        <%= time_ago_in_words status.created_at %> ago
+        <br>
+        <%= city.uptime_percent('service_requests').round(2) %> uptime
+      </small>
+    </div>
+  </td>
+<% else %>
+  <td></td>
+<% end %>
+
+<td><%= city.service_definitions_count %> types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="<%= city.bucketed_service_requests.values.to_json %>"></span>
+</td>
+<td><%= city.total_service_requests %></td>
+<td><%= city.min_service_requests %></td>
+<td><%= city.max_service_requests %></td>
+<td><%= city.avg_service_requests %></td>
