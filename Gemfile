@@ -34,8 +34,6 @@ gem 'rails', '~> 8.1.0'
 gem 'sass-rails'
 gem 'scenic'
 gem 'sentry-rails'
-gem 'slim'
-gem 'slim-rails'
 gem 'stimulus-rails'
 gem 'terser'
 gem 'textacular'
@@ -51,6 +49,7 @@ end
 
 group :development do
   gem 'annotaterb'
+  gem 'herb'
   gem 'listen'
   gem 'rubocop'
   gem 'rubocop-capybara'
@@ -59,7 +58,6 @@ group :development do
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'rubocop-rspec_rails'
-  gem 'slim_lint', require: false
   gem 'web-console', '>= 3.3.0'
   gem 'webmock'
 end

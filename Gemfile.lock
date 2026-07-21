@@ -215,6 +215,8 @@ GEM
       activesupport (>= 7.2)
     hashdiff (1.2.1)
     hashie (3.6.0)
+    herb (0.10.2-arm64-darwin)
+    herb (0.10.2-x86_64-linux-gnu)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.2.3)
@@ -450,17 +452,6 @@ GEM
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
       logger
-    slim (5.2.1)
-      temple (~> 0.10.0)
-      tilt (>= 2.1.0)
-    slim-rails (4.0.0)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      slim (>= 3.0, < 6.0, != 5.0.0)
-    slim_lint (0.34.0)
-      rexml (~> 3.2)
-      rubocop (>= 1.0, < 2.0)
-      slim (>= 3.0, < 6.0)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
@@ -472,7 +463,6 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.2.0)
-    temple (0.10.4)
     terser (1.2.7)
       execjs (>= 0.3.0, < 3)
     textacular (5.7.0)
@@ -535,6 +525,7 @@ DEPENDENCIES
   font_assets
   good_job (~> 4.14)
   groupdate
+  herb
   importmap-rails
   jbuilder (~> 2.13)
   kramdown
@@ -561,9 +552,6 @@ DEPENDENCIES
   sass-rails
   scenic
   sentry-rails
-  slim
-  slim-rails
-  slim_lint
   stimulus-rails
   terser
   textacular

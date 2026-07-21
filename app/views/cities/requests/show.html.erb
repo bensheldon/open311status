@@ -1,0 +1,23 @@
+<%
+  service_request = ServiceRequestDecorator.decorate @service_request
+
+  provide(:meta_title) { "#{service_request.raw_data.fetch('service_name', 'Service Request')} - #{service_request.city.name} - ##{service_request.raw_data['service_request_id']}" }
+  provide(:meta_description) { service_request.raw_data['description'].presence || "311 service request in #{service_request.city.name}." }
+  provide(:canonical_url) { polymorphic_url(service_request) }
+%>
+
+<h2 class="h4">
+  <%= service_request.city.name %>
+  <% badge_class = service_request.status == 'open' ? 'badge-warning' : 'badge-success' %>
+  <span class="badge <%= badge_class %>"><%= service_request.status.presence&.capitalize %></span>
+  <small><%= time_ago_in_words(service_request.requested_datetime).capitalize %></small>
+</h2>
+
+<h1 style="margin-top: 0"><%= service_request.raw_data['service_name'] %></h1>
+
+<p><%= service_request.raw_data['description'] %></p>
+<td>
+  <% if service_request.media_url.present? %>
+    <%= image_tag service_request.media_url, class: 'img-responsive', alt: service_request.raw_data['service_name'] %>
+  <% end %>
+</td>

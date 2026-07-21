@@ -16,7 +16,7 @@ updates:
         patterns:
           - "rubocop"
           - "rubocop-*"
-          - "slim_lint"
+          - "herb"
       bundler-dev:
         dependency-type: "development"
         update-types:
