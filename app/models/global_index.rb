@@ -11,7 +11,7 @@
 #
 # Indexes
 #
-#  index_global_indices_on_content_gist_trgm_ops        (content) USING gist
+#  index_global_indices_on_content_gist_trgm_ops        (content gist_trgm_ops) USING gist
 #  index_global_indices_on_id                           (id) UNIQUE
 #  index_global_indices_on_to_tsvector_english_content  (to_tsvector('english'::regconfig, content)) USING gin
 #

@@ -23,7 +23,7 @@
 #  index_service_requests_on_city_id_and_service_request_id  (city_id,service_request_id) UNIQUE
 #  index_service_requests_on_created_at                      (created_at)
 #  index_service_requests_on_geometry                        (geometry) USING gist
-#  index_service_requests_on_requested_datetime              (requested_datetime)
+#  index_service_requests_on_requested_datetime              (requested_datetime DESC NULLS LAST)
 #  index_service_requests_on_status                          (status)
 #
 # Foreign Keys
