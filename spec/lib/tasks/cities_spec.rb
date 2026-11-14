@@ -50,7 +50,6 @@ RSpec.describe "cities:service_requests", type: :rake do
 
   before do
     allow(FetchServiceRequestsJob).to receive(:perform_now)
-    allow(FetchServiceRequestsJob).to receive(:perform_later)
   end
 
   it 'fetches for all cities' do
@@ -65,9 +64,12 @@ RSpec.describe "cities:service_requests", type: :rake do
       end
     end
 
+    before do
+      ActiveJob::Base.queue_adapter = :test
+    end
+
     it 'performs later' do
-      task.invoke
-      expect(FetchServiceRequestsJob).to have_received(:perform_later).twice
+      expect { task.invoke }.to have_enqueued_job(FetchServiceRequestsJob).twice
     end
   end
 
