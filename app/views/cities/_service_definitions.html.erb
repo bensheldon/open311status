@@ -6,7 +6,7 @@
     </tr>
   </thead>
   <tbody>
-    <% service_definitions.find_each do |service_definition| %>
+    <% service_definitions.each do |service_definition| %>
       <tr>
         <td><%= service_definition.raw_data['service_name'] %></td>
         <td><%= service_definition.raw_data['description'] %></td>

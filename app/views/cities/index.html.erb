@@ -1,7 +1,7 @@
 <% provide(:meta_title) { "Open311 Status - 311 API monitoring and analysis" } %>
 <div class="well mb-3">
   <strong>
-    Scanning <%= @cities.size %> Open311 endpoints every 10 minutes.
+    Scanning <%= @cities.size %> Open311 endpoints every hour.
     For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers" rel="noopener">Open311 Wiki</a>.
   </strong>
 </div>
@@ -17,7 +17,6 @@
 </div>
 
 <div class="card card-default mb-3 card-table">
-  <%= turbo_stream_from "cities" %>
   <table class="table table-sm table-bordered table-striped">
     <thead>
       <tr>
@@ -36,7 +35,11 @@
       </tr>
     </thead>
     <tbody>
-      <%= render partial: 'city_row_content', layout: 'city_row', collection: @cities, as: :city %>
+      <% @cities.each do |city| %>
+        <tr id="city_<%= city.slug %>">
+          <%= render 'city_row_content', city: city %>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
@@ -49,3 +52,5 @@
 <div class="text-center mt-3">
   <%= link_to "View all Service Requests", requests_path, class: 'btn btn-outline-dark' %>
 </div>
+
+<p class="text-muted text-center mt-3"><small>Generated <%= Time.current.utc.strftime("%Y-%m-%d %H:%M UTC") %></small></p>

@@ -1,1 +1,1 @@
-web: unset PORT && bin/rails server
+web: bin/rails server

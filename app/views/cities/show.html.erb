@@ -12,7 +12,7 @@
     <h3 class="card-title">Service Requests created during previous 48 hours</h3>
   </div>
   <div class="card-body">
-    <% series_data = [{ name: city.name, data: city.service_requests.group_by_hour(:requested_datetime, range: 2.days.ago..Time.current).count }].to_json %>
+    <% series_data = [{ name: city.name, data: city.bucketed_service_requests }].to_json %>
     <div data-controller="line-chart" data-line-chart-series-value="<%= series_data %>"></div>
   </div>
 </div>

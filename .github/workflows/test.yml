@@ -1,0 +1,21 @@
+name: Test
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  test:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+      - name: "Ruby: Install Ruby"
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Lint
+        run: bin/lint --nofix
+      - name: Run tests
+        run: bin/rspec

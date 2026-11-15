@@ -1,0 +1,68 @@
+name: Fetch and Publish
+on:
+  schedule:
+    - cron: '17 * * * *' # hourly
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      fetch:
+        description: 'Fetch new data before building'
+        type: boolean
+        default: true
+      backfill:
+        description: 'Deep backfill service requests over the retention window before building'
+        type: boolean
+        default: false
+concurrency:
+  group: fetch-and-publish
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  fetch_and_publish:
+    name: Fetch data and publish site
+    runs-on: ubuntu-latest
+    env:
+      RUBYOPT: "--enable=yjit"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+      - name: "Ruby: Install Ruby"
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+      - name: Checkout data branch into ./data
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin data; then
+            git fetch --depth=1 origin data
+            git worktree add data FETCH_HEAD --detach
+          else
+            git worktree add --orphan -b data data
+          fi
+      - name: Fetch Open311 data
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch)
+        run: bin/rails data:fetch
+      - name: Deep backfill service requests
+        if: github.event_name == 'workflow_dispatch' && inputs.backfill
+        run: bin/rails data:backfill
+      - name: Commit and push data branch
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.fetch || inputs.backfill))
+        working-directory: data
+        run: |
+          git add --all
+          git commit --quiet -m "Update data $(date -u +%Y-%m-%dT%H:%MZ)" || echo "No changes"
+          git push origin HEAD:refs/heads/data
+      - name: Build website
+        run: bin/parklife build
+      - name: Publish
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          enable_jekyll: false
+          force_orphan: true

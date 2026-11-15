@@ -1,6 +1,10 @@
 require_relative 'boot'
 
-require 'rails/all'
+require 'rails'
+require 'active_model/railtie'
+require 'action_controller/railtie'
+require 'action_view/railtie'
+require 'sprockets/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -11,26 +15,11 @@ module Open311status
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.1
 
-    config.active_job.queue_adapter = :good_job
-
-    config.secrets = config_for(:secrets)
-    config.secret_key_base = config.secrets[:secret_key_base]
-    def secrets
-      config.secrets
-    end
-
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    config.secret_key_base = ENV.fetch('SECRET_KEY_BASE', 'open311status-static-site')
 
     config.cities = YAML.load_file Rails.root.join('config', 'cities.yml')
 
-    config.action_mailer.deliver_later_queue_name = 'default'
-    config.action_mailer.default_url_options = {
-      host: Rails.application.secrets.default_host
-    }
-
-    config.paths.add 'app/decorators/collections', eager_load: true
+    # Directory containing the YAML data files (checked out from the `data` branch).
+    config.data_path = Pathname.new(ENV.fetch('DATA_PATH', Rails.root.join('data').to_s))
   end
 end

@@ -36,23 +36,23 @@ bruhl:
   jurisdiction: 'bruehl.de'
 ```
 
-### Loading real data
+### How it works
 
-By default, running `db:setup` will load cities and generate fake service
-requests. To load cities, run `rake cities:load`. And to load service requests,
-`rake cities:service_requests`
+Open311 Status is a static website built with [Parklife](https://github.com/benpickles/parklife) from a Rails app that has no database:
 
-### Application Dependencies
-1. Install Ruby with your ruby version manager of choice, like [rbenv](https://github.com/rbenv/rbenv) or [RVM](https://github.com/codeforamerica/howto/blob/master/Ruby.md)
-2. Check the ruby version in `.ruby-version` and ensure you have it installed locally e.g. `rbenv install 2.6.1`
-3. Install [bundler](https://bundler.io/) (the latest Heroku-compatible version): `gem install bundler`
-4. [Install Postgres](https://github.com/codeforamerica/howto/blob/master/PostgreSQL.md). If setting up Postgres.app, you will also need to add the binary to your path. e.g. Add to your `~/.bashrc`:
-`export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"`.
-5. [Install PostGIS](https://postgis.net/install/), the Postgres geospatial extension, if it's not included in your distribution. Postgres.app comes with postgis.
+- **Data** lives as YAML in the `data` branch (`cities/<slug>.yml`: service definitions, status checks, and recent service requests), keeping it out of `main`. The app reads it from `./data` (override with `DATA_PATH`).
+- **Fetching**: the [Fetch and Publish workflow](.github/workflows/fetch_and_publish.yml) runs hourly, checks out the `data` branch into `./data`, runs `bin/rails data:fetch`, commits and pushes the `data` branch, then builds the site with `bin/parklife build` and publishes `./build` to the `gh-pages` branch. Pushes to `main` rebuild and publish without fetching.
+- **Retention**: status checks are kept for 6 months and service requests for 7 days (`City::STATUS_RETENTION`, `City::SERVICE_REQUEST_RETENTION`); older history remains in the `data` branch's git history.
+
+### Loading data locally
+
+- `bin/data` checks out the `data` branch into `./data` as a git worktree (or pulls it if already present).
+- `bin/rails data:fetch` fetches fresh data from every endpoint into `./data`. Limit with `SLUGS=chicago,boston`.
+- `bin/rails data:backfill` deep-backfills service requests across the whole retention window (walking date ranges to get past endpoint page limits). In CI, run "Fetch and Publish" manually with the "backfill" option.
 
 ### JavaScript
 
-JavaScript is managed via [importmap-rails](https://github.com/rails/importmap-rails) — no Node.js or build step required. Vendor packages (Chart.js, Bootstrap, Stimulus, Turbo, ActionCable) are downloaded to `vendor/javascript/` and served directly by Rails.
+JavaScript is managed via [importmap-rails](https://github.com/rails/importmap-rails) — no Node.js or build step required. Vendor packages (Chart.js, Bootstrap, Stimulus) are downloaded to `vendor/javascript/` and served directly by Rails.
 
 To add or update a package:
 ```sh
@@ -66,11 +66,9 @@ bin/importmap unpin <package>
 
 ### Application Setup
 
-1. Install ruby gem dependencies: `bundle install`
-2. Create the databases and load schema and seeds: `bin/rails db:setup`
-3. Run the tests: `bin/rspec`
-4. Run the server: `bin/rails server`, and visit the web-browser: [`http://localhost:3000`](http://localhost:3000)
+No database is required.
 
-#### Migration guide
-
-You may need to run `rake db:gis:setup` to enable PostGIS on your database.
+1. Install dependencies and check out data: `bin/setup`
+2. Run the tests: `bin/rspec`
+3. Run the server: `bin/rails server`, and visit [`http://localhost:3000`](http://localhost:3000)
+4. Build the static site: `bin/parklife build` (output in `./build`)

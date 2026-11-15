@@ -1,62 +1,42 @@
 # frozen_string_literal: true
 
 require 'open311'
+require 'timeout'
 
 class Status
-  class Telemetry
-    attr_accessor :request_name, :city, :status
+  module Telemetry
+    TIMEOUT = 60 # seconds; the open311 gem doesn't expose Faraday timeouts
 
-    def self.process(request_name, options = {}, &)
-      new(request_name, options).process(&)
-    end
+    HTTP_CODES = {
+      'Open311::BadRequest' => 400,
+      'Open311::Unauthorized' => 401,
+      'Open311::Forbidden' => 403,
+      'Open311::NotFound' => 404,
+      'Open311::NotAcceptable' => 406,
+      'Open311::InternalServerError' => 500,
+      'Open311::BadGateway' => 502,
+      'Open311::ServiceUnavailable' => 503,
+    }.freeze
 
-    def initialize(request_name, options = {})
-      self.request_name = request_name
-      self.city = options.fetch :city
-
-      self.status = city.statuses.new(request_name:)
-    end
-
-    def process
+    # Yields, records a Status on the city, and returns [response, status].
+    def self.process(request_name, city:, &)
+      status = Status.new(request_name:)
+      start = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       response = nil
-      start = Time.current
 
       begin
-        response = yield
+        response = Timeout.timeout(TIMEOUT, &)
         status.http_code = 200
       rescue Open311::Error => e
-        status.http_code = open311_error_to_http_code(e)
+        status.http_code = HTTP_CODES[e.class.name]
+        status.error_message = "#{e.class}: #{e}" if status.http_code.nil?
       rescue StandardError => e
         status.error_message = "#{e.class}: #{e}"
       end
 
-      status.duration_ms = ((Time.current - start) * 1000).to_i
-      status.save!
-
-      response
-    end
-
-    def open311_error_to_http_code(exception)
-      case exception
-      when Open311::BadRequest
-        400
-      when Open311::Unauthorized
-        401
-      when Open311::Forbidden
-        403
-      when Open311::NotFound
-        404
-      when Open311::NotAcceptable
-        406
-      when Open311::InternalServerError
-        500
-      when Open311::BadGateway
-        502
-      when Open311::ServiceUnavailable
-        503
-      else
-        raise exception
-      end
+      status.duration_ms = ((Process.clock_gettime(Process::CLOCK_MONOTONIC) - start) * 1000).to_i
+      city.add_status(status)
+      [response, status]
     end
   end
 end
