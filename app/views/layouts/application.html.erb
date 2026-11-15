@@ -10,7 +10,6 @@
     <% if content_for? :canonical_url %>
       <link rel="canonical" href="<%= yield(:canonical_url) %>">
     <% end %>
-    <%= render 'shared/google_analytics' %>
   </head>
   <body>
     <div class="wrap-body">

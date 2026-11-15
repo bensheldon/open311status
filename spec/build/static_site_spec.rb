@@ -40,7 +40,7 @@ RSpec.describe 'Built static site', :build do # rubocop:disable RSpec/DescribeCl
     skip 'Run bin/parklife build first' unless build_dir.join('index.html').exist?
 
     Capybara.register_driver(:cuprite_build) do |app|
-      # Only load local files: no analytics or remote request photos.
+      # Only load local files, not remote request photos.
       Capybara::Cuprite::Driver.new(app, window_size: [1400, 900], js_errors: true, pending_connection_errors: false,
                                          url_allowlist: [%r{\Ahttp://127\.0\.0\.1}])
     end
