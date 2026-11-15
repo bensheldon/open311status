@@ -13,7 +13,4 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.include ActiveSupport::Testing::TimeHelpers
-
-  # Specs against the Parklife build (spec/build) only run with `--tag build`.
-  config.filter_run_excluding :build unless config.inclusion_filter[:build]
 end

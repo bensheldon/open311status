@@ -85,6 +85,7 @@ RSpec/DescribeClass:
     - spec/features/*
     - spec/requests/*
     - spec/system/*
+    - spec/build/*
     - spec/routing/*
 
 RSpec/ExampleLength:
