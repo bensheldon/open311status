@@ -57,11 +57,13 @@ RSpec.describe City::Api do
 
   # An Open311 endpoint that, like real ones, returns at most one page of
   # requests in the date range, newest first.
-  def stub_paginated_endpoint(requests, page_size: 50, fail_after: nil)
+  def stub_paginated_endpoint(requests, page_size: 50, fail_after: nil, stall_after: nil)
     calls = 0
     stub_request(:get, /requests\.json/).to_return do |request|
       calls += 1
       raise SocketError, 'connection reset' if fail_after && calls > fail_after
+
+      sleep 1 if stall_after && calls > stall_after
 
       query = Rack::Utils.parse_query(URI(request.uri.to_s).query)
       start_at = Time.zone.parse(query['start_date'])
@@ -96,17 +98,28 @@ RSpec.describe City::Api do
       expect(city.service_requests.size).to eq 85
     end
 
-    it 'does not advance the cursor past unfetched requests when a request fails partway' do
+    it 'keeps completed ranges and records the error when a request fails partway' do
       requests = requests_between(3.days.ago, 1.minute.ago, 300)
       stub_paginated_endpoint(requests, fail_after: 10)
 
-      expect { api.fetch_service_requests }.to raise_error(Faraday::ConnectionFailed)
-      fetched = city.service_requests.map(&:service_request_id)
+      fetched = api.fetch_service_requests.pluck('service_request_id')
       expect(fetched).not_to be_empty
+      expect(city.service_requests.map(&:service_request_id)).to match_array(fetched)
+      expect(city.service_requests_status.error_message).to include('connection reset')
+      expect(city.statuses.size).to eq 1
+
       cursor = city.latest_requested_datetime
       missing = requests.reject { |r| fetched.include?(r['service_request_id']) }
       expect(missing).not_to be_empty
       expect(missing.map { |r| Time.zone.parse(r['requested_datetime']) }).to all(be >= cursor)
+    end
+
+    it 'times out a stalled range request' do
+      stub_const('Status::Telemetry::TIMEOUT', 0.2)
+      stub_paginated_endpoint(requests_between(1.day.ago, 1.minute.ago, 120), stall_after: 1)
+
+      api.fetch_service_requests
+      expect(city.service_requests_status.error_message).to start_with('Timeout::Error')
     end
   end
 
@@ -117,5 +130,15 @@ RSpec.describe City::Api do
     expect(api.fetch_service_requests_in_ranges.size).to eq 200
     expect(city.service_requests.size).to eq 200
     expect(city.statuses).to be_empty
+  end
+
+  it 'raises IncompleteFetchError with the completed ranges when backfill fails partway' do
+    stub_paginated_endpoint(requests_between(City::SERVICE_REQUEST_RETENTION.ago + 1.minute, 1.minute.ago, 200), fail_after: 4)
+
+    expect { api.fetch_service_requests_in_ranges }.to raise_error(described_class::IncompleteFetchError) { |error|
+      expect(error.fetched).not_to be_empty
+      expect(error.cause).to be_a(Faraday::ConnectionFailed)
+    }
+    expect(city.service_requests).not_to be_empty
   end
 end

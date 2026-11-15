@@ -12,6 +12,17 @@ class City
     BACKFILL_SHRINK_RATE = 0.5
     DEFAULT_REQUESTS_LIMIT = 50
 
+    # Raised when a request fails partway through fetching date ranges. The
+    # requests in #fetched (from the ranges that completed) are already merged.
+    class IncompleteFetchError < StandardError
+      attr_reader :fetched
+
+      def initialize(fetched, error)
+        @fetched = fetched
+        super("#{error.class}: #{error.message}")
+      end
+    end
+
     def initialize(city)
       @city = city
     end
@@ -48,7 +59,8 @@ class City
     # only merged once every request up to them is known to be fetched. If the
     # first response is a full page, it may be truncated: the range is then
     # fetched again in smaller date ranges (see #fetch_service_requests_in_ranges).
-    # Returns the requests that were fetched.
+    # If a range fails, the status records the error and the requests from the
+    # ranges that completed are kept. Returns the requests that were fetched.
     def fetch_service_requests
       start_at = [city.latest_requested_datetime, City::SERVICE_REQUEST_RETENTION.ago].compact.max
       end_at = Time.current
@@ -58,7 +70,14 @@ class City
       return [] unless status.success?
 
       requests = normalize_requests(data)
-      return fetch_service_requests_in_ranges(start_at:, end_at:) if requests.size >= requests_limit
+      if requests.size >= requests_limit
+        begin
+          return fetch_service_requests_in_ranges(start_at:, end_at:)
+        rescue IncompleteFetchError => e
+          Status::Telemetry.record_error(status, e.cause)
+          return e.fetched
+        end
+      end
 
       city.merge_service_requests(requests)
       requests
@@ -68,7 +87,8 @@ class City
     # first. A response that fills a page may be truncated, so it is discarded and
     # the range is halved; otherwise the requests are merged and the next range
     # grows. Merging only complete ranges, in order, keeps the cursor safe if a
-    # request fails partway through. Does not record statuses.
+    # request fails partway through; then it raises IncompleteFetchError. Each
+    # request has the same timeout as a status check. Does not record statuses.
     # Returns the requests that were fetched.
     def fetch_service_requests_in_ranges(start_at: City::SERVICE_REQUEST_RETENTION.ago, end_at: Time.current)
       interval = BACKFILL_INITIAL_INTERVAL.to_f
@@ -77,7 +97,12 @@ class City
 
       while cursor < end_at
         range_end = [cursor + interval, end_at].min
-        requests = normalize_requests(open311.service_requests(**date_params(cursor, range_end)))
+        begin
+          data = Status::Telemetry.with_timeout { open311.service_requests(**date_params(cursor, range_end)) }
+        rescue StandardError => e
+          raise IncompleteFetchError.new(fetched, e)
+        end
+        requests = normalize_requests(data)
 
         if requests.size >= requests_limit && interval > 1
           interval *= BACKFILL_SHRINK_RATE

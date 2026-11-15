@@ -23,6 +23,8 @@ jobs:
   fetch_and_publish:
     name: Fetch data and publish site
     runs-on: ubuntu-latest
+    # Each API request times out after 60 seconds; this stops the whole run if it still hangs.
+    timeout-minutes: 45
     env:
       RUBYOPT: "--enable=yjit"
     steps:

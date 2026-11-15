@@ -25,18 +25,27 @@ class Status
       response = nil
 
       begin
-        response = Timeout.timeout(TIMEOUT, &)
+        response = with_timeout(&)
         status.http_code = 200
-      rescue Open311::Error => e
-        status.http_code = HTTP_CODES[e.class.name]
-        status.error_message = "#{e.class}: #{e}" if status.http_code.nil?
       rescue StandardError => e
-        status.error_message = "#{e.class}: #{e}"
+        record_error(status, e)
       end
 
       status.duration_ms = ((Process.clock_gettime(Process::CLOCK_MONOTONIC) - start) * 1000).to_i
       city.add_status(status)
       [response, status]
+    end
+
+    # Runs an API request, raising Timeout::Error if it takes longer than TIMEOUT.
+    def self.with_timeout(&)
+      Timeout.timeout(TIMEOUT, &)
+    end
+
+    # Marks the status as failed: with the HTTP code for Open311 errors, or the
+    # error message for anything else.
+    def self.record_error(status, error)
+      status.http_code = HTTP_CODES[error.class.name]
+      status.error_message = status.http_code ? nil : "#{error.class}: #{error}"
     end
   end
 end

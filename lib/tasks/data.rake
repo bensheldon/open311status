@@ -25,9 +25,12 @@ namespace :data do
   desc 'Deep backfill service requests over the retention window for all cities (or SLUGS=a,b)'
   task backfill: :environment do
     each_city_in_parallel do |city|
-      count = Timeout.timeout(15.minutes) { city.api.fetch_service_requests_in_ranges.size }
-      city.save
+      count = city.api.fetch_service_requests_in_ranges.size
       Rails.logger.info "#{city.slug}: backfilled #{count} requests (#{city.service_requests.size} stored)"
+    rescue City::Api::IncompleteFetchError => e
+      Rails.logger.error "#{city.slug}: backfill stopped after #{e.fetched.size} requests: #{e.message}"
+    ensure
+      city.save # keep the requests from completed ranges
     end
   end
 
@@ -36,9 +39,10 @@ namespace :data do
     each_city_in_parallel do |city|
       definitions = city.api.fetch_service_list
       requests = city.api.fetch_service_requests
-      city.save
       Rails.logger.info "#{city.slug}: #{definitions.size} service definitions, #{requests.size} new/updated requests " \
                         "(list: #{city.service_list_status.title}, requests: #{city.service_requests_status.title})"
+    ensure
+      city.save # keep statuses and any fetched data, even after an unexpected error
     end
   end
 end
