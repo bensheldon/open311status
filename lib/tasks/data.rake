@@ -25,7 +25,7 @@ namespace :data do
   desc 'Deep backfill service requests over the retention window for all cities (or SLUGS=a,b)'
   task backfill: :environment do
     each_city_in_parallel do |city|
-      count = Timeout.timeout(15.minutes) { city.api.backfill_service_requests }
+      count = Timeout.timeout(15.minutes) { city.api.fetch_service_requests_in_ranges.size }
       city.save
       Rails.logger.info "#{city.slug}: backfilled #{count} requests (#{city.service_requests.size} stored)"
     end

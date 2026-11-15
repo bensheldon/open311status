@@ -12,7 +12,6 @@ class City
       :headers,
       :notes,
       :requests_limit,
-      :requests_omit_timezone,
     ].freeze
 
     attr_accessor(*ATTRIBUTES)

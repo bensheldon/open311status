@@ -63,7 +63,7 @@ The app reads the data from the `./data` directory. To use a different directory
 The [Fetch and Publish workflow](.github/workflows/fetch_and_publish.yml) runs each hour. It does these steps:
 
 1. It checks out the `data` branch into `./data`.
-2. It gets new data from each Open311 endpoint (`bin/rails data:fetch`).
+2. It gets new data from each Open311 endpoint (`bin/rails data:fetch`). It gets the requests made after the newest stored request. If the response is a full page, some requests can be missing. Then it gets the same time again in smaller date ranges, until no response is a full page.
 3. It commits the data and pushes the `data` branch.
 4. It builds the website into `./build` (`bin/parklife build`).
 5. It publishes `./build` to the `gh-pages` branch.

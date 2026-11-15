@@ -43,39 +43,53 @@ class City
     end
 
     # Fetches service requests since the newest one already stored and merges them in.
+    #
+    # The newest stored request is the cursor for the next fetch, so requests are
+    # only merged once every request up to them is known to be fetched. If the
+    # first response is a full page, it may be truncated: the range is then
+    # fetched again in smaller date ranges (see #fetch_service_requests_in_ranges).
+    # Returns the requests that were fetched.
     def fetch_service_requests
-      start_datetime = [city.latest_requested_datetime, City::SERVICE_REQUEST_RETENTION.ago].compact.max
+      start_at = [city.latest_requested_datetime, City::SERVICE_REQUEST_RETENTION.ago].compact.max
+      end_at = Time.current
       data, status = Status::Telemetry.process('service_requests', city:) do
-        open311.service_requests(**date_params(start_datetime))
+        open311.service_requests(**date_params(start_at))
       end
       return [] unless status.success?
 
-      merge_requests(data)
+      requests = normalize_requests(data)
+      return fetch_service_requests_in_ranges(start_at:, end_at:) if requests.size >= requests_limit
+
+      city.merge_service_requests(requests)
+      requests
     end
 
-    # Walks the retention window in date ranges, shrinking the range when a
-    # response hits the endpoint's page limit and growing it otherwise, so that
-    # requests beyond a single page are captured. Does not record statuses.
-    def backfill_service_requests(start_at: City::SERVICE_REQUEST_RETENTION.ago, end_at: Time.current)
-      limit = city.requests_limit || DEFAULT_REQUESTS_LIMIT
+    # Fetches every service request between start_at and end_at, oldest range
+    # first. A response that fills a page may be truncated, so it is discarded and
+    # the range is halved; otherwise the requests are merged and the next range
+    # grows. Merging only complete ranges, in order, keeps the cursor safe if a
+    # request fails partway through. Does not record statuses.
+    # Returns the requests that were fetched.
+    def fetch_service_requests_in_ranges(start_at: City::SERVICE_REQUEST_RETENTION.ago, end_at: Time.current)
       interval = BACKFILL_INITIAL_INTERVAL.to_f
       cursor = start_at
-      total = 0
+      fetched = []
 
       while cursor < end_at
         range_end = [cursor + interval, end_at].min
-        requests = merge_requests(open311.service_requests(**date_params(cursor, range_end)))
+        requests = normalize_requests(open311.service_requests(**date_params(cursor, range_end)))
 
-        if requests.size >= limit && interval > 1
-          interval *= BACKFILL_SHRINK_RATE # possibly truncated; retry a smaller range
+        if requests.size >= requests_limit && interval > 1
+          interval *= BACKFILL_SHRINK_RATE
         else
-          total += requests.size
+          city.merge_service_requests(requests)
+          fetched.concat(requests)
           cursor = range_end
           interval *= BACKFILL_GROWTH_RATE
         end
       end
 
-      total
+      fetched
     end
 
     private
@@ -87,14 +101,15 @@ class City
     end
 
     def format_date(time)
-      date = time.utc.xmlschema
-      city.requests_omit_timezone ? date.chomp('Z') : date
+      time.utc.xmlschema
     end
 
-    def merge_requests(data)
-      requests = normalize(data).select { |r| r['service_request_id'].present? }
-      city.merge_service_requests(requests)
-      requests
+    def normalize_requests(data)
+      normalize(data).select { |r| r['service_request_id'].present? }
+    end
+
+    def requests_limit
+      city.requests_limit || DEFAULT_REQUESTS_LIMIT
     end
 
     def url_for(file)

@@ -12,7 +12,6 @@ chicago:
   name: 'Chicago, IL'
   endpoint: "http://311api.cityofchicago.org/open311/v2/"
   requests_limit: 50
-  requests_omit_timezone: true
 koln:
   name: 'Köln / Cologne, Deutschland'
   endpoint: 'https://sags-uns.stadt-koeln.de/georeport/v2/'
