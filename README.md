@@ -38,17 +38,40 @@ bruhl:
 
 ### How it works
 
-Open311 Status is a static website built with [Parklife](https://github.com/benpickles/parklife) from a Rails app that has no database:
+Open311 Status is a static website. A Rails app makes the pages. [Parklife](https://github.com/benpickles/parklife) saves the pages as HTML files. The app does not use a database.
 
-- **Data** lives as YAML in the `data` branch (`cities/<slug>.yml`: service definitions, status checks, and recent service requests), keeping it out of `main`. The app reads it from `./data` (override with `DATA_PATH`).
-- **Fetching**: the [Fetch and Publish workflow](.github/workflows/fetch_and_publish.yml) runs hourly, checks out the `data` branch into `./data`, runs `bin/rails data:fetch`, commits and pushes the `data` branch, then builds the site with `bin/parklife build` and publishes `./build` to the `gh-pages` branch. Pushes to `main` rebuild and publish without fetching.
-- **Retention**: status checks are kept for 6 months and service requests for 7 days (`City::STATUS_RETENTION`, `City::SERVICE_REQUEST_RETENTION`); older history remains in the `data` branch's git history.
+The repository has three branches:
 
-### Loading data locally
+| Branch | Contents | History |
+|---|---|---|
+| `main` | The code. | Normal. |
+| `data` | The data, as YAML files. One file for each city: `cities/<slug>.yml`. | One commit each hour. |
+| `gh-pages` | The built website. GitHub Pages serves this branch. | Only the latest build. Each publish replaces the branch. |
 
-- `bin/data` checks out the `data` branch into `./data` as a git worktree (or pulls it if already present).
-- `bin/rails data:fetch` fetches fresh data from every endpoint into `./data`. Limit with `SLUGS=chicago,boston`.
-- `bin/rails data:backfill` deep-backfills service requests across the whole retention window (walking date ranges to get past endpoint page limits). In CI, run "Fetch and Publish" manually with the "backfill" option.
+The app reads the data from the `./data` directory. To use a different directory, set `DATA_PATH`.
+
+The [Fetch and Publish workflow](.github/workflows/fetch_and_publish.yml) runs each hour. It does these steps:
+
+1. It checks out the `data` branch into `./data`.
+2. It gets new data from each Open311 endpoint (`bin/rails data:fetch`).
+3. It commits the data and pushes the `data` branch.
+4. It builds the website into `./build` (`bin/parklife build`).
+5. It publishes `./build` to the `gh-pages` branch.
+
+A push to `main` does only steps 1, 4 and 5. It does not get new data. You can also start the workflow manually. Then you can select "fetch" and "backfill".
+
+The data files keep:
+
+- Status checks for 6 months (`City::STATUS_RETENTION`).
+- Service requests for 7 days (`City::SERVICE_REQUEST_RETENTION`).
+
+Older data stays in the history of the `data` branch.
+
+### Data for local development
+
+- `bin/data` gets the latest commit of the `data` branch. It puts the files in `./data` as a git worktree. It gets only the latest commit, not the full history. Run it again to update the data. `bin/setup` and `bin/update` run it for you. It works in each git worktree of the app.
+- `bin/rails data:fetch` gets new data from each endpoint into `./data`. To get data for some cities only, set `SLUGS`. Example: `SLUGS=chicago,koln`.
+- `bin/rails data:backfill` gets all service requests for the last 7 days. It uses small date ranges, because some endpoints return a limited number of requests in each response. To do this in GitHub Actions, start "Fetch and Publish" manually and select "backfill".
 
 ### JavaScript
 
@@ -68,7 +91,7 @@ bin/importmap unpin <package>
 
 No database is required.
 
-1. Install dependencies and check out data: `bin/setup`
+1. Install the dependencies and get the data: `bin/setup`
 2. Run the tests: `bin/rspec`
 3. Run the server: `bin/rails server`, and visit [`http://localhost:3000`](http://localhost:3000)
-4. Build the static site: `bin/parklife build` (output in `./build`)
+4. Build the static website: `bin/parklife build`. The output goes into `./build`.
