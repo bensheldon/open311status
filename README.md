@@ -45,15 +45,15 @@ The repository has three branches:
 | Branch | Contents | History |
 |---|---|---|
 | `main` | The code. | Normal. |
-| `data` | The data, as [JSON Lines](https://jsonlines.org) files. Each line is one record. | One commit each hour. |
+| `data` | The data, as YAML files. | One commit each hour. |
 | `gh-pages` | The built website. GitHub Pages serves this branch. | Only the latest build. Each publish replaces the branch. |
 
 The `data` branch has one directory for each city:
 
 ```
-cities/<slug>/service_definitions.jsonl
-cities/<slug>/statuses.jsonl
-cities/<slug>/requests.jsonl
+cities/<slug>/service_definitions.yml
+cities/<slug>/statuses.yml
+cities/<slug>/requests.yml
 ```
 
 The app removes records that are older than the retention time.

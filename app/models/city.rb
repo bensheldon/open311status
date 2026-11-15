@@ -4,7 +4,7 @@ class City
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  # How long data is kept in the data branch's JSON Lines files (older data remains in git history).
+  # How long data is kept in the data branch's YAML files (older data remains in git history).
   STATUS_RETENTION = 6.months
   SERVICE_REQUEST_RETENTION = 7.days
   WINDOW = 48.hours

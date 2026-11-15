@@ -7,7 +7,7 @@ RSpec.describe City do
 
   before { write_city_data('chicago') }
 
-  it 'loads data from JSON Lines files' do
+  it 'loads data from YAML files' do
     expect(city.name).to eq 'Chicago, IL'
     expect(city.service_definitions_count).to be_positive
     expect(city.service_requests.size).to be_positive
@@ -42,11 +42,11 @@ RSpec.describe City do
     expect(described_class.find('baltimore').service_requests).not_to be_empty
   end
 
-  it 'writes one JSON Lines file each for service definitions, statuses and requests' do
+  it 'writes one YAML file each for service definitions, statuses and requests' do
     city.save
     dir = DataStore.city_dir('chicago')
-    expect(dir.join('service_definitions.jsonl').readlines.size).to eq city.service_definitions_count
-    expect(dir.join('statuses.jsonl').readlines.size).to eq city.statuses.size
-    expect(dir.join('requests.jsonl').readlines.size).to eq city.service_requests.size
+    expect(dir.join('service_definitions.yml').then { |f| YAML.safe_load_file(f) }.size).to eq city.service_definitions_count
+    expect(dir.join('statuses.yml').then { |f| YAML.safe_load_file(f) }.size).to eq city.statuses.size
+    expect(dir.join('requests.yml').then { |f| YAML.safe_load_file(f) }.size).to eq city.service_requests.size
   end
 end
