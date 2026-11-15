@@ -41,4 +41,28 @@ RSpec.describe City::Api do
     expect(city.service_requests.map(&:service_request_id)).to include('a')
     expect(city.statuses).to be_empty
   end
+
+  it 'records unknown errors as an error message' do
+    stub_request(:get, /services\.json/).to_raise(SocketError.new('getaddrinfo failed'))
+
+    api.fetch_service_list
+    expect(city.service_list_status.http_code).to be_nil
+    expect(city.service_list_status.error_message).to include('getaddrinfo failed')
+  end
+
+  it 'keeps existing service definitions when the fetch fails' do
+    city.service_definitions = [{ 'service_code' => 'x' }]
+    stub_request(:get, /services\.json/).to_return(status: 500)
+
+    expect(api.fetch_service_list.map(&:service_code)).to eq ['x']
+  end
+
+  it 'starts fetching from the newest stored request' do
+    newest = 2.hours.ago.change(usec: 0)
+    city.merge_service_requests([{ 'service_request_id' => '1', 'requested_datetime' => newest.iso8601 }])
+    stub = stub_request(:get, /requests\.json/).with(query: hash_including('start_date' => newest.utc.strftime('%Y-%m-%dT%H:%M:%S'))).to_return(body: '[]', headers: { 'Content-Type' => 'application/json' })
+
+    api.fetch_service_requests
+    expect(stub).to have_been_requested
+  end
 end

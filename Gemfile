@@ -43,6 +43,7 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'cuprite'
   gem 'rspec_junit_formatter'
   gem 'webmock'
 end

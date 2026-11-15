@@ -57,6 +57,8 @@ jobs:
           git push origin HEAD:refs/heads/data
       - name: Build website
         run: bin/parklife build
+      - name: Check website build
+        run: bin/check-build
       - name: Publish
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4

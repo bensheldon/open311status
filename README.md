@@ -102,6 +102,6 @@ bin/importmap unpin <package>
 No database is required.
 
 1. Install the dependencies and get the data: `bin/setup`
-2. Run the tests: `bin/rspec`
+2. Run the tests: `bin/rspec`. To test the built website in a browser, run `bin/parklife build`, `bin/check-build`, then `bin/rspec --tag build`.
 3. Run the server: `bin/rails server`, and visit [`http://localhost:3000`](http://localhost:3000)
 4. Build the static website: `bin/parklife build`. The output goes into `./build`.

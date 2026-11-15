@@ -19,3 +19,9 @@ jobs:
         run: bin/lint --nofix
       - name: Run tests
         run: bin/rspec
+      - name: Build website
+        run: bin/parklife build
+      - name: Check website build
+        run: bin/check-build
+      - name: Run browser tests against the build
+        run: bin/rspec --tag build

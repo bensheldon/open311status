@@ -49,4 +49,21 @@ RSpec.describe City do
     expect(dir.join('statuses.yml').then { |f| YAML.safe_load_file(f) }.size).to eq city.statuses.size
     expect(dir.join('requests.yml').then { |f| YAML.safe_load_file(f) }.size).to eq city.service_requests.size
   end
+
+  it 'raises a routing error for unknown cities and requests' do
+    expect { described_class.find('nowhere') }.to raise_error(ActionController::RoutingError)
+    expect { city.find_service_request('missing') }.to raise_error(ActionController::RoutingError)
+  end
+
+  it 'has zero uptime with no checks' do
+    expect(described_class.new('baltimore').uptime_percent('service_list')).to eq 0.0
+  end
+
+  it 'replaces requests with the same id when merging' do
+    id = city.service_requests.first.service_request_id
+    count = city.service_requests.size
+    city.merge_service_requests([{ 'service_request_id' => id, 'status' => 'closed', 'requested_datetime' => 1.minute.ago.iso8601 }])
+    expect(city.service_requests.size).to eq count
+    expect(city.find_service_request(id).status).to eq 'closed'
+  end
 end

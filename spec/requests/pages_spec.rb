@@ -47,4 +47,31 @@ RSpec.describe 'Pages' do
     get '/sitemaps/chicago.xml'
     expect(response.body).to include('/cities/chicago/requests/')
   end
+
+  it 'renders the static sitemap' do
+    get '/sitemaps/static.xml'
+    expect(response.body).to include('/about', '/requests', '/cities/chicago')
+  end
+
+  it 'links between request pages' do
+    stub_const('RequestsController::PER_PAGE', 1)
+    write_city_data('chicago', service_requests: Array.new(3) { |i| { 'service_request_id' => i.to_s } })
+    get '/requests'
+    expect(response.body).to include('/requests/page/2')
+    expect(response.body).not_to include('Newer requests')
+
+    get '/requests/page/2'
+    expect(response.body).to include('href="/requests"', '/requests/page/3')
+  end
+
+  it 'renders a request without a description at its id path' do
+    write_city_data('chicago', service_requests: [{ 'service_request_id' => 'abc.1', 'service_name' => 'Graffiti' }])
+    get '/cities/chicago/requests/abc.1'
+    expect(response).to have_http_status(:ok)
+    expect(response.body).to include('Graffiti')
+  end
+
+  it 'raises a routing error for an unknown city' do
+    expect { get '/cities/nowhere' }.to raise_error(ActionController::RoutingError)
+  end
 end
