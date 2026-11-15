@@ -40,9 +40,9 @@ RSpec.describe 'Built static site', :build do # rubocop:disable RSpec/DescribeCl
     skip 'Run bin/parklife build first' unless build_dir.join('index.html').exist?
 
     Capybara.register_driver(:cuprite_build) do |app|
-      # Only load local files, not remote request photos.
+      # Resolve every host except 127.0.0.1 to "not found", so the browser makes no external requests.
       Capybara::Cuprite::Driver.new(app, window_size: [1400, 900], js_errors: true, pending_connection_errors: false,
-                                         url_allowlist: [%r{\Ahttp://127\.0\.0\.1}])
+                                         browser_options: { 'host-resolver-rules' => 'MAP * ~NOTFOUND, EXCLUDE 127.0.0.1' })
     end
     original = [Capybara.app, Capybara.current_driver, Capybara.server]
     Capybara.app = static_app(build_dir)
@@ -66,6 +66,13 @@ RSpec.describe 'Built static site', :build do # rubocop:disable RSpec/DescribeCl
     visit href
     expect(page.evaluate_script('document.querySelector("h1").textContent')).to be_present
     expect(wait_for('[data-controller="line-chart"] canvas')).to eq 1
+  end
+
+  it 'makes no external requests' do
+    visit '/'
+    wait_for('[data-controller="line-chart"] canvas')
+    external = page.driver.browser.network.traffic.reject { |t| t.request.url.start_with?('http://127.0.0.1') }
+    expect(external.filter_map(&:response)).to be_empty
   end
 
   it 'serves pages without the .html extension' do
