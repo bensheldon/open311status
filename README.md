@@ -52,11 +52,11 @@ The `data` branch has one directory for each city:
 
 ```
 cities/<slug>/service_definitions.jsonl
-cities/<slug>/statuses/<YYYY-MM>.jsonl      (one file for each month)
-cities/<slug>/requests/<YYYY-MM-DD>.jsonl   (one file for each day the requests were made)
+cities/<slug>/statuses.jsonl
+cities/<slug>/requests.jsonl
 ```
 
-Each hourly commit changes only a small number of files. The app deletes files that are older than the retention time.
+The app removes records that are older than the retention time.
 
 The app reads the data from the `./data` directory. To use a different directory, set `DATA_PATH`.
 

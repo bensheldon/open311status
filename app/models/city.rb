@@ -63,7 +63,7 @@ class City
     DataStore.write(slug, {
                       'service_definitions' => service_definitions.map(&:raw_data),
       'statuses' => statuses.sort_by(&:created_at).map(&:to_h),
-      'service_requests' => service_requests.map(&:raw_data),
+      'service_requests' => service_requests.sort_by { |sr| sr.service_request_id.to_s }.map(&:raw_data),
                     })
   end
 
@@ -158,7 +158,6 @@ class City
     status_cutoff = STATUS_RETENTION.ago
     @statuses = statuses.select { |s| s.created_at >= status_cutoff }
     request_cutoff = SERVICE_REQUEST_RETENTION.ago
-    # Requests without a requested_datetime can't be placed in a dated file, so they are dropped.
-    @service_requests = service_requests.select { |sr| sr.requested_datetime && sr.requested_datetime >= request_cutoff }
+    @service_requests = service_requests.select { |sr| sr.requested_datetime.nil? || sr.requested_datetime >= request_cutoff }
   end
 end

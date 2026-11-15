@@ -42,12 +42,11 @@ RSpec.describe City do
     expect(described_class.find('baltimore').service_requests).not_to be_empty
   end
 
-  it 'writes requests into one file per day and statuses into one file per month' do
+  it 'writes one JSON Lines file each for service definitions, statuses and requests' do
     city.save
     dir = DataStore.city_dir('chicago')
-    days = city.service_requests.map { |sr| sr.requested_datetime.utc.strftime('%Y-%m-%d') }.uniq.sort
-    expect(dir.glob('requests/*.jsonl').map { |f| f.basename('.jsonl').to_s }.sort).to eq days
-    expect(dir.glob('statuses/*.jsonl')).not_to be_empty
     expect(dir.join('service_definitions.jsonl').readlines.size).to eq city.service_definitions_count
+    expect(dir.join('statuses.jsonl').readlines.size).to eq city.statuses.size
+    expect(dir.join('requests.jsonl').readlines.size).to eq city.service_requests.size
   end
 end
