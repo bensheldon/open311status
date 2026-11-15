@@ -103,7 +103,7 @@ class City
       uri.to_s
     end
 
-    # Converts Hashie::Mash responses into plain, YAML-safe hashes.
+    # Converts Hashie::Mash responses into plain hashes.
     def normalize(data)
       data = [data] if data.is_a?(Hash)
       JSON.parse(Array(data).to_json)

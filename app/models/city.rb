@@ -4,7 +4,7 @@ class City
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  # How long data is kept in the data branch's YAML files (older data remains in git history).
+  # How long data is kept in the data branch's JSON Lines files (older data remains in git history).
   STATUS_RETENTION = 6.months
   SERVICE_REQUEST_RETENTION = 7.days
   WINDOW = 48.hours
@@ -158,6 +158,7 @@ class City
     status_cutoff = STATUS_RETENTION.ago
     @statuses = statuses.select { |s| s.created_at >= status_cutoff }
     request_cutoff = SERVICE_REQUEST_RETENTION.ago
-    @service_requests = service_requests.select { |sr| sr.requested_datetime.nil? || sr.requested_datetime >= request_cutoff }
+    # Requests without a requested_datetime can't be placed in a dated file, so they are dropped.
+    @service_requests = service_requests.select { |sr| sr.requested_datetime && sr.requested_datetime >= request_cutoff }
   end
 end

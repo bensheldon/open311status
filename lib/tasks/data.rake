@@ -31,7 +31,7 @@ namespace :data do
     end
   end
 
-  desc 'Fetch service lists and service requests for all cities (or SLUGS=a,b) and write YAML to the data directory'
+  desc 'Fetch service lists and service requests for all cities (or SLUGS=a,b) and write them to the data directory'
   task fetch: :environment do
     each_city_in_parallel do |city|
       definitions = city.api.fetch_service_list

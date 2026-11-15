@@ -7,7 +7,7 @@ RSpec.describe City do
 
   before { write_city_data('chicago') }
 
-  it 'loads data from YAML' do
+  it 'loads data from JSON Lines files' do
     expect(city.name).to eq 'Chicago, IL'
     expect(city.service_definitions_count).to be_positive
     expect(city.service_requests.size).to be_positive
@@ -39,7 +39,15 @@ RSpec.describe City do
   it 'refreshes .all when data files change' do
     expect(described_class.all.find { |c| c.slug == 'baltimore' }.service_requests).to be_empty
     write_city_data('baltimore')
-    FileUtils.touch(DataStore.city_path('baltimore'), mtime: 1.minute.from_now.to_time)
     expect(described_class.find('baltimore').service_requests).not_to be_empty
+  end
+
+  it 'writes requests into one file per day and statuses into one file per month' do
+    city.save
+    dir = DataStore.city_dir('chicago')
+    days = city.service_requests.map { |sr| sr.requested_datetime.utc.strftime('%Y-%m-%d') }.uniq.sort
+    expect(dir.glob('requests/*.jsonl').map { |f| f.basename('.jsonl').to_s }.sort).to eq days
+    expect(dir.glob('statuses/*.jsonl')).not_to be_empty
+    expect(dir.join('service_definitions.jsonl').readlines.size).to eq city.service_definitions_count
   end
 end

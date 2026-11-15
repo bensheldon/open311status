@@ -45,8 +45,18 @@ The repository has three branches:
 | Branch | Contents | History |
 |---|---|---|
 | `main` | The code. | Normal. |
-| `data` | The data, as YAML files. One file for each city: `cities/<slug>.yml`. | One commit each hour. |
+| `data` | The data, as [JSON Lines](https://jsonlines.org) files. Each line is one record. | One commit each hour. |
 | `gh-pages` | The built website. GitHub Pages serves this branch. | Only the latest build. Each publish replaces the branch. |
+
+The `data` branch has one directory for each city:
+
+```
+cities/<slug>/service_definitions.jsonl
+cities/<slug>/statuses/<YYYY-MM>.jsonl      (one file for each month)
+cities/<slug>/requests/<YYYY-MM-DD>.jsonl   (one file for each day the requests were made)
+```
+
+Each hourly commit changes only a small number of files. The app deletes files that are older than the retention time.
 
 The app reads the data from the `./data` directory. To use a different directory, set `DATA_PATH`.
 
