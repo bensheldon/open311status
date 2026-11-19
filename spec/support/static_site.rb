@@ -24,6 +24,11 @@ Capybara.register_driver(:cuprite_offline) do |app|
     app,
     window_size: [1400, 900],
     js_errors: true,
+    # Same as Snapper: allow slow Chrome starts on CI runners.
+    timeout: 10,
+    process_timeout: 30,
+    headless: !ENV['SHOW_BROWSER'],
+    slowmo: ENV['SLOWMO']&.to_f,
     # Resolve every host except 127.0.0.1 to "not found", so tests make no external requests.
     browser_options: { 'host-resolver-rules' => 'MAP * ~NOTFOUND, EXCLUDE 127.0.0.1' }
   )
