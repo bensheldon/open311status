@@ -10,6 +10,12 @@ Currently Open311status is unable to do the following despite it being very valu
 
 - **Accuracy**: the API reflects the "ground-truth" status of a particular service request; e.g. if the API reports the status of a ticket as "closed", the pothole has been filled or the request explicitly rejected. We have observed some systems will report a ticket as "closed" when a separate internal work-order has been created but no externally visible action has actually been taken.
 
+## How the checks work
+
+Each hour, Open311 Status makes two requests to each endpoint: one for the list of services and one for recent service requests. The result of each request is shown as Okay (under 1 second), Slow, or Error.
+
+The service requests check always includes a `start_date`: the time of the newest request already collected. Some endpoints may be fast with a `start_date` but slow or failing without one, so this is not necessarily representative behavior of all usage.
+
 ## Why is this important?
 
 Comparative API performance data helps city leadership and 3rd-party application developers make better decisions about how they implement and support Open311:
