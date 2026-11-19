@@ -1,0 +1,17 @@
+<% content_for :meta_title, 'Search service requests | Open311 Status' %>
+
+<div data-controller="search">
+  <h1>Search service requests</h1>
+
+  <form class="my-3" action="<%= search_path %>" method="get" role="search">
+    <div class="input-group">
+      <input data-search-target="input" id="search-box" class="form-control" type="search" name="q" placeholder="Search service requests" aria-label="Search service requests" autocomplete="off">
+      <button type="submit" class="btn btn-outline-secondary">
+        <%= fa_icon 'search' %>
+        Search
+      </button>
+    </div>
+  </form>
+
+  <div id="search-results" data-search-target="results" aria-live="polite"></div>
+</div>

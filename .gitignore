@@ -53,3 +53,9 @@ yarn-debug.log*
 
 # Parklife build output
 /build
+/public/pagefind
+
+# Vite
+/public/vite
+/public/vite-dev
+/public/vite-test

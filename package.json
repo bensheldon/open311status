@@ -1,0 +1,18 @@
+{
+  "name": "open311status",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "pagefind": "^1.5.2",
+    "vite": "^8.3.8",
+    "vite-plugin-ruby": "^5.2.6",
+    "vite-plugin-stimulus-hmr": "^3.0.0"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.9",
+    "chart.js": "^4.6.1",
+    "stimulus-vite-helpers": "^3.1.0"
+  }
+}

@@ -8,7 +8,6 @@ Rails.application.configure do
 
   config.public_file_server.enabled = true
 
-  config.assets.js_compressor = :terser
   config.assets.css_compressor = :sass
   # Assets are precompiled inside the Parklife build process, after boot.
   config.assets.compile = true

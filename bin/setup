@@ -4,6 +4,7 @@ cd "$(dirname "$0")/.."
 
 echo "== Installing dependencies =="
 bundle check || bundle install
+npm ci
 
 echo "== Mounting data branch at ./data =="
 bin/data
