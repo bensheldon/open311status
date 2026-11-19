@@ -14,7 +14,7 @@ Currently Open311status is unable to do the following despite it being very valu
 
 Each hour, Open311 Status makes two requests to each endpoint: one for the list of services and one for recent service requests. The result of each request is shown as Okay (under 1 second), Slow, or Error.
 
-The service requests check always includes a `start_date`: the time of the newest request already collected. Some endpoints are fast with a `start_date` but slow or failing without one, which is what many apps request by default. Those problems do not appear here.
+The service requests check always includes a `start_date`: the time of the newest request already collected. Some endpoints may be fast with a `start_date` but slow or failing without one, so this is not necessarily representative behavior of all usage.
 
 ## Why is this important?
 
