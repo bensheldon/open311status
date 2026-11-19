@@ -44,3 +44,5 @@ group :test do
   gem 'rspec_junit_formatter'
   gem 'webmock'
 end
+
+gem "concurrent-ruby", "~> 1.3"

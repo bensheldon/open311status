@@ -1,7 +1,7 @@
 name: Fetch and Publish
 on:
   schedule:
-    - cron: '17 * * * *' # hourly
+    - cron: '4,19,34,49 * * * *' # every 15 minutes
   push:
     branches: [main]
   workflow_dispatch:
@@ -61,9 +61,14 @@ jobs:
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && (inputs.fetch || inputs.backfill))
         working-directory: data
         run: |
+          # Replace the branch with a single parentless commit so its history doesn't grow.
           git add --all
-          git commit --quiet -m "Update data $(date -u +%Y-%m-%dT%H:%MZ)" || echo "No changes"
-          git push origin HEAD:refs/heads/data
+          if git rev-parse --verify --quiet HEAD >/dev/null && git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          commit=$(git commit-tree "$(git write-tree)" -m "Update data $(date -u +%Y-%m-%dT%H:%MZ)")
+          git push --force origin "$commit:refs/heads/data"
       - name: Build website
         run: bin/parklife build
       - name: Check website build
