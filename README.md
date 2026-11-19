@@ -93,27 +93,24 @@ The search page (`/search`) finds service requests. It uses [Pagefind](https://p
 - The system tests make an index from the test data.
 - To make the index for `bin/rails server`, run `bin/rails runner 'require "./config/pagefind"; Pagefind.build'`.
 
-Pagefind is an npm package, so you must install [Node.js](https://nodejs.org). Use the version in [`.node-version`](.node-version). `bin/setup` installs the package (`npm ci`).
+Pagefind is an npm package, so you must install [Node.js](https://nodejs.org). Use the version in [`.node-version`](.node-version). `bin/setup` installs the npm packages (`npm ci`).
 
 ### JavaScript
 
-JavaScript is managed via [importmap-rails](https://github.com/rails/importmap-rails) — no Node.js or build step required. (Node.js is necessary only to make the search index.) Vendor packages (Chart.js, Bootstrap, Stimulus) are downloaded to `vendor/javascript/` and served directly by Rails.
+[Vite](https://vite.dev) builds the JavaScript, with [Vite Ruby](https://vite-ruby.netlify.app) (`vite_rails`). The npm packages (Stimulus, Bootstrap, Chart.js) are in [`package.json`](package.json).
 
-To add or update a package:
-```sh
-bin/importmap pin <package>
-```
+- The entrypoint is [`app/javascript/entrypoints/application.js`](app/javascript/entrypoints/application.js). The Stimulus controllers are in `app/javascript/controllers`. Vite finds and registers each `*_controller.js` file.
+- Development: `bin/dev` starts the Rails server and the Vite dev server (`bin/vite dev`). The Vite dev server reloads the page or controller when a file changes. If the Vite dev server does not run, Rails builds the JavaScript when it changes (`autoBuild`).
+- Tests: the tests build the JavaScript one time before they start (`spec/support/vite.rb`).
+- Static website: `bin/parklife build` runs `assets:precompile`, which also runs `vite build`. The bundle goes into `build/vite`. Sprockets still builds the CSS into `build/assets`.
 
-To remove a package:
-```sh
-bin/importmap unpin <package>
-```
+To add a package, run `npm install <package>`.
 
 ### Application Setup
 
-No database is required. You must install Node.js for the search index (see [Search](#search)).
+No database is required. You must install Node.js for the JavaScript and the search index.
 
 1. Install the dependencies and get the data: `bin/setup`
 2. Run the tests: `bin/rspec`. To test the built website in a browser, run `bin/parklife build`, `bin/check-build`, then `bin/rspec --tag build`.
-3. Run the server: `bin/rails server`, and visit [`http://localhost:3000`](http://localhost:3000)
+3. Run the server: `bin/dev`, and visit [`http://localhost:3000`](http://localhost:3000)
 4. Build the static website: `bin/parklife build`. The output goes into `./build`.

@@ -27,6 +27,7 @@ require 'parklife/application'
 Parklife::Application.prepend(Module.new do
   def build
     start = Time.now
+    # Also runs vite:build, which writes the JavaScript bundle into public/vite.
     Rake::Task['assets:precompile'].invoke
 
     # Writes the search index to public/pagefind; it is copied into build/ below.
@@ -37,6 +38,7 @@ Parklife::Application.prepend(Module.new do
     # Copy static files (404.html, favicon, robots.txt, compiled assets, etc.)
     FileUtils.cp_r(Rails.root.join("public").children, Rails.root.join("build"))
     FileUtils.rm_rf(Rails.root.join("public/assets"))
+    FileUtils.rm_rf(Rails.root.join("public/vite"))
     FileUtils.cp(Rails.root.join("CNAME"), Rails.root.join("build/CNAME"))
 
     pages_built = crawler.instance_variable_get(:@visited).size

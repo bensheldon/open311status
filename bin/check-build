@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # Checks the Parklife output in ./build: the main pages exist, and every
-# /assets/ file referenced by any page (including the importmap) exists.
+# /assets/ and /vite/ file referenced by any page exists.
 require 'pathname'
 
 build = Pathname.new(File.expand_path('../build', __dir__))
@@ -14,7 +14,7 @@ end
 pages = build.glob('**/*.html')
 errors << "Only #{pages.size} pages built" if pages.size < 10
 
-assets = pages.flat_map { |page| page.read.scan(%r{"(/assets/[^"?#]+)"}).flatten }.uniq
+assets = pages.flat_map { |page| page.read.scan(%r{"(/(?:assets|vite)/[^"?#]+)"}).flatten }.uniq
 errors << 'No asset references found' if assets.empty?
 assets.each { |asset| errors << "Missing asset #{asset}" unless build.join(asset.delete_prefix('/')).file? }
 

@@ -6,7 +6,8 @@
     <title><%= content_for?(:meta_title) ? yield(:meta_title) : 'Open311 Status' %></title>
     <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : "Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights." %>">
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_importmap_tags %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "application" %>
     <% if content_for? :canonical_url %>
       <link rel="canonical" href="<%= yield(:canonical_url) %>">
     <% end %>

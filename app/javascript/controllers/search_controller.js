@@ -1,5 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
+// Not bundled by Vite: the site serves the Pagefind index and its loader.
+const PAGEFIND_URL = "/pagefind/pagefind.js"
+
 // Searches the Pagefind index in /pagefind (built by config/pagefind.rb)
 // for the `q` URL parameter, and shows the results.
 export default class extends Controller {
@@ -16,7 +19,7 @@ export default class extends Controller {
 
   async #search(query) {
     try {
-      const pagefind = await import("/pagefind/pagefind.js")
+      const pagefind = await import(/* @vite-ignore */ PAGEFIND_URL)
       const search = await pagefind.search(query)
       const results = await Promise.all(search.results.slice(0, 50).map((result) => result.data()))
       this.resultsTarget.innerHTML = this.#render(query, search.results.length, results)

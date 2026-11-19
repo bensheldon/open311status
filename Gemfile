@@ -11,7 +11,6 @@ gem 'bootstrap', '~> 5.3.8'
 gem 'draper'
 gem 'font_assets'
 gem 'font-awesome-rails'
-gem 'importmap-rails'
 # faraday_middleware 0.14 (via open311) calls JSON.parse with 2 positional args, removed in json 3
 gem 'json', '< 3'
 gem 'kramdown'
@@ -21,9 +20,7 @@ gem 'parklife-rails'
 gem 'puma'
 gem 'rails', '~> 8.1.0'
 gem 'sass-rails'
-gem 'stimulus-rails'
-gem 'terser'
-gem 'turbo-rails'
+gem 'vite_rails'
 
 group :development, :test do
   gem 'rspec-rails'
