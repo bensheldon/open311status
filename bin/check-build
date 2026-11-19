@@ -7,7 +7,7 @@ build = Pathname.new(File.expand_path('../build', __dir__))
 abort "No build directory; run bin/parklife build first" unless build.directory?
 
 errors = []
-%w[index.html about.html requests.html sitemap.xml sitemaps/static.xml 404.html CNAME].each do |path|
+%w[index.html about.html requests.html sitemap.xml sitemaps/static.xml search.html 404.html CNAME pagefind/pagefind.js].each do |path|
   errors << "Missing #{path}" unless build.join(path).file?
 end
 

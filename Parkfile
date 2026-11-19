@@ -4,6 +4,7 @@ ENV["RAILS_LOG_LEVEL"] ||= "warn"
 
 require 'parklife/rails'
 require_relative 'config/environment'
+require_relative 'config/pagefind'
 
 Parklife.application.config.on_404 = :warn
 Parklife.application.config.nested_index = false
@@ -12,6 +13,7 @@ Parklife.application.config.base = ENV.fetch("PARKLIFE_BASE", "https://status.op
 Parklife.application.routes do
   root crawl: true
   get "/requests", crawl: true
+  get "/search"
 
   get "/sitemap.xml"
   get "/sitemaps/static.xml"
@@ -26,6 +28,9 @@ Parklife::Application.prepend(Module.new do
   def build
     start = Time.now
     Rake::Task['assets:precompile'].invoke
+
+    # Writes the search index to public/pagefind; it is copied into build/ below.
+    Pagefind.build
 
     super
 

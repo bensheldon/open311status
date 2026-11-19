@@ -10,4 +10,12 @@ RSpec.describe 'Built static site', :build, type: :feature do
 
     expect(page).to have_css('h1', text: 'About Open311 Status')
   end
+
+  it 'searches service requests with the built index' do
+    visit '/search?q=pothole'
+
+    within('#search-results') do
+      expect(page).to have_css('li a[href^="/cities/"]', minimum: 1).or have_text('No service requests found')
+    end
+  end
 end

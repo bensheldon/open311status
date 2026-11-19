@@ -65,7 +65,7 @@ The [Fetch and Publish workflow](.github/workflows/fetch_and_publish.yml) runs e
 1. It checks out the `data` branch into `./data`.
 2. It gets new data from each Open311 endpoint (`bin/rails data:fetch`). It gets the requests made after the newest stored request. If the response is a full page, some requests can be missing. Then it gets the same time again in smaller date ranges, until no response is a full page.
 3. It commits the data and pushes the `data` branch.
-4. It builds the website into `./build` (`bin/parklife build`).
+4. It builds the website into `./build` (`bin/parklife build`). This also builds the search index.
 5. It publishes `./build` to the `gh-pages` branch.
 
 A push to `main` does only steps 1, 4 and 5. It does not get new data. You can also start the workflow manually. Then you can select "fetch" and "backfill".
@@ -83,9 +83,21 @@ Older data stays in the history of the `data` branch.
 - `bin/rails data:fetch` gets new data from each endpoint into `./data`. To get data for some cities only, set `SLUGS`. Example: `SLUGS=chicago,koln`.
 - `bin/rails data:backfill` gets all service requests for the last 7 days. It uses small date ranges, because some endpoints return a limited number of requests in each response. To do this in GitHub Actions, start "Fetch and Publish" manually and select "backfill".
 
+### Search
+
+The search page (`/search`) finds service requests. It uses [Pagefind](https://pagefind.app). Pagefind runs in the browser, so the static website does not need a server for search.
+
+[`config/pagefind.rb`](config/pagefind.rb) makes the search index. It adds one record for each service request in the data files: the service name, description, address, status and city. It writes the index into `public/pagefind`. Git ignores this directory. If the data files did not change, it does not make the index again.
+
+- `bin/parklife build` makes the index and copies it into `build/pagefind`.
+- The system tests make an index from the test data.
+- To make the index for `bin/rails server`, run `bin/rails runner 'require "./config/pagefind"; Pagefind.build'`.
+
+Pagefind is an npm package, so you must install [Node.js](https://nodejs.org). Use the version in [`.node-version`](.node-version). `bin/setup` installs the package (`npm ci`).
+
 ### JavaScript
 
-JavaScript is managed via [importmap-rails](https://github.com/rails/importmap-rails) — no Node.js or build step required. Vendor packages (Chart.js, Bootstrap, Stimulus) are downloaded to `vendor/javascript/` and served directly by Rails.
+JavaScript is managed via [importmap-rails](https://github.com/rails/importmap-rails) — no Node.js or build step required. (Node.js is necessary only to make the search index.) Vendor packages (Chart.js, Bootstrap, Stimulus) are downloaded to `vendor/javascript/` and served directly by Rails.
 
 To add or update a package:
 ```sh
@@ -99,7 +111,7 @@ bin/importmap unpin <package>
 
 ### Application Setup
 
-No database is required.
+No database is required. You must install Node.js for the search index (see [Search](#search)).
 
 1. Install the dependencies and get the data: `bin/setup`
 2. Run the tests: `bin/rspec`. To test the built website in a browser, run `bin/parklife build`, `bin/check-build`, then `bin/rspec --tag build`.
