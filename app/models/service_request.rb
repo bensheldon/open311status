@@ -49,7 +49,35 @@ class ServiceRequest
     nil
   end
 
+  def latitude
+    coordinates&.first
+  end
+
+  def longitude
+    coordinates&.last
+  end
+
+  def coordinates?
+    !coordinates.nil?
+  end
+
   private
+
+  # [lat, long] as floats, or nil when missing, invalid, out of range or 0,0.
+  def coordinates
+    return @_coordinates if defined?(@_coordinates)
+
+    lat = parse_float(raw_data['lat'])
+    long = parse_float(raw_data['long'])
+    @_coordinates =
+      ([lat, long] if lat && long && lat.abs <= 90 && long.abs <= 180 && !(lat.zero? && long.zero?))
+  end
+
+  def parse_float(value)
+    Float(value.to_s.strip)
+  rescue ArgumentError
+    nil
+  end
 
   def parse_time(value)
     return if value.blank?

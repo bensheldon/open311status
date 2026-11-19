@@ -77,6 +77,8 @@ The data files keep:
 
 Older data stays in the history of the `data` branch.
 
+Each service request page shows nearby requests. These are the 5 closest other requests in the same city, not more than 500 m away (`City::NEARBY_LIMIT` and `City::NEARBY_RADIUS_METERS`). The app uses the optional `lat` and `long` fields. If a request does not have them, the page does not show nearby requests. To make the build fast, the app puts the requests of each city into a grid of 0.01 degree cells one time. Each lookup examines only the cells near the request.
+
 ### Data for local development
 
 - `bin/data` gets the latest commit of the `data` branch. It puts the files in `./data` as a git worktree. It gets only the latest commit, not the full history. Run it again to update the data. `bin/setup` and `bin/update` run it for you. It works in each git worktree of the app.

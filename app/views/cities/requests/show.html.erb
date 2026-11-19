@@ -21,3 +21,21 @@
 <% if service_request.media_url.present? %>
   <%= image_tag service_request.media_url, class: 'img-responsive', alt: service_request.raw_data['service_name'] %>
 <% end %>
+
+<% nearby = service_request.city.nearby_service_requests(service_request) %>
+<% if nearby.any? %>
+  <h2 class="h4">Nearby requests</h2>
+  <table class="table table-condensed nearby-service-requests">
+    <tbody>
+      <% nearby.each do |other, distance| %>
+        <% badge_class = other.status == 'open' ? 'badge-warning' : 'badge-success' %>
+        <tr>
+          <td><a href="<%= service_request_path(other) %>"><%= other.raw_data['service_name'].presence || 'Service Request' %></a></td>
+          <td><%= distance < 1000 ? "#{distance.round} m" : "#{(distance / 1000).round(1)} km" %></td>
+          <td><span class="badge <%= badge_class %>"><%= other.status.presence&.capitalize %></span></td>
+          <td><%= other.requested_datetime ? "#{time_ago_in_words(other.requested_datetime)} ago" : 'Unknown' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
