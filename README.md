@@ -36,6 +36,12 @@ bruhl:
   jurisdiction: 'bruehl.de'
 ```
 
+### Removed API endpoints
+
+These endpoints were removed from `config/cities.yml` because they no longer work:
+
+- **Baltimore, MD** (removed November 2026, [#129](https://github.com/bensheldon/open311status/issues/129)): `http://311.baltimorecity.gov/open311/v2/` now redirects to a 404 page on the city website, and the test server `311test.baltimorecity.gov` no longer exists. The new 311 portal (`balt311.baltimorecity.gov`) runs on Salesforce. Its Open311-style API at `https://baltimore311.herokuapp.com/311/v3/` needs a registered API key. Without a key, `services.json` returns HTTP 500 and `requests.json` returns HTTP 401.
+
 ### How it works
 
 Open311 Status is a static website. A Rails app makes the pages. [Parklife](https://github.com/benpickles/parklife) saves the pages as HTML files. The app does not use a database.
