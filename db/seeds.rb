@@ -1,1 +1,0 @@
-Seeder.new.call

@@ -1,81 +1,58 @@
 # frozen_string_literal: true
 
-# == Schema Information
-#
-# Table name: service_requests
-#
-#  id                 :bigint           not null, primary key
-#  geometry           :geography        geometry, 4326
-#  raw_data           :json
-#  requested_datetime :datetime
-#  status             :string
-#  updated_datetime   :datetime
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  city_id            :bigint
-#  service_request_id :string
-#
-# Indexes
-#
-#  index_service_requests_on_city_id                         (city_id)
-#  index_service_requests_on_city_id_and_created_at_and_id   (city_id,created_at,id)
-#  index_service_requests_on_city_id_and_requested_datetime  (city_id,requested_datetime DESC NULLS LAST)
-#  index_service_requests_on_city_id_and_service_request_id  (city_id,service_request_id) UNIQUE
-#  index_service_requests_on_created_at                      (created_at)
-#  index_service_requests_on_geometry                        (geometry) USING gist
-#  index_service_requests_on_requested_datetime              (requested_datetime)
-#  index_service_requests_on_status                          (status)
-#
-# Foreign Keys
-#
-#  fk_rails_...  (city_id => cities.id) ON DELETE => cascade
-#
 require 'rails_helper'
 
 RSpec.describe ServiceRequest do
-  it 'has a valid factory' do
-    expect(create(:service_request)).to be_valid
-  end
+  let(:city) { City.new('chicago') }
 
-  describe '#raw_data=' do
-    let(:json) { JSON.parse(service_requests_json).first }
-    let(:sr) { described_class.new raw_data: json }
-
-    it 'extracts :service_request_id' do
-      expect(sr.service_request_id).to eq json['service_request_id']
-    end
-
-    it 'extracts :status' do
-      expect(sr.status).to eq json['status']
-    end
-
-    it 'extracts :requested_datetime' do
-      expect(sr.requested_datetime).to eq DateTime.iso8601 json['requested_datetime']
-    end
-
-    it 'extracts :updated_datetime' do
-      expect(sr.updated_datetime).to eq DateTime.iso8601 json['updated_datetime']
-    end
-
-    it 'extracts a point' do
-      expect(sr.geometry.lat).to eq json['lat']
-      expect(sr.geometry.lon).to eq json['long']
-    end
+  def build(raw)
+    described_class.new(city, raw)
   end
 
   describe '#slug' do
-    let(:service_request) { create(:service_request) }
-
-    it 'sluggifies the description' do
-      service_request.raw_data['description'] = 'Something happened.'
-      expect(service_request.slug).to eq 'something-happened'
+    it 'is a parameterized description' do
+      expect(build('description' => 'Pothole on  Main_St - big one').slug).to eq 'pothole-on-main-st-big-one'
     end
 
-    context 'when description is nil' do
-      specify do
-        service_request.raw_data['description'] = nil
-        expect(service_request.slug).to eq ''
-      end
+    it 'is truncated to SLUG_SIZE without a trailing dash' do
+      slug = build('description' => "#{'a' * 99} bcd").slug
+      expect(slug.size).to be <= described_class::SLUG_SIZE
+      expect(slug).not_to end_with('-')
     end
+
+    it 'is blank without a description' do
+      expect(build({}).slug).to eq ''
+    end
+  end
+
+  describe '#media_url' do
+    it 'forces https' do
+      expect(build('media_url' => 'http://example.com/a.jpg').media_url).to eq 'https://example.com/a.jpg'
+    end
+
+    it 'uses the endpoint host for relative URLs' do
+      expect(build('media_url' => '/photos/a.jpg').media_url).to eq "https://#{URI.parse(city.endpoint).host}/photos/a.jpg"
+    end
+
+    it 'is nil when blank or invalid' do
+      expect(build({}).media_url).to be_nil
+      expect(build('media_url' => 'http://exa mple.com/<>').media_url).to be_nil
+    end
+  end
+
+  describe 'datetimes' do
+    it 'parses ISO 8601' do
+      expect(build('requested_datetime' => '2026-01-02T03:04:05-05:00').requested_datetime).to eq Time.utc(2026, 1, 2, 8, 4, 5)
+    end
+
+    it 'is nil when missing or unparseable' do
+      expect(build({}).requested_datetime).to be_nil
+      expect(build('requested_datetime' => 'not a date').requested_datetime).to be_nil
+      expect(build('updated_datetime' => '').updated_datetime).to be_nil
+    end
+  end
+
+  it 'stringifies numeric ids' do
+    expect(build('service_request_id' => 123).service_request_id).to eq '123'
   end
 end

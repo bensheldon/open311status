@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:meta_title) ? yield(:meta_title) : 'Open311 Status' %></title>
     <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : "Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights." %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_importmap_tags %>
-    <%= csrf_meta_tags %>
     <% if content_for? :canonical_url %>
       <link rel="canonical" href="<%= yield(:canonical_url) %>">
     <% end %>
-    <%= render 'shared/google_analytics' %>
   </head>
   <body>
     <div class="wrap-body">
@@ -19,7 +18,6 @@
       </header>
       <main role="main">
         <div class="container">
-          <%= render 'layouts/messages' %>
           <%= yield %>
         </div>
       </main>

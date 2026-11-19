@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% ServiceRequestDecorator.decorate_collection(service_requests).each do |service_request| %>
+    <% service_requests.each do |service_request| %>
       <tr>
         <td><%= service_request.city.name %></td>
         <td><%= service_request.raw_data['service_name'] %></td>
@@ -23,7 +23,7 @@
             <% end %>
           <% end %>
         </td>
-        <td><%= link_to "#{time_ago_in_words(service_request.requested_datetime)} ago", service_request %></td>
+        <td><%= link_to(service_request.requested_datetime ? "#{time_ago_in_words(service_request.requested_datetime)} ago" : "Unknown", service_request_path(service_request)) %></td>
       </tr>
     <% end %>
   </tbody>

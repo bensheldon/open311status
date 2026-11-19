@@ -3,7 +3,6 @@
 #
 plugins:
   - rubocop-capybara
-  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rspec
@@ -86,6 +85,7 @@ RSpec/DescribeClass:
     - spec/features/*
     - spec/requests/*
     - spec/system/*
+    - spec/build/*
     - spec/routing/*
 
 RSpec/ExampleLength:

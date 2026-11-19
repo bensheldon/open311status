@@ -3,8 +3,7 @@
 module Cities
   class RequestsController < ApplicationController
     def show
-      @service_request = City.find_by!(slug: params.expect(:city_slug)).service_requests.find_by!(service_request_id: params.expect(:service_request_id))
-      redirect_to polymorphic_path(@service_request), status: :moved_permanently if @service_request.slug.present? && params[:slug] != @service_request.slug
+      @service_request = City.find(params.expect(:city_slug)).find_service_request(params.expect(:service_request_id))
     end
   end
 end

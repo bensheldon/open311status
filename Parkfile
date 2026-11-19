@@ -1,0 +1,40 @@
+ENV["RAILS_ENV"] = "production"
+ENV["RACK_ENV"] = "production"
+ENV["RAILS_LOG_LEVEL"] ||= "warn"
+
+require 'parklife/rails'
+require_relative 'config/environment'
+
+Parklife.application.config.on_404 = :warn
+Parklife.application.config.nested_index = false
+Parklife.application.config.base = ENV.fetch("PARKLIFE_BASE", "https://status.open311.org")
+
+Parklife.application.routes do
+  root crawl: true
+  get "/requests", crawl: true
+
+  get "/sitemap.xml"
+  get "/sitemaps/static.xml"
+  City.all.each do |city|
+    get "/sitemaps/#{city.slug}.xml"
+  end
+end
+
+Rails.application.load_tasks
+require 'parklife/application'
+Parklife::Application.prepend(Module.new do
+  def build
+    start = Time.now
+    Rake::Task['assets:precompile'].invoke
+
+    super
+
+    # Copy static files (404.html, favicon, robots.txt, compiled assets, etc.)
+    FileUtils.cp_r(Rails.root.join("public").children, Rails.root.join("build"))
+    FileUtils.rm_rf(Rails.root.join("public/assets"))
+    FileUtils.cp(Rails.root.join("CNAME"), Rails.root.join("build/CNAME"))
+
+    pages_built = crawler.instance_variable_get(:@visited).size
+    puts "✅ Parklife built #{pages_built} pages in #{(Time.now - start).round(1)} seconds"
+  end
+end)

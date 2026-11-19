@@ -21,10 +21,6 @@ GEM
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
       zeitwerk (~> 2.6)
-    actioncable-enhanced-postgresql-adapter (1.0.2)
-      actioncable (>= 6.0)
-      connection_pool (>= 2.2.5)
-      pg (~> 1.5)
     actionmailbox (8.1.4.1)
       actionpack (= 8.1.4.1)
       activejob (= 8.1.4.1)
@@ -76,15 +72,6 @@ GEM
       activemodel (= 8.1.4.1)
       activesupport (= 8.1.4.1)
       timeout (>= 0.4.0)
-    activerecord-explain-analyze (0.1.0)
-      activerecord (>= 4)
-      pg
-    activerecord-has_some_of_many (1.2.1)
-      activerecord (>= 7.0.0.alpha)
-      railties (>= 7.0.0.alpha)
-    activerecord-postgis-adapter (11.1.1)
-      activerecord (~> 8.1.0)
-      rgeo-activerecord (~> 8.1.0)
     activestorage (8.1.4.1)
       actionpack (= 8.1.4.1)
       activejob (= 8.1.4.1)
@@ -106,32 +93,7 @@ GEM
       uri (>= 0.13.1)
     addressable (2.9.2)
       public_suffix (>= 2.0.2, < 8.0)
-    annotaterb (4.26.0)
-      activerecord (>= 6.0.0)
-      activesupport (>= 6.0.0)
     ast (2.4.3)
-    autoprefixer-rails (10.6.1.0)
-      execjs (~> 2)
-    aws-eventstream (1.4.1)
-    aws-partitions (1.1305.0)
-    aws-sdk-core (3.268.0)
-      aws-eventstream (~> 1, >= 1.4.1)
-      aws-partitions (~> 1, >= 1.992.0)
-      aws-sigv4 (~> 1.9)
-      base64
-      bigdecimal
-      jmespath (~> 1, >= 1.6.1)
-      logger
-      rexml (~> 3.4, >= 3.4.2)
-    aws-sdk-kms (1.143.0)
-      aws-sdk-core (~> 3, >= 3.268.0)
-      aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.242.0)
-      aws-sdk-core (~> 3, >= 3.268.0)
-      aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.5)
-    aws-sigv4 (1.12.1)
-      aws-eventstream (~> 1, >= 1.0.2)
     babosa (2.1.0)
     base64 (0.3.0)
     bigdecimal (4.1.3)
@@ -150,9 +112,6 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    childprocess (5.1.0)
-      logger (~> 1.5)
-    climate_control (1.2.0)
     concurrent-ruby (1.3.8)
     connection_pool (3.0.2)
     crack (1.0.1)
@@ -174,17 +133,8 @@ GEM
     drb (2.2.3)
     erb (6.0.7)
     erubi (1.13.1)
-    et-orbi (1.4.2)
-      tzinfo
     execjs (2.10.2)
       json (>= 2)
-    factory_bot (6.6.0)
-      activesupport (>= 6.1.0)
-    factory_bot_rails (6.5.1)
-      factory_bot (~> 6.5)
-      railties (>= 6.1.0)
-    faker (3.8.0)
-      i18n (>= 1.8.11, < 2)
     faraday (0.17.6)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.14.0)
@@ -200,20 +150,8 @@ GEM
       railties (>= 3.2, < 9.0)
     font_assets (0.1.14)
       rack
-    fugit (1.14.0)
-      et-orbi (~> 1.4)
-      raabro (~> 1.4)
     globalid (1.4.0)
       activesupport (>= 6.1)
-    good_job (4.24.1)
-      activejob (>= 6.1.0)
-      activerecord (>= 6.1.0)
-      concurrent-ruby (>= 1.3.1)
-      fugit (>= 1.11.0)
-      railties (>= 6.1.0)
-      thor (>= 1.0.0)
-    groupdate (6.8.0)
-      activesupport (>= 7.2)
     hashdiff (1.2.2)
     hashie (3.6.0)
     herb (0.11.2-arm64-darwin)
@@ -230,30 +168,16 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    jbuilder (2.15.1)
-      actionview (>= 7.0.0)
-      activesupport (>= 7.0.0)
-    jmespath (1.6.2)
-    json (3.1.0)
+    json (2.21.2)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
     language_server-protocol (3.17.0.6)
-    launchy (3.1.1)
-      addressable (~> 2.8)
-      childprocess (~> 5.0)
-      logger (~> 1.6)
     lint_roller (1.1.0)
     listen (3.10.1)
       logger
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     logger (1.7.0)
-    lograge (0.15.1)
-      actionpack (>= 4)
-      activesupport (>= 4)
-      logger
-      railties (>= 4)
-      request_store (~> 1.0)
     loofah (2.25.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.19.5)
@@ -288,15 +212,17 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.7-x86_64-linux-gnu)
       racc (~> 1.4)
-    order_query (0.5.6)
-      activerecord (>= 5.0, < 8.2)
-      activesupport (>= 5.0, < 8.2)
     parallel (2.3.0)
+    parklife (0.9.0)
+      nokogiri
+      rack-test
+      thor
+    parklife-rails (0.3.0)
+      parklife (>= 0.8.0.beta1)
+      rails
     parser (3.3.13.0)
       ast (~> 2.4.1)
       racc
-    pg (1.7.0-arm64-darwin)
-    pg (1.7.0-x86_64-linux)
     popper_js (2.11.8)
     pp (0.6.4)
       prettyprint
@@ -306,17 +232,13 @@ GEM
     public_suffix (7.0.5)
     puma (8.0.3)
       nio4r (~> 2.0)
-    raabro (1.5.0)
     racc (1.8.1)
     rack (3.2.8)
-    rack-host-redirect (1.3.0)
-      rack
     rack-session (2.1.2)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
     rack-test (2.3.0)
       rack (>= 1.3)
-    rack-timeout (0.7.0)
     rackup (2.3.1)
       rack (>= 3)
     rails (8.1.4.1)
@@ -333,10 +255,6 @@ GEM
       activesupport (= 8.1.4.1)
       bundler (>= 1.15.0)
       railties (= 8.1.4.1)
-    rails-controller-testing (1.0.5)
-      actionpack (>= 5.0.1.rc1)
-      actionview (>= 5.0.1.rc1)
-      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.3.0)
       activesupport (>= 5.0.0)
       minitest
@@ -373,10 +291,6 @@ GEM
     request_store (1.7.0)
       rack (>= 1.4)
     rexml (3.4.4)
-    rgeo (3.1.0)
-    rgeo-activerecord (8.1.0)
-      activerecord (>= 8.1, < 8.2)
-      rgeo (>= 3.0)
     rspec-core (3.13.7)
       rspec-support (~> 3.13.0)
     rspec-expectations (3.13.6)
@@ -413,9 +327,6 @@ GEM
     rubocop-capybara (3.1.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.89)
-    rubocop-factory_bot (2.28.0)
-      lint_roller (~> 1.1)
-      rubocop (~> 1.72, >= 1.72.1)
     rubocop-performance (1.27.0)
       lint_roller (~> 1.1)
       rubocop (>= 1.89.0, < 2.0)
@@ -446,17 +357,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    scenic (1.9.0)
-      activerecord (>= 4.0.0)
-      railties (>= 4.0.0)
     securerandom (0.4.1)
-    sentry-rails (7.2.0)
-      railties (>= 5.2.0)
-      sentry-ruby (~> 7.2.0)
-    sentry-ruby (7.2.0)
-      bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      logger
     sprockets (4.4.1)
       concurrent-ruby (~> 1.1)
       logger
@@ -469,11 +370,8 @@ GEM
       railties (>= 6.0.0)
     terser (1.2.8)
       execjs (>= 0.3.0, < 3)
-    textacular (5.7.0)
-      activerecord (>= 5.0)
     thor (1.5.0)
     tilt (2.9.0)
-    timecop (0.9.11)
     timeout (0.6.1)
     tsort (0.2.0)
     turbo-rails (2.0.23)
@@ -508,57 +406,35 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  actioncable-enhanced-postgresql-adapter
-  activerecord-explain-analyze
-  activerecord-has_some_of_many
-  activerecord-postgis-adapter
-  annotaterb
-  autoprefixer-rails
-  aws-sdk-s3
   babosa
   bootsnap (>= 1.1.0)
   bootstrap (~> 5.3.8)
   capybara
-  climate_control
   cuprite
   draper
-  factory_bot_rails
-  faker
   font-awesome-rails
   font_assets
-  good_job (~> 4.14)
-  groupdate
   herb
   importmap-rails
-  jbuilder (~> 2.13)
+  json (< 3)
   kramdown
-  launchy
   listen
-  lograge
   open311!
-  order_query
-  pg
+  parklife
+  parklife-rails
   puma
-  rack-host-redirect
-  rack-timeout
   rails (~> 8.1.0)
-  rails-controller-testing
   rspec-rails
   rspec_junit_formatter
   rubocop
   rubocop-capybara
-  rubocop-factory_bot
   rubocop-performance
   rubocop-rails
   rubocop-rspec
   rubocop-rspec_rails
   sass-rails
-  scenic
-  sentry-rails
   stimulus-rails
   terser
-  textacular
-  timecop
   turbo-rails
   web-console (>= 3.3.0)
   webmock

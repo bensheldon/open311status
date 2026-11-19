@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+# Mounts the latest `data` branch at ./data as a detached git worktree, or
+# updates it if already mounted. The app reads YAML from ./data (override with
+# DATA_PATH). Detached so that multiple checkouts/worktrees can each mount it.
+set -eu
+cd "$(dirname "$0")/.."
+
+if ! git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+  echo "No 'data' branch on origin yet; run 'bin/rails data:fetch' to populate ./data locally." >&2
+  mkdir -p data
+  exit 0
+fi
+
+# Only the latest snapshot is needed locally; history can grow large (hourly commits).
+git fetch --quiet --depth=1 origin data
+git worktree prune
+
+if [ -e data/.git ]; then
+  if [ -n "$(git -C data status --porcelain)" ]; then
+    echo "./data has local changes; leaving it as is. Discard them with: git -C data checkout -- . && git -C data clean -fd" >&2
+    exit 0
+  fi
+  git -C data checkout --quiet --detach origin/data
+elif [ -d data ] && [ -n "$(ls -A data)" ]; then
+  echo "./data exists but is not a checkout of the data branch; move or delete it, then rerun bin/data." >&2
+  exit 1
+else
+  rmdir data 2>/dev/null || true
+  git worktree add --quiet --detach data origin/data
+fi
+
+echo "./data is at origin/data $(git -C data log -1 --format='%h (%cr)')"
