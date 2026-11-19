@@ -37,9 +37,9 @@ RSpec.describe City do
   end
 
   it 'refreshes .all when data files change' do
-    expect(described_class.all.find { |c| c.slug == 'baltimore' }.service_requests).to be_empty
-    write_city_data('baltimore')
-    expect(described_class.find('baltimore').service_requests).not_to be_empty
+    expect(described_class.all.find { |c| c.slug == 'bloomington' }.service_requests).to be_empty
+    write_city_data('bloomington')
+    expect(described_class.find('bloomington').service_requests).not_to be_empty
   end
 
   it 'writes one YAML file each for service definitions, statuses and requests' do
@@ -56,7 +56,7 @@ RSpec.describe City do
   end
 
   it 'has zero uptime with no checks' do
-    expect(described_class.new('baltimore').uptime_percent('service_list')).to eq 0.0
+    expect(described_class.new('bloomington').uptime_percent('service_list')).to eq 0.0
   end
 
   it 'replaces requests with the same id when merging' do

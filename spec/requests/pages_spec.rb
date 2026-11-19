@@ -25,7 +25,7 @@ RSpec.describe 'Pages' do
   end
 
   it 'renders a city with no data' do
-    get '/cities/baltimore'
+    get '/cities/bloomington'
     expect(response).to have_http_status(:ok)
   end
 
