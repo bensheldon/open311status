@@ -52,6 +52,22 @@ RSpec.describe ServiceRequest do
     end
   end
 
+  describe 'coordinates' do
+    it 'parses lat and long as floats' do
+      sr = build('lat' => '41.88', 'long' => -87.63)
+      expect([sr.latitude, sr.longitude]).to eq [41.88, -87.63]
+      expect(sr).to be_coordinates
+    end
+
+    it 'is nil when missing, invalid, out of range or 0,0' do
+      [{}, { 'lat' => '41.8' }, { 'lat' => 'x', 'long' => '1' }, { 'lat' => '', 'long' => '' },
+       { 'lat' => 0, 'long' => 0 }, { 'lat' => 91, 'long' => 1 }].each do |raw|
+        sr = build(raw)
+        expect([sr.latitude, sr.longitude, sr.coordinates?]).to eq([nil, nil, false]), raw.inspect
+      end
+    end
+  end
+
   it 'stringifies numeric ids' do
     expect(build('service_request_id' => 123).service_request_id).to eq '123'
   end

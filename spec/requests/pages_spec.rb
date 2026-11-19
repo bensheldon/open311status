@@ -71,6 +71,21 @@ RSpec.describe 'Pages' do
     expect(response.body).to include('Graffiti')
   end
 
+  it 'lists nearby requests on a service request page' do
+    write_city_data('chicago', service_requests: [
+                      { 'service_request_id' => '1', 'service_name' => 'Pothole', 'lat' => 41.88, 'long' => -87.63 },
+                      { 'service_request_id' => '2', 'service_name' => 'Graffiti', 'status' => 'open', 'lat' => 41.881, 'long' => -87.63 },
+                      { 'service_request_id' => '3', 'service_name' => 'Rodent', 'lat' => 42.5, 'long' => -87.63 },
+                      { 'service_request_id' => '4', 'service_name' => 'Tree' },
+                    ])
+    get '/cities/chicago/requests/1'
+    expect(response.body).to include('Nearby requests', 'href="/cities/chicago/requests/2"', '111 m', 'Open')
+    expect(response.body).not_to include('Rodent')
+
+    get '/cities/chicago/requests/4'
+    expect(response.body).not_to include('Nearby requests')
+  end
+
   it 'raises a routing error for an unknown city' do
     expect { get '/cities/nowhere' }.to raise_error(ActionController::RoutingError)
   end

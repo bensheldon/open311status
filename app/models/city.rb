@@ -9,6 +9,12 @@ class City
   SERVICE_REQUEST_RETENTION = 7.days
   WINDOW = 48.hours
 
+  # Nearby service requests on a request's page.
+  NEARBY_RADIUS_METERS = 500
+  NEARBY_LIMIT = 5
+  NEARBY_CELL_DEGREES = 0.01
+  EARTH_RADIUS_METERS = 6_371_000
+
   delegate(*Configuration::ATTRIBUTES, to: :configuration)
 
   attr_reader :slug, :service_definitions, :statuses, :service_requests
@@ -82,6 +88,34 @@ class City
       by_id[sr.service_request_id] = sr if sr.service_request_id.present?
     end
     @service_requests = sort_requests(by_id.values)
+    @_nearby_grid = nil
+  end
+
+  # Other service requests within radius_meters, closest first, as [service_request, distance_meters] pairs.
+  # Requests are put into a grid of cells once, so each lookup checks only the cells near the request.
+  def nearby_service_requests(service_request, radius_meters: NEARBY_RADIUS_METERS, limit: NEARBY_LIMIT)
+    return [] unless service_request.coordinates?
+
+    lat = service_request.latitude
+    long = service_request.longitude
+    radius_degrees = radius_meters * 180 / (EARTH_RADIUS_METERS * Math::PI)
+    long_radius_degrees = [radius_degrees / [Math.cos(lat * Math::PI / 180), 0.01].max, 180].min
+    rows = ((lat - radius_degrees) / NEARBY_CELL_DEGREES).floor..((lat + radius_degrees) / NEARBY_CELL_DEGREES).floor
+    cols = ((long - long_radius_degrees) / NEARBY_CELL_DEGREES).floor..((long + long_radius_degrees) / NEARBY_CELL_DEGREES).floor
+
+    nearby = []
+    rows.each do |row|
+      cols.each do |col|
+        nearby_grid[[row, col]]&.each do |other|
+          next if (other.latitude - lat).abs > radius_degrees || other.equal?(service_request)
+          next if other.service_request_id == service_request.service_request_id
+
+          distance = haversine_meters(lat, long, other.latitude, other.longitude)
+          nearby << [other, distance] if distance <= radius_meters
+        end
+      end
+    end
+    nearby.min_by(limit, &:last)
   end
 
   def find_service_request(service_request_id)
@@ -150,6 +184,22 @@ class City
     @service_requests = sort_requests(raw_list.map { |raw| ServiceRequest.new(self, raw) })
   end
 
+  def nearby_grid
+    @_nearby_grid ||= service_requests.select(&:coordinates?).group_by { |sr| nearby_cell(sr.latitude, sr.longitude) }
+  end
+
+  def nearby_cell(lat, long)
+    [(lat / NEARBY_CELL_DEGREES).floor, (long / NEARBY_CELL_DEGREES).floor]
+  end
+
+  def haversine_meters(lat1, long1, lat2, long2)
+    rad = Math::PI / 180
+    dlat = (lat2 - lat1) * rad
+    dlong = (long2 - long1) * rad
+    a = (Math.sin(dlat / 2)**2) + (Math.cos(lat1 * rad) * Math.cos(lat2 * rad) * (Math.sin(dlong / 2)**2))
+    2 * EARTH_RADIUS_METERS * Math.asin(Math.sqrt(a.clamp(0, 1)))
+  end
+
   def sort_requests(list)
     list.sort_by { |sr| sr.requested_datetime || Time.zone.at(0) }.reverse
   end
@@ -159,5 +209,6 @@ class City
     @statuses = statuses.select { |s| s.created_at >= status_cutoff }
     request_cutoff = SERVICE_REQUEST_RETENTION.ago
     @service_requests = service_requests.select { |sr| sr.requested_datetime.nil? || sr.requested_datetime >= request_cutoff }
+    @_nearby_grid = nil
   end
 end
