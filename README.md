@@ -63,7 +63,7 @@ The app reads the data from the `./data` directory. To use a different directory
 The [Fetch and Publish workflow](.github/workflows/fetch_and_publish.yml) runs each hour. It does these steps:
 
 1. It checks out the `data` branch into `./data`.
-2. It gets new data from each Open311 endpoint (`bin/rails data:fetch`). Because requests are not necessarily ordered by creation date, an incremental fetch is made Each request is recorded as a status check. The service requests check always sends a `start_date`, so it does not test requests without dates (see [#11](https://github.com/bensheldon/open311status/issues/11)). It gets the requests made after the newest stored request. If the response is a full page, some requests can be missing. Then it gets the same time again in smaller date ranges, until no response is a full page.
+2. It does an incremental fetch from each Open311 endpoint (`bin/rails data:fetch`). It gets only the requests made after the newest stored request. Endpoints return a limited number of requests in each response, and the requests are not necessarily in date order. If a response is a full page, some requests can be missing. Then it gets the same time again in smaller date ranges, until no response is a full page. Each request is recorded as a status check. The service requests check always sends a `start_date`, so it does not test requests without dates (see [#11](https://github.com/bensheldon/open311status/issues/11)).
 3. It commits the data and pushes the `data` branch.
 4. It builds the website into `./build` (`bin/parklife build`).
 5. It publishes `./build` to the `gh-pages` branch.
