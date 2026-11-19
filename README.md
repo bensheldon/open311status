@@ -111,6 +111,14 @@ To add a package, run `npm install <package>`.
 No database is required. You must install Node.js for the JavaScript and the search index.
 
 1. Install the dependencies and get the data: `bin/setup`
-2. Run the tests: `bin/rspec`. To test the built website in a browser, run `bin/parklife build`, `bin/check-build`, then `bin/rspec --tag build`.
+2. Run the tests: `bin/rspec`. To test the built website in a browser, build it from fake data, then run the browser tests:
+
+   ```sh
+   DATA_PATH=tmp/fake-data bin/rails data:fake
+   DATA_PATH=tmp/fake-data bin/parklife build
+   bin/check-build
+   bin/rspec --tag build
+   ```
+
 3. Run the server: `bin/dev`, and visit [`http://localhost:3000`](http://localhost:3000)
 4. Build the static website: `bin/parklife build`. The output goes into `./build`.

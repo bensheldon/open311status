@@ -46,3 +46,17 @@ namespace :data do
     end
   end
 end
+
+namespace :data do
+  desc 'Write fake data for tests into DATA_PATH: Chicago gets the service requests in spec/fixtures'
+  task fake: :environment do
+    fixture = ->(name) { JSON.parse(Rails.root.join("spec/fixtures/#{name}.json").read) }
+    service_requests = fixture.call('service_requests').each_with_index.map do |raw, i|
+      raw.merge('requested_datetime' => (i + 1).hours.ago.iso8601)
+    end
+    statuses = [{ 'request_name' => 'service_requests', 'created_at' => 1.hour.ago.utc.iso8601, 'http_code' => 200, 'duration_ms' => 100 }]
+    DataStore.write('chicago', 'service_definitions' => fixture.call('service_list'), 'statuses' => statuses,
+                               'service_requests' => service_requests)
+    puts "Wrote fake data into #{DataStore.path}"
+  end
+end

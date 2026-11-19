@@ -2,8 +2,10 @@
 
 require 'rails_helper'
 
-# Browser tests against the Parklife output. Run `bin/parklife build` first,
-# then `bin/rspec --tag build`.
+# Browser tests against the Parklife output, built from fake data:
+#   DATA_PATH=tmp/fake-data bin/rails data:fake
+#   DATA_PATH=tmp/fake-data bin/parklife build
+#   bin/rspec --tag build
 RSpec.describe 'Built static site', :build, type: :feature do
   it 'serves pages without the .html extension' do
     visit '/about'
@@ -11,17 +13,12 @@ RSpec.describe 'Built static site', :build, type: :feature do
     expect(page).to have_css('h1', text: 'About Open311 Status')
   end
 
-  it 'finds a built service request with search' do
-    visit '/requests'
-    first('a[href^="/cities/"][href*="/requests/"]').click
-    service_name = find('h1').text
-    expect(service_name).to be_present
-
-    visit "/search?q=#{CGI.escape(service_name)}"
+  it 'finds a service request from the fake data with search' do
+    visit '/search?q=building+violation'
 
     within('#search-results') do
-      expect(page).to have_css('li a[href*="/requests/"]', text: /\A#{Regexp.escape(service_name)} in /, minimum: 1)
-      expect(page).to have_css('mark')
+      expect(page).to have_link('Building Violation in Chicago, IL', href: '/cities/chicago/requests/14-01100627')
+      expect(page).to have_css('mark', text: /building/i)
     end
   end
 end
