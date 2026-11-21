@@ -1,0 +1,3607 @@
+---
+- service_request_id: 127463
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-14T16:45:57.840+01:00'
+  updated_datetime: '2026-11-14T16:48:19.672+01:00'
+  expected_datetime:
+  address: Werner-Seelenbinder-Straße 5 (Reutershagen)
+  adress_id:
+  lat: 54.0976629390324
+  long: 12.072469910506936
+  media_url:
+  zipcode:
+- service_request_id: 127464
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-14T18:45:09.853+01:00'
+  updated_datetime: '2026-11-14T18:45:30.345+01:00'
+  expected_datetime:
+  address: Lagerlöfstraße 8 (Evershagen)
+  adress_id:
+  lat: 54.118289629521854
+  long: 12.065416329631732
+  media_url:
+  zipcode:
+- service_request_id: 127465
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-14T18:47:17.191+01:00'
+  updated_datetime: '2026-11-14T18:47:25.081+01:00'
+  expected_datetime:
+  address: Seepromenade 10 (Seebad Warnemünde)
+  adress_id:
+  lat: 54.17932732060402
+  long: 12.078743606773223
+  media_url:
+  zipcode:
+- service_request_id: 127466
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-14T18:48:34.972+01:00'
+  updated_datetime: '2026-11-14T18:48:44.155+01:00'
+  expected_datetime:
+  address: Seestraße 13 (Seebad Warnemünde)
+  adress_id:
+  lat: 54.18020352100356
+  long: 12.082201971428587
+  media_url:
+  zipcode:
+- service_request_id: 127467
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-14T18:50:20.796+01:00'
+  updated_datetime: '2026-11-14T18:50:58.249+01:00'
+  expected_datetime:
+  address: Heinrich-Heine-Straße 2 (Seebad Warnemünde)
+  adress_id:
+  lat: 54.17914821659187
+  long: 12.08299640934639
+  media_url:
+  zipcode:
+- service_request_id: 127468
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-14T21:40:42.309+01:00'
+  updated_datetime: '2026-11-14T21:40:53.141+01:00'
+  expected_datetime:
+  address: Schliemannstraße 1 (Hansaviertel)
+  adress_id:
+  lat: 54.082610236868135
+  long: 12.110331191435455
+  media_url:
+  zipcode:
+- service_request_id: 127469
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-15T00:02:23.913+01:00'
+  updated_datetime: '2026-11-15T00:02:43.575+01:00'
+  expected_datetime:
+  address: Lagerstraße 26 (Stadtmitte)
+  adress_id:
+  lat: 54.09192200149306
+  long: 12.137171142647418
+  media_url:
+  zipcode:
+- service_request_id: 127470
+  status_notes:
+  status: received
+  service_code: 11
+  service_name: Wegereinigung fehlt
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst)
+  service_notice:
+  requested_datetime: '2026-11-15T08:09:14.867+01:00'
+  updated_datetime: '2026-11-15T08:09:34.682+01:00'
+  expected_datetime:
+  address: Eikaterweg 1 (Brinckmansdorf)
+  adress_id:
+  lat: 54.08112111627892
+  long: 12.175927235908707
+  media_url:
+  zipcode:
+- service_request_id: 127471
+  status_notes:
+  status: received
+  service_code: 17
+  service_name: Hausmüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-15T09:58:23.295+01:00'
+  updated_datetime: '2026-11-15T09:58:36.623+01:00'
+  expected_datetime:
+  address: Lagerstraße 33 (Stadtmitte)
+  adress_id:
+  lat: 54.091390653017754
+  long: 12.137059326744025
+  media_url:
+  zipcode:
+- service_request_id: 127472
+  status_notes:
+  status: pending
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-15T10:55:48.983+01:00'
+  updated_datetime: '2026-11-15T10:55:48.983+01:00'
+  expected_datetime:
+  address: Landreiterstraße 5a (Gehlsdorf)
+  adress_id:
+  lat: 54.10062268103391
+  long: 12.116112753251048
+  media_url:
+  zipcode:
+- service_request_id: 127473
+  status_notes:
+  status: received
+  service_code: 64
+  service_name: Beschilderung/Markierung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beschilderung)
+  service_notice:
+  requested_datetime: '2026-11-15T11:14:30.862+01:00'
+  updated_datetime: '2026-11-15T11:15:00.427+01:00'
+  expected_datetime:
+  address: Gutenbergstraße 40 (Dierkow-Ost)
+  adress_id:
+  lat: 54.10227119599756
+  long: 12.16633699480508
+  media_url:
+  zipcode:
+- service_request_id: 127474
+  status_notes:
+  status: pending
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-15T12:05:47.404+01:00'
+  updated_datetime: '2026-11-15T12:05:47.404+01:00'
+  expected_datetime:
+  address: Höger Up 8 (Brinckmansdorf)
+  adress_id:
+  lat: 54.082509366409425
+  long: 12.186277469588951
+  media_url:
+  zipcode:
+- service_request_id: 127476
+  status_notes:
+  status: received
+  service_code: 22
+  service_name: Sperrmüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-15T13:40:10.319+01:00'
+  updated_datetime: '2026-11-15T13:43:01.135+01:00'
+  expected_datetime:
+  address: Doberaner Straße 63 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.092353085291364
+  long: 12.11076256536924
+  media_url:
+  zipcode:
+- service_request_id: 127477
+  status_notes:
+  status: received
+  service_code: 20
+  service_name: Recycling-Container überfüllt
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Container)
+  service_notice:
+  requested_datetime: '2026-11-15T13:41:25.732+01:00'
+  updated_datetime: '2026-11-15T13:43:13.536+01:00'
+  expected_datetime:
+  address: An der Elisabethwiese 1a (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.09192147068961
+  long: 12.108897283132219
+  media_url:
+  zipcode:
+- service_request_id: 127478
+  status_notes:
+  status: received
+  service_code: 173
+  service_name: Baustelle
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Untere Verkehrsbehörde)
+  service_notice:
+  requested_datetime: '2026-11-15T14:12:15.651+01:00'
+  updated_datetime: '2026-11-15T14:12:29.338+01:00'
+  expected_datetime:
+  address: Hundertmännerstraße 2 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.08277766084461
+  long: 12.114584858349566
+  media_url:
+  zipcode:
+- service_request_id: 127479
+  status_notes:
+  status: received
+  service_code: 12
+  service_name: Wildwuchs
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Grünflächen; Ordnungswidrigkeiten)
+  service_notice:
+  requested_datetime: '2026-11-15T14:41:58.198+01:00'
+  updated_datetime: '2026-11-15T14:42:49.946+01:00'
+  expected_datetime:
+  address: Tessiner Straße 68 (Brinckmansdorf)
+  adress_id:
+  lat: 54.08111399897598
+  long: 12.195177551078952
+  media_url:
+  zipcode:
+- service_request_id: 127480
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-15T15:47:28.615+01:00'
+  updated_datetime: '2026-11-15T15:49:46.314+01:00'
+  expected_datetime:
+  address: Modersohn-Becker-Weg 28 (Brinckmansdorf)
+  adress_id:
+  lat: 54.0758062790803
+  long: 12.177383540874125
+  media_url:
+  zipcode:
+- service_request_id: 127481
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-15T16:19:44.934+01:00'
+  updated_datetime: '2026-11-15T16:20:00.206+01:00'
+  expected_datetime:
+  address: Hartmut-Colden-Straße 18 (Dierkow-Neu)
+  adress_id:
+  lat: 54.104378611047
+  long: 12.175549287622186
+  media_url:
+  zipcode:
+- service_request_id: 127482
+  status_notes:
+  status: received
+  service_code: 21
+  service_name: Sondermüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-15T16:52:06.895+01:00'
+  updated_datetime: '2026-11-15T16:52:19.926+01:00'
+  expected_datetime:
+  address: Am Heidenholt 2 (Peez)
+  adress_id:
+  lat: 54.147393867892475
+  long: 12.1597316789902
+  media_url:
+  zipcode:
+- service_request_id: 127483
+  status_notes:
+  status: pending
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-15T17:09:11.605+01:00'
+  updated_datetime: '2026-11-15T17:09:11.605+01:00'
+  expected_datetime:
+  address: Heiligengeisthof 26 (Stadtmitte)
+  adress_id:
+  lat: 54.08940685360011
+  long: 12.136307249107452
+  media_url:
+  zipcode:
+- service_request_id: 127484
+  status_notes:
+  status: received
+  service_code: 9
+  service_name: Poller/Planke/Absperrelement schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Ausstattung)
+  service_notice:
+  requested_datetime: '2026-11-15T18:14:10.543+01:00'
+  updated_datetime: '2026-11-15T18:31:56.872+01:00'
+  expected_datetime:
+  address: Hirtenweg 8 (Biestow)
+  adress_id:
+  lat: 54.06141240364727
+  long: 12.112369069832294
+  media_url:
+  zipcode:
+- service_request_id: 127485
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: in_process
+  service_code: 2
+  service_name: bauliche Gefahrenstelle
+  description: Der Radweg, immerhin Bestandteil des Radfernweg Berlin–Kopenhagen und Teil des Bundesförderprogramms „Radnetz Deutschland“ ist jetzt endlich wieder benutzbar. Eine Schande war ja bereits, daß die Zuwegung Krummendorf volle 4 Monate (.) gesperrt war, wegen der Wasser-Anschlusserneuerung von gerade mal 9 Wohneinheiten im Kirchsteig. Nun zeigen sich einige Unebenheiten und sogar Risse in der Fahrbahn. Nach gerade ein mal 2 Jahren. AKtuell (2026 Oktober/November) wurde offenbar versucht, 3 der größten Risse mit groben Split und etwas Bitumen zu schließen. Der Versuch ist völlig untauglich, da der Split zu grob ist, nicht eingearbeitet wurde und nicht mal über die volle Breite aufgefüllt wurde. Hier sollte erst mal die Bodenwelle abgefräst werden und dann mit besserer Bitumenmasse neu abgedeckt werden.
+  agency_responsible: Bauhof
+  service_notice:
+  requested_datetime: '2026-11-15T18:24:56.607+01:00'
+  updated_datetime: '2026-11-16T07:37:14.750+01:00'
+  expected_datetime:
+  address: Krummendorfer Straße 9f (Toitenwinkel)
+  adress_id:
+  lat: 54.128205102608916
+  long: 12.127299520817827
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTUyLCJwdXIiOiJibG9iX2lkIn19--5cbed1800cd2ef44dafa14771651876414094d45/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127486
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Straßenlaterne in Kassebohm im Carl-Hinstorff-Weg 26 defekt
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-15T19:43:03.848+01:00'
+  updated_datetime: '2026-11-16T08:59:46.354+01:00'
+  expected_datetime:
+  address: Carl-Hinstorff-Weg 26 (Brinckmansdorf)
+  adress_id:
+  lat: 54.0741587746688
+  long: 12.171787674660967
+  media_url:
+  zipcode:
+- service_request_id: 127487
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: closed
+  service_code: 3
+  service_name: Beleuchtung schadhaft
+  description: Leuchtmittel der Straßenbeleuchtung defekt.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-16T04:11:43.092+01:00'
+  updated_datetime: '2026-11-19T07:24:14.204+01:00'
+  expected_datetime:
+  address: Loggerweg 13a (Stadtmitte)
+  adress_id:
+  lat: 54.09290433070058
+  long: 12.149530373156184
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTYzLCJwdXIiOiJibG9iX2lkIn19--1d95c2feebe7e5071fddb3b45b93e8c470e43c9e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127488
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 04.12.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Gerüstbauerring 30 eine Waschmaschine
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-16T06:05:20.348+01:00'
+  updated_datetime: '2026-11-19T08:29:07.786+01:00'
+  expected_datetime:
+  address: Gerüstbauerring 30 (Groß Klein)
+  adress_id:
+  lat: 54.14948454105095
+  long: 12.079961695650834
+  media_url:
+  zipcode:
+- service_request_id: 127489
+  status_notes: "Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. \nEntsorgungstermin: 09.12.2026."
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der Adam-J.-Krusenstern-Str. 25 wurde ein Holzschrank abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T06:52:24.474+01:00'
+  updated_datetime: '2026-11-19T18:10:04.805+01:00'
+  expected_datetime: '2026-12-09'
+  address: Adam-J.-Krusenstern-Straße 25 (Schmarl)
+  adress_id:
+  lat: 54.13204561270334
+  long: 12.075772755269881
+  media_url:
+  zipcode:
+- service_request_id: 127490
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 09.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Stephan-Jantzen-Ring 39 ein Holzschrank
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T06:53:53.388+01:00'
+  updated_datetime: '2026-11-19T08:29:05.480+01:00'
+  expected_datetime:
+  address: Stephan-Jantzen-Ring 39 (Schmarl)
+  adress_id:
+  lat: 54.126830814888706
+  long: 12.068673491392019
+  media_url:
+  zipcode:
+- service_request_id: 127491
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 09.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Hundsburgallee 1 eine Matratze
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T06:54:44.846+01:00'
+  updated_datetime: '2026-11-19T08:29:04.861+01:00'
+  expected_datetime:
+  address: Hundsburgallee 1 (Schmarl)
+  adress_id:
+  lat: 54.128402971044096
+  long: 12.07449297670364
+  media_url:
+  zipcode:
+- service_request_id: 127492
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: closed
+  service_code: 11
+  service_name: Wegereinigung fehlt
+  description: Glasscherben auf dem Radweg
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst) [delegiert an: Stadtentsorgung Rostock GmbH (Straßenreinigung; Winterdienst)]'
+  service_notice:
+  requested_datetime: '2026-11-16T08:27:09.852+01:00'
+  updated_datetime: '2026-11-17T15:42:19.876+01:00'
+  expected_datetime:
+  address: Alte Warnemünder Chaussee 1e (Groß Klein)
+  adress_id:
+  lat: 54.13680823397931
+  long: 12.06596657645351
+  media_url:
+  zipcode:
+- service_request_id: 127493
+  status_notes: Auch wenn es eine beleuchtete Wegealternative über den Wendehammer bei Berringerstr. 33 über den Parkplatz entlang Hartmut-Colden-Str. 37-41 gibt, wurde eine Beleuchtung für diesen Parkweg im Rahmen der Aufwertung des Bereiches mit vorgesehen.
+  status: closed
+  service_code: 105
+  service_name: Beleuchtung verändern
+  description: dieser Weg von der Hartmut-Colden-Str. bis zur Berringerstr. ist komplett dunkel. Wäre schön, wenn man dort auch ein paar Laternen aufstellen würde.
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-16T09:40:38.101+01:00'
+  updated_datetime: '2026-11-17T08:39:46.482+01:00'
+  expected_datetime:
+  address: Hartmut-Colden-Straße 32 (Dierkow-Neu)
+  adress_id:
+  lat: 54.10308730616012
+  long: 12.177243062073567
+  media_url:
+  zipcode:
+- service_request_id: 127494
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 11.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Schiffbauerring 50 mehrere Holzbretter
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T09:45:10.210+01:00'
+  updated_datetime: '2026-11-19T08:29:07.679+01:00'
+  expected_datetime:
+  address: Schiffbauerring 50 (Groß Klein)
+  adress_id:
+  lat: 54.14989537365199
+  long: 12.073305861713264
+  media_url:
+  zipcode:
+- service_request_id: 127495
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 11.12.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Schiffbauerring 50 eine Waschmaschine
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-16T09:45:42.562+01:00'
+  updated_datetime: '2026-11-19T08:29:07.587+01:00'
+  expected_datetime:
+  address: Schiffbauerring 50 (Groß Klein)
+  adress_id:
+  lat: 54.14989537365199
+  long: 12.073305861713264
+  media_url:
+  zipcode:
+- service_request_id: 127496
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 11.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Schiffbauerring 44 befindet sich ein Teppich!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T09:46:46.567+01:00'
+  updated_datetime: '2026-11-19T18:21:50.885+01:00'
+  expected_datetime: '2026-12-11'
+  address: Schiffbauerring 44 (Groß Klein)
+  adress_id:
+  lat: 54.15013265631919
+  long: 12.075129786958826
+  media_url:
+  zipcode:
+- service_request_id: 127497
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 11.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Schiffbauerring 53 Sperrmüll
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T09:47:38.644+01:00'
+  updated_datetime: '2026-11-19T08:29:04.128+01:00'
+  expected_datetime:
+  address: Schiffbauerring 54 (Groß Klein)
+  adress_id:
+  lat: 54.15087717811173
+  long: 12.074121449423316
+  media_url:
+  zipcode:
+- service_request_id: 127498
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 11.12.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Schiffbauerring 53 ein Kühlschrank
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-16T09:48:09.028+01:00'
+  updated_datetime: '2026-11-19T08:29:04.228+01:00'
+  expected_datetime:
+  address: Schiffbauerring 54 (Groß Klein)
+  adress_id:
+  lat: 54.15087717811173
+  long: 12.074121449423316
+  media_url:
+  zipcode:
+- service_request_id: 127499
+  status_notes: ''
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Couch, Teppich
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-16T10:30:43.107+01:00'
+  updated_datetime: '2026-11-19T09:40:53.998+01:00'
+  expected_datetime:
+  address: Gerüstbauerring 15 (Groß Klein)
+  adress_id:
+  lat: 54.14799691379861
+  long: 12.077632177161211
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTgyLCJwdXIiOiJibG9iX2lkIn19--ae3b04c195c422695e527daac6ed52f913dccc11/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127500
+  status_notes: ''
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll vor der Müllbox Gorki 46
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T10:40:28.909+01:00'
+  updated_datetime: '2026-11-19T09:43:48.475+01:00'
+  expected_datetime:
+  address: Maxim-Gorki-Straße 46 (Evershagen)
+  adress_id:
+  lat: 54.12236631836973
+  long: 12.051752955605206
+  media_url:
+  zipcode:
+- service_request_id: 127501
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 03.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der M.-Gorki-Str. 30 wurde Sperrmüll neben der Mülltonnenbox abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T10:41:46.935+01:00'
+  updated_datetime: '2026-11-19T08:29:04.754+01:00'
+  expected_datetime: '2026-11-30'
+  address: Maxim-Gorki-Straße 30 (Evershagen)
+  adress_id:
+  lat: 54.12332238136591
+  long: 12.053565021759827
+  media_url:
+  zipcode:
+- service_request_id: 127502
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 03.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll vor dem Eingang Linné 6
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T10:47:40.587+01:00'
+  updated_datetime: '2026-11-19T08:29:05.169+01:00'
+  expected_datetime:
+  address: Carl-von-Linné-Straße 6 (Evershagen)
+  adress_id:
+  lat: 54.11757013138222
+  long: 12.062377254647744
+  media_url:
+  zipcode:
+- service_request_id: 127503
+  status_notes: ''
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Kinder Reise Bett inkl Tasche liegt zwischen Radweg und Fahrbahn. Aus wm kommend Richtung City. Unfallgefahr.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T11:09:01.981+01:00'
+  updated_datetime: '2026-11-17T08:36:34.316+01:00'
+  expected_datetime:
+  address: Knud-Rasmussen-Straße 12 (Evershagen)
+  adress_id:
+  lat: 54.124078484920545
+  long: 12.064544640787076
+  media_url:
+  zipcode:
+- service_request_id: 127504
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 03.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll neben den Müllboxen Nexö 11, 13, 14
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T11:37:15.448+01:00'
+  updated_datetime: '2026-11-19T08:29:05.899+01:00'
+  expected_datetime:
+  address: Martin-Andersen-Nexö-Ring 13 (Evershagen)
+  adress_id:
+  lat: 54.120670233902615
+  long: 12.063785220649569
+  media_url:
+  zipcode:
+- service_request_id: 127505
+  status_notes: ''
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Matratzen und Sperrmüll liegt neben dem Müllstellplatz
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T11:48:18.845+01:00'
+  updated_datetime: '2026-11-19T09:45:19.545+01:00'
+  expected_datetime:
+  address: St.-Petersburger Straße 3 (Lütten Klein)
+  adress_id:
+  lat: 54.134326765021854
+  long: 12.05652557134045
+  media_url:
+  zipcode:
+- service_request_id: 127506
+  status_notes: ''
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: bitte diversen Sperrmüll neben dem Müllstellplatz einsammeln
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T11:49:02.276+01:00'
+  updated_datetime: '2026-11-19T09:46:10.931+01:00'
+  expected_datetime:
+  address: St.-Petersburger Straße 7 (Lütten Klein)
+  adress_id:
+  lat: 54.134883930277
+  long: 12.056511649866827
+  media_url:
+  zipcode:
+- service_request_id: 127507
+  status_notes: wurde entfernt
+  status: closed
+  service_code: 172
+  service_name: Einkaufskörbe/Einkaufswagen
+  description: Ein verlassener Einkaufswagen mit Kleidung steht auf dem Neuen Markt herum.
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-16T11:50:48.039+01:00'
+  updated_datetime: '2026-11-18T16:31:39.829+01:00'
+  expected_datetime: '2026-11-18'
+  address: Neuer Markt 14 (Stadtmitte)
+  adress_id:
+  lat: 54.08869291595403
+  long: 12.139621990972008
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTg3LCJwdXIiOiJibG9iX2lkIn19--32d3e6608280cb076886a31c7dff27db01944351/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127508
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: in_process
+  service_code: 172
+  service_name: Einkaufskörbe/Einkaufswagen
+  description: In der Grünanlage Reiferbahn steht ein verlassener Einkaufswagen mit Kleidungstücken herum.
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Spielplatzservice)
+  service_notice:
+  requested_datetime: '2026-11-16T11:56:49.473+01:00'
+  updated_datetime: '2026-11-18T11:29:59.331+01:00'
+  expected_datetime: '2026-11-30'
+  address: Paulstraße 1 (Stadtmitte)
+  adress_id:
+  lat: 54.082486806567914
+  long: 12.13742628652312
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTgzLCJwdXIiOiJibG9iX2lkIn19--75f35c758f90e3415feb0375f9576e83c2af71bf/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMzYwLDM2MF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--59b3c7aa75c16ef98f5eae137ff8eeedc9ec4e2d/Einkaufakorb%20Reifergraben.jpeg
+  zipcode:
+- service_request_id: 127509
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: in_process
+  service_code: 172
+  service_name: Einkaufskörbe/Einkaufswagen
+  description: Ein verlassener Einkaufswagen steht direkt auf dem Fussballplatz herum.
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Spielplatzservice)
+  service_notice:
+  requested_datetime: '2026-11-16T11:58:47.298+01:00'
+  updated_datetime: '2026-11-19T07:39:27.709+01:00'
+  expected_datetime: '2026-11-30'
+  address: Am Reifergraben 4 (Stadtmitte)
+  adress_id:
+  lat: 54.08236044409796
+  long: 12.137709876005964
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTg1LCJwdXIiOiJibG9iX2lkIn19--9405b30f47711720e31a7fd47df9c28aac1c16d1/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGVnIiwicmVzaXplX3RvX2xpbWl0IjpbMzYwLDM2MF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--59b3c7aa75c16ef98f5eae137ff8eeedc9ec4e2d/Reifergraben%20Fussballplatz.jpeg
+  zipcode:
+- service_request_id: 127510
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 23.11.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll- Matratzen, Bretter abgestellt
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T13:21:57.883+01:00'
+  updated_datetime: '2026-11-19T08:29:05.799+01:00'
+  expected_datetime:
+  address: Hartmut-Colden-Straße 39 (Dierkow-Neu)
+  adress_id:
+  lat: 54.10263573291135
+  long: 12.177306005961407
+  media_url:
+  zipcode:
+- service_request_id: 127511
+  status_notes:
+  status: received
+  service_code: 18
+  service_name: Hundekot
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst)
+  service_notice:
+  requested_datetime: '2026-11-16T13:22:39.040+01:00'
+  updated_datetime: '2026-11-16T13:22:53.890+01:00'
+  expected_datetime:
+  address: Urho-Kekkonen-Straße 3 (Toitenwinkel)
+  adress_id:
+  lat: 54.11718315610861
+  long: 12.142260561379091
+  media_url:
+  zipcode:
+- service_request_id: 127512
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 23.11.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Bretter, Schrankteile
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T13:23:40.603+01:00'
+  updated_datetime: '2026-11-19T08:29:05.583+01:00'
+  expected_datetime:
+  address: Bruno-Taut-Straße 3 (Dierkow-Neu)
+  adress_id:
+  lat: 54.107455885108834
+  long: 12.170358134590066
+  media_url:
+  zipcode:
+- service_request_id: 127513
+  status_notes: "Stadtentsorgung Rostock: 19.11.2026 um 09:49 Uhr, \nEine Duschtrennwand ist Bauabfall (kein Sperrmüll) und wird nicht abgeholt!"
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Hier wurde eine Duschtrennwand abgelegt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: WIRO GmbH]'
+  service_notice:
+  requested_datetime: '2026-11-16T13:25:30.946+01:00'
+  updated_datetime: '2026-11-19T21:13:37.869+01:00'
+  expected_datetime: '2026-11-30'
+  address: Kurt-Schumacher-Ring 38 (Dierkow-Neu)
+  adress_id:
+  lat: 54.106433126106026
+  long: 12.16883731901756
+  media_url:
+  zipcode:
+- service_request_id: 127514
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 23.11.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Fernseher abgestellt
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-16T13:27:35.025+01:00'
+  updated_datetime: '2026-11-19T08:29:08.303+01:00'
+  expected_datetime:
+  address: Theodor-Heuss-Straße 6 (Dierkow-Neu)
+  adress_id:
+  lat: 54.10550931838378
+  long: 12.174605631892216
+  media_url:
+  zipcode:
+- service_request_id: 127515
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 23.11.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Schrankteile, Bretter abgestellt
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T13:28:46.429+01:00'
+  updated_datetime: '2026-11-19T08:29:08.401+01:00'
+  expected_datetime:
+  address: Kurt-Schumacher-Ring 175 (Dierkow-Neu)
+  adress_id:
+  lat: 54.103676986066205
+  long: 12.16932089427405
+  media_url:
+  zipcode:
+- service_request_id: 127516
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 26.11.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Kleiner Haufen Sperrmüll
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T14:29:33.891+01:00'
+  updated_datetime: '2026-11-19T08:29:08.501+01:00'
+  expected_datetime:
+  address: Rigaer Straße 16 (Lütten Klein)
+  adress_id:
+  lat: 54.140024724527535
+  long: 12.046895213783772
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTg4LCJwdXIiOiJibG9iX2lkIn19--a925f4626ff0474c28c3303e269955453856d377/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127517
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 26.11.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Kleiner Haufen Sperrmüll
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-16T14:37:20.126+01:00'
+  updated_datetime: '2026-11-19T08:29:08.612+01:00'
+  expected_datetime:
+  address: Rigaer Straße 19 (Lütten Klein)
+  adress_id:
+  lat: 54.14000222460328
+  long: 12.04798132207904
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTg5LCJwdXIiOiJibG9iX2lkIn19--0da97b3445fcd266023288ae72ec03a93b1b4ba7/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127518
+  status_notes: Vielen Dank für ihren Hinweis. Wir haben sofort unsere Außendienstmitarbeiter geschickt, um die Angelegenheit vor Ort zu prüfen und die Ordnungswidrigkeit ggf. zu ahnden.
+  status: closed
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: Es kommt wiederholt vor, dass dieses Fahrzeug ordnungswidrig auf dem Gehweg abgestellt wurde. Dadurch wird der Gehweg erheblich eingeschränkt bzw. teilweise vollständig blockiert. Fußgänger, insbesondere Menschen mit Kinderwagen, Rollstuhlfahrer, Personen mit Rollatoren sowie Kinder, werden dadurch behindert und teilweise gezwungen, auf die Fahrbahn auszuweichen. Ich bitte darum, diesen wiederkehrenden Verstoß zu überprüfen und entsprechende Maßnahmen einzuleiten, damit der Gehweg wieder uneingeschränkt und sicher von allen Fußgängern genutzt werden kann.
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-16T18:26:32.264+01:00'
+  updated_datetime: '2026-11-16T19:05:43.910+01:00'
+  expected_datetime:
+  address: Ernst-Brockelmann-Straße 1 (Gehlsdorf)
+  adress_id:
+  lat: 54.10842743750695
+  long: 12.108182157014067
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNTk1LCJwdXIiOiJibG9iX2lkIn19--2a3d9c2542379be23e17ab0fc231091648733c23/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127519
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-16T19:18:00.371+01:00'
+  updated_datetime: '2026-11-16T19:18:19.009+01:00'
+  expected_datetime:
+  address: Willem-Barents-Straße 26 (Schmarl)
+  adress_id:
+  lat: 54.13035806389351
+  long: 12.07003360852457
+  media_url:
+  zipcode:
+- service_request_id: 127521
+  status_notes: "[Update] Die gewünschte Querung in einem Zug ist auch unser Ziel und wird kontinuierlich im Rahmen der finanziellen und technischen Möglichkeiten umgesetzt. Eine kurzfristige Anpassung an dieser Bestandsanlage ist nicht möglich, da die Umsetzung eine umfangreiche Überarbeitung der Signalsteuerung erfordert und häufig auch bauliche Anpassungen notwendig werden. Auf Grund der neuen Bebauung und dem geänderten Mobilitätsverhalten der Bevölkerung soll dies mittelfristig erfolgen. Dabei wird auch die Querung in einem Zug geprüft. Bis zu einer solchen Lösung ermöglicht die Mittelinsel allen Personengruppen das sichere Überqueren der Straße, wobei die Signalsteuerung sicherstellt, dass die (jeweilige) Fahrbahn auch nach Grünende sicher verlassen werden kann. (PS: Das Klarschiff Portal wurde zur Bearbeitung einfacher Störungsmeldungen konzipiert und erlaubt keine Lösung städteplanerischer und verkehrsplanerischer Sachverhalte. Technisch sind uns dazu nur kurze Kommentare möglich.)"
+  status: not_solvable
+  service_code: 62
+  service_name: Ampel schadhaft
+  description: Ampelschaltung für Fußgänger sehr knapp bemessen. Ich bin gut zu Fuß und selbst bei zügigem Schritt erreicht man die gegenüberliegende Seite nicht bei grün. Bitte prüfen und die Zeit der Grünphase in der Steuerung erhöhen lassen. Vielen Dank
+  agency_responsible: Tiefbauamt (Ampeln)
+  service_notice:
+  requested_datetime: '2026-11-16T22:13:50.932+01:00'
+  updated_datetime: '2026-11-17T12:22:08.162+01:00'
+  expected_datetime:
+  address: Gärtnerstraße 18 (Stadtmitte)
+  adress_id:
+  lat: 54.09202527357968
+  long: 12.147340974039851
+  media_url:
+  zipcode:
+- service_request_id: 127522
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Beleuchtung ist seit Monaten defeft, mal funktioniert sie und dann mal nicht, kein gutes gefühle da Abends lang zu laufen
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-16T22:21:35.410+01:00'
+  updated_datetime: '2026-11-17T08:25:51.776+01:00'
+  expected_datetime:
+  address: Zum Lebensbaum 6 (Toitenwinkel)
+  adress_id:
+  lat: 54.111965859341694
+  long: 12.155557300007958
+  media_url:
+  zipcode:
+- service_request_id: 127523
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Seit Monaten fehler der Beleuchtung mal funktioniert sie, mal nicht, kein gutes Gefühl da Abends im Dunkeln lang zu laufen.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-16T22:27:46.396+01:00'
+  updated_datetime: '2026-11-17T08:27:54.746+01:00'
+  expected_datetime:
+  address: Pablo-Neruda-Straße 19 (Toitenwinkel)
+  adress_id:
+  lat: 54.112028617760956
+  long: 12.153997648526273
+  media_url:
+  zipcode:
+- service_request_id: 127524
+  status_notes: Vielen Dank für Ihre Meldung. Sie wurde zur Leerung und Reinigung der PPK-Container an die Firma Veolia Umweltservice weitergeleitet.
+  status: in_process
+  service_code: 20
+  service_name: Recycling-Container überfüllt
+  description: Die Papiercontainer sind überfüllt und es wird fleißig daneben abgelagert. Bitte dringend entleeren lassen.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Container) [delegiert an: Veolia Umweltservice Nord GmbH]'
+  service_notice:
+  requested_datetime: '2026-11-16T22:30:19.614+01:00'
+  updated_datetime: '2026-11-17T12:10:05.108+01:00'
+  expected_datetime: '2026-11-30'
+  address: Edith-Lindenberg-Straße 21 (Brinckmansdorf)
+  adress_id:
+  lat: 54.08773259924436
+  long: 12.186087022525513
+  media_url:
+  zipcode:
+- service_request_id: 127525
+  status_notes: ''
+  status: closed
+  service_code: 64
+  service_name: Beschilderung/Markierung schadhaft
+  description: Verkehrsschild/ Straßennamenschild steht schief in Richtung Fahrbahn
+  agency_responsible: Bauhof
+  service_notice:
+  requested_datetime: '2026-11-17T06:09:30.473+01:00'
+  updated_datetime: '2026-11-19T11:17:56.158+01:00'
+  expected_datetime:
+  address: A.-Tischbein-Straße 49 (Groß Klein)
+  adress_id:
+  lat: 54.15276100547908
+  long: 12.071572800774055
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjE2LCJwdXIiOiJibG9iX2lkIn19--d0c126b1de5329afe73793354a40524af14d591d/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127526
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: in_process
+  service_code: 149
+  service_name: Gully verstopft
+  description: Direkt an der vordersten Bushaltestelle ist der Gully verstopft, so das die Autos sehr viel Wasser auf den Wartebereich spritzen.
+  agency_responsible: Bauhof
+  service_notice:
+  requested_datetime: '2026-11-17T06:14:31.470+01:00'
+  updated_datetime: '2026-11-17T06:29:09.424+01:00'
+  expected_datetime:
+  address: Warnowallee 31 (Lütten Klein)
+  adress_id:
+  lat: 54.13804169251054
+  long: 12.055151413216807
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjE3LCJwdXIiOiJibG9iX2lkIn19--f34fe9d3abfdf01af7a5edffc8dfd40fe39e2ac0/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127527
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Straßenlaterne wieder defekt. Dies wurde nun zum 2 Mal genutzt, um unser Grundstück zu beschädigen.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-17T07:16:03.426+01:00'
+  updated_datetime: '2026-11-17T08:32:50.755+01:00'
+  expected_datetime:
+  address: Dünkirchener Straße 1 (Lichtenhagen)
+  adress_id:
+  lat: 54.15370250761697
+  long: 12.055906253046947
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjE5LCJwdXIiOiJibG9iX2lkIn19--09354c8ad78462092b8be26073dad3bc16e6dd16/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127528
+  status_notes:
+  status: received
+  service_code: 69
+  service_name: Poller/Planke/Absperrelement schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Ausstattung)
+  service_notice:
+  requested_datetime: '2026-11-17T07:47:54.258+01:00'
+  updated_datetime: '2026-11-17T07:48:12.098+01:00'
+  expected_datetime:
+  address: Ulmenstraße 43 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.087326532317746
+  long: 12.108755800926556
+  media_url:
+  zipcode:
+- service_request_id: 127531
+  status_notes: Vielen Dank für Ihren Hinweis. Der Prozess zur Lösung des Problems kann allerdings einige Wochen andauern.
+  status: in_process
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: Herrenrad „Caver“, fahruntüchtig
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-17T08:18:47.578+01:00'
+  updated_datetime: '2026-11-18T06:57:14.675+01:00'
+  expected_datetime:
+  address: An der Hege 11 (Stadtmitte)
+  adress_id:
+  lat: 54.08881356229736
+  long: 12.141424610083922
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjI2LCJwdXIiOiJibG9iX2lkIn19--36665dad5dc890e7f9368cd2c205d80c0af44ee7/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127532
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 03.12.2026.'
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: "."
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-17T08:31:43.603+01:00'
+  updated_datetime: '2026-11-19T08:29:06.213+01:00'
+  expected_datetime: '2026-11-26'
+  address: Eduard-Vilde-Straße 3 (Evershagen)
+  adress_id:
+  lat: 54.121151378932694
+  long: 12.054201038152382
+  media_url:
+  zipcode:
+- service_request_id: 127533
+  status_notes:
+  status: received
+  service_code: 23
+  service_name: Wegereinigung fehlt
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst)
+  service_notice:
+  requested_datetime: '2026-11-17T08:33:53.781+01:00'
+  updated_datetime: '2026-11-17T08:34:18.379+01:00'
+  expected_datetime:
+  address: Schröderplatz 5 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.087759931873705
+  long: 12.126346165325609
+  media_url:
+  zipcode:
+- service_request_id: 127534
+  status_notes: Altreifen werden von der Stadtentsorgung Rostock nicht abgeholt.
+  status: not_solvable
+  service_code: 21
+  service_name: Sondermüll
+  description: Zwei Altreifen befinden sich gegenüber der KGA An der Mühle am Straßenrand.
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-17T08:47:40.811+01:00'
+  updated_datetime: '2026-11-17T11:50:09.166+01:00'
+  expected_datetime: '2026-11-24'
+  address: Am Mühlenteich 46 (Evershagen)
+  adress_id:
+  lat: 54.11547567996442
+  long: 12.03847326054397
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjMyLCJwdXIiOiJibG9iX2lkIn19--0bb4b17ab1269ee7b8861ad35218871e8fb8d2eb/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127535
+  status_notes: 'Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet. Entsorgungstermin: 19.11.2026'
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll wurde vorm Tor der KGA An der Mühle abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-17T08:49:42.104+01:00'
+  updated_datetime: '2026-11-17T12:04:21.135+01:00'
+  expected_datetime: '2026-11-19'
+  address: Am Mühlenteich 18 (Evershagen)
+  adress_id:
+  lat: 54.11392694290049
+  long: 12.04601685166603
+  media_url:
+  zipcode:
+- service_request_id: 127536
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 27.11.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Hinterm Trafohaus wurden 5 Altgeräte (Waschmaschinen, Elektroherd, Geschirrspüler, Kühlschrank) abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-17T09:41:41.538+01:00'
+  updated_datetime: '2026-11-19T08:29:06.101+01:00'
+  expected_datetime: '2026-11-30'
+  address: Alte Warnemünder Chaussee 40 (Groß Klein)
+  adress_id:
+  lat: 54.14144834348434
+  long: 12.067197149312447
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjM3LCJwdXIiOiJibG9iX2lkIn19--5426b7c72691a1ac0abab1e951960c2ca75a0ae5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127537
+  status_notes: Vielen Dank für Ihren Hinweis. Der Prozess zur Lösung des Problems kann allerdings einige Wochen andauern.
+  status: in_process
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: Schon lange,lange Zeit steht dort ein Schrotthaufen,ehemals Auto.Ich kann und will es auch nicht verstehen,warum hier nichts passiert...Der deutsche Bürger wird überall für das Falschparken bestraft.Bei diesem Schrotthaufen passiert einfach nichts.Würde das Auto bei einem Politiker vor der Tür stehen,wäre es längst verschwunden.Wie immer,es muß erst was passieren.Bei soviel Umweltverschmutzung kann ich nur mit dem Kopf schütteln.Vielen Dank. Ein aufmerksamer Bürger.Bleiben Sie gesund.
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-17T10:07:27.423+01:00'
+  updated_datetime: '2026-11-19T15:05:51.969+01:00'
+  expected_datetime:
+  address: Husumer Straße 3 (Lichtenhagen)
+  adress_id:
+  lat: 54.14844154809697
+  long: 12.058524696144033
+  media_url:
+  zipcode:
+- service_request_id: 127538
+  status_notes: Vielen Dank für Ihre Meldung. Sie wurde zur Leerung und Reinigung der Unterflur-Container an die Firma Veolia Umweltservice weitergeleitet.
+  status: in_process
+  service_code: 20
+  service_name: Recycling-Container überfüllt
+  description: Die unterirdische Papiertonne ist seit mindestens 1,5 Wochen überfüllt. Alle stellen ihre Pakete neben dem Container ab und der Wind verteilt diese überall hin. Dürfen die umliegenden Gewerbetreibenden wie Späti oder die Bar eigentlich ihre Pappe auch hierüber entsorgen? Es entsteht viel Müll und gerade diese stellen Ihre großen Pakete oft einfach daneben.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Container) [delegiert an: Veolia Umweltservice Nord GmbH]'
+  service_notice:
+  requested_datetime: '2026-11-17T11:47:40.421+01:00'
+  updated_datetime: '2026-11-17T11:57:45.931+01:00'
+  expected_datetime: '2026-11-30'
+  address: Waldemarstraße 62 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.087555004122976
+  long: 12.114689219853837
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjQxLCJwdXIiOiJibG9iX2lkIn19--9a1d7fa7e40e7e26f74dc2d4cac75c6941a31991/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127539
+  status_notes: Vielen Dank für Ihren Hinweis. Der Prozess zur Lösung des Problems kann allerdings einige Wochen andauern.
+  status: in_process
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: Älteres herrenloses Fahrrad
+  agency_responsible: Stadtamt (Allgemeiner Ordnungsdienst)
+  service_notice:
+  requested_datetime: '2026-11-17T12:08:13.737+01:00'
+  updated_datetime: '2026-11-18T15:15:56.958+01:00'
+  expected_datetime:
+  address: Klüverweg 5 (Gehlsdorf)
+  adress_id:
+  lat: 54.113039298480516
+  long: 12.107633888074444
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjQ4LCJwdXIiOiJibG9iX2lkIn19--30b171a2bb4fcca23330d832b5a422a486e08f08/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127540
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-17T12:33:00.582+01:00'
+  updated_datetime: '2026-11-17T13:43:37.798+01:00'
+  expected_datetime:
+  address: Dethardingstraße 92 (Hansaviertel)
+  adress_id:
+  lat: 54.08605050260786
+  long: 12.10612606987836
+  media_url:
+  zipcode:
+- service_request_id: 127541
+  status_notes: Vielen Dank für Ihren Hinweis. Wir werden den Sachverhalt prüfen und den Sachverhalt an das Fachamt weiter leiten. MfG
+  status: in_process
+  service_code: 12
+  service_name: Wildwuchs
+  description: Die Vorgärten gehöhren doch der Stadt. Warum wird hier nicht der Eigentümer zur Rechenschaft gezogen ? Eine Schande ..
+  agency_responsible: Tiefbauamt (Straßenverwaltung)
+  service_notice:
+  requested_datetime: '2026-11-17T13:06:46.189+01:00'
+  updated_datetime: '2026-11-18T13:52:29.673+01:00'
+  expected_datetime:
+  address: Budapester Straße 63 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.089404862432104
+  long: 12.111953344287842
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjUwLCJwdXIiOiJibG9iX2lkIn19--987e3f134b9bc8fb535ff691a33e5615c90bb4af/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127542
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-17T13:16:11.446+01:00'
+  updated_datetime: '2026-11-17T13:16:29.123+01:00'
+  expected_datetime:
+  address: Ostseeallee 42 (Lütten Klein)
+  adress_id:
+  lat: 54.14056195590027
+  long: 12.042777309142535
+  media_url:
+  zipcode:
+- service_request_id: 127543
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: in_process
+  service_code: 12
+  service_name: Wildwuchs
+  description: Der Cotoneaster, der den Spielplatz Am Wendebecken von der Wohnbebauung abtrennt, hat schon etwa die Hälfte des Gehwegs überwuchert. Ich befürchte, dass das im Winter zu einem echten Problem werden wird. Angesichts der vielen Senioren, die hier wohnen und oft auf Rollator oder sogar Rollstuhl angewiesen sind, sollte hier bald ein Rückschnitt erfolgen.
+  agency_responsible: Tiefbauamt (Straßenverwaltung)
+  service_notice:
+  requested_datetime: '2026-11-17T13:44:01.568+01:00'
+  updated_datetime: '2026-11-19T11:13:59.431+01:00'
+  expected_datetime:
+  address: Am Wendebecken 7a (Seebad Warnemünde)
+  adress_id:
+  lat: 54.17081630983179
+  long: 12.086647533365543
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjUzLCJwdXIiOiJibG9iX2lkIn19--6ca3c8f8295f5cb61991ffb290ee561a16450eab/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127544
+  status_notes: Ihr Hinweis ist berechtigt. Er wird in die turnusmäßige Pflege/Säuberung eingeordnet.
+  status: in_process
+  service_code: 17
+  service_name: Hausmüll
+  description: Kleinteile befinden sich im Grünstreifen.
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Grünflächen; Ordnungswidrigkeiten)
+  service_notice:
+  requested_datetime: '2026-11-17T14:12:53.236+01:00'
+  updated_datetime: '2026-11-18T11:17:12.234+01:00'
+  expected_datetime: '2026-11-30'
+  address: Am Schmarler Bach 2 (Schmarl)
+  adress_id:
+  lat: 54.13760754950246
+  long: 12.073081716962928
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjU0LCJwdXIiOiJibG9iX2lkIn19--bc5c68077c364d0104a6092a976ef09791b1a5f8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127545
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 09.12.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: E-Schrott (Staubsauger/Reingungsgerät) wurde an der Müllcontainerbox abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-17T15:46:34.467+01:00'
+  updated_datetime: '2026-11-19T08:29:07.488+01:00'
+  expected_datetime: '2026-11-30'
+  address: Ernst-Haeckel-Straße 12 (Südstadt)
+  adress_id:
+  lat: 54.065958895537335
+  long: 12.113528487171822
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjU1LCJwdXIiOiJibG9iX2lkIn19--2a18844ae678b2db75d2642a7bd2488da2380302/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127546
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 04.12.2026.'
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Bitte die Waschmaschine und den Kühlschrank entsorgen lassen. Sie wurden neben dem Mülltonnenstellplatz am Trafohaus abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-17T16:17:18.521+01:00'
+  updated_datetime: '2026-11-19T08:29:06.869+01:00'
+  expected_datetime: '2026-11-30'
+  address: Schiffbauerring 51 (Groß Klein)
+  adress_id:
+  lat: 54.14946950829105
+  long: 12.073990689764893
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjU2LCJwdXIiOiJibG9iX2lkIn19--78cdb606fe6c5c8a5cb36660398c9754a288ea53/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127547
+  status_notes: 'Die Meldung wurde an die Stadtentsorgung Rostock GmbH delegiert. Entsorgungstermin: 11.12.2026.'
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Bitte den Sperrmüll (Küchenschränke) entsorgen lassen. Sie wurden neben dem Mülltonnenstellplatz am Trafohaus abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-17T16:19:01.795+01:00'
+  updated_datetime: '2026-11-19T08:29:06.664+01:00'
+  expected_datetime: '2026-11-30'
+  address: Schiffbauerring 51 (Groß Klein)
+  adress_id:
+  lat: 54.149469308598725
+  long: 12.073993652698974
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjU3LCJwdXIiOiJibG9iX2lkIn19--488625a62ddccca6bdccdd7757efb3dbd2d59d4e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127549
+  status_notes: Hausmüll gehört in die vorhandenen Hausmülltonnen. Die werden regelmäßig von der Stadtentsorgung Rostock entleert.
+  status: not_solvable
+  service_code: 17
+  service_name: Hausmüll
+  description: Bitte den Hausmüll entsorgen lassen.
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-17T16:21:10.910+01:00'
+  updated_datetime: '2026-11-18T07:25:40.823+01:00'
+  expected_datetime: '2026-11-17'
+  address: Schiffbauerring 51 (Groß Klein)
+  adress_id:
+  lat: 54.14946450963859
+  long: 12.073994671731926
+  media_url:
+  zipcode:
+- service_request_id: 127550
+  status_notes: Danke für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung an die Ausführungsfirma weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Es wurden zwei neue Lampen gebaut, was ich super finde, da es an dieser Stelle wirklich dunkel ist, aber die eine Lampe funktioniert leider nicht. Es ist leider super dunkel an der Stelle und man kann dort nichts sehen.
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-17T16:21:51.346+01:00'
+  updated_datetime: '2026-11-17T17:12:01.079+01:00'
+  expected_datetime:
+  address: Röntgenstraße 5 (Südstadt)
+  adress_id:
+  lat: 54.064484606661125
+  long: 12.1166636449757
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjU4LCJwdXIiOiJibG9iX2lkIn19--ddd166e34c45deb98cb2327bd23b6d5f101e7027/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127551
+  status_notes: Danke für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: closed
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: unsere straßenlampe im tannenweg zwischen nr 10 und 11 in rostock schaltet immer an und aus.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-17T16:49:54.055+01:00'
+  updated_datetime: '2026-11-19T07:23:26.518+01:00'
+  expected_datetime:
+  address: Tannenweg 10 (Gartenstadt/Stadtweide)
+  adress_id:
+  lat: 54.07586411314648
+  long: 12.08397989750567
+  media_url:
+  zipcode:
+- service_request_id: 127552
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Diese Lampe ist defekt.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-17T17:18:59.862+01:00'
+  updated_datetime: '2026-11-18T08:10:59.994+01:00'
+  expected_datetime:
+  address: Martin-Niemöller-Straße 38 (Toitenwinkel)
+  adress_id:
+  lat: 54.110393411447575
+  long: 12.15842075938568
+  media_url:
+  zipcode:
+- service_request_id: 127553
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Auch diese Lampe ist defekt.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-17T17:19:32.379+01:00'
+  updated_datetime: '2026-11-18T08:11:41.167+01:00'
+  expected_datetime:
+  address: Martin-Niemöller-Straße 41 (Toitenwinkel)
+  adress_id:
+  lat: 54.110519201582235
+  long: 12.159051078504179
+  media_url:
+  zipcode:
+- service_request_id: 127554
+  status_notes:
+  status: reviewed
+  service_code: 4
+  service_name: Beschilderung/Markierung schadhaft
+  description: "Beschilderung überflüssig.\r Es gibt keine Baustelle."
+  agency_responsible: Tiefbauamt (Untere Verkehrsbehörde)
+  service_notice:
+  requested_datetime: '2026-11-17T22:31:20.221+01:00'
+  updated_datetime: '2026-11-19T06:32:14.885+01:00'
+  expected_datetime:
+  address: Bertolt-Brecht-Straße 17a (Evershagen)
+  adress_id:
+  lat: 54.121330126733596
+  long: 12.05808011116912
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjYzLCJwdXIiOiJibG9iX2lkIn19--2bc5a38f6eb4bb23b59385576f2c6e9b5d3641db/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127555
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-18T06:46:30.116+01:00'
+  updated_datetime: '2026-11-18T06:46:44.520+01:00'
+  expected_datetime:
+  address: Ludwigstraße 6 (Stadtmitte)
+  adress_id:
+  lat: 54.0838023652413
+  long: 12.129648349145606
+  media_url:
+  zipcode:
+- service_request_id: 127556
+  status_notes: 'Ihre Meldung wurde zur Abholung des Elektroschrotts an die Stadtentsorgung Rostock weitergeleitet. Entsorgungstermin: 27.11.2026'
+  status: closed
+  service_code: 15
+  service_name: Elektroschrott
+  description: Ein Kühlschrank und ein Herd stehen neben dem Mülltonnenstellplatz herum.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-18T07:19:13.899+01:00'
+  updated_datetime: '2026-11-19T00:42:12.570+01:00'
+  expected_datetime: '2026-11-27'
+  address: Kleiner Warnowdamm 20 (Groß Klein)
+  adress_id:
+  lat: 54.143579662763074
+  long: 12.071389789595093
+  media_url:
+  zipcode:
+- service_request_id: 127557
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet.
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll steht neben den Mülltonnen herum.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T07:22:00.676+01:00'
+  updated_datetime: '2026-11-19T00:37:41.478+01:00'
+  expected_datetime: '2026-11-30'
+  address: Kleiner Warnowdamm 21 (Groß Klein)
+  adress_id:
+  lat: 54.1434785367631
+  long: 12.070908239682343
+  media_url:
+  zipcode:
+- service_request_id: 127558
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen. Ein Auftrag wurde für den Bauhof erteilt zur Reinigung der Straßenabläufe.
+  status: in_process
+  service_code: 2
+  service_name: bauliche Gefahrenstelle
+  description: Die rechte Spur stadtauswärts muss gesperrt werden, zumindest bei nasser Fahrbahn, für alle. Als Maßnahme nur für Fahrzeuge über 3,5 t wäre es nicht ausreichend. Eine maximale Geschwindigkeit von 30 km/h wäre als Maßnahme auch nicht ausreichend, aber besser als nichts. Als Radfahrer oder Fußgänger wird man regelmäßig geduscht, obwohl es eine Ordnungswidrigkeit darstellt. Auch von Berufskraftfahrern, die es noch besser wissen müssten, auch von unseren städtischen Unternehmen RSAG und SR.
+  agency_responsible: Bauhof
+  service_notice:
+  requested_datetime: '2026-11-18T08:17:24.417+01:00'
+  updated_datetime: '2026-11-18T14:52:36.889+01:00'
+  expected_datetime:
+  address: Mühlendamm 8b (Stadtmitte)
+  adress_id:
+  lat: 54.08511065406793
+  long: 12.149939734243066
+  media_url:
+  zipcode:
+- service_request_id: 127559
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet. Die Müllsäcke und Pappkartons gehören in die entsprechenden Mülltonnen.
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Verdreckter Mülltonnenstellplatz.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T08:45:09.626+01:00'
+  updated_datetime: '2026-11-19T00:35:39.195+01:00'
+  expected_datetime: '2026-11-30'
+  address: Zum Fohlenhof 8 (Toitenwinkel)
+  adress_id:
+  lat: 54.113450766574005
+  long: 12.135518953215483
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjg3LCJwdXIiOiJibG9iX2lkIn19--c15d7c55ec374f05025fe88f7aadc6b3cff5b4dc/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127560
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet.
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der M.-Gorki-Str. 58 wurde Sperrmüll neben der Mülltonnenbox abgestellt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T08:54:14.642+01:00'
+  updated_datetime: '2026-11-19T00:24:17.532+01:00'
+  expected_datetime: '2026-11-30'
+  address: Maxim-Gorki-Straße 58 (Evershagen)
+  adress_id:
+  lat: 54.11865946868062
+  long: 12.052387388543542
+  media_url:
+  zipcode:
+- service_request_id: 127561
+  status_notes: Ihre Meldung wurde zur Abholung des Elektroschrotts an die Stadtentsorgung Rostock weitergeleitet.
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Im Stephan-Jantzen-Ring 39 befindet sich ein TV-Gerät.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-18T09:09:40.828+01:00'
+  updated_datetime: '2026-11-18T10:04:17.395+01:00'
+  expected_datetime: '2026-11-30'
+  address: Stephan-Jantzen-Ring 39 (Schmarl)
+  adress_id:
+  lat: 54.126954175338
+  long: 12.068807483267229
+  media_url:
+  zipcode:
+- service_request_id: 127562
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: closed
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Die gesamten Leuchten vom AIDAhome in Richtung der Silos sind ausgeschaltet. Daher ist der Weg sehr dunkel
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-18T09:10:00.036+01:00'
+  updated_datetime: '2026-11-19T07:32:33.183+01:00'
+  expected_datetime:
+  address: Am Strande 4 (Stadtmitte)
+  adress_id:
+  lat: 54.09320693454728
+  long: 12.14587354029033
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjg5LCJwdXIiOiJibG9iX2lkIn19--73c6e6f3d769865bf4e8e53eb1eecd6d2c69ecc1/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127563
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet.
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Laut Bürgerhinweis befindet hier sich eine Sperrmüllablagerung.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T09:10:33.735+01:00'
+  updated_datetime: '2026-11-18T16:57:39.184+01:00'
+  expected_datetime: '2026-11-30'
+  address: Haedgestraße 3 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.09049115450176
+  long: 12.126337746132771
+  media_url:
+  zipcode:
+- service_request_id: 127564
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet.
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Laut Bürgermeldung befindet sich hier eine Sperrmüllablegerung.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T09:11:57.161+01:00'
+  updated_datetime: '2026-11-18T17:00:23.454+01:00'
+  expected_datetime: '2026-11-30'
+  address: Haedgestraße 23 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.091499987601196
+  long: 12.127453763977726
+  media_url:
+  zipcode:
+- service_request_id: 127565
+  status_notes: Ihre Meldung wurde zur Abholung des Elektroschrotts an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: In der M.-Gorki-Str. 30 wurde eine Spülmaschine neben der Mülltonnenbox abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-18T09:17:31.038+01:00'
+  updated_datetime: '2026-11-19T15:26:30.111+01:00'
+  expected_datetime: '2026-11-30'
+  address: Maxim-Gorki-Straße 30 (Evershagen)
+  adress_id:
+  lat: 54.123326704059565
+  long: 12.05358468676023
+  media_url:
+  zipcode:
+- service_request_id: 127566
+  status_notes:
+  status: reviewed
+  service_code: 111
+  service_name: Ampelschaltung ändern
+  description: Bitte die Schwaaner Landstraße nur noch für Fahrzeuge mit <3,5to freigeben. Täglich fahren diverse Überlandbusse, Fernreisebusse, Flixbusse, Schienenersatzverkehr der DB und viele Lkw die SL entlang, um die Nobelstaße mit den diversen Ampeln zu umfahren. Vielen Dank fürs Lesen imd Bearnbeiten
+  agency_responsible: Tiefbauamt (Untere Verkehrsbehörde)
+  service_notice:
+  requested_datetime: '2026-11-18T09:19:14.355+01:00'
+  updated_datetime: '2026-11-19T09:32:52.871+01:00'
+  expected_datetime:
+  address: Schwaaner Landstraße 128 (Südstadt)
+  adress_id:
+  lat: 54.06199101760245
+  long: 12.129251687976039
+  media_url:
+  zipcode:
+- service_request_id: 127568
+  status_notes: Vielen Dank für Ihre Meldung. Sie wurde dem Kataster-, Vermessungs- und Liegenschaftsamt (Grundstücksverwaltung) zugeordnet.
+  status: reviewed
+  service_code: 13
+  service_name: Bauabfall
+  description: Ein komplettes Toilettenbecken liegt hier herum.
+  agency_responsible: Kataster-, Vermessungs- und Liegenschaftsamt (Liegenschaften)
+  service_notice:
+  requested_datetime: '2026-11-18T10:33:54.823+01:00'
+  updated_datetime: '2026-11-19T00:13:10.437+01:00'
+  expected_datetime: '2026-11-30'
+  address: Am Grenzschlachthof 3 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.105477799325286
+  long: 12.092082153098069
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjkzLCJwdXIiOiJibG9iX2lkIn19--9fe9027f77e2f6d156d71d091ad4f948e476597f/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127569
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet.
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Taklerring 15 befinden sich drei Schrankbretter.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T10:45:14.639+01:00'
+  updated_datetime: '2026-11-19T00:01:09.152+01:00'
+  expected_datetime: '2026-11-30'
+  address: Taklerring 15 (Groß Klein)
+  adress_id:
+  lat: 54.151134163262356
+  long: 12.076728146697908
+  media_url:
+  zipcode:
+- service_request_id: 127570
+  status_notes: 'Vielen Dank für Ihre Meldung. Sie wurde doppelt eingetragen. siehe KS-Meldung: 127133'
+  status: duplicate
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Blockmacherring 15 befinden sich zwei Schrankbretter.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T11:21:56.988+01:00'
+  updated_datetime: '2026-11-18T23:58:59.683+01:00'
+  expected_datetime: '2026-11-18'
+  address: Blockmacherring 15 (Groß Klein)
+  adress_id:
+  lat: 54.14621712179812
+  long: 12.075034024638253
+  media_url:
+  zipcode:
+- service_request_id: 127571
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Der Sperrmüllhaufen wird immer größer!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-18T11:45:09.127+01:00'
+  updated_datetime: '2026-11-19T15:25:29.506+01:00'
+  expected_datetime: '2026-11-30'
+  address: Tschaikowskistraße 67 (Reutershagen)
+  adress_id:
+  lat: 54.09324281961662
+  long: 12.095095219061935
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjk2LCJwdXIiOiJibG9iX2lkIn19--01aee0498432254515ece03297433add291b2cf9/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127572
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Seit mindestens 3 Wochen sind die Laternen hier am Karl-Planeth-Weg abends nicht angeschaltet.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-18T11:46:04.473+01:00'
+  updated_datetime: '2026-11-18T14:36:16.750+01:00'
+  expected_datetime:
+  address: Am Schwibbogen 1 (Stadtmitte)
+  adress_id:
+  lat: 54.087583269253315
+  long: 12.147661714344725
+  media_url:
+  zipcode:
+- service_request_id: 127573
+  status_notes: Vielen Dank für Ihren Hinweis. Wir werden die Situation vor Ort prüfen.
+  status: in_process
+  service_code: 11
+  service_name: Wegereinigung fehlt
+  description: Der komplette Radweg in dem Abschnitt ist voll mit Laub. Extreme Sturzgefahr. Die Straße daneben wurde witzigerweise diese Woche schon gereinigt.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst) [delegiert an: Stadtentsorgung Rostock GmbH (Straßenreinigung; Winterdienst)]'
+  service_notice:
+  requested_datetime: '2026-11-18T11:55:19.345+01:00'
+  updated_datetime: '2026-11-19T10:21:27.589+01:00'
+  expected_datetime:
+  address: Erich-Schlesinger-Straße 24 (Südstadt)
+  adress_id:
+  lat: 54.07738692189483
+  long: 12.117046456857578
+  media_url:
+  zipcode:
+- service_request_id: 127574
+  status_notes:
+  status: reviewed
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: Bis zu 5 Autos parken im Kreuzungsbereich.
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-18T11:55:38.539+01:00'
+  updated_datetime: '2026-11-18T13:40:58.559+01:00'
+  expected_datetime:
+  address: Albert-Einstein-Straße 11 (Südstadt)
+  adress_id:
+  lat: 54.076839250296246
+  long: 12.103281725943923
+  media_url:
+  zipcode:
+- service_request_id: 127575
+  status_notes:
+  status: reviewed
+  service_code: 90
+  service_name: Ampelschaltung ändern
+  description: "Wieder einmal werden Radfahrende umgeleitet, damit KFZ freie Fahrt haben - und das (wieder einmal) in der Fahrradstrasse Lange Strasse.\r \r Einfache Maßnahme um diese Diskriminierung zu verhindern:\r - Vollsperrung des Bereiches um die Haltestelle Kröpeliner Tor für KFZ\r - alle Parkhäuser und Geschäfte bleiben für KFZ erreichbar (U-Turn vor der Haltestelle Kröpeliner Tor\r - Radverkehr in beiden Richtungen auf der nicht für den Weihnachstmarkt gesperrten Fahrbahnseite\r \r - kann durch einen Federstrich in der Vekehrsbehörde umgesetzt werden\r - kostet nichts außer ein Paar Baken zur Sperrung für KFZ"
+  agency_responsible: Tiefbauamt (Untere Verkehrsbehörde)
+  service_notice:
+  requested_datetime: '2026-11-18T12:49:33.434+01:00'
+  updated_datetime: '2026-11-19T09:34:05.493+01:00'
+  expected_datetime:
+  address: Bussebart 1 (Stadtmitte)
+  adress_id:
+  lat: 54.08991860616993
+  long: 12.129496527473199
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNjk3LCJwdXIiOiJibG9iX2lkIn19--91176796f9cc2229a392c243e1ac83cde5aee312/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127577
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-18T15:17:38.557+01:00'
+  updated_datetime: '2026-11-18T15:19:47.546+01:00'
+  expected_datetime:
+  address: Dethardingstraße 93 (Hansaviertel)
+  adress_id:
+  lat: 54.08593990851591
+  long: 12.106186511638867
+  media_url:
+  zipcode:
+- service_request_id: 127578
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-18T16:30:04.701+01:00'
+  updated_datetime: '2026-11-18T16:30:20.775+01:00'
+  expected_datetime:
+  address: Am Kabutzenhof 40 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.090090806457454
+  long: 12.110506804368185
+  media_url:
+  zipcode:
+- service_request_id: 127579
+  status_notes:
+  status: received
+  service_code: 173
+  service_name: Baustelle
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Untere Verkehrsbehörde)
+  service_notice:
+  requested_datetime: '2026-11-18T16:48:27.802+01:00'
+  updated_datetime: '2026-11-18T16:48:50.813+01:00'
+  expected_datetime:
+  address: Schwaaner Landstraße 10 (Stadtmitte)
+  adress_id:
+  lat: 54.0743063324702
+  long: 12.139705065808013
+  media_url:
+  zipcode:
+- service_request_id: 127580
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Straßenlaterne vor dem Fontaneweg 5 und 6 hat einen Wackelkontakt und fällt gelegentlich länger aus. Eventuell mal überprüfen. Danke.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-18T17:20:15.725+01:00'
+  updated_datetime: '2026-11-19T08:25:47.912+01:00'
+  expected_datetime:
+  address: Fontaneweg 5 (Dierkow-West)
+  adress_id:
+  lat: 54.1088795866533
+  long: 12.150967994236424
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNzEwLCJwdXIiOiJibG9iX2lkIn19--c34585d29ef33d1526e1e37f0948bd57bda0bb79/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127581
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: defekte Straßenbeleuchtung
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-18T19:21:09.388+01:00'
+  updated_datetime: '2026-11-19T14:52:57.328+01:00'
+  expected_datetime:
+  address: Ernst-Alban-Straße 10 (Südstadt)
+  adress_id:
+  lat: 54.06385089439274
+  long: 12.129171513075551
+  media_url:
+  zipcode:
+- service_request_id: 127582
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: in_process
+  service_code: 11
+  service_name: Wegereinigung fehlt
+  description: Der Radweg auf der Erich Schlesinger liegt dick voll mit Laub. Eine einzige nasse Schicht, bitte so schnell wie möglich räumen.
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst) [delegiert an: Stadtentsorgung Rostock GmbH (Straßenreinigung; Winterdienst)]'
+  service_notice:
+  requested_datetime: '2026-11-18T19:49:44.452+01:00'
+  updated_datetime: '2026-11-19T15:21:40.953+01:00'
+  expected_datetime:
+  address: Erich-Schlesinger-Straße 24 (Südstadt)
+  adress_id:
+  lat: 54.077735596258776
+  long: 12.11659495963581
+  media_url:
+  zipcode:
+- service_request_id: 127584
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 3
+  service_name: Beleuchtung schadhaft
+  description: Straßenbeleuchtung vor Am Strom 21 defekt - Lampe leuchtet einige Minuten dann für eine knappe Minute aus, Vorgang wiederholt sich permanet
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-18T22:37:47.327+01:00'
+  updated_datetime: '2026-11-19T08:27:47.798+01:00'
+  expected_datetime:
+  address: Am Strom 21 (Seebad Warnemünde)
+  adress_id:
+  lat: 54.173917161521274
+  long: 12.09036345128218
+  media_url:
+  zipcode:
+- service_request_id: 127585
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Die Straßenlaterne vor Haus Nr. ist seit 4 Wochen defekt. Vor Haus Nr. 5/6 nun eine weitere.
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-18T23:41:20.636+01:00'
+  updated_datetime: '2026-11-19T08:29:08.854+01:00'
+  expected_datetime:
+  address: Rembrandtstraße 8 (Hansaviertel)
+  adress_id:
+  lat: 54.08410240965259
+  long: 12.10520867597883
+  media_url:
+  zipcode:
+- service_request_id: 127586
+  status_notes:
+  status: reviewed
+  service_code: 2
+  service_name: bauliche Gefahrenstelle
+  description: Immer noch parken dreiste Autofahrer im Kreuzungsbereich Ernst-Heydemann-Str./Ecke Rembrandtstraße. Die Sicht ist stark eingeschränkt und das Abbiegen aus der Rembrandtstraße zur Parkstraße verengt. Außerdem ignorieren Autofahrer aus Richtung Parkstraße die Vorfahrt für Fahrzeuge aus der Rembrandtstraße. Es kommt zu Beinaheunfällen und gefährlichen Situationen, auch für Besucher des Kindergartens ggü.. Es muss endlich ein Poller und eine Verdeutlichung der Vorfahrt erfolgen...
+  agency_responsible: Tiefbauamt (Ausstattung)
+  service_notice:
+  requested_datetime: '2026-11-18T23:54:17.298+01:00'
+  updated_datetime: '2026-11-19T06:21:39.043+01:00'
+  expected_datetime:
+  address: Ernst-Heydemann-Straße 1 (Hansaviertel)
+  adress_id:
+  lat: 54.08272301989328
+  long: 12.103913799421552
+  media_url:
+  zipcode:
+- service_request_id: 127587
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Ein Sofa wurde hier abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T05:52:03.154+01:00'
+  updated_datetime: '2026-11-19T15:30:37.036+01:00'
+  expected_datetime: '2026-11-30'
+  address: Malchiner Straße 1 (Lichtenhagen)
+  adress_id:
+  lat: 54.154924579111196
+  long: 12.06416765798898
+  media_url:
+  zipcode:
+- service_request_id: 127588
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet! \n  \nEntsorgungstermin: 23.11.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Hier wurden viele Schränke abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T06:42:38.743+01:00'
+  updated_datetime: '2026-11-19T15:43:02.401+01:00'
+  expected_datetime: '2026-11-23'
+  address: Heinrich-Tessenow-Straße 46 (Dierkow-Neu)
+  adress_id:
+  lat: 54.10445075352587
+  long: 12.163264078040758
+  media_url:
+  zipcode:
+- service_request_id: 127589
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-19T06:47:05.135+01:00'
+  updated_datetime: '2026-11-19T06:47:28.191+01:00'
+  expected_datetime:
+  address: Lessingstraße 6 (Stadtmitte)
+  adress_id:
+  lat: 54.07568928897294
+  long: 12.139034393825977
+  media_url:
+  zipcode:
+- service_request_id: 127590
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-19T06:50:27.530+01:00'
+  updated_datetime: '2026-11-19T07:18:21.349+01:00'
+  expected_datetime:
+  address: Ulmenstraße 43 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.087330501371014
+  long: 12.108843077658573
+  media_url:
+  zipcode:
+- service_request_id: 127591
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Stephan-Jantzen-Ring 34 wurde ein Holzschrank abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T06:56:06.756+01:00'
+  updated_datetime: '2026-11-19T15:46:15.826+01:00'
+  expected_datetime: '2026-11-30'
+  address: Stephan-Jantzen-Ring 34 (Schmarl)
+  adress_id:
+  lat: 54.12801926524082
+  long: 12.067771706111506
+  media_url:
+  zipcode:
+- service_request_id: 127592
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Stephan-Jantzen-Ring 26 befinden sich drei Schrankbretter!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T06:56:41.336+01:00'
+  updated_datetime: '2026-11-19T15:49:48.240+01:00'
+  expected_datetime: '2026-11-30'
+  address: Stephan-Jantzen-Ring 26 (Schmarl)
+  adress_id:
+  lat: 54.12856156855713
+  long: 12.067595344939015
+  media_url:
+  zipcode:
+- service_request_id: 127593
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Stephan-Jantzen-Ring 12 wurden ein Kinderwagen und ein Holzstuhl abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T06:57:45.045+01:00'
+  updated_datetime: '2026-11-19T17:26:18.918+01:00'
+  expected_datetime: '2026-11-30'
+  address: Stephan-Jantzen-Ring 12 (Schmarl)
+  adress_id:
+  lat: 54.13168273262315
+  long: 12.067906609834088
+  media_url:
+  zipcode:
+- service_request_id: 127594
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet! \n\nEntsorgungstermin: 25.11.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 2 befinden sich sieben Schrankbretter!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T06:58:37.720+01:00'
+  updated_datetime: '2026-11-19T17:34:31.271+01:00'
+  expected_datetime: '2026-11-25'
+  address: Kolumbusring 2 (Schmarl)
+  adress_id:
+  lat: 54.13453637752431
+  long: 12.074131587064482
+  media_url:
+  zipcode:
+- service_request_id: 127595
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 7 wurden drei Holzschränke abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T06:59:12.801+01:00'
+  updated_datetime: '2026-11-19T17:35:58.679+01:00'
+  expected_datetime: '2026-11-30'
+  address: Kolumbusring 7 (Schmarl)
+  adress_id:
+  lat: 54.13453948935364
+  long: 12.075646672786837
+  media_url:
+  zipcode:
+- service_request_id: 127596
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 15 wurden drei Holzschränke abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:00:08.081+01:00'
+  updated_datetime: '2026-11-19T17:40:29.828+01:00'
+  expected_datetime: '2026-11-30'
+  address: Kolumbusring 15 (Schmarl)
+  adress_id:
+  lat: 54.135939883039924
+  long: 12.077075536916482
+  media_url:
+  zipcode:
+- service_request_id: 127597
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 17 befindet sich eine Matratze!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:00:45.271+01:00'
+  updated_datetime: '2026-11-19T17:43:08.783+01:00'
+  expected_datetime: '2026-11-30'
+  address: Kolumbusring 17 (Schmarl)
+  adress_id:
+  lat: 54.13636324349355
+  long: 12.076311985794794
+  media_url:
+  zipcode:
+- service_request_id: 127598
+  status_notes:
+  status: pending
+  service_code: 15
+  service_name: Elektroschrott
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-19T07:00:59.984+01:00'
+  updated_datetime: '2026-11-19T07:00:59.984+01:00'
+  expected_datetime:
+  address: Kieler Straße 20 (Hansaviertel)
+  adress_id:
+  lat: 54.08757801489264
+  long: 12.098263209818581
+  media_url:
+  zipcode:
+- service_request_id: 127599
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!  \n  \nEntsorgungstermin: 09.12.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 37 wurde ein Sessel abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:01:18.588+01:00'
+  updated_datetime: '2026-11-19T17:46:26.221+01:00'
+  expected_datetime: '2026-12-09'
+  address: Kolumbusring 37 (Schmarl)
+  adress_id:
+  lat: 54.13701834208615
+  long: 12.07144846121197
+  media_url:
+  zipcode:
+- service_request_id: 127600
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!  \n  \nEntsorgungstermin: 09.12.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 52 befindet sich ein Schrankbrett!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:01:57.468+01:00'
+  updated_datetime: '2026-11-19T17:52:43.394+01:00'
+  expected_datetime: '2026-12-09'
+  address: Kolumbusring 52 (Schmarl)
+  adress_id:
+  lat: 54.13455842584577
+  long: 12.069669192396647
+  media_url:
+  zipcode:
+- service_request_id: 127601
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!  \n  \nEntsorgungstermin: 09.12.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Kolumbusring 53 wurde ein Holzschrank abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:02:29.385+01:00'
+  updated_datetime: '2026-11-19T17:54:31.998+01:00'
+  expected_datetime: '2026-12-09'
+  address: Kolumbusring 53 (Schmarl)
+  adress_id:
+  lat: 54.134554491401104
+  long: 12.070000140352741
+  media_url:
+  zipcode:
+- service_request_id: 127602
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!  \n  \nEntsorgungstermin: 25.11.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der Vitus-Bering-Str. 6 befinden sich vier Schrankbretter!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:03:04.022+01:00'
+  updated_datetime: '2026-11-19T17:57:11.286+01:00'
+  expected_datetime: '2026-11-25'
+  address: Vitus-Bering-Straße 6 (Schmarl)
+  adress_id:
+  lat: 54.135317647666255
+  long: 12.071192417117421
+  media_url:
+  zipcode:
+- service_request_id: 127603
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der Roald-Amundsen-Str. 6 befinden sich zehn Schrankbretter!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:03:57.091+01:00'
+  updated_datetime: '2026-11-19T18:00:42.305+01:00'
+  expected_datetime: '2026-11-30'
+  address: Roald-Amundsen-Straße 6 (Schmarl)
+  adress_id:
+  lat: 54.13165481095217
+  long: 12.07335471730248
+  media_url:
+  zipcode:
+- service_request_id: 127604
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der Roald-Amundsen-Str. 23 wurde ein Sofa abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:04:35.829+01:00'
+  updated_datetime: '2026-11-19T18:05:17.534+01:00'
+  expected_datetime: '2026-11-30'
+  address: Roald-Amundsen-Straße 23 (Schmarl)
+  adress_id:
+  lat: 54.13272248242103
+  long: 12.073619843927442
+  media_url:
+  zipcode:
+- service_request_id: 127605
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der Roald-Amundsen-Str. 19 befinden sich sieben Schrankbretter!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:05:15.806+01:00'
+  updated_datetime: '2026-11-19T18:02:39.697+01:00'
+  expected_datetime: '2026-11-30'
+  address: Roald-Amundsen-Straße 19 (Schmarl)
+  adress_id:
+  lat: 54.1327648496931
+  long: 12.074995486804756
+  media_url:
+  zipcode:
+- service_request_id: 127606
+  status_notes: "Vielen Dank für Ihre Meldung!  \n  \nSie wurde doppelt eingetragen! \nsiehe KS-Meldung: 127496"
+  status: duplicate
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Schiffbauerring 44 wurde ein Teppich abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:06:05.842+01:00'
+  updated_datetime: '2026-11-19T18:23:50.257+01:00'
+  expected_datetime: '2026-11-19'
+  address: Schiffbauerring 44 (Groß Klein)
+  adress_id:
+  lat: 54.15013117686186
+  long: 12.075132971681551
+  media_url:
+  zipcode:
+- service_request_id: 127607
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!  \n  \nEntsorgungstermin: 09.12.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: In der Adam-J.-Krusenstern-Str. 25 wurde ein Holzschrank abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:06:43.700+01:00'
+  updated_datetime: '2026-11-19T18:08:17.674+01:00'
+  expected_datetime: '2026-12-09'
+  address: Adam-J.-Krusenstern-Straße 25 (Schmarl)
+  adress_id:
+  lat: 54.13202533750402
+  long: 12.075768180154355
+  media_url:
+  zipcode:
+- service_request_id: 127608
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet! \n\nEntsorgungstermin: 20.11.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sperrmüll steht beim Mülltonnenstellplatz herum!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:43:13.434+01:00'
+  updated_datetime: '2026-11-19T18:28:39.438+01:00'
+  expected_datetime: '2026-11-20'
+  address: Kleiner Warnowdamm 31 (Groß Klein)
+  adress_id:
+  lat: 54.14270180669334
+  long: 12.070485791069954
+  media_url:
+  zipcode:
+- service_request_id: 127609
+  status_notes: Ihre Meldung wurde zur Abholung des Elektroschrotts an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Elektroschrott steht beim Mülltonnenstellplatz herum!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-19T07:44:14.819+01:00'
+  updated_datetime: '2026-11-19T18:32:43.547+01:00'
+  expected_datetime: '2026-11-30'
+  address: Kleiner Warnowdamm 31 (Groß Klein)
+  adress_id:
+  lat: 54.142702068552296
+  long: 12.070490300387366
+  media_url:
+  zipcode:
+- service_request_id: 127610
+  status_notes:
+  status: received
+  service_code: 64
+  service_name: Beschilderung/Markierung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beschilderung)
+  service_notice:
+  requested_datetime: '2026-11-19T08:04:40.920+01:00'
+  updated_datetime: '2026-11-19T08:06:16.799+01:00'
+  expected_datetime:
+  address: Am Strande 1a (Stadtmitte)
+  adress_id:
+  lat: 54.09200369147837
+  long: 12.131732228448794
+  media_url:
+  zipcode:
+- service_request_id: 127611
+  status_notes:
+  status: received
+  service_code: 135
+  service_name: Papierkorb/Abfalleimer aufstellen
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst)
+  service_notice:
+  requested_datetime: '2026-11-19T08:04:50.887+01:00'
+  updated_datetime: '2026-11-19T08:12:08.558+01:00'
+  expected_datetime:
+  address: Modersohn-Becker-Weg 12 (Brinckmansdorf)
+  adress_id:
+  lat: 54.07578468082144
+  long: 12.1779360101247
+  media_url:
+  zipcode:
+- service_request_id: 127612
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Am Fußweg befindet sich ein Sperrmüllhaufen!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T08:05:33.641+01:00'
+  updated_datetime: '2026-11-19T18:37:03.904+01:00'
+  expected_datetime: '2026-11-30'
+  address: Südring 12 (Südstadt)
+  adress_id:
+  lat: 54.07435439386305
+  long: 12.119378326458591
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNzE4LCJwdXIiOiJibG9iX2lkIn19--cfeb08b9adec86b56224172f83a9d8ee4a63dfb5/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127613
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-19T09:04:39.973+01:00'
+  updated_datetime: '2026-11-19T09:04:40.136+01:00'
+  expected_datetime:
+  address: Südring 76 (Südstadt)
+  adress_id:
+  lat: 54.071973059679664
+  long: 12.106534556882185
+  media_url:
+  zipcode:
+- service_request_id: 127614
+  status_notes: Vielen Dank für Ihre positive Rückmeldung. Nach Betätigung eines Tasters wird die Querung in den meisten Fällen in weniger als 10 Sekunden freigegeben, manchmal dauert es bis zu 20 Sekunden und nur in seltenen Fällen ist die Wartezeit größer als 60s. Eine Auswertung der Daten hat ergeben, dass längeren Wartezeiten nur dann auftreten, wenn die Querung bereits kurz zuvor GRÜN hatte oder ein Bus die Strecke befährt. Die Steuerung reagiert in dieser Weise, weil die neue Lichtsignalanlage neben der Sicherung der Querung (diese steht an erster Stelle) auch die Priorisierung des ÖPNV und einen harmonischen Verkehrsablauf bewerkstelligen soll. Eine Anpassung der Steuerung wurde bereits geprüft, sie lässt sich unter diesen Bedingungen aber nicht wie gewünscht umsetzen.
+  status: closed
+  service_code: 111
+  service_name: Ampelschaltung ändern
+  description: "Sehr geehrte Damen und Herren, \ndas Aufstellen eines mobilen Blitzers hat sehr dazu beigetragen, den Straßenverkehr zu entschleunigen und das \"wilde\" Geparke/Halten vor den Haustüren einzudämmen. Vielen Dank dafür. Der Blitzer kann gerne häufiger dort aufgestellt werden.\n\nEine weitere Anregung ist die Schaltung der Ampel: Morgens (kurz vor 8 Uhr) sind Kinder sehr ungeduldig an der Ampel, da sie eilig zur Schule wollen. Es gab schon einige blenzlige Situationen (auch wegen zu schnellen Fahrens, aber auch wegen Überquerung der Ampel bei rot). Vielleicht kann zu der Uhrzeit die Ampelschaltung wieder geändert werden (schnelleres Umschalten).\n\nNochmals vielen Dank für Ihren Einsatz, den Straßenverkehr in Rostock sicherer zu machen.\n\nMit freundlichen Grüßen"
+  agency_responsible: Tiefbauamt (Ampeln)
+  service_notice:
+  requested_datetime: '2026-11-19T09:08:02.165+01:00'
+  updated_datetime: '2026-11-19T10:02:27.316+01:00'
+  expected_datetime:
+  address: Blücherstraße 60 (Stadtmitte)
+  adress_id:
+  lat: 54.077912393520506
+  long: 12.141881154523865
+  media_url:
+  zipcode:
+- service_request_id: 127615
+  status_notes: "Vielen Dank für Ihre Meldung! \n  \nSie wurde an den Grundstückseigentümer/Vermieter (WIRO) weitergeleitet!"
+  status: in_process
+  service_code: 21
+  service_name: Sondermüll
+  description: Zwischen der Händelstr. 12-13 wurden über Nacht illegal Altreifen und Farbeimer abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: WIRO GmbH]'
+  service_notice:
+  requested_datetime: '2026-11-19T09:18:06.740+01:00'
+  updated_datetime: '2026-11-19T18:41:37.384+01:00'
+  expected_datetime: '2026-11-30'
+  address: Händelstraße 12 (Reutershagen)
+  adress_id:
+  lat: 54.09287834063957
+  long: 12.085794593675002
+  media_url:
+  zipcode:
+- service_request_id: 127616
+  status_notes: "Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!  \n  \nEntsorgungstermin: 20.11.2026"
+  status: closed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Schiffbauerring 28 wurde ein Sofa abgestellt!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T09:18:11.891+01:00'
+  updated_datetime: '2026-11-19T18:15:36.838+01:00'
+  expected_datetime: '2026-11-20'
+  address: Schiffbauerring 28 (Groß Klein)
+  adress_id:
+  lat: 54.147889664145566
+  long: 12.073744192427805
+  media_url:
+  zipcode:
+- service_request_id: 127617
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Im Schiffbauerring 8 befinden sich drei Schrankbretter!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T09:18:54.098+01:00'
+  updated_datetime: '2026-11-19T18:12:35.140+01:00'
+  expected_datetime: '2026-11-30'
+  address: Schiffbauerring 8 (Groß Klein)
+  adress_id:
+  lat: 54.14592150869265
+  long: 12.071173670520967
+  media_url:
+  zipcode:
+- service_request_id: 127618
+  status_notes:
+  status: received
+  service_code: 111
+  service_name: Ampelschaltung ändern
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Ampeln)
+  service_notice:
+  requested_datetime: '2026-11-19T10:44:27.432+01:00'
+  updated_datetime: '2026-11-19T10:44:59.034+01:00'
+  expected_datetime:
+  address: Warnowallee 5 (Lütten Klein)
+  adress_id:
+  lat: 54.13809487536679
+  long: 12.052747750365407
+  media_url:
+  zipcode:
+- service_request_id: 127619
+  status_notes: Danke für Ihren Hinweis. Es ist baulich so vorgesehen das die Bordsteine 3cm höher sind, damit es eine Wasserführung gibt. Daher wird es hier keinen Umbau geben. Wir bitten um Verständnis. Mit freundlichen Grüßen die Straßenaufsicht. Wir sehen daher diese Meldung als gelöst an.
+  status: closed
+  service_code: 2
+  service_name: bauliche Gefahrenstelle
+  description: Die abgesenkten Bordsteine an den Zebrastreifen des Kreisverkehrs sind für Rollstuhlfahrer zu hoch, weil sie nicht ebenerdig sind. Dadurch wird eine Passage mit einem Rollstuhl gefährlich und problematisch.
+  agency_responsible: Tiefbauamt (Straßenaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-19T13:07:49.167+01:00'
+  updated_datetime: '2026-11-19T14:59:54.987+01:00'
+  expected_datetime:
+  address: Strempelstraße 1 (Hansaviertel)
+  adress_id:
+  lat: 54.086508622216996
+  long: 12.101584036865049
+  media_url:
+  zipcode:
+- service_request_id: 127620
+  status_notes: Vielen Dank für Ihren Hinweis. Die Meldung wurde zur Störungsbeseitigung weitergeleitet.
+  status: in_process
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: Defekte Laterne
+  agency_responsible: 'Tiefbauamt (Beleuchtung) [delegiert an: Stadtwerke Rostock AG]'
+  service_notice:
+  requested_datetime: '2026-11-19T16:57:11.656+01:00'
+  updated_datetime: '2026-11-19T17:06:16.888+01:00'
+  expected_datetime:
+  address: Am Feldrain 101 (Biestow)
+  adress_id:
+  lat: 54.06156394563402
+  long: 12.116196110082232
+  media_url:
+  zipcode:
+- service_request_id: 127621
+  status_notes:
+  status: pending
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T18:19:07.033+01:00'
+  updated_datetime: '2026-11-19T18:19:07.033+01:00'
+  expected_datetime:
+  address: Hawermannweg 29 (Reutershagen)
+  adress_id:
+  lat: 54.103713286014624
+  long: 12.078283820717985
+  media_url:
+  zipcode:
+- service_request_id: 127622
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-19T19:03:49.573+01:00'
+  updated_datetime: '2026-11-19T19:04:30.532+01:00'
+  expected_datetime:
+  address: Willem-Barents-Straße 15 (Schmarl)
+  adress_id:
+  lat: 54.130347942950806
+  long: 12.070021153863866
+  media_url:
+  zipcode:
+- service_request_id: 127623
+  status_notes: |-
+    Wenn der Sperrmüll zum regulären Entsorgungstag (Donnerstag) an einem nahen Müllbehälterstellplatz in der Osloer Str. 39
+    oder 42 bereitgestellt wird, kann er durch die Stadtentsorgung Rostock satzungsgemäß und kostenlos entsorgt werden!
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Bitte den Sperrmüll im Gehölzstreifen beim Spielplatz Osloer Straße entsorgen lassen!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-19T19:48:45.505+01:00'
+  updated_datetime: '2026-11-19T19:50:11.147+01:00'
+  expected_datetime: '2026-11-30'
+  address: Osloer Straße 42 (Lütten Klein)
+  adress_id:
+  lat: 54.135858401266574
+  long: 12.049515014342255
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNzQzLCJwdXIiOiJibG9iX2lkIn19--ad96271b8582750bdce58f657282f79256206e3e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/Osloer%20Str.39-48%20(Generationenpark)%20002-A.jpg
+  zipcode:
+- service_request_id: 127624
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T19:54:08.407+01:00'
+  updated_datetime: '2026-11-19T19:54:33.361+01:00'
+  expected_datetime:
+  address: Semmelweisstraße 1 (Südstadt)
+  adress_id:
+  lat: 54.06589013222336
+  long: 12.124529772391144
+  media_url:
+  zipcode:
+- service_request_id: 127625
+  status_notes:
+  status: pending
+  service_code: 62
+  service_name: Ampel schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Ampeln)
+  service_notice:
+  requested_datetime: '2026-11-19T20:31:24.665+01:00'
+  updated_datetime: '2026-11-19T20:31:24.665+01:00'
+  expected_datetime:
+  address: Tessiner Straße 47a (Brinckmansdorf)
+  adress_id:
+  lat: 54.08139593835622
+  long: 12.179525735514265
+  media_url:
+  zipcode:
+- service_request_id: 127626
+  status_notes: Danke für Ihren Hinweis. Wir werden den Sachverhalt entsprechend unserer personellen und zeitlichen Möglichkeiten umgehend prüfen.
+  status: reviewed
+  service_code: 22
+  service_name: Sperrmüll
+  description: Wieder befindet sich Sperrmüll im Gebüsch bei der Straßenbahnwendeschleife Rügener Straße!
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Grünflächen; Ordnungswidrigkeiten)
+  service_notice:
+  requested_datetime: '2026-11-19T21:03:18.871+01:00'
+  updated_datetime: '2026-11-19T21:06:04.351+01:00'
+  expected_datetime: '2026-11-30'
+  address: Sassnitzer Straße 34 (Lütten Klein)
+  adress_id:
+  lat: 54.146200164348954
+  long: 12.050149701906728
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNzUwLCJwdXIiOiJibG9iX2lkIn19--18bc36ab69ec8f639c838cb6ac920e68f96f5030/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJKUEciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--ae7f3399d0082af6c272d53b1eb20052e761ea87/resized_Sassnitzer%20Str.33-35%20(Gr%C3%BCnfl%C3%A4che%20R%C3%BCckseite)%20003-A.JPG
+  zipcode:
+- service_request_id: 127627
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:20:17.098+01:00'
+  updated_datetime: '2026-11-19T21:21:39.431+01:00'
+  expected_datetime:
+  address: Zum Lebensbaum 22 (Toitenwinkel)
+  adress_id:
+  lat: 54.1111104209065
+  long: 12.156201580298925
+  media_url:
+  zipcode:
+- service_request_id: 127628
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:21:32.061+01:00'
+  updated_datetime: '2026-11-19T21:21:43.555+01:00'
+  expected_datetime:
+  address: Jawaharlal-Nehru-Straße 15 (Toitenwinkel)
+  adress_id:
+  lat: 54.113445471095446
+  long: 12.159687506844664
+  media_url:
+  zipcode:
+- service_request_id: 127629
+  status_notes: Ihre Meldung wurde zur Abholung des Sperrmülls und Elektroschrotts an die Stadtentsorgung Rostock weitergeleitet!
+  status: in_process
+  service_code: 15
+  service_name: Elektroschrott
+  description: Ich möchte eine illegale Müllentsorgung (ein Fernseher und etwas Sperrmüll) in der Ludwigstr. 29 melden!
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Elektroschrott)]'
+  service_notice:
+  requested_datetime: '2026-11-19T21:34:59.162+01:00'
+  updated_datetime: '2026-11-19T21:40:17.128+01:00'
+  expected_datetime: '2026-12-01'
+  address: Ludwigstraße 29 (Stadtmitte)
+  adress_id:
+  lat: 54.08382529503058
+  long: 12.129539570763106
+  media_url:
+  zipcode:
+- service_request_id: 127630
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:42:59.223+01:00'
+  updated_datetime: '2026-11-19T21:43:23.482+01:00'
+  expected_datetime:
+  address: Alte Warnemünder Chaussee 25 (Groß Klein)
+  adress_id:
+  lat: 54.14180585956376
+  long: 12.070605290799563
+  media_url:
+  zipcode:
+- service_request_id: 127631
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:50:35.710+01:00'
+  updated_datetime: '2026-11-19T22:03:27.711+01:00'
+  expected_datetime:
+  address: Alte Warnemünder Chaussee 25 (Groß Klein)
+  adress_id:
+  lat: 54.1415443038147
+  long: 12.070768754526368
+  media_url:
+  zipcode:
+- service_request_id: 127632
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:51:23.473+01:00'
+  updated_datetime: '2026-11-19T22:03:41.943+01:00'
+  expected_datetime:
+  address: Alte Warnemünder Chaussee 37 (Groß Klein)
+  adress_id:
+  lat: 54.14136114214514
+  long: 12.070900370979851
+  media_url:
+  zipcode:
+- service_request_id: 127633
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:52:05.065+01:00'
+  updated_datetime: '2026-11-19T22:03:52.791+01:00'
+  expected_datetime:
+  address: Alte Warnemünder Chaussee 37 (Groß Klein)
+  adress_id:
+  lat: 54.14117033868118
+  long: 12.071044798289254
+  media_url:
+  zipcode:
+- service_request_id: 127634
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T21:58:56.050+01:00'
+  updated_datetime: '2026-11-19T21:59:12.563+01:00'
+  expected_datetime:
+  address: Am Feldrain 53 (Biestow)
+  adress_id:
+  lat: 54.06167543277678
+  long: 12.114659737997826
+  media_url:
+  zipcode:
+- service_request_id: 127635
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T22:01:41.370+01:00'
+  updated_datetime: '2026-11-19T22:01:54.855+01:00'
+  expected_datetime:
+  address: Am Feldrain 36 (Biestow)
+  adress_id:
+  lat: 54.06161018348968
+  long: 12.115268731209028
+  media_url:
+  zipcode:
+- service_request_id: 127636
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T22:09:40.499+01:00'
+  updated_datetime: '2026-11-19T22:09:55.617+01:00'
+  expected_datetime:
+  address: Bei der Tweel 10 (Hansaviertel)
+  adress_id:
+  lat: 54.080315709770105
+  long: 12.112957027310232
+  media_url:
+  zipcode:
+- service_request_id: 127637
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T22:21:04.682+01:00'
+  updated_datetime: '2026-11-19T22:21:38.447+01:00'
+  expected_datetime:
+  address: Rimelsweg 16 (Reutershagen)
+  adress_id:
+  lat: 54.104658099999995
+  long: 12.0821216
+  media_url:
+  zipcode:
+- service_request_id: 127638
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-19T23:02:19.951+01:00'
+  updated_datetime: '2026-11-19T23:02:39.886+01:00'
+  expected_datetime:
+  address: Am Feldrain 96 (Biestow)
+  adress_id:
+  lat: 54.061598599999996
+  long: 12.1152386
+  media_url:
+  zipcode:
+- service_request_id: 127640
+  status_notes:
+  status: received
+  service_code: 15
+  service_name: Elektroschrott
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T07:03:52.912+01:00'
+  updated_datetime: '2026-11-20T07:18:59.990+01:00'
+  expected_datetime:
+  address: Henrik-Ibsen-Straße 13 (Evershagen)
+  adress_id:
+  lat: 54.11752299348933
+  long: 12.0606859880617
+  media_url:
+  zipcode:
+- service_request_id: 127641
+  status_notes:
+  status: received
+  service_code: 15
+  service_name: Elektroschrott
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T07:03:53.062+01:00'
+  updated_datetime: '2026-11-20T07:18:54.190+01:00'
+  expected_datetime:
+  address: Henrik-Ibsen-Straße 13 (Evershagen)
+  adress_id:
+  lat: 54.11752299348933
+  long: 12.0606859880617
+  media_url:
+  zipcode:
+- service_request_id: 127642
+  status_notes:
+  status: received
+  service_code: 22
+  service_name: Sperrmüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T07:05:34.551+01:00'
+  updated_datetime: '2026-11-20T07:06:22.729+01:00'
+  expected_datetime:
+  address: Heinrich-Tessenow-Straße 35 (Dierkow-Neu)
+  adress_id:
+  lat: 54.103651450685305
+  long: 12.16485342949011
+  media_url:
+  zipcode:
+- service_request_id: 127643
+  status_notes:
+  status: received
+  service_code: 22
+  service_name: Sperrmüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T07:15:34.745+01:00'
+  updated_datetime: '2026-11-20T07:15:45.393+01:00'
+  expected_datetime:
+  address: Kolumbusring 8 (Schmarl)
+  adress_id:
+  lat: 54.13445684289812
+  long: 12.076258054155028
+  media_url:
+  zipcode:
+- service_request_id: 127644
+  status_notes:
+  status: received
+  service_code: 15
+  service_name: Elektroschrott
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T07:18:33.584+01:00'
+  updated_datetime: '2026-11-20T07:18:48.377+01:00'
+  expected_datetime:
+  address: Maxim-Gorki-Straße 28 (Evershagen)
+  adress_id:
+  lat: 54.12324047486666
+  long: 12.053811999137514
+  media_url:
+  zipcode:
+- service_request_id: 127645
+  status_notes:
+  status: pending
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T07:45:59.963+01:00'
+  updated_datetime: '2026-11-20T07:45:59.963+01:00'
+  expected_datetime:
+  address: Wismarsche Straße 26 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.086443060041745
+  long: 12.119609824176647
+  media_url:
+  zipcode:
+- service_request_id: 127646
+  status_notes:
+  status: pending
+  service_code: 69
+  service_name: Poller/Planke/Absperrelement schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Ausstattung)
+  service_notice:
+  requested_datetime: '2026-11-20T07:49:54.425+01:00'
+  updated_datetime: '2026-11-20T07:49:54.425+01:00'
+  expected_datetime:
+  address: Wismarsche Straße 26 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.08638956824018
+  long: 12.119615188594679
+  media_url:
+  zipcode:
+- service_request_id: 127647
+  status_notes:
+  status: pending
+  service_code: 4
+  service_name: Beschilderung/Markierung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beschilderung)
+  service_notice:
+  requested_datetime: '2026-11-20T07:54:27.529+01:00'
+  updated_datetime: '2026-11-20T07:54:27.529+01:00'
+  expected_datetime:
+  address: Wismarsche Straße 24 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.08655319000431
+  long: 12.119848540778978
+  media_url:
+  zipcode:
+- service_request_id: 127648
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-20T07:56:05.358+01:00'
+  updated_datetime: '2026-11-20T08:19:17.218+01:00'
+  expected_datetime:
+  address: Franz-Bunke-Weg 10 (Brinckmansdorf)
+  adress_id:
+  lat: 54.07243962452628
+  long: 12.164588139705756
+  media_url:
+  zipcode:
+- service_request_id: 127649
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-20T09:08:08.217+01:00'
+  updated_datetime: '2026-11-20T09:16:16.355+01:00'
+  expected_datetime:
+  address: Heinrich-Tessenow-Straße 41 (Dierkow-Neu)
+  adress_id:
+  lat: 54.104013899999984
+  long: 12.1641386
+  media_url:
+  zipcode:
+- service_request_id: 127650
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-20T09:10:35.076+01:00'
+  updated_datetime: '2026-11-20T09:11:22.073+01:00'
+  expected_datetime:
+  address: Mühlenstraße 3 (Stadtmitte)
+  adress_id:
+  lat: 54.0875346618416
+  long: 12.14565782189812
+  media_url:
+  zipcode:
+- service_request_id: 127651
+  status_notes:
+  status: received
+  service_code: 15
+  service_name: Elektroschrott
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T09:17:29.111+01:00'
+  updated_datetime: '2026-11-20T09:17:57.563+01:00'
+  expected_datetime:
+  address: Willi-Bredel-Straße 13 (Evershagen)
+  adress_id:
+  lat: 54.12255445493926
+  long: 12.056295737586465
+  media_url:
+  zipcode:
+- service_request_id: 127652
+  status_notes:
+  status: pending
+  service_code: 22
+  service_name: Sperrmüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T09:40:53.419+01:00'
+  updated_datetime: '2026-11-20T09:40:53.419+01:00'
+  expected_datetime:
+  address: Helsinkier Straße 9 (Lütten Klein)
+  adress_id:
+  lat: 54.13755828735938
+  long: 12.056649982810987
+  media_url:
+  zipcode:
+- service_request_id: 127653
+  status_notes: ''
+  status: in_process
+  service_code: 22
+  service_name: Sperrmüll
+  description: Sofa und Schrankteile
+  agency_responsible: 'Amt für Umwelt- und Klimaschutz (Umweltaufsicht) [delegiert an: Stadtentsorgung Rostock GmbH (Entsorgung)]'
+  service_notice:
+  requested_datetime: '2026-11-20T10:26:06.281+01:00'
+  updated_datetime: '2026-11-20T10:26:48.722+01:00'
+  expected_datetime:
+  address: Bremer Straße 43 (Hansaviertel)
+  adress_id:
+  lat: 54.090433925061575
+  long: 12.098929349426975
+  media_url: https://www.klarschiff-hro.de/backoffice/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTQyNzY1LCJwdXIiOiJibG9iX2lkIn19--74e38d08757cf85429ec3c4cb56ee4062e1fe4c9/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOlszNjAsMzYwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--65abc9a82efc84e5dfdb72a54125bef04c4c6bbd/filename.jpg
+  zipcode:
+- service_request_id: 127654
+  status_notes:
+  status: received
+  service_code: 172
+  service_name: Einkaufskörbe/Einkaufswagen
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T11:28:09.426+01:00'
+  updated_datetime: '2026-11-20T11:28:09.574+01:00'
+  expected_datetime:
+  address: Kistenmacherstraße 16 (Stadtmitte)
+  adress_id:
+  lat: 54.088082252126384
+  long: 12.138732772554361
+  media_url:
+  zipcode:
+- service_request_id: 127655
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-20T14:06:29.297+01:00'
+  updated_datetime: '2026-11-20T14:07:13.068+01:00'
+  expected_datetime:
+  address: Großer Horst 21 (Biestow)
+  adress_id:
+  lat: 54.060481255001406
+  long: 12.077584210819477
+  media_url:
+  zipcode:
+- service_request_id: 127656
+  status_notes:
+  status: received
+  service_code: 22
+  service_name: Sperrmüll
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T14:59:16.289+01:00'
+  updated_datetime: '2026-11-20T14:59:25.690+01:00'
+  expected_datetime:
+  address: Budapester Straße 58 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.088803549524386
+  long: 12.111282071080586
+  media_url:
+  zipcode:
+- service_request_id: 127657
+  status_notes:
+  status: pending
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-20T15:03:00.018+01:00'
+  updated_datetime: '2026-11-20T15:03:00.018+01:00'
+  expected_datetime:
+  address: Plöner Straße 16 (Lichtenhagen)
+  adress_id:
+  lat: 54.14474219999997
+  long: 12.060353700000002
+  media_url:
+  zipcode:
+- service_request_id: 127658
+  status_notes:
+  status: pending
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T15:11:35.945+01:00'
+  updated_datetime: '2026-11-20T15:11:35.945+01:00'
+  expected_datetime:
+  address: Kurt-Tucholsky-Straße 36 (Südstadt)
+  adress_id:
+  lat: 54.07149278310945
+  long: 12.12261690752148
+  media_url:
+  zipcode:
+- service_request_id: 127659
+  status_notes:
+  status: received
+  service_code: 2
+  service_name: bauliche Gefahrenstelle
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Straßenaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-20T15:21:03.494+01:00'
+  updated_datetime: '2026-11-20T15:21:32.379+01:00'
+  expected_datetime:
+  address: Kurt-Tucholsky-Straße 28 (Südstadt)
+  adress_id:
+  lat: 54.07133534968918
+  long: 12.124329258751791
+  media_url:
+  zipcode:
+- service_request_id: 127660
+  status_notes:
+  status: received
+  service_code: 49
+  service_name: Beschilderung/Markierung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beschilderung)
+  service_notice:
+  requested_datetime: '2026-11-20T15:44:50.148+01:00'
+  updated_datetime: '2026-11-20T15:44:50.292+01:00'
+  expected_datetime:
+  address: Schröderplatz 2 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.08768845896478
+  long: 12.127147607685567
+  media_url:
+  zipcode:
+- service_request_id: 127661
+  status_notes:
+  status: received
+  service_code: 35
+  service_name: Spielgerät schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Spielplatzservice)
+  service_notice:
+  requested_datetime: '2026-11-20T15:59:57.143+01:00'
+  updated_datetime: '2026-11-20T16:00:11.519+01:00'
+  expected_datetime:
+  address: Kleiner Warnowdamm 19 (Groß Klein)
+  adress_id:
+  lat: 54.14271816500127
+  long: 12.072504659613465
+  media_url:
+  zipcode:
+- service_request_id: 127662
+  status_notes:
+  status: received
+  service_code: 35
+  service_name: Spielgerät schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Spielplatzservice)
+  service_notice:
+  requested_datetime: '2026-11-20T16:02:57.080+01:00'
+  updated_datetime: '2026-11-20T16:03:07.865+01:00'
+  expected_datetime:
+  address: Kleiner Warnowdamm 19 (Groß Klein)
+  adress_id:
+  lat: 54.142829720426306
+  long: 12.072616784723543
+  media_url:
+  zipcode:
+- service_request_id: 127663
+  status_notes:
+  status: received
+  service_code: 35
+  service_name: Spielgerät schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Stadtgrün, Naturschutz und Friedhofswesen (Spielplatzservice)
+  service_notice:
+  requested_datetime: '2026-11-20T16:06:10.276+01:00'
+  updated_datetime: '2026-11-20T16:06:19.580+01:00'
+  expected_datetime:
+  address: Kleiner Warnowdamm 19 (Groß Klein)
+  adress_id:
+  lat: 54.14301172950442
+  long: 12.072799121999065
+  media_url:
+  zipcode:
+- service_request_id: 127664
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T17:18:24.758+01:00'
+  updated_datetime: '2026-11-20T17:18:40.073+01:00'
+  expected_datetime:
+  address: Rimelsweg 1 (Reutershagen)
+  adress_id:
+  lat: 54.10311895942519
+  long: 12.080543585651311
+  media_url:
+  zipcode:
+- service_request_id: 127665
+  status_notes:
+  status: received
+  service_code: 150
+  service_name: Kunst im öffentlichen Raum schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Kulturamt
+  service_notice:
+  requested_datetime: '2026-11-20T17:37:13.322+01:00'
+  updated_datetime: '2026-11-20T17:37:26.554+01:00'
+  expected_datetime:
+  address: Dänische Straße 14a (Seebad Warnemünde)
+  adress_id:
+  lat: 54.173821799999956
+  long: 12.0829182
+  media_url:
+  zipcode:
+- service_request_id: 127666
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T18:19:52.347+01:00'
+  updated_datetime: '2026-11-20T18:20:27.535+01:00'
+  expected_datetime:
+  address: Am Feldrain 28 (Biestow)
+  adress_id:
+  lat: 54.06163368936646
+  long: 12.116872222657088
+  media_url:
+  zipcode:
+- service_request_id: 127667
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T18:23:05.923+01:00'
+  updated_datetime: '2026-11-20T18:23:21.652+01:00'
+  expected_datetime:
+  address: Am Feldrain 102 (Biestow)
+  adress_id:
+  lat: 54.06138230667284
+  long: 12.116411891513613
+  media_url:
+  zipcode:
+- service_request_id: 127668
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-20T19:12:04.739+01:00'
+  updated_datetime: '2026-11-20T19:12:29.403+01:00'
+  expected_datetime:
+  address: Wismarsche Straße 3 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.0878973798001
+  long: 12.123029998509594
+  media_url:
+  zipcode:
+- service_request_id: 127669
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-20T19:15:17.553+01:00'
+  updated_datetime: '2026-11-20T19:15:34.701+01:00'
+  expected_datetime:
+  address: Am Brink 1 (Kröpeliner-Tor-Vorstadt)
+  adress_id:
+  lat: 54.08776740679363
+  long: 12.12143798416717
+  media_url:
+  zipcode:
+- service_request_id: 127670
+  status_notes:
+  status: pending
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T19:45:25.253+01:00'
+  updated_datetime: '2026-11-20T19:45:25.253+01:00'
+  expected_datetime:
+  address: Rimelsweg 5 (Reutershagen)
+  adress_id:
+  lat: 54.10361354623839
+  long: 12.080939233896027
+  media_url:
+  zipcode:
+- service_request_id: 127671
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-20T20:06:43.289+01:00'
+  updated_datetime: '2026-11-20T20:07:22.749+01:00'
+  expected_datetime:
+  address: Wolgaster Straße 10 (Lichtenhagen)
+  adress_id:
+  lat: 54.14981950482661
+  long: 12.065151778165626
+  media_url:
+  zipcode:
+- service_request_id: 127672
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-20T20:44:25.082+01:00'
+  updated_datetime: '2026-11-20T20:46:15.935+01:00'
+  expected_datetime:
+  address: Am Feldrain 38 (Biestow)
+  adress_id:
+  lat: 54.061756811436595
+  long: 12.115568905690944
+  media_url:
+  zipcode:
+- service_request_id: 127674
+  status_notes:
+  status: received
+  service_code: 63
+  service_name: Beleuchtung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-21T00:15:25.286+01:00'
+  updated_datetime: '2026-11-21T00:16:59.066+01:00'
+  expected_datetime:
+  address: Osloer Straße 20 (Lütten Klein)
+  adress_id:
+  lat: 54.13414016004785
+  long: 12.050873353713452
+  media_url:
+  zipcode:
+- service_request_id: 127675
+  status_notes:
+  status: pending
+  service_code: 171
+  service_name: Tierkadaver
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Allgemeiner Ordnungsdienst)
+  service_notice:
+  requested_datetime: '2026-11-21T09:17:52.510+01:00'
+  updated_datetime: '2026-11-21T09:17:52.510+01:00'
+  expected_datetime:
+  address: An der Kiesgrube 7b (Brinckmansdorf)
+  adress_id:
+  lat: 54.100663715657475
+  long: 12.185500460781046
+  media_url:
+  zipcode:
+- service_request_id: 127676
+  status_notes:
+  status: received
+  service_code: 85
+  service_name: verbotener Streusalzeinsatz
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Papierkörbe; Straßenreinigung; Winterdienst)
+  service_notice:
+  requested_datetime: '2026-11-21T09:22:36.799+01:00'
+  updated_datetime: '2026-11-21T09:22:54.090+01:00'
+  expected_datetime:
+  address: Gaffelschonerweg 1 (Stadtmitte)
+  adress_id:
+  lat: 54.09156286183774
+  long: 12.151430269030275
+  media_url:
+  zipcode:
+- service_request_id: 127677
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-21T09:58:33.541+01:00'
+  updated_datetime: '2026-11-21T10:02:27.766+01:00'
+  expected_datetime:
+  address: Am Vögenteich 25 (Stadtmitte)
+  adress_id:
+  lat: 54.08645271661646
+  long: 12.125752583003718
+  media_url:
+  zipcode:
+- service_request_id: 127678
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-21T10:48:20.980+01:00'
+  updated_datetime: '2026-11-21T10:48:21.134+01:00'
+  expected_datetime:
+  address: Südring 76 (Südstadt)
+  adress_id:
+  lat: 54.071941898178636
+  long: 12.106495209221503
+  media_url:
+  zipcode:
+- service_request_id: 127679
+  status_notes:
+  status: received
+  service_code: 64
+  service_name: Beschilderung/Markierung schadhaft
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beschilderung)
+  service_notice:
+  requested_datetime: '2026-11-21T11:13:04.902+01:00'
+  updated_datetime: '2026-11-21T11:18:26.024+01:00'
+  expected_datetime:
+  address: Pressentinstraße 47 (Gehlsdorf)
+  adress_id:
+  lat: 54.108581618111344
+  long: 12.110545125886999
+  media_url:
+  zipcode:
+- service_request_id: 127680
+  status_notes:
+  status: received
+  service_code: 120
+  service_name: dauerhaftes Falschparken
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Stadtamt (Verkehrsüberwachung)
+  service_notice:
+  requested_datetime: '2026-11-21T13:00:54.455+01:00'
+  updated_datetime: '2026-11-21T13:01:16.919+01:00'
+  expected_datetime:
+  address: Berringerstraße 7 (Dierkow-Neu)
+  adress_id:
+  lat: 54.1015448634991
+  long: 12.17794038321134
+  media_url:
+  zipcode:
+- service_request_id: 127681
+  status_notes:
+  status: received
+  service_code: 160
+  service_name: Altfahrzeug/Schrottfahrrad
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Altfahrzeuge)
+  service_notice:
+  requested_datetime: '2026-11-21T13:35:05.260+01:00'
+  updated_datetime: '2026-11-21T13:35:05.421+01:00'
+  expected_datetime:
+  address: Dierkower Allee 5 (Dierkow-Neu)
+  adress_id:
+  lat: 54.10370090732036
+  long: 12.179312140550826
+  media_url:
+  zipcode:
+- service_request_id: 127682
+  status_notes:
+  status: received
+  service_code: 172
+  service_name: Einkaufskörbe/Einkaufswagen
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-21T13:59:38.700+01:00'
+  updated_datetime: '2026-11-21T13:59:38.834+01:00'
+  expected_datetime:
+  address: Berringerstraße 18 (Dierkow-Neu)
+  adress_id:
+  lat: 54.10068937555363
+  long: 12.175876688518695
+  media_url:
+  zipcode:
+- service_request_id: 127683
+  status_notes:
+  status: received
+  service_code: 97
+  service_name: Beleuchtung verändern
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Tiefbauamt (Beleuchtung)
+  service_notice:
+  requested_datetime: '2026-11-21T14:26:29.579+01:00'
+  updated_datetime: '2026-11-21T14:26:45.775+01:00'
+  expected_datetime:
+  address: An der Jägerbäk 1b (Reutershagen)
+  adress_id:
+  lat: 54.10868621127716
+  long: 12.078555685677243
+  media_url:
+  zipcode:
+- service_request_id: 127684
+  status_notes:
+  status: received
+  service_code: 172
+  service_name: Einkaufskörbe/Einkaufswagen
+  description: redaktionelle Prüfung ausstehend
+  agency_responsible: Amt für Umwelt- und Klimaschutz (Umweltaufsicht)
+  service_notice:
+  requested_datetime: '2026-11-21T14:31:23.490+01:00'
+  updated_datetime: '2026-11-21T14:31:23.733+01:00'
+  expected_datetime:
+  address: Bruno-Taut-Straße 17 (Dierkow-Neu)
+  adress_id:
+  lat: 54.1089897981885
+  long: 12.168667973632052
+  media_url:
+  zipcode:

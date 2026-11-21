@@ -1,0 +1,963 @@
+---
+- service_request_id: 27076-2026
+  title: "#27076-2026 Schrott-Kfz"
+  description: Seit mehreren Tagen steht hier ein PKW-Anhänger ohne Nummernschild im öffentlichen Straßenraum
+  lat: 50.938891269322
+  long: 7.0659115165472
+  address_string: 51109 Köln, Rather Kirchweg 302
+  service_name: Schrott-Kfz
+  requested_datetime: '2026-11-14T14:49:46+01:00'
+  updated_datetime: '2026-11-14T17:02:28+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/20261114_141042.jpg
+  status_note: ''
+  service_code: '2.3'
+- service_request_id: 27077-2026
+  title: "#27077-2026 Wilder Müll"
+  description: 'Abgelegter Bauschutt. Bitte nach dem abholen die Schranke auf der Fährgasse schließen um zukünftig so etwas zu vermeiden. Vielen Dank '
+  lat: 51.031620078768
+  long: 6.9608883652901
+  address_string: 50769 Köln, Pastor-Kastenholz-Weg 30
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T15:23:51+01:00'
+  updated_datetime: '2026-11-14T15:25:37+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4213.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27078-2026
+  title: "#27078-2026 Kölner Grün"
+  description: An den Fahrradständern gegenüber der genannten Adresse steht weit Monaten ein großer Anhänger. Er ist angekettet.
+  lat: 50.922734977855
+  long: 6.956153830376
+  address_string: 50677 Köln, Sachsenring 6
+  service_name: Kölner Grün
+  requested_datetime: '2026-11-14T15:29:43+01:00'
+  updated_datetime: '2026-11-14T15:31:24+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/43955.jpg
+  status_note: ''
+  service_code: '3.2'
+- service_request_id: 27079-2026
+  title: "#27079-2026 Straßenbaustellen"
+  description: 'Stolperfalle und Einengung des Gehwegs '
+  lat: 50.935368698522
+  long: 6.911423218699
+  address_string: 50931 Köln, Lortzingstr. 60
+  service_name: Straßenbaustellen
+  requested_datetime: '2026-11-14T15:44:07+01:00'
+  updated_datetime: '2026-11-14T15:44:32+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0628.jpeg
+  status_note: ''
+  service_code: '2.5'
+- service_request_id: 27080-2026
+  title: "#27080-2026 Straßenbaustellen"
+  description: 'Schieflage, Stolperfalle und Einengung des Gehwegs '
+  lat: 50.93491907147
+  long: 6.9114402167552
+  address_string: 50931 Köln, Lortzingstr. 52
+  service_name: Straßenbaustellen
+  requested_datetime: '2026-11-14T15:45:13+01:00'
+  updated_datetime: '2026-11-14T15:45:59+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0629.jpeg
+  status_note: ''
+  service_code: '2.5'
+- service_request_id: 27081-2026
+  title: "#27081-2026 Wilder Müll"
+  description: 'Alter Elektroschrott, wie immer an derselben „zu verschenken“-Brücke am Kanal. Hier wird permanent Schrott und Müll hingekippt. Was stimmt mit den Leuten nicht????  '
+  lat: 50.93349363025
+  long: 6.9135099993596
+  address_string: 50931 Köln, Klosterstr. 86
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T15:49:02+01:00'
+  updated_datetime: '2026-11-14T15:50:42+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0630.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27082-2026
+  title: "#27082-2026 Wilder Müll"
+  description: 'Soll wohl „witzig“ sein '
+  lat: 50.933688781526
+  long: 6.9166017307755
+  address_string: 50931 Köln, Brucknerstr. 15
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T15:51:36+01:00'
+  updated_datetime: '2026-11-14T15:51:57+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0631.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27083-2026
+  title: "#27083-2026 Wilder Müll"
+  description: 'An der Pescherstraße, K-Pesch Richtung K-Auweiler liegt seit Wochen ein grauer Müllsack, es sind bestimmt schon einige Fahrzeuge der AWB vorbeigefahren um Pause am Auweiler Büdchen zu machen. Muss erst ein normaler Bürger eine Meldung machen, um den Sack einsammeln? Soviel zum Stadtbild  '
+  lat: 51.00056502087
+  long: 6.8592388778056
+  address_string: 50765 Köln, Ahornstr. 55
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T16:22:53+01:00'
+  updated_datetime: '2026-11-14T16:22:53+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27084-2026
+  title: "#27084-2026 Defekte Oberfläche"
+  description: 'Der Gehweg und die Parkbucht sackt ab. Ein riesen Loch von einer "Ratte" am Baum konnte ich Ihnen nicht übermitteln. Der Gehweg sackt alle paar Monate ab. '
+  lat: 50.940674182891
+  long: 6.9982083771499
+  address_string: 51103 Köln, Thessaloniki-Allee 9
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-14T17:41:09+01:00'
+  updated_datetime: '2026-11-14T17:43:17+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27085-2026
+  title: "#27085-2026 Kfz-Ampel defekt"
+  description: "Rote Ampel defekt! Bitte um schnellstmögliche Instandsetzung! \r\nVielen Dank! "
+  lat: 51.024237871248
+  long: 6.8892567307921
+  address_string: 50765 Köln, Am Georgshof 6
+  service_name: Kfz-Ampel defekt
+  requested_datetime: '2026-11-14T17:59:12+01:00'
+  updated_datetime: '2026-11-14T18:00:33+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG-20261114-WA0003.jpg
+  status_note: ''
+  service_code: 2.1.3
+- service_request_id: 27086-2026
+  title: "#27086-2026 Schrottfahrräder"
+  description: Guten Tag, am Wendehammer in der Werkstattstrasse 120 steht ein Schrottfahrrad, ich würde mich freuen, wenn Ihre Kollegen es die Tage einsammeln könnten. MfG
+  lat: 50.962570783935
+  long: 6.9439514123951
+  address_string: 50733 Köln, Werkstattstr. 120
+  service_name: Schrottfahrräder
+  requested_datetime: '2026-11-14T18:04:51+01:00'
+  updated_datetime: '2026-11-15T05:01:06+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/Schrottfahrrad_IMG_2533.jpeg
+  status_note: ''
+  service_code: '1.5'
+- service_request_id: 27087-2026
+  title: "#27087-2026 Wilder Müll"
+  description: 'Müll im ganzen Bereich. '
+  lat: 50.848424410088
+  long: 7.0915192365646
+  address_string: 51147 Köln, Alte Blockstelle 20
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T18:05:28+01:00'
+  updated_datetime: '2026-11-14T18:06:21+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_2598.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27088-2026
+  title: "#27088-2026 Lichtmast defekt"
+  description: Bemalter Laternenmast
+  lat: 50.924322181581
+  long: 6.9114504754543
+  address_string: 50935 Köln, Lindenthalgürtel 47
+  service_name: Lichtmast defekt
+  requested_datetime: '2026-11-14T18:09:01+01:00'
+  updated_datetime: '2026-11-14T18:10:12+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000096955.jpg
+  status_note: ''
+  service_code: 2.6.3
+- service_request_id: 27089-2026
+  title: "#27089-2026 Graffiti"
+  description: Beschmierter Mülleimer an der Haltestelle Gleueler Str./Gürtel, Linie 13 Ri. Sülzgürtel. Bitte den AWB zur Reinigung weiterleiten. Vielen Dank!
+  lat: 50.924046593319
+  long: 6.9119775295258
+  address_string: 50935 Köln, Lindenthalgürtel 50
+  service_name: Graffiti
+  requested_datetime: '2026-11-14T18:12:52+01:00'
+  updated_datetime: '2026-11-14T18:14:30+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000096956.jpg
+  status_note: ''
+  service_code: '1.2'
+- service_request_id: 27090-2026
+  title: "#27090-2026 Schrott-Kfz"
+  description: "Beide Anhänger stehen dort seit Monaten und werden nicht bewegt. In Zusammenhang mit der Baustelle an den Versorgungsleitungen, sowie den Kranarbeiten an einem Privathaus und den damit verbundenen Halteverbotszonen in der Straße Alte Apotheke ist die zugestellten Parkfläche durch die Anhänger unzumutbar. \r\n\r\nIn der Straße befindet sich desweiteren noch eine Kindertageseinrichtung. Aktuell ist die gesamte Verkehrs- und Parksituation in der Alten Apotheke eine absolute Katastrophe.\r\n"
+  lat: 50.865186417771
+  long: 7.0424478148819
+  address_string: 51143 Köln, Alte Apotheke 11
+  service_name: Schrott-Kfz
+  requested_datetime: '2026-11-14T18:16:43+01:00'
+  updated_datetime: '2026-11-15T05:01:07+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000185714.jpg
+  status_note: ''
+  service_code: '2.3'
+- service_request_id: 27091-2026
+  title: "#27091-2026 Wilder Müll"
+  description: 'Riesiger Müllberg aus Pappe und Kartons auf dem Gehweg vor Herthastraße 57. Auf einem Karton steht der Name Anna Makarl als Adressaufkleber. Der Name steht auch bei Herthastraße 57 an der Klingel. '
+  lat: 50.9129038
+  long: 6.941703
+  address_string: 50969 Köln, Herthastr. 55
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T18:28:54+01:00'
+  updated_datetime: '2026-11-14T18:33:48+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/20261114_182819.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27092-2026
+  title: "#27092-2026 Kfz-Ampel defekt"
+  description: Ampel geht in Grünphase komplett aus. Kfz Ampel aus Richtung Rösrath kommend
+  lat: 50.92212147179
+  long: 7.0900270342827
+  address_string: 51107 Köln, Rösrather Str. 672
+  service_name: Kfz-Ampel defekt
+  requested_datetime: '2026-11-14T19:10:32+01:00'
+  updated_datetime: '2026-11-14T19:10:32+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.1.3
+- service_request_id: 27093-2026
+  title: "#27093-2026 Leuchtmittel defekt"
+  description: 'Defekte Laterne mit der Nummer 8 '
+  lat: 51.041236306045
+  long: 6.8839469885648
+  address_string: 50765 Köln, Mosenbergstr. 1
+  service_name: Leuchtmittel defekt
+  requested_datetime: '2026-11-14T19:46:54+01:00'
+  updated_datetime: '2026-11-14T19:46:54+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.6.1
+- service_request_id: 27094-2026
+  title: "#27094-2026 Leuchtmittel defekt"
+  description: 'Die Masten 21 und 23 am Bahnsteig Barbarossaplatz Richtung Poststr. sind beide defekt. Auch der Dreiermast in der Mitte des Platzes. '
+  lat: 50.928836846886
+  long: 6.9432055950165
+  address_string: 50677 Köln, Salierring 48
+  service_name: Leuchtmittel defekt
+  requested_datetime: '2026-11-14T19:52:26+01:00'
+  updated_datetime: '2026-11-14T19:52:26+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.6.1
+- service_request_id: 27095-2026
+  title: "#27095-2026 Defekte Oberfläche"
+  description: Gullydeckel auf dem Parkstreifen  gegenüber Haus Stadtwaldgürtel 25 herausgebrochen
+  lat: 50.929602404824
+  long: 6.9088171204894
+  address_string: 50931 Köln, Stadtwaldgürtel 14
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-14T21:21:57+01:00'
+  updated_datetime: '2026-11-14T21:28:03+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000051084.jpg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27096-2026
+  title: "#27096-2026 Schrottfahrräder"
+  description: Kategorie Schrott kfz hat leider nicht geklappt. Fzg steht seit mindestens 17.10.26 unverändert ggü Hausnummer 1 mit abgelaufenen Kurzzeitkennzeichen
+  lat: 50.88981187767
+  long: 7.0596601312187
+  address_string: 51143 Köln, Deutzer Weg 1
+  service_name: Schrottfahrräder
+  requested_datetime: '2026-11-14T21:53:42+01:00'
+  updated_datetime: '2026-11-15T05:01:08+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000297361.jpg
+  status_note: ''
+  service_code: '1.5'
+- service_request_id: 27097-2026
+  title: "#27097-2026 Wilder Müll"
+  description: Türen oder große Holzplatten hinter der Litfaßsäule
+  lat: 50.890565978068
+  long: 7.0751380919319
+  address_string: 51145 Köln, Bonner Str. 53
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T23:33:31+01:00'
+  updated_datetime: '2026-11-14T23:33:31+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27098-2026
+  title: "#27098-2026 Leuchtmittel defekt"
+  description: Leuchtmittel Fußweg defekt
+  lat: 50.956690805456
+  long: 7.0209598807232
+  address_string: 51065 Köln, Kieppemühler Str. 30
+  service_name: Leuchtmittel defekt
+  requested_datetime: '2026-11-14T23:36:45+01:00'
+  updated_datetime: '2026-11-14T23:36:45+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.6.1
+- service_request_id: 27099-2026
+  title: "#27099-2026 Kfz-Ampel defekt"
+  description: Wie oft muss man den Mangel noch melden? Immer noch ein defektes Licht der Ampelanlage Berliner Str. in Fahrtrichtung Köln-Mülheim kurz nach der Autobahnbrücke.
+  lat: 50.979493629615
+  long: 7.0214894413948
+  address_string: 51063 Köln, Berliner Str. 227
+  service_name: Kfz-Ampel defekt
+  requested_datetime: '2026-11-14T23:40:03+01:00'
+  updated_datetime: '2026-11-14T23:40:03+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.1.3
+- service_request_id: 27100-2026
+  title: "#27100-2026 Wilder Müll"
+  description: In dem Bereich kommt es immer wieder zur Verunreinigung durch Hundekot. Entweder direkt auf der Straße, oder der Kot wird in Beutel gepackt und auf die Grundstücke oder den Straßenrand geworfen.
+  lat: 50.863148467795
+  long: 7.0524117350578
+  address_string: 51143 Köln, Wolff-Metternich-Str. 17
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-14T23:52:52+01:00'
+  updated_datetime: '2026-11-14T23:52:52+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27101-2026
+  title: "#27101-2026 Defekte Oberfläche"
+  description: In der Heidelberger Straße in Höhe der Hausnummern 11 & 13 sitzt seit einer Zeit das Einlaufgitter eines Straßenablaufs nicht fest. Jedesmal wenn ein Auto darüber fährt, ertönt ein mittlerweile sehr lautes Klackgeräusch. Siehe markiertes Foto. Welches nicht festsitzt, lässt sich nicht genau orten. Ich bitte dies zu prüfen, und das lockere Gitter zu fixieren! Danke im Voraus!
+  lat: 50.950841578341
+  long: 7.0034082949706
+  address_string: 51065 Köln, Heidelberger Str. 11
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-14T23:47:12+01:00'
+  updated_datetime: '2026-11-14T23:57:25+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000133543.jpg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27102-2026
+  title: "#27102-2026 Schrott-Kfz"
+  description: "Laut Google streetView steht das Fahrzeug dort seit mindestens 4 Jahren.\r\n\r\nEs steht aktuell immer noch dort. Ohne Kennzeichen und dem Bewuchs nach auch seither nicht bewegt.\r\n\r\nIn der Siedlung sind Stellplätze rar."
+  lat: 50.867473462639
+  long: 7.0507657527924
+  address_string: 51143 Köln, Nelkenweg 1
+  service_name: Schrott-Kfz
+  requested_datetime: '2026-11-14T23:57:05+01:00'
+  updated_datetime: '2026-11-15T05:01:09+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4282.png
+  status_note: ''
+  service_code: '2.3'
+- service_request_id: 27103-2026
+  title: "#27103-2026 Defekte Oberfläche"
+  description: "In der Robert-Koch-Straße 65 am Übergang zum Kringsweg in Lindenthal (50.928516, 6.920576) gibt es ein sehr tiefes Loch in der Straße. Das Kopfsteinpflaster ist mit mehreren Steinen eingebrochen und die Straße möglicherweise unterspült.\r\nDa es sich offensichtlich nicht um ein einfaches Schlagloch handelt, sollte sich jemand den Schaden zeitnah ansehen. Das Loch ist tief genug, dass Kinder reinfallen können oder Autos einbrechen."
+  lat: 50.928503924557
+  long: 6.9205911312723
+  address_string: 50931 Köln, Kringsweg 12
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T07:54:22+01:00'
+  updated_datetime: '2026-11-15T07:57:36+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000033476.jpg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27104-2026
+  title: "#27104-2026 Glascontainer-Standort vermüllt"
+  description: 'Hier liegt Sperrmüll zwischen den Containern. '
+  lat: 50.934956725471
+  long: 6.8398563828022
+  address_string: 50858 Köln, Göttinger Str. 9
+  service_name: Glascontainer-Standort vermüllt
+  requested_datetime: '2026-11-15T07:58:05+01:00'
+  updated_datetime: '2026-11-15T07:58:05+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 1.4.3
+- service_request_id: 27105-2026
+  title: "#27105-2026 Schrottfahrräder"
+  description: Laut Anwohnerbeschwerden  und eigener Beobachtung stehen diese beiden Fahrräder, seit vielen Monaten am Fahhrradständer angeschlossen. Sie sind seither nicht mehr bewegt worden und teilweise verrostet.
+  lat: 50.92195540198
+  long: 7.0810438353562
+  address_string: 51107 Köln, Rösrather Str. 555
+  service_name: Schrottfahrräder
+  requested_datetime: '2026-11-15T09:14:49+01:00'
+  updated_datetime: '2026-11-15T17:01:27+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4915.jpeg
+  status_note: ''
+  service_code: '1.5'
+- service_request_id: 27106-2026
+  title: "#27106-2026 Schrottfahrräder"
+  description: diese Schrottrad steht hier schon ewig herum. es ist komplett zugerostet und fahruntüchtig
+  lat: 50.923900256834
+  long: 6.9268584251404
+  address_string: 50937 Köln, Zülpicher Str. 209
+  service_name: Schrottfahrräder
+  requested_datetime: '2026-11-15T09:28:29+01:00'
+  updated_datetime: '2026-11-15T17:01:28+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4536.jpeg
+  status_note: ''
+  service_code: '1.5'
+- service_request_id: 27107-2026
+  title: "#27107-2026 Wilder Müll"
+  description: Seit Wochen liegt hier der Fuß eines Baustellenschildes
+  lat: 50.96414953569
+  long: 6.9758503139019
+  address_string: 50735 Köln, Stammheimer Str. 95
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T10:03:02+01:00'
+  updated_datetime: '2026-11-15T10:05:59+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_3468.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27108-2026
+  title: "#27108-2026 Glascontainer voll"
+  description: "Die Glasmüll Container an dieser Stelle sind bereits seit mehreren Wochen so voll, dass immer mehr Altglas davor abgestellt wird.\r\nKönnten sie bitte geleert werden?"
+  lat: 50.925919532876
+  long: 6.8622922897339
+  address_string: 50858 Köln, Willi-Lauf-Allee 2
+  service_name: Glascontainer voll
+  requested_datetime: '2026-11-15T10:42:38+01:00'
+  updated_datetime: '2026-11-15T10:42:38+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 1.4.1
+- service_request_id: 27109-2026
+  title: "#27109-2026 Wilder Müll"
+  description: Jede Menge Hausmüll hinter der Hütte in der Kurve hinter der S-Bahnbrücke Urnenstrasse. Etwas versteckt, im Hohlweg links die Stufen hoch.
+  lat: 50.980726124103
+  long: 7.065749559556
+  address_string: 51069 Köln, Hünenstr. 29
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T10:42:40+01:00'
+  updated_datetime: '2026-11-15T10:44:58+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000033261.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27110-2026
+  title: "#27110-2026 Leuchtmittel defekt"
+  description: 'Ich hatte bereits vor 4 Wochen gemeldet, dass die Straßenbeleuchtung am Rad- und Fußgängerweg defekt ist. Die Mastnummer ist von der Fussgängerseite her nicht einsehbar. Es ist der 2. Mast von der Lovis-Conrinth-Strasse in Richtung Aachener Strasse. Der Weg ist dort extrem dunkel, weil rundherum Wald ist. Außerdem ist es gefährlich, weil man weder heruntergefallene Äste sieht noch eventuelle Löcher im Weg. Bitte kümmern Sie sich endlich. '
+  lat: 50.940152071515
+  long: 6.8634370722657
+  address_string: 50933 Köln, Kirchnerstr. 4
+  service_name: Leuchtmittel defekt
+  requested_datetime: '2026-11-15T11:16:30+01:00'
+  updated_datetime: '2026-11-15T11:16:30+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.6.1
+- service_request_id: 27111-2026
+  title: "#27111-2026 Defekte Oberfläche"
+  description: 'Auf dem Stumpelrott Gehweg stadteinwärts ,  gegenüber dem Haus 32, sind mindestens zwei Pflastersteine circa 3,5 cm Zentimeter überstehend.  Ich stürzte darüber und habe mich verletzt. Ich habe schon an die Rechtsabteilung  der Stadt geschrieben.   Der Schaden muss umgehend behoben werden : alte Menschen und auch Kinder auf ihrem Roller können drüber schwer  Vielen Dank. '
+  lat: 50.882788342758
+  long: 7.0179122686386
+  address_string: 50999 Köln, Auf dem Stumpelrott 32a
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T11:17:35+01:00'
+  updated_datetime: '2026-11-15T11:20:41+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4856.jpeg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27112-2026
+  title: "#27112-2026 Fußgängerampel defekt"
+  description: "Ampel reagiert nicht auf Drücken, Knopf für Sehbehinderte funktioniert ebenfalls nicht. \r\n"
+  lat: 50.925151384583
+  long: 6.9651907682419
+  address_string: 50678 Köln, Dreikönigenstr. 54
+  service_name: Fußgängerampel defekt
+  requested_datetime: '2026-11-15T11:29:33+01:00'
+  updated_datetime: '2026-11-15T11:30:03+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/image_50.jpg
+  status_note: ''
+  service_code: 2.1.1
+- service_request_id: 27113-2026
+  title: "#27113-2026 Kölner Grün"
+  description: "Sehr geehrte Damen und Herren,\r\nich wende mich mit einem Anliegen an Sie, das mir als regelmäßiger Parknutzer sehr am Herzen liegt. Es geht insbesondere um die Situation in Kölner Parks: Nordpark und im Johannes Giesbert Park. \r\n\r\nDort führen seit mehreren Jahren immer mehr Hundebesitzerinnen und Hundebesitzer ihre Hunde ohne Leine. Dadurch kam es für mich und meinen Sohn bereits mehrfach zu heiklen Situationen, in denen Hunde auf uns zugerannt sind oder mich angebellt haben. \r\n\r\nHäufig waren die Halterinnen und Halter dabei abgelenkt, zum Beispiel durch den Blick aufs Handy, und konnten ihre Tiere nicht rechtzeitig zurückrufen.\r\n\r\nDas ist mir nicht nur beim Joggen passiert, sondern inzwischen auch, wenn ich mit meinem Sohn unterwegs bin oder auf einer Bank sitze. Gerade für Kinder und in der Nähe von Spielplätzen sind solche Begegnungen beängstigend und können schnell gefährlich werden. Wenn ich Hundebesitzende darauf direkt anspreche, kam bisher selten Einsicht über ihre Verantwortung. Ich wünsche mir, dass alle die Parks sicher und entspannt nutzen können.\r\n\r\nDeshalb möchte ich Sie freundlich um Folgendes bitten: Machen Sie die Hundehalterinnen und Hundehalter noch deutlicher auf ihre Verantwortung und die geltenden Regeln aufmerksam. Führen Sie in den genannten Parks mehr Kontrollen durch. Weisen Sie deutlicher darauf hin, dass es ausgewiesene Hundewiesen gibt, jedoch der Rest der Parks für alle sicher nutzbar sein sollte.\r\n\r\nIch würde mich sehr freuen, wenn Sie meine Anregungen aufgreifen. Für Rückfragen stehe ich Ihnen gern zur Verfügung.\r\n\r\nVielen Dank für Ihre Unterstützung und Ihre Arbeit!\r\n\r\nFreundliche Grüße\r\nSteffen Eggebrecht "
+  lat: 50.969526412865
+  long: 6.9640445709229
+  address_string: 50733 Köln, Kretzerstr. 26
+  service_name: Kölner Grün
+  requested_datetime: '2026-11-15T11:33:23+01:00'
+  updated_datetime: '2026-11-15T11:33:23+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '3.2'
+- service_request_id: 27114-2026
+  title: "#27114-2026 Wilder Müll"
+  description: 'Bügel Brett auf dem Weg '
+  lat: 50.936586742354
+  long: 6.8945002555847
+  address_string: 50933 Köln, Voigtelstr. 24
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T11:36:23+01:00'
+  updated_datetime: '2026-11-15T11:36:23+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27115-2026
+  title: "#27115-2026 Wilder Müll"
+  description: Ein Koffer, zebrafarben, wurde abgestellt!
+  lat: 50.964017225256
+  long: 6.9682624043617
+  address_string: 50735 Köln, Amsterdamer Str. 71
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T11:39:22+01:00'
+  updated_datetime: '2026-11-15T11:40:26+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000027516.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27116-2026
+  title: "#27116-2026 Defekte Verkehrszeichen"
+  description: "Das Verkehrszeichen\r\n306 abknickende Vorfahrt ist an der Brücke Richtung Hand nicht mehr zu erkennen.  Vom Gesprüpp zugewachsen. Im Rahmen der Verkehrssicherungspflicht zeitnah wieder sichtbar zu machen. Querstrasse geht zum Gewerbegebiet\r\n"
+  lat: 50.982355681829
+  long: 7.0768492060597
+  address_string: 51069 Köln, Eschenbruchstr. 20
+  service_name: Defekte Verkehrszeichen
+  requested_datetime: '2026-11-15T11:42:02+01:00'
+  updated_datetime: '2026-11-15T11:42:02+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.4.2
+- service_request_id: 27117-2026
+  title: "#27117-2026 Wilder Müll"
+  description: 'Holzpalette und das runde Ding '
+  lat: 50.937042299409
+  long: 6.8961143904421
+  address_string: 50933 Köln, Aachener Str. 557a
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T11:53:51+01:00'
+  updated_datetime: '2026-11-15T11:54:35+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_6152.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27118-2026
+  title: "#27118-2026 Wilder Müll"
+  description: 'Die Stangen hinter dem grauen Kasten '
+  lat: 50.936863946598
+  long: 6.8964850902557
+  address_string: 50933 Köln, Hermann-Pflaume-Str. 39
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T11:55:49+01:00'
+  updated_datetime: '2026-11-15T11:56:30+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_6151.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27119-2026
+  title: "#27119-2026 Straßenbaustellen"
+  description: 'Abgelegte Stützen von Warnbarken, aber weit und breit keine Baustelle. '
+  lat: 50.937458013036
+  long: 6.8443943814467
+  address_string: 50858 Köln, Breslauer Str. 2a
+  service_name: Straßenbaustellen
+  requested_datetime: '2026-11-15T11:56:07+01:00'
+  updated_datetime: '2026-11-15T11:57:03+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/20261115_111658.jpg
+  status_note: ''
+  service_code: '2.5'
+- service_request_id: 27120-2026
+  title: "#27120-2026 Kfz-Ampel defekt"
+  description: "Überkopfampel Rotlicht defekt. \r\nÜbergang KVB Fahrtrichtung Lindenthal"
+  lat: 50.970470019037
+  long: 6.8699593318161
+  address_string: 50829 Köln, Schaffrathsgasse 50
+  service_name: Kfz-Ampel defekt
+  requested_datetime: '2026-11-15T12:00:05+01:00'
+  updated_datetime: '2026-11-15T12:00:05+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.1.3
+- service_request_id: 27121-2026
+  title: "#27121-2026 Kölner Grün"
+  description: "Guten Tag \r\nAm Zülpicher Platz im Innenhof meines Wohnhauses wurde am 12.11.26 aus mir unerfindlichen Gründen ein augenscheinlich gesunder gross gewachsener ca.40m hoher Baum radikal abgeschlagen!  :(\r\nGibt es dafür eine Genehmigung? \r\nIch wohne Roonstraße 17, der Baum befand sich auf dem Grundstück eines Wohnhauses auf der Hochstadenstrase, ca.Hausnummer 28, 30 oder 32.\r\nDie Innenhof dieser Gebäude grenzen aneinander, weswegen ich diesen schönen Baum auch vor meinem Fenster \"hatte\".\r\nEs gibt eh schon zu wenig Begrünung hier in der Innenstadt, das war hier jahrelang ein wenig Flora&Fauna, ein Schattenspender im Hitzesommer und Lebensraum für so viele Vögel und Tauben, ich konnte es als nächster Nähe beobachten und besitze auch Videoaufnahmen von September diesen Jahres, wo dieser Baum in seiner vollen Pracht blüht, siehe beigefügten Foto: oben Aufnahme vom 13.09.26, untere Aufnahme von heute, 15.11.26.\r\n\r\nHatte der Abholzer bzw. der Auftraggeber/Eigentümer des Hauses eine offizielle Genehmigung für diesen radikalen Abschlag?\r\nGerne würde ich diesen unglaublich brutalen Vorgang der Natur gegenüber zur Anzeige bringen!\r\n\r\nIch bitte um Stellungnahme, vielen Dank."
+  lat: 50.929563383095
+  long: 6.9398093223526
+  address_string: 50674 Köln, Hochstadenstr. 30
+  service_name: Kölner Grün
+  requested_datetime: '2026-11-15T11:56:01+01:00'
+  updated_datetime: '2026-11-15T12:08:45+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/37338.jpg
+  status_note: ''
+  service_code: '3.2'
+- service_request_id: 27122-2026
+  title: "#27122-2026 Wilder Müll"
+  description: Guten Tag, am Rheinufer ist seit einiger Zeit ein größeres Zeltlager mit entsprechender Müllansammlung. Leider ein sehr unschönes Bild am Rheinufer. Es befindet sich zwischen dem unteren Spazierweg und dem Rheinufer im Grünstreifen zwischen den hohen Bäumen in Höhe des Colonia-Hochhauses. Danke schön für das Entfernen!
+  lat: 50.959223105677
+  long: 6.9821724534055
+  address_string: 50735 Köln, An der Schanz 2
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T12:06:31+01:00'
+  updated_datetime: '2026-11-15T12:11:46+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000101455.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27123-2026
+  title: "#27123-2026 Schrottfahrräder"
+  description: 'Augustinerstraße/ Ecke Große Sandkaul: Fahrradleiche'
+  lat: 50.935294678292
+  long: 6.9569043931543
+  address_string: 50667 Köln, Pipinstr. 4
+  service_name: Schrottfahrräder
+  requested_datetime: '2026-11-15T12:24:59+01:00'
+  updated_datetime: '2026-11-15T17:01:28+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000624938.jpg
+  status_note: ''
+  service_code: '1.5'
+- service_request_id: 27124-2026
+  title: "#27124-2026 Straßenbaustellen"
+  description: "Vor den Häusern Kleiner Griechenmarkt 31 und 33 stehen zwei vergessene Straßenschilder und zwei weiße Plastikgitter von einer beendeten Baustelle.\r\n\r\nDanke für Ihre Hilfe."
+  lat: 50.93215096355
+  long: 6.9487927952312
+  address_string: 50676 Köln, Kleiner Griechenmarkt 31
+  service_name: Straßenbaustellen
+  requested_datetime: '2026-11-15T12:35:35+01:00'
+  updated_datetime: '2026-11-15T12:35:35+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '2.5'
+- service_request_id: 27125-2026
+  title: "#27125-2026 Lichtmast defekt"
+  description: 'Nach einem Sturmschaden wurde die Lampe Höhe Eispohlweg 6 in Worringen entfernt, es steht nur noch der Mast.  Die Laterne wurde bislang nicht ersetzt und ist seit ca. 3 Wochen nicht mehr vorhanden. '
+  lat: 51.061889799634
+  long: 6.8529676186241
+  address_string: 50769 Köln, Eispohlweg 6
+  service_name: Lichtmast defekt
+  requested_datetime: '2026-11-15T12:49:20+01:00'
+  updated_datetime: '2026-11-15T12:49:20+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.6.3
+- service_request_id: 27126-2026
+  title: "#27126-2026 Wilder Müll"
+  description: Gegenüber der Blücherstr.15, Nippes, wurde ein Haufen Müll abgeladen geladen!!!!
+  lat: 50.966651428572
+  long: 6.9554812959033
+  address_string: 50733 Köln, Blücherstr. 15
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T12:55:38+01:00'
+  updated_datetime: '2026-11-15T12:56:53+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000027517.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27127-2026
+  title: "#27127-2026 Lichtmast defekt"
+  description: Defekter Strassenlampenmast an Ladezone beim Rewe sülzgürtel 49
+  lat: 50.915629716595
+  long: 6.9183844450194
+  address_string: 50937 Köln, Sülzgürtel 49
+  service_name: Lichtmast defekt
+  requested_datetime: '2026-11-15T13:04:20+01:00'
+  updated_datetime: '2026-11-15T13:07:20+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/20261114_032525.jpg
+  status_note: ''
+  service_code: 2.6.3
+- service_request_id: 27128-2026
+  title: "#27128-2026 Lichtmast defekt"
+  description: Das Dach der Lampe ist verbogen. Rankestrasse 3-5
+  lat: 50.91876416858
+  long: 6.9136046975871
+  address_string: 50935 Köln, Rankestr. 3
+  service_name: Lichtmast defekt
+  requested_datetime: '2026-11-15T13:09:08+01:00'
+  updated_datetime: '2026-11-15T13:10:38+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/20261114_050608.jpg
+  status_note: ''
+  service_code: 2.6.3
+- service_request_id: 27129-2026
+  title: "#27129-2026 Altkleidercontainer-Standort vermüllt"
+  description: wilder müll
+  lat: 50.981987878763
+  long: 6.8947434425354
+  address_string: 50829 Köln, Rudi-Conin-Str. 7
+  service_name: Altkleidercontainer-Standort vermüllt
+  requested_datetime: '2026-11-15T13:59:34+01:00'
+  updated_datetime: '2026-11-15T13:59:57+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/image_51.jpg
+  status_note: ''
+  service_code: 1.3.4
+- service_request_id: 27130-2026
+  title: "#27130-2026 Glascontainer-Standort vermüllt"
+  description: Der Glascontainer wurde wie üblich zur Müllabladeplatz umfunktioniert.
+  lat: 50.934433863228
+  long: 6.9997124390436
+  address_string: 51105 Köln, Gießener Str. 154
+  service_name: Glascontainer-Standort vermüllt
+  requested_datetime: '2026-11-15T14:07:56+01:00'
+  updated_datetime: '2026-11-15T14:08:52+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_9597.JPG
+  status_note: ''
+  service_code: 1.4.3
+- service_request_id: 27131-2026
+  title: "#27131-2026 Kölner Grün"
+  description: 'Es hat sich über Jahre altes Laub angesammelt. Ca. 1m breit. Müsste abgetragen werden und gesäubert. Ist eine Sackgasse und Wendehammer, sowieso nicht so viel Platz. Danke! '
+  lat: 50.923479776935
+  long: 6.9036235654008
+  address_string: 50935 Köln, Sigmaringer Str. 18
+  service_name: Kölner Grün
+  requested_datetime: '2026-11-15T14:13:35+01:00'
+  updated_datetime: '2026-11-15T14:15:00+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000169953.jpg
+  status_note: ''
+  service_code: '3.2'
+- service_request_id: 27132-2026
+  title: "#27132-2026 Defekte Oberfläche"
+  description: Behinderung Gehweg durch herab hängende Pflanzen. Dadurch ausweichen auf Radweg nötig und in Folge dessen Gefährdung.
+  lat: 50.934527256586
+  long: 7.0011492181619
+  address_string: 51105 Köln, Rolshover Str. 70
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T14:27:37+01:00'
+  updated_datetime: '2026-11-15T14:29:11+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000015108.jpg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27133-2026
+  title: "#27133-2026 Defekte Oberfläche"
+  description: "Behinderung Parkplätze für Fahrräder durch Laub. \r\n\r\nVorschlag:\r\nDa regelmäßig jährlich und dadurch planbar Absperrung EINES PKW Stellplatzes zur Saison und Ablage dort statt Blockade SECHS Stellplätze Fahrräder."
+  lat: 50.952457122475
+  long: 6.953842257806
+  address_string: 50670 Köln, Kasparstr. 4
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T14:31:48+01:00'
+  updated_datetime: '2026-11-15T14:34:20+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000015065.jpg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27134-2026
+  title: "#27134-2026 Defekte Oberfläche"
+  description: 'Es sind mehrer Schlaglöcher in verschiedenen Größen auf der Straße. Vor dem Haus an der Joch 1, 51061 Köln Stammheim '
+  lat: 50.988674866028
+  long: 6.9981841505661
+  address_string: 51061 Köln, An der Joch 1
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T14:57:46+01:00'
+  updated_datetime: '2026-11-15T14:59:06+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/image_52.jpg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27135-2026
+  title: "#27135-2026 Wilder Müll"
+  description:
+  lat: 50.941610064611
+  long: 7.0017555356026
+  address_string: 51103 Köln, Kalk-Mülheimer Str. 96
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T15:01:06+01:00'
+  updated_datetime: '2026-11-15T15:01:23+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_7606.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27136-2026
+  title: "#27136-2026 Wilder Müll"
+  description:
+  lat: 50.941574805928
+  long: 7.0009651780128
+  address_string: 51103 Köln, Engelsstr. 12
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T15:03:03+01:00'
+  updated_datetime: '2026-11-15T15:03:19+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_7604.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27137-2026
+  title: "#27137-2026 Wilder Müll"
+  description: 'Alte Matratze steht seit ein paar Tagen an der Hauswand Weyertal 40, 50937 Köln. '
+  lat: 50.923843720302
+  long: 6.927358323667
+  address_string: 50937 Köln, Weyertal 40
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T15:21:00+01:00'
+  updated_datetime: '2026-11-15T15:21:00+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27138-2026
+  title: "#27138-2026 Wilder Müll"
+  description: "Guten Tag,\r\n\r\nunmittelbar neben der Glasentsorgung wurde eine Tüte mit einer großen Menge Glassplittern direkt auf der Grünfläche abgelegt.  Mehrere Glassplitter befinden sich ebenfalls auf dem Gehweg und der Straße, wahrscheinlich ist die Tüte dem Verursacher beim Transport gerissen. Es besteht akute Verletzungsgefahr für Kinder und Tiere. Bitte um zeitnahe Reinigung. Vielen Dank. "
+  lat: 50.905567941811
+  long: 6.950021982193
+  address_string: 50969 Köln, Landskronstr. 2
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T15:30:43+01:00'
+  updated_datetime: '2026-11-15T15:35:25+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/20261115_112926.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27139-2026
+  title: "#27139-2026 Kölner Grün"
+  description: "Dauerhafte Verschmutzung und Störungen im Theodor-Heuss-Park (Ebertplatz)\r\n\r\nSehr geehrte Damen und Herren,\r\nich wende mich an Sie, weil sich im Theodor-Heuss-Park am Ebertplatz seit längerer Zeit täglich Gruppen aufhalten, die den Park stark verschmutzen (Müll, Flaschen, Verpackungen, Hinterlassenschaften). \r\n\r\nAuch heute sind die Personen vor Ort (Foto - Personen Links davon). Ich bin gerade dort spazieren gegangen und konnte keine Fotos machen, da dort spezielle Gruppe, auch Dealer abhängen.\r\n\r\nDer Park und die Menschen, die ihn nutzen, leiden spürbar darunter. Viele Anwohner und Familien meiden den Park inzwischen.\r\nIch frage Sie: Warum wird hier nicht konsequent eingegriffen? \r\n\r\nDie Personen sollen den Müll selbst aufräumen und verstehen, dass das nicht geht."
+  lat: 50.950937214402
+  long: 6.9599550962448
+  address_string: 50668 Köln, Theodor-Heuss-Ring 5
+  service_name: Kölner Grün
+  requested_datetime: '2026-11-15T15:36:08+01:00'
+  updated_datetime: '2026-11-15T15:40:11+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4234.jpeg
+  status_note: ''
+  service_code: '3.2'
+- service_request_id: 27140-2026
+  title: "#27140-2026 Wilder Müll"
+  description:
+  lat: 50.940776181474
+  long: 6.9684791564941
+  address_string: 50679 Köln, Kennedy-Ufer 2a
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T15:53:59+01:00'
+  updated_datetime: '2026-11-15T15:54:25+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4158.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27141-2026
+  title: "#27141-2026 Spiel- und Bolzplätze"
+  description: Der Mülleimer quillt über und Tiere haben den Müll auf dem Sand im Spielplatz verteilt.
+  lat: 51.000695188553
+  long: 6.8722486495972
+  address_string: 50767 Köln, Gaußstr. 17
+  service_name: Spiel- und Bolzplätze
+  requested_datetime: '2026-11-15T15:54:09+01:00'
+  updated_datetime: '2026-11-15T15:56:10+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000188224.jpg
+  status_note: ''
+  service_code: '3.3'
+- service_request_id: 27142-2026
+  title: "#27142-2026 Spiel- und Bolzplätze"
+  description: Auf der neu eingerichteten Sportfläche am Glashütten-Park befindet sich seit mehr als einer Woche eine demolierte Absperrung. Entweder sollte diese entsorgt werden, bevor sich Kinder verletzten, oder gegen eine intakte getauscht werden
+  lat: 50.887595599894
+  long: 7.0588445663452
+  address_string: 51143 Köln, Josefstr. 26
+  service_name: Spiel- und Bolzplätze
+  requested_datetime: '2026-11-15T15:55:36+01:00'
+  updated_datetime: '2026-11-15T15:57:38+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/image_53.jpg
+  status_note: ''
+  service_code: '3.3'
+- service_request_id: 27143-2026
+  title: "#27143-2026 Defekte Oberfläche"
+  description: Tiefes Schlagloch auf der Johannes-Müller-Str. , das eine für Fahrräder gefährliche Tiefe erreicht hat
+  lat: 50.963882299888
+  long: 6.9727635383606
+  address_string: 50735 Köln, Johannes-Müller-Str. 21
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T16:00:28+01:00'
+  updated_datetime: '2026-11-15T16:02:18+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_7808.jpeg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27144-2026
+  title: "#27144-2026 Wilder Müll"
+  description: Von Weiler aus kommend Richtung Esch auf der Blockstr. In Höhe Wasserwerk  Feldweg rechts ca. 50 Meter liegt der Müll om Wasserschutzgebiet, ca. 1 Rm
+  lat: 51.022043815561
+  long: 6.8738872278482
+  address_string: 50765 Köln, Blockstr. 70
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T16:01:36+01:00'
+  updated_datetime: '2026-11-15T16:04:57+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000188228.jpg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27145-2026
+  title: "#27145-2026 Wilder Müll"
+  description: "Wilder Müll (zahlreiche volle Plastiksäcke mit Kleidung) in Köln-Merheim auf der gegenüber liegenden Straßenseite von der Änne-Schulte-Str. 4c am Kleidercontainer und rundum am Kleidercontainer entsorgt.\r\n\r\nDer Kleidercontainer ist VOLL und LÄUFT ÜBER !\r\n\r\nBitte den Kleidercontainer und den Müll darum sofort entsorgen und entfernen.\r\n\r\nVielen Dank an die AWB-Mitarbeiter.\r\n"
+  lat: 50.945010985021
+  long: 7.0551162954871
+  address_string: 51109 Köln, Änne-Schulte-Str. 4c
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T16:59:34+01:00'
+  updated_datetime: '2026-11-15T17:03:08+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/WhatsApp%20Image%202026-11-15%20at%2016.48.43.jpeg
+  status_note: ''
+  service_code: '1.1'
+- service_request_id: 27146-2026
+  title: "#27146-2026 Umlaufsperren / Drängelgitter"
+  description: "Auf dem Radweg stehen Absperrungen.\r\nBitte schnellstmöglich entfernen - Unfallgefahr!"
+  lat: 50.932437946741
+  long: 6.9630355230402
+  address_string: 50676 Köln, Holzmarkt 77
+  service_name: Umlaufsperren / Drängelgitter
+  requested_datetime: '2026-11-15T17:38:37+01:00'
+  updated_datetime: '2026-11-15T17:38:37+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: '2.7'
+- service_request_id: 27147-2026
+  title: "#27147-2026 Defekte Oberfläche"
+  description: "Subject: Meldung: Falsch geparkte Dott-Roller blockieren Gehweg und stehen in Hecke\r\n\r\nGuten Tag,\r\n\r\nvor meinem Grundstück Kratzweg 110 51109  stehen aktuell 6 Dott-E-Roller auf dem Gehweg. Einer davon steht in meiner Hecke auf Privatgrundstück. Die Roller behindern den Gehweg und stellen insbesondere für Fußgänger, Kinderwagen und Rollstuhlfahrer ein Hindernis dar.\r\n\r\nBitte lassen Sie die Roller zeitnah entfernen bzw. ordnungsgemäß umsetzen. Fotos mit Datum und Uhrzeit hängen an. Da dies kein Einzelfall ist, bitte ich außerdem darum, die Abstellsituation an diesem Standort zu prüfen.\r\n\r\nVielen Dank und freundliche Grüße \r\nMirac Ayazgün "
+  lat: 50.946249522603
+  long: 7.049489257833
+  address_string: 51109 Köln, Kratzweg 110
+  service_name: Defekte Oberfläche
+  requested_datetime: '2026-11-15T17:43:30+01:00'
+  updated_datetime: '2026-11-15T17:44:45+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0090.jpeg
+  status_note: ''
+  service_code: 2.4.3
+- service_request_id: 27148-2026
+  title: "#27148-2026 Leuchtmittel defekt"
+  description: Lichtmast bei Freiligrathstr. 14 immer noch defekt (seit Monaten).
+  lat: 50.920806949142
+  long: 6.9043328037584
+  address_string: 50935 Köln, Freiligrathstr. 14
+  service_name: Leuchtmittel defekt
+  requested_datetime: '2026-11-15T18:09:02+01:00'
+  updated_datetime: '2026-11-15T18:09:02+01:00'
+  status: open
+  media_url: ''
+  status_note: ''
+  service_code: 2.6.1
+- service_request_id: 27149-2026
+  title: "#27149-2026 Wilder Müll"
+  description: "Meldung über Sondernutzung des öffentlichen Raums und illegale Müllablagerung\r\n​Im Grünbereich der öffentlichen Straße ist es regelmäßig zu folgenden Missständen und Belästigungen gekommen:\r\n​Illegale Müllzwischenlagerung: Es befindet sich dort ein Müllhaufen, der im Wesentlichen aus mehreren blauen Eimern besteht, die vermutlich aus gewerblicher Tätigkeit stammen. Beobachtungen zufolge werden dieser Müll und die Eimer regelmäßig von dem an der Straße stehenden Pritschenwagen abgeladen und dort zwischengelagert.\r\n​Sondernutzung / Entzug der Allgemeinheit: Zudem wurden dort private Gartenstühle platziert, die als Absperrung für Parkplätze dienen. Dadurch wird der öffentliche Parkraum unberechtigt für die Allgemeinheit gesperrt.\r\n​Die beschriebenen Aktivitäten sowie der Missbrauch des öffentlichen Raums gehen mutmaßlich von Personen aus, die unter der Anschrift Weilerweg 91 wohnhaft sind oder sich dort regelmäßig aufhalten."
+  lat: 51.02283914786
+  long: 6.8823870376999
+  address_string: 50765 Köln, Weilerweg 91
+  service_name: Wilder Müll
+  requested_datetime: '2026-11-15T18:29:00+01:00'
+  updated_datetime: '2026-11-15T18:47:09+01:00'
+  status: open
+  media_url: https://sags-uns.stadt-koeln.de/system/files/2026-11/1000141482.jpg
+  status_note: ''
+  service_code: '1.1'

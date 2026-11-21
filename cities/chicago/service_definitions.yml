@@ -1,0 +1,862 @@
+---
+- service_code: 5c1849d89e6e99eda0adf610
+  service_name: Air Pollution, Odor or Dust Complaint
+  description: Use this service request type to report dust, odors or other air pollution from commercial and industrial sites. This service request does not apply to privately owned barbecues and fireplaces.
+  metadata: true
+  type: batch
+  keywords: code:VAZ
+  group: Health
+- service_code: 5c1849d89e6e99eda0adf546
+  service_name: Asbestos Complaint
+  description: Use this service request to report any asbestos-related complaints.
+  metadata: true
+  type: batch
+  keywords: code:VAT
+  group: Health
+- service_code: 5ffc7e655246a87d5d7c245d
+  service_name: COVID-19 - Coronavirus
+  description: Use this code to inquire about  COVID-19 - Coronavirus.
+  metadata: true
+  type: batch
+  keywords: code:COVID
+  group: Health
+- service_code: 5c1849d89e6e99eda0adf5e7
+  service_name: Construction & Demolition Complaint
+  description: Use this service request to report issues with construction or demolition sites. To report dust, odors or other air pollution from construction sites use the Air Pollution, Odor or Dust Complaint. If the complaint is related to noise and the work if occurring between 8PM and 8AM, call 311.
+  metadata: true
+  type: batch
+  keywords: code:VAT5
+  group: Health
+- service_code: 5c1849cf9e6e99eda0adb576
+  service_name: Daycare Center
+  description: Use this service request to report health or sanitary issues with daycare centers. If the issue is related to food, use “Restaurant Complaint” instead.
+  metadata: true
+  type: batch
+  keywords: code:HHC
+  group: Health
+- service_code: 5c1849d89e6e99eda0adf4a7
+  service_name: Equipment Noise Complaint
+  description: Use this service request report excessive noise coming from air conditioners, compressors, generators, or any other piece of industrial or commercial equipment. If the noise occurs between the hours of 8PM and 8AM, please call 311. If your complaint is regarding street musicians, bar noise, or loud music please refer to the Chicago Police Department.
+  metadata: true
+  type: batch
+  keywords: code:VAH
+  group: Health
+- service_code: 5c1849d89e6e99eda0adf595
+  service_name: Gas Station and Storage Tank Complaint
+  description: Use this service request to report issues related to under-ground storage tanks and above-ground storage tanks, pump malfunctions, odors, and fuel spills.
+  metadata: true
+  type: batch
+  keywords: code:VAT3
+  group: Health
+- service_code: 5c1849cb9e6e99eda0ad9f07
+  service_name: Groceries
+  description: This service request is used to report problems related to food safety at grocery stores. For problems relating to pricing, weights, expiration dates, or other business  issues (rather than health), use “Consumer Retail Store Complaint” instead. ’
+  metadata: true
+  type: batch
+  keywords: code:HFC
+  group: Health
+- service_code: 5c1849cb9e6e99eda0ad9ea6
+  service_name: Health Club
+  description: Used to report problems related to sanitation or health risks at health clubs. Problems relating to pricing or other business-related issues should be reported under "Consumer Fraud Complaint."
+  metadata: true
+  type: batch
+  keywords: code:HEE
+  group: Health
+- service_code: 5c1849cb9e6e99eda0ad9e46
+  service_name: Hotel/Motel - Health Department
+  description: Used to report problems related to sanitation or health risks at hotels or motels. Problems relating to pricing or other business-related issues should be reported under "Consumer Fraud Complaint."
+  metadata: true
+  type: batch
+  keywords: code:HEA
+  group: Health
+- service_code: 5c1849cb9e6e99eda0ad9e1f
+  service_name: Lead Inspection Request
+  description: 'This service request is used to request an inspection of a building for lead paint or other lead hazards, especially when small children live in the dwelling. PLEASE NOTE:  This code should not be used for a Water Lead Test Kit Request or Water Lead Test Visit Request.'
+  metadata: true
+  type: batch
+  keywords: code:HDF
+  group: Health
+- service_code: 5c1849d79e6e99eda0adf19d
+  service_name: Licensed Pharmaceutical Representative Complaint
+  description: To report pharmaceutical representative's failure to show a license or comply with ethical standards.
+  metadata: true
+  type: batch
+  keywords: code:LPRC
+  group: Health
+- service_code: 5c1849d39e6e99eda0add4a0
+  service_name: Pushcart Food Vendor Complaint
+  description: This service request is used to report health or sanitary problems with pushcart  food vendors.
+  metadata: true
+  type: batch
+  keywords: code:CORNVEND
+  group: Health
+- service_code: 4fd6e4ece750840569000019
+  service_name: Restaurant Complaint
+  description: This service request is used to report problems related to food safety at restaurants. Do not use this type to report problems relating to pricing, weights, expiration dates, or other business issues. These complaints are to be entered as Consumer Retail Store Complaint.
+  metadata: true
+  type: batch
+  keywords: code:HFB
+  group: Health
+- service_code: 5c1849cb9e6e99eda0ad9f2e
+  service_name: Smokeless Tobacco at Sports Event Complaint
+  description: Use this Service Request Type to report violations of the No Smokeless Tobacco Use Ordinance passed by the Chicago City Council to protect the health of patrons and workers against the known dangers of smokeless tobacco. A photo or video is required to follow up on complaints of individuals using smokeless tobacco at sports venues.
+  metadata: true
+  type: batch
+  keywords: code:HFF
+  group: Health
+- service_code: 5c1849cf9e6e99eda0adb4e0
+  service_name: 'Smoking: Non-Food Establishment'
+  description: This code is used to report violations of the Chicago Clean Indoor Air Ordinance passed by the Chicago City Council to protect the health of patrons and workers against the known dangers of tobacco smoke, including second-hand smoke. This is specifically for a non-food establishment.
+  metadata: true
+  type: batch
+  keywords: code:HFS
+  group: Health
+- service_code: 5c1849d89e6e99eda0adf5be
+  service_name: Spills or Dumping in Natural Water Ways
+  description: Use this service request to report pollution into rivers, lakes, canal, or sewers.
+  metadata: true
+  type: batch
+  keywords: code:VAT4
+  group: Health
+- service_code: 5c1849d69e6e99eda0adea62
+  service_name: Tanning and Body Art Complaint
+  description: Use this Service Request type to report complaints related to the use of tanning equipment, receipt of a tattoo or other body art procedure including body piercing and permanent make up.
+  metadata: true
+  type: batch
+  keywords: code:TABA
+  group: Health
+- service_code: 65ccf6e8e07c0bf411016278
+  service_name: Test Type Code Follow-Up
+  metadata: false
+  type: batch
+  keywords: code:TTCFU
+  group: Requests for CSR Assistance
+- service_code: 4ffa9cad6018277d4000007b
+  service_name: Alley Light Out Complaint
+  description: Report an alley light out (located on a wooden pole).  To report street lights that are not working, use Street Light Out.
+  metadata: true
+  type: batch
+  keywords: code:SFA
+  group: CDOT - Department of Transportation
+- service_code: 5c1849ce9e6e99eda0adada2
+  service_name: Alley Pothole Complaint
+  description: Report alley potholes. To report a utility cut (usually a square cut made for utility repairs) or a sinkhole (a deep dip or void in the pavement) call 311 directly.
+  metadata: true
+  type: batch
+  keywords: code:PHB
+  group: CDOT - Department of Transportation
+- service_code: 5c1849cd9e6e99eda0ada6af
+  service_name: Bicycle Request/Complaint
+  description: Use this service request to report abandoned bikes (Except for Divvy or 'Lyft' branded bikeshare bikes, instead, use service request 'Divvy Bike Parking Complaint'). Bicycle Request Complaint can also be used to report damage to bike racks, report construction blocking bike lanes, request a new bike lane, bike program literature, and new bike rack or visit https://bikeparking-chicago.hub.arcgis.com/
+  metadata: true
+  type: batch
+  keywords: code:PCL
+  group: CDOT - Department of Transportation
+- service_code: 4fd3b656e750846c53000004
+  service_name: Pothole in Street Complaint
+  description: Report locations of street potholes.  Use Alley Pot Hole to report potholes in alleys.
+  metadata: true
+  type: batch
+  keywords: code:PHF
+  group: CDOT - Department of Transportation
+- service_code: 5d8124525246c8501125bbf9
+  service_name: Protected Bike Lane - Debris Removal
+  description: This type code is for debris removal at protected bike lanes that cannot be picked up by Street Sweepers. If debris is located in the parkway, vacant lot or alley please submit a Street Cleaning Request.
+  metadata: true
+  type: batch
+  keywords: code:PBLDR
+  group: CDOT - Department of Transportation
+- service_code: 5c1849d69e6e99eda0ade852
+  service_name: Sidewalk Inspection Request
+  description: "Use this service request to report the condition of City sidewalks or accessibility (ADA) ramp issues.\r\n\r\nIf you are requesting sidewalk repair, please continue. The city will complete a sidewalk condition survey."
+  metadata: true
+  type: batch
+  keywords: code:PBS
+  group: CDOT - Department of Transportation
+- service_code: 5c1849d19e6e99eda0adc3fa
+  service_name: Sign Repair -  Base / Bolt Removal
+  description: Report empty sign bases or bolts sticking up from the sidewalk that need to be removed.
+  metadata: true
+  type: batch
+  keywords: code:SIGNREMO
+  group: CDOT - Department of Transportation
+- service_code: 5c1849cb9e6e99eda0ada115
+  service_name: Sign Repair Request - All Other Signs
+  description: "Report maintenance issues to miscellaneous missing, damaged or graffitied signs such as bike route, disabled parking, street name, and loading zone, parking restriction, pedestrian crossing, or speed limit signs.  Please note \"Do Not Enter\", \"One-Way\", and \"Stop\" signs have their own service request types.\r\n\r\nRequests to have new signs installed (meaning the sign has never existed at the location before) must be made directly to the alderman's office."
+  metadata: true
+  type: batch
+  keywords: code:PCE
+  group: CDOT - Department of Transportation
+- service_code: 5c1849c89e6e99eda0ad915c
+  service_name: Sign Repair Request - Do Not Enter Sign
+  description: Report maintenance issues to damaged or missing "Do Not Enter" signs.
+  metadata: true
+  type: batch
+  keywords: code:PCD
+  group: CDOT - Department of Transportation
+- service_code: 5c1849c89e6e99eda0ad9132
+  service_name: Sign Repair Request - One Way Sign
+  description: Report maintenance issues to damaged or missing "One Way" signs.
+  metadata: true
+  type: batch
+  keywords: code:PCC
+  group: CDOT - Department of Transportation
+- service_code: 5d8124525246c8501125bbbd
+  service_name: Sign Repair Request - Residential Permit Parking
+  description: Report missing, damaged, or faded residential parking permit signs that require maintenance. Refer new sign requests to Alderman for ordinance initiation.
+  metadata: true
+  type: batch
+  keywords: code:SRPP
+  group: CDOT - Department of Transportation
+- service_code: 5c1849c89e6e99eda0ad9105
+  service_name: Sign Repair Request - Stop Sign
+  description: Report maintenance issues to damaged or missing "Stop" signs.
+  metadata: true
+  type: batch
+  keywords: code:PCB
+  group: CDOT - Department of Transportation
+- service_code: 5d8124525246c8501125bc1e
+  service_name: Snow Removal - Protected Bike Lane or Bridge Sidewalk
+  description: This type code is for snow removal requests for protected bike lanes that require special snow removal equipment and cannot be plowed by typical snow removal trucks and for Bridge Sidewalks that need to be cleared of snow.
+  metadata: true
+  type: batch
+  keywords: code:SNPBLBS
+  group: CDOT - Department of Transportation
+- service_code: 5c1849d69e6e99eda0adea3b
+  service_name: Snow – Uncleared Sidewalk Complaint
+  description: Use this service request to report sidewalks in the public way that have not been cleared (shoveled or salted) within 15 hours after a snow/sleet event.
+  metadata: true
+  type: batch
+  keywords: code:SWSNOREM
+  group: CDOT - Department of Transportation
+- service_code: 5c1849cc9e6e99eda0ada33e
+  service_name: Street Light On During Day Complaint
+  description: Report street lights that are on during the day.
+  metadata: true
+  type: batch
+  keywords: code:SFN
+  group: CDOT - Department of Transportation
+- service_code: 4ffa9f2d6018277d400000c8
+  service_name: Street Light Out Complaint
+  description: Report a street light outage on a residential or arterial street (street lights are located on metal poles).
+  metadata: true
+  type: batch
+  keywords: code:SFD
+  group: CDOT - Department of Transportation
+- service_code: 5c1849ca9e6e99eda0ad9bc0
+  service_name: Street Light Pole Damage Complaint
+  description: Report a street light pole that has been severely damaged and/or knocked down. To report traffic signal pole down, use Traffic Signal Out.  To report street or traffic pole access doors that are missing, use Street Light Pole Door Missing.
+  metadata: true
+  type: batch
+  keywords: code:SFK
+  group: CDOT - Department of Transportation
+- service_code: 5c1849cc9e6e99eda0ada3f2
+  service_name: Street Light Pole Door Missing Complaint
+  description: Report a missing cover plate at the base of a street light or traffic signal pole.
+  metadata: true
+  type: batch
+  keywords: code:SFQ
+  group: CDOT - Department of Transportation
+- service_code: 4ffa9db16018277d400000a2
+  service_name: Traffic Signal Out Complaint
+  description: Report traffic signals and/or pedestrian crosswalk signals that are not working or are flashing.
+  metadata: true
+  type: batch
+  keywords: code:SFB
+  group: CDOT - Department of Transportation
+- service_code: 5c1849ca9e6e99eda0ad9b75
+  service_name: Viaduct Light Out Complaint
+  description: Report lights located under viaducts that are not working or are damaged.
+  metadata: true
+  type: batch
+  keywords: code:SFC
+  group: CDOT - Department of Transportation
+- service_code: 5c1849cf9e6e99eda0adb736
+  service_name: Business Complaints
+  description: Use this service request to report an individual or business enterprise conducting business without proper City of Chicago business license or permit.
+  metadata: true
+  type: batch
+  keywords: code:RBL
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d39e6e99eda0add5b8
+  service_name: Cab Feedback
+  description: Use this service request to report problems with a taxicab related service. Complaints are investigated about the condition or safety of a cab, a driver refusing to pick up a passenger or take them to their destination, reckless driving, overcharge on the fare or discourtesy to passengers or fellow motorists. It is vital to have a complainant's name/contact info, as disciplinary action may be impossible without this vital information.
+  metadata: true
+  type: batch
+  keywords: code:CSC
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d49e6e99eda0addc71
+  service_name: Cable TV Complaint
+  description: This service request is used to report billing, service or any other problems with cable television companies that operate under the City of  Chicago cable franchise agreement.
+  metadata: true
+  type: batch
+  keywords: code:OCC
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d59e6e99eda0addef0
+  service_name: Consumer Fraud Complaint
+  description: Use this service request to report unscrupulous or possibly illegal practices by a business (i.e., Defective Merchandise; Paid for a service such as home repair that was not completed; Deceptive Immigration Service Tactics; Failure to Honor a Warranty; Unauthorized Charges added to purchase price, etc.).
+  metadata: true
+  type: batch
+  keywords: code:CSF
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849cf9e6e99eda0adb2fa
+  service_name: Consumer Retail Business Complaint
+  description: Use this service request to report complaints against retail businesses in the City of Chicago (i.e., Refund Violation, Foodware Violation, Overcharged, False Advertisement, Outdated Merchandise).
+  metadata: true
+  type: batch
+  keywords: code:CST
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d79e6e99eda0adeff2
+  service_name: Inaccurate Fuel Pump Complaint
+  description: Use this service request to report complaints about inaccurate/inappropriate charges for fuel, pumps dispensing contaminated fuel, and other fuel pump issues in the City of Chicago (i.e., Leaking nozzle or hose; Price counter continues to run after fuel stops dispensing, etc.).
+  metadata: true
+  type: batch
+  keywords: code:FPC
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d49e6e99eda0addbec
+  service_name: Inaccurate Retail Scales Complaint
+  description: Use this service request to report problems with behind-the-counter scales used by retail businesses in the City of Chicago (i.e., scales used to weigh produce or deli items; scales used by private shipping services such as FedEx, UPS, and USPS). It does not include hanging scales used by consumers.
+  metadata: true
+  type: batch
+  keywords: code:INR
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d39e6e99eda0add0bf
+  service_name: Liquor Establishment Complaint
+  description: This service request is used to report all complaints against  liquor license holders, including  sale of alcohol to minors, establishments that generate excessive noise, cash payouts on poker or other gambling machines, sale of single cigarettes or sale of cigarettes to minors.
+  metadata: true
+  type: batch
+  keywords: code:LIQUORCO
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849c89e6e99eda0ad91c3
+  service_name: No Solicitation Complaint
+  description: Use this service request to report a person or business distributing commercial advertising matter (e.g., coupons, menus, sales announcements, general advertisements) on private property.
+  metadata: true
+  type: batch
+  keywords: code:NOSOLCPP
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d59e6e99eda0adde83
+  service_name: Outdated Merchandise Complaint
+  description: Use this service request to report food or over-the-counter medication being sold after the sell-by date by retail businesses in the City of Chicago. Food and medication that has not expired, but the consumer believes to be unsafe, should be reported to the Chicago Department of Public Health.
+  metadata: true
+  type: batch
+  keywords: code:ODM
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849ce9e6e99eda0adaec8
+  service_name: Paid Sick Leave Violation
+  description: Use this service request to enter complaints regarding Paid Sick Leave Ordinance and Anti-Retaliation (COVID-19) violations from any employee who works at least 2 hours within a 2 week period within the City of Chicago, and is at least 18 years old.
+  metadata: true
+  type: batch
+  keywords: code:PSL
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 65ccf6e5e07c0bf41101377f
+  service_name: Personal Delivery Device Complaint
+  description: Report issues regarding the operations of Personal Delivery Devices (PDD), which are defined as electric-powered devices that are intended to transport property primarily on areas normally designated for pedestrians. Report issues such parking on public way, operating in restricted areas, etc. For customer service issues, please contact the PDD company.
+  metadata: true
+  type: batch
+  keywords: code:PDD
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d59e6e99eda0addf20
+  service_name: Public Vehicle/Valet Complaint
+  description: This service request is used to report complaints against any Charter Bus/Trolley, Horse-Drawn Carriage, Limousine Service, Pedicab, or Valet Parking Service.
+  metadata: true
+  type: batch
+  keywords: code:CSP
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d09e6e99eda0adb78a
+  service_name: Renters and Foreclosure Complaint
+  description: Use this service request to report if the property you live in was foreclosed and you did not receive proper notice regarding the option of renewing your lease or receiving relocation assistance (e.g., building is foreclosed and you are being forced out without any options).
+  metadata: true
+  type: batch
+  keywords: code:RFC
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d09e6e99eda0adb7c4
+  service_name: Ridesharing Complaint
+  description: This service request is used to report complaints against Uber, Lyft, Via or other ride-share companies.
+  metadata: true
+  type: batch
+  keywords: code:TNP
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d19e6e99eda0adc366
+  service_name: Shared Housing/Vacation Rental Complaint
+  description: 'Use this service request to report issues regarding vacation rental properties (e.g., VRBO (Vacation Rental by Owner)), Shared Housing (i.e., AirBNB) and Bed and Breakfasts. Complaint examples include, but are not limited to the following: service not provided, poor condition of property, excessive noise, etc.'
+  metadata: true
+  type: batch
+  keywords: code:SHVR
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d39e6e99eda0add373
+  service_name: Sidewalk Café/Outdoor Dining Complaint
+  description: Use this service request to report complaints against a restaurant's sidewalk café or outdoor dining area (i.e., not enough space for pedestrians to walk by; obstruction of sidewalk, etc.)
+  metadata: true
+  type: batch
+  keywords: code:CAFE
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849ce9e6e99eda0adac9c
+  service_name: Tobacco - General Complaint
+  description: Use this service request to report sale of tobacco products or tobacco accessories without the required City of Chicago business license, and to report tobacco violations (i.e., Business selling unstamped or loose cigarettes).
+  metadata: true
+  type: batch
+  keywords: code:BAG
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849c89e6e99eda0ad9186
+  service_name: Tobacco - Sale to Minors Complaint
+  description: Use this service request to report a business that may be selling tobacco products and/or tobacco accessories to children under 18 years of age.
+  metadata: true
+  type: batch
+  keywords: code:BAM
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 5c1849d29e6e99eda0adc9a5
+  service_name: Wage Complaint
+  description: Use this service request to submit a complaint regarding minimum wage and/or wage theft violations from any employee that works two or more hours within any two week period.
+  metadata: true
+  type: batch
+  keywords: code:MWC
+  group: BACP - Business Affairs and Consumer Protection
+- service_code: 4ffa4c69601827691b000018
+  service_name: Abandoned Vehicle Complaint
+  description: Use this service request to report an abandoned vehicle. (Car, truck, motorcycle, etc.)
+  metadata: true
+  type: batch
+  keywords: code:SKA
+  group: Streets and Sanitation
+- service_code: 5c1849cf9e6e99eda0adb01b
+  service_name: Bee/Wasp Removal
+  description: 'This type code is for bee and wasp removal. Note: The City does not remove nests from private property/dwelling/back yards.'
+  metadata: true
+  type: batch
+  keywords: code:SGG
+  group: Streets and Sanitation
+- service_code: 5c1849d19e6e99eda0adc51c
+  service_name: Blue Recycling Cart
+  description: 'Use this service request when a recycling container has been damaged or stolen and a replacement is needed.  Note:  This service request is for residents who are eligible for collection services with the Department of Streets & Sanitation, for more information go here: https://www.chicago.gov/city/en/depts/streets.html'
+  metadata: true
+  type: batch
+  keywords: code:SRRC
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adcc03
+  service_name: Clean Vacant Lot Request
+  description: This service request is used to report litter, trash or debris on vacant lots. If your request is regarding excessive debris or illegal dumping, please use the "Fly Dumping Complaint" instead. If your request is for Weed Removal, please call 311 to submit a "Weed Removal Request" instead.
+  metadata: true
+  type: batch
+  keywords: code:SCT
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adc9d3
+  service_name: Clean and Green Program Request
+  description: This service request is used to request supplies for neighborhood clean-up activities. Tools are loaned to community groups throughout the year. Requests for tools must be received 3-4 business days prior to date of clean up. Tools and bags will be picked up at the local Streets & Sanitation Division. Groups wishing to have a  weekend clean-up must pick up the supplies on Friday.  (Tools may be picked up on Saturday only on the special citywide Clean and Green days.)
+  metadata: true
+  type: batch
+  keywords: code:NAA
+  group: Streets and Sanitation
+- service_code: 5c1849cf9e6e99eda0adb1fe
+  service_name: Dead Animal Pick-Up Request
+  description: This type service request to report a dead animal that needs to be picked-up and removed.
+  metadata: true
+  type: batch
+  keywords: code:SGQ
+  group: Streets and Sanitation
+- service_code: 5c1849d09e6e99eda0adbd3c
+  service_name: Dead Bird
+  description: This type code is for tracking dead birds, especially as they relate to the West Nile Virus.
+  metadata: true
+  type: batch
+  keywords: code:SGV
+  group: Streets and Sanitation
+- service_code: 5c1849d39e6e99eda0add2a9
+  service_name: Fly Dumping Complaint
+  description: This service request is used to report garbage or construction debris  that has been illegally dumped on the public way or on a vacant lot. If you are viewing the dumping in progress, call 911 with the license plate number and a description of the vehicle and/or individuals involved. If you are reporting the problem after the fact, please include  the license plate number and a description of the vehicle and/or individuals involved on this service request.
+  metadata: true
+  type: batch
+  keywords: code:SDR
+  group: Streets and Sanitation
+- service_code: 5c1849d19e6e99eda0adc3bc
+  service_name: Garbage Cart Maintenance
+  description: If your black plastic City of Chicago garbage cart is missing, it may be replaced. You must let us know how many carts are missing, and how many carts you have remaining at the address.  We also need to know the approximate date when you first noticed the cart missing.
+  metadata: true
+  type: batch
+  keywords: code:SIE
+  group: Streets and Sanitation
+- service_code: 65ccf6e1e07c0bf41100fbd9
+  service_name: Graffiti Removal Request
+  description: Use this request to report graffiti that is on your property, public property or on someone else's property. Graffiti will be removed from public or private property by  Graffiti Program.  Graffiti will either be painted over (if the graffiti is on a painted surface) or blasted off with a high pressure baking soda and water solution (if it is on brick, cement or stone).
+  metadata: true
+  type: batch
+  keywords: code:GRAF
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adcd3f
+  service_name: Ice and Snow Removal Request
+  description: This service request is for removal of ice and snow from city streets. Crews make every effort to remove snow and ice from streets as quickly as possible during the winter months. Certain answers are required to request snow/ice removal equipment (i.e., address of the problem, is the problem on a main street or side street and description of the problem). This request is not for uncleared sidewalks. To report uncleared sidewalks, use "Snow - Uncleared Sidewalk/Bike Lane Complaint."
+  metadata: true
+  type: batch
+  keywords: code:SDO
+  group: Streets and Sanitation
+- service_code: 5c1849d09e6e99eda0adb90e
+  service_name: Missed Garbage Pick-Up Complaint
+  description: "Use this service request to report the city truck that regularly picks up your garbage has not done so.  Let us know if only your garbage pickup was missed, or if the entire alley was missed.  If you do not know your garbage pickup schedule, then you may call 311 for information.\r\nThe Department of Streets and Sanitation, Bureau of Sanitation is responsible for this service."
+  metadata: true
+  type: batch
+  keywords: code:SCC
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adcc54
+  service_name: Recycling Inspection Request
+  description: Use this service request type to requests an inspection for compliance. Landlords, management companies and businesses who want more information on compliance can call  (312)744-2413.
+  metadata: true
+  type: batch
+  keywords: code:SCX
+  group: Streets and Sanitation
+- service_code: 5c1849d49e6e99eda0add726
+  service_name: Recycling Pick Up
+  description: 'Use this service request for requesting a missed recycling pick-up.  Note:  Prior to submitting your request, please confirm your collection day by visiting this link: https://www.recyclebycity.com/chicago/schedule'
+  metadata: true
+  type: batch
+  keywords: code:SRRP
+  group: Streets and Sanitation
+- service_code: 4fd3b9bce750846c5300004a
+  service_name: Rodent Baiting/Rat Complaint
+  description: Use this service request to report a rodent or rat problem.
+  metadata: true
+  type: batch
+  keywords: code:SGA
+  group: Streets and Sanitation
+- service_code: 4fd3b750e750846c5300001d
+  service_name: Sanitation Code Violation
+  description: 'Use this service type to report unsanitary conditions on private property that should cause the owner to be cited for violating the City''s sanitation codes. Certain questions must be answered to initiate an investigation: the location address and what type of problem exists. It is helpful to know who is responsible for the problem, if known. If you can leave your name and phone number, the inspectors sometimes need to contact the complainant in order to issue a citation to the violator.'
+  metadata: true
+  type: batch
+  keywords: code:SCB
+  group: Streets and Sanitation
+- service_code: 5c1849d39e6e99eda0add329
+  service_name: Snow - Object/Dibs Removal Request
+  description: Use this service request to have items removed from parking spaces. (i.e., Chairs, Buckets, Cones, etc.).
+  metadata: true
+  type: batch
+  keywords: code:SDW
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adcd6f
+  service_name: Street Cleaning Request
+  description: This service request is used for curb to curb sweeping the debris off the street by a street sweeping machine (mechanical sweeper).
+  metadata: true
+  type: batch
+  keywords: code:SDP
+  group: Streets and Sanitation
+- service_code: 4fd3bbf8e750846c53000069
+  service_name: Tree Debris Clean-Up Request
+  description: "Use this service request to request a pick-up of a pile of branches or bushes. The branches/bushes must be neatly stacked in the alley or City parkway near the curb. Blocking a street, sidewalk of alleyway may result in a sanitation code ticket being issued. Certain questions must be answered to complete this request: e.g., is the amount larger than a desk and where is the debris located.  \r\n\r\nThe Department of Streets and Sanitation, Bureau of Forestry picks up large piles of branches.  Use this service request for all Debris Removal requests."
+  metadata: true
+  type: batch
+  keywords: code:SEL
+  group: Streets and Sanitation
+- service_code: 5c1849d49e6e99eda0adda37
+  service_name: Tree Planting Request
+  description: "Requests to plant a tree on the City parkway in front of your house are done through this service request. The parkway is the space between the curb and the city sidewalk.\r\n\r\nCertain answers are required to enter a work order: the address you want a tree planted at,  how many trees you want planted, and whether a tree has been planted at this address recently.\r\n\r\nThe Department of Streets and Sanitation, Bureau of Forestry oversees tree planting for the City of Chicago."
+  metadata: true
+  type: batch
+  keywords: code:SED
+  group: Streets and Sanitation
+- service_code: 5c1849d59e6e99eda0ade15c
+  service_name: Tree Removal Request
+  description: 'A City inspector will check trees on the public way to determine if they are dead or diseased. The inspector will order the removal of dead or dangerous trees.  If a tree is not dead or diseased the City will not remove it.  Certain answers are required to enter a work order to request removal of a tree from city property: the address at which the tree is located and the location of the tree to be inspected (parkway near the curb, in alley or City-owned vacant lot etc.).'
+  metadata: true
+  type: batch
+  keywords: code:SEE
+  group: Streets and Sanitation
+- service_code: 5c1849d59e6e99eda0ade19c
+  service_name: Tree Trim Request (NO LONGER BEING ACCEPTED)
+  description: Starting Spring 2023, Chicago’s public parkway trees will be trimmed utilizing an Area Tree Trimming program; therefore, DSS is no longer accepting individual tree trimming requests.
+  metadata: true
+  type: batch
+  keywords: code:SEF
+  group: Streets and Sanitation
+- service_code: 5c1849ca9e6e99eda0ad9885
+  service_name: Weed Removal Request
+  description: "High weeds can be cut and removed from the public way by using this service request.  Certain answers are required to report high weeds: the address and the location(vacant lot, alley etc.) of the overgrown weeds. \r\n\r\nThe Department of Streets and Sanitation, Bureau of Sanitation cuts weeds for the City of Chicago."
+  metadata: true
+  type: batch
+  keywords: code:SCP
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adcbda
+  service_name: Wire Basket Request
+  description: Use this service request for requesting a wire basket on a corner in front of a business or store front.
+  metadata: true
+  type: batch
+  keywords: code:SCS
+  group: Streets and Sanitation
+- service_code: 5c1849d29e6e99eda0adcba5
+  service_name: Yard Waste Pick-Up Request
+  description: Yard waste consists of leaves, grass clippings, branches, brush, clippings from shrubbery, and garden waste.  Yard waste does not include dirt, rocks, or gravel.  Piles of tree branches that are approximately the size of two garbage carts or smaller are picked up by the yard waste collection crews.  Piles that are larger should be entered into the system as Tree Debris.
+  metadata: true
+  type: batch
+  keywords: code:SCQ
+  group: Streets and Sanitation
+- service_code: 5c1849d69e6e99eda0adea8a
+  service_name: Animal In Trap Complaint
+  description: "Use this service request to report an animal in a trap. Do not use if the animal is loose inside a house or building. Do not use this service request to report animals confined in boxes or carriers – use Stray Animal call type instead.\r\n\r\nIf the animal is in a private trap CACC will not pick it up. The caller must make arrangements via internet/email at visitcacc@cityofchicago.org to bring the animal to CACC. Callers without a valid state issued permit will have the trap confiscated (i.e., not returned) & may be referred to the state for illegal trapping for possible fines."
+  metadata: true
+  type: batch
+  keywords: code:EBD
+  group: Animal Care and Control
+- service_code: 5c1849eb9e6e99eda0ae4082
+  service_name: Coyote Interaction Complaint
+  description: Use this service request to report coyote interaction. Sightings from a distance should not be reported as coyotes are state-protected wildlife.
+  metadata: true
+  type: batch
+  keywords: code:CIAC
+  group: Animal Care and Control
+- service_code: 5c1849d69e6e99eda0ade9ee
+  service_name: Nuisance Animal Complaint
+  description: "This service request is used to report complaints regarding unlicensed, unvaccinated animals, excessive noise or dog excrement issues on the public way. This does not pertain to wildlife that are commonly protected by state laws.\r\n\r\nIf the animal is \"wildlife\" (non-domesticate animals) CACC does not remove/relocate wildlife unless it is either injured or vicious as it is protected by state wildlife codes/laws."
+  metadata: true
+  type: batch
+  keywords: code:EAB
+  group: Animal Care and Control
+- service_code: 5c1849cd9e6e99eda0ada819
+  service_name: Pet Wellness Check Request
+  description: Use this service request to report the need of a wellness check, an animal being beaten or abused, or concerns for a pet such as no food, no water, unsanitary pet conditions, etc.
+  metadata: true
+  type: batch
+  keywords: code:PET
+  group: Animal Care and Control
+- service_code: 5c1849c99e6e99eda0ad9545
+  service_name: Report an Injured Animal
+  description: "Use this service request to report any non-owned animal in the public way, public place, city park, on a pole, electrical wire, or train tracks that is injured or sick. \r\n\r\nIf the animal is deceased, CACC does not pick up any deceased animals, instead enter Service Request under Streets & Sanitation, \"Dead Animal Pick-up Request Type Code\"."
+  metadata: true
+  type: batch
+  keywords: code:EAQ
+  group: Animal Care and Control
+- service_code: 5c1849c99e6e99eda0ad942c
+  service_name: Stray Animal Complaint
+  description: "Use this service request to report a stray animal. A stray animal is an unleashed animal not in the presence of an owner and does not pertain to wildlife which cannot be defined as strays.\r\n\r\nIf the animal is wildlife CACC will not respond unless the animal is injured or vicious as it is protected by state wildlife codes/laws."
+  metadata: true
+  type: batch
+  keywords: code:EAE
+  group: Animal Care and Control
+- service_code: 5c1849c99e6e99eda0ad9456
+  service_name: Vicious Animal Complaint
+  description: Use this service request to report any animal that is exhibiting signs of being vicious, including attacking or attempting to bite. If you or your companion animal(s) has been bitten, report this to 911 who will generate a Bite Report for you and/or them.
+  metadata: true
+  type: batch
+  keywords: code:EAF
+  group: Animal Care and Control
+- service_code: 5c1849cb9e6e99eda0ada21b
+  service_name: Alley Sewer Inspection Request
+  description: Use this service request to report problems with alley sewers, such as  a caved-in sewer, a hole close to the sewer or standing water because the sewer is clogged. This service request can also be used to report persons illegally dumping something into an alley sewer. If you are viewing the dumping in progress, call 911 with the license plate number and a description of the vehicle and/or individuals involved. If you are reporting the problem after the fact, please include a name, address or other information.
+  metadata: true
+  type: batch
+  keywords: code:AAI
+  group: DWM - Department of Water Management
+- service_code: 5c1849d29e6e99eda0adc88a
+  service_name: Low Water Pressure Complaint
+  description: Use this service request to report low water pressure inside a building that you own. Please contact your landlord if there is a problem in a space that you are renting.
+  metadata: true
+  type: batch
+  keywords: code:WBK
+  group: DWM - Department of Water Management
+- service_code: 5c1849cc9e6e99eda0ada43a
+  service_name: No Water Complaint
+  description: The service request is used to report no water to property. If there is a visible leak, call 311
+  metadata: true
+  type: batch
+  keywords: code:WBJ
+  group: DWM - Department of Water Management
+- service_code: 5c1849cc9e6e99eda0ada57e
+  service_name: Open Fire Hydrant Complaint
+  description: This service request is used to report illegally opened fire hydrants with water coming out of the nozzle.
+  metadata: true
+  type: batch
+  keywords: code:WBT
+  group: DWM - Department of Water Management
+- service_code: 5c1849cb9e6e99eda0ada142
+  service_name: Sewer Cave-In Inspection Request
+  description: 'This service request is to be used for the following reasons: cave-in by the sewer, sewer cave-in in the street.'
+  metadata: true
+  type: batch
+  keywords: code:AAD
+  group: DWM - Department of Water Management
+- service_code: 5c1849d39e6e99eda0add40a
+  service_name: Sewer Cleaning Inspection Request
+  description: "This service request is used to request that the City sewers, located on or near the curb, be checked for cleaning. Certain questions must be answered to create a work order for an inspection: the address location, whether this sewer is in front of your home and the location of the sewer (street, curb line, alley etc.).\r\n\r\nDo not use this service type to request cleaning of a catch basin on private property. That is the property owner's responsibility."
+  metadata: true
+  type: batch
+  keywords: code:CHECKFOR
+  group: DWM - Department of Water Management
+- service_code: 5c1849cb9e6e99eda0ada172
+  service_name: Water On Street Complaint
+  description: 'This service request is used to report water that remains on the street following a rain storm. Certain questions need to be answered to dispatch a sewer crew: the address of the location, the location of the water (middle of street, curb line, alley etc.) Additional information that is helpful includes whether water is bubbling up in the street, and from where. Noting whether any construction has been done in the street lately, and by whom, can also help.'
+  metadata: true
+  type: batch
+  keywords: code:AAE
+  group: DWM - Department of Water Management
+- service_code: 5c1849cb9e6e99eda0ada1a2
+  service_name: Water in Basement Complaint
+  description: "Report a backup of water in your home or business under this service request. Certain questions need to be answered to dispatch a sewer crew: the address location, whether the water is dirty or clean, where the water is coming from (floor drain, toilet, shower etc.), how many inches of water have backed up and whether this is a basement, crawl space or ground level.\r\n\r\nDo not use this service request to report water that has entered your basement through the windows."
+  metadata: true
+  type: batch
+  keywords: code:AAF
+  group: DWM - Department of Water Management
+- service_code: 5c1849cd9e6e99eda0ada8d5
+  service_name: Buildings - Boiler Violation
+  description: This service request is used for comments and complaints about boilers in all residential buildings.
+  metadata: true
+  type: batch
+  keywords: code:BBB
+  group: DOB - Buildings
+- service_code: 5c1849cf9e6e99eda0adb06c
+  service_name: Buildings - Electrical Violation
+  description: This service request is used for comments and complaints regarding defective and dangerous electrical wiring systems in all types of buildings and occupancies throughout the city.
+  metadata: true
+  type: batch
+  keywords: code:BBE
+  group: DOB - Buildings
+- service_code: 5c1849cf9e6e99eda0adb0fb
+  service_name: Buildings - Elevator Violation
+  description: This service request is used for comments and complaints regarding all types of elevators (both passenger and freight), escalators and other similar people movers.
+  metadata: true
+  type: batch
+  keywords: code:BBH
+  group: DOB - Buildings
+- service_code: 5c1849d19e6e99eda0adc1c8
+  service_name: Buildings - Furnace Violation
+  description: This code is used for comments and complaints for residential buildings equipped with gas combustion furnaces where a carbon monoxide hazard is suspected.
+  metadata: true
+  type: batch
+  keywords: code:BBP
+  group: DOB - Buildings
+- service_code: 5c1849cd9e6e99eda0ada905
+  service_name: Buildings - Plumbing Violation
+  description: This code may be used for comments and complaints regarding defective plumbing systems and/or fixtures in all types in buildings. Calls may include complaints about low water pressure, no water, no hot water, backed-up or standing sewage, leaking or broken faucets/toilets/bathtubs/sinks or flooding due to defective gutters and downspouts on the outside of a building.
+  metadata: true
+  type: batch
+  keywords: code:BBC
+  group: DOB - Buildings
+- service_code: 5c1849ce9e6e99eda0adaf4c
+  service_name: No Building Permit and Construction Violation
+  description: Use this service request to report persons or companies building or rehabilitating a structure without having a City Building Permit displayed. The permit is to be posted where it's visible from the public way.
+  metadata: true
+  type: batch
+  keywords: code:BBD
+  group: DOB - Buildings
+- service_code: 5c1849d19e6e99eda0adc11d
+  service_name: Porch Inspection Request
+  description: This service request is used to report a porch that may be dangerous due to rot, damage, poor construction or any other conditions that may render it unsafe.
+  metadata: true
+  type: batch
+  keywords: code:BPI
+  group: DOB - Buildings
+- service_code: 5c1849d19e6e99eda0adbfcd
+  service_name: Vacant/Abandoned Building Complaint
+  description: Use this service request to report an abandoned building in your neighborhood. Please call 311 directly to report any building that is in danger of collapse or poses any other hazard that may cause imminent danger to nearby tenants or the public.
+  metadata: true
+  type: batch
+  keywords: code:BBK
+  group: DOB - Buildings
+- service_code: 5c1849ce9e6e99eda0adabcd
+  service_name: Aircraft Noise Complaint
+  description: 'Use this service request to report an airport or aircraft-related noise issue. Please note: in order to include your aircraft noise complaint in the Airport Noise Management System report, you must provide a verifiable Illinois address when completing your contact information for this request.'
+  metadata: true
+  type: batch
+  keywords: code:AVN
+  group: Aviation
+- service_code: 65ccf6d4e07c0bf4110003e2
+  service_name: Aircraft Noise Monitor Request
+  description: Use this code to requests an Airport Noise Management System ("ANMS")  - Device  to monitor the amount of noise generated from aircraft at “Midway” or “O’Hare”.  The portable noise monitors allow us to provide you with a specific report on aircraft noise levels at your home during a sample two-week monitoring period.
+  metadata: true
+  type: batch
+  keywords: code:ANM
+  group: Aviation
+- service_code: 5c1849cf9e6e99eda0adb14c
+  service_name: City Vehicle Sticker Violation
+  description: This service request is used to report vehicles that are registered to a Chicago address that are not displaying the City of Chicago Vehicle License on the windshield.
+  metadata: true
+  type: batch
+  keywords: code:QAC
+  group: City Clerk's Office
+- service_code: 5c1849d89e6e99eda0adf639
+  service_name: Vehicle Parked in Bike Lane Complaint
+  description: Report a vehicle parking in a bike lane.  This information will be used for analysis to target problem locations.
+  metadata: true
+  type: batch
+  keywords: code:VBL
+  group: Finance
+- service_code: 62bded1a5246445592101568
+  service_name: Divvy Bike Parking Complaint
+  description: Used to report improperly parked Divvy bike or "Lyft" branded bikeshare bike, so it can be retrieved and/or corrected by the Divvy Operator.
+  metadata: true
+  type: batch
+  keywords: code:DBPC
+  group: Outside Agencies
+- service_code: 5d2e519d9e6ee5a42d916b60
+  service_name: E-Scooter
+  description: Use this code to report an electric scooter (e-scooter) blocking the public way after a rider has finished his or her ride. We encourage the public to call the company labeled on the e-scooter. If it has been more than 2 hours after the call continue.
+  metadata: true
+  type: batch
+  keywords: code:PCL3
+  group: Outside Agencies
+- service_code: 62bded505246445592110171
+  service_name: E-Scooter Parking Complaint
+  description: "Report an electric scooter (e-scooter) blocking the public way after a rider has finished their ride. Residents can provide information on the e-scooter location and company, so it can be retrieved and or corrected by the Operator. Customer service issues (such as account questions) should be directed to the appropriate e-scooter company.\r\nDivvy/Lyft: divvybikes.com/contact or 1-855-553-4889\r\nLime: https://www.li.me/ or support@li.me or 1-888-546-3345\r\nSuperpedestrian: support@superpedestrian.com or https://superpedestrian.com/ or 1-844-701-8163\r\nSpin: support@spin.pm or www.spin.app or 1-888-249-9698"
+  metadata: true
+  type: batch
+  keywords: code:ESPC
+  group: Outside Agencies
+- service_code: 6571eee852469b72ad33094b
+  service_name: CHA - How's My Driving
+  description: CHA - How's My Driving" needs to be configured and then activity outcome added for Chicago Housing Authority.
+  metadata: false
+  type: batch
+  keywords: code:NAH25
+  group: Chicago Housing Authority
+- service_code: 5c1849d39e6e99eda0add01e
+  service_name: Extreme Weather Notification
+  description: In case of a Heat Warning or a Wind Chill Warning, the City will activate the Extreme Weather Notification System to provide weather information to those with special needs. Through its Emergency Telephone Notification System (or 911 Callback) the City will contact registered households with a recorded telephone message that will provide (1) weather forecasts and safety tips, (2) City services information (e.g. cooling/warming centers), and (3) how to register for an in-person well-being check.
+  metadata: true
+  type: batch
+  keywords: code:JNS
+  group: Extreme Weather Notification
+- service_code: 5c1849d39e6e99eda0add046
+  service_name: Park Repair/Maintenance
+  description: This type code should be used to report facilities management issues , and all issues dealing with needed maintenance work at Chicago Park District Facilities and Grounds. In the description, please note the name of the park or park district facility.
+  metadata: true
+  type: batch
+  keywords: code:KAC
+  group: Chicago Park District
+- service_code: 5c1849d79e6e99eda0adefce
+  service_name: Commercial Fire Safety Inspection  - FAC
+  description: This service request is used to ask the Fire Department to schedule an inspection to determine whether fire hazards exist in a commercial property.  If a residential inspection is needed enter a building violation instead.
+  metadata: true
+  type: batch
+  keywords: code:FAC
+  group: Fire
+- service_code: 5c1849d39e6e99eda0add34d
+  service_name: Bungalow/Vintage Home Information Request
+  description: This service request is used to request the mailing of information on technical assistance to current and would-be owners of Historic Chicago Bungalows and Vintage Homes. Information will be sent to you that can guide you in the purchase, restoration, or modernization of these homes, and help you find the resources you need.
+  metadata: true
+  type: batch
+  keywords: code:BUNGALOW
+  group: Department of Housing
+- service_code: 5c1849cf9e6e99eda0adb70d
+  service_name: Home Buyer Program Info Request
+  description: Department of Housing offers different programs to assist homebuyers looking to purchase their primary residence in the City of Chicago. Programs are limited to funding availability and applicants must meet ALL eligibility requirements. Please provide name and email address or mailing address to receive additional information.
+  metadata: true
+  type: batch
+  keywords: code:HOP
+  group: Department of Housing
+- service_code: 5c1849d19e6e99eda0adc595
+  service_name: Small Accessible Repairs and Ramps for Seniors
+  description: Provides enabling devices to 1-to-4 unit residences occupied by low and moderate income seniors who are at least 60 years of age. The program addresses issues of accessibility, safety, and security by providing needed upgrades, including grab bars, ramps, and other needed repairs so seniors can maintain their independence.
+  metadata: true
+  type: batch
+  keywords: code:HRAIL
+  group: Department of Housing
+- service_code: 6571eee852469b72ad330739
+  service_name: Post Planting Inspection
+  metadata: false
+  type: batch
+  keywords: code:BOF-POSTPLANT
+- service_code: 6571eee852469b72ad33078e
+  service_name: Tree Planting - Vendor
+  metadata: false
+  type: batch
+  keywords: code:BOF-PLANTING
+- service_code: 4fd3b167e750846744000005
+  service_name: rodent
+  metadata: false
+  type: batch
+  keywords: 'code:'

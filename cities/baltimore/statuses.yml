@@ -1,0 +1,17 @@
+---
+- request_name: service_list
+  created_at: '2026-11-15T16:02:21Z'
+  http_code: 200
+  duration_ms: 202
+- request_name: service_requests
+  created_at: '2026-11-15T16:02:21Z'
+  http_code: 200
+  duration_ms: 38
+- request_name: service_list
+  created_at: '2026-11-15T18:24:51Z'
+  http_code: 200
+  duration_ms: 116
+- request_name: service_requests
+  created_at: '2026-11-15T18:24:51Z'
+  http_code: 200
+  duration_ms: 43
