@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open311 Status - 311 API monitoring and analysis</title>
+    <meta name="description" content="Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.">
+    <link rel="stylesheet" href="/assets/application-45e5b11b619b5705bf263c519a28d2e8d3bf924969219c0eec2930067e356a5d.css" media="all" />
+    
+    <script src="/vite/assets/application-Br0s-MtQ.js" crossorigin="" type="module"></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="/">Open311 Status</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex ms-auto my-2 my-lg-0" action="/search" method="get" role="search">
+        <input id="navbar-search" class="form-control form-control-sm" type="search" name="q" placeholder="Search requests" aria-label="Search service requests" autocomplete="off">
+      </form>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">
+            <i class="fa fa-question-circle"></i>
+            About
+</a>        </li>
+        <li class="nav-item">
+          <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/codeforamerica/open311status">
+            <i class="fa fa-github-alt"></i>
+            Github
+</a>        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    </header>
+    <main role="main" class="flex-grow-1">
+      <div class="container">
+        <div class="well mb-3">
+  <strong>
+    Scanning 4 Open311 endpoints every hour.
+    For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers" rel="noopener">Open311 Wiki</a>.
+  </strong>
+</div>
+
+<div class="card card-default mb-3">
+  <div class="card-header">
+    <h3 class="card-title">Service Requests created during previous 48 hours</h3>
+  </div>
+  <div class="card-body">
+    <div data-controller="line-chart" data-line-chart-series-value="[{&quot;name&quot;:&quot;Bloomington, IN&quot;,&quot;data&quot;:{&quot;2026-11-19T14:00:00Z&quot;:0,&quot;2026-11-19T15:00:00Z&quot;:1,&quot;2026-11-19T16:00:00Z&quot;:0,&quot;2026-11-19T17:00:00Z&quot;:1,&quot;2026-11-19T18:00:00Z&quot;:0,&quot;2026-11-19T19:00:00Z&quot;:1,&quot;2026-11-19T20:00:00Z&quot;:0,&quot;2026-11-19T21:00:00Z&quot;:1,&quot;2026-11-19T22:00:00Z&quot;:1,&quot;2026-11-19T23:00:00Z&quot;:1,&quot;2026-11-20T00:00:00Z&quot;:0,&quot;2026-11-20T01:00:00Z&quot;:0,&quot;2026-11-20T02:00:00Z&quot;:0,&quot;2026-11-20T03:00:00Z&quot;:0,&quot;2026-11-20T04:00:00Z&quot;:0,&quot;2026-11-20T05:00:00Z&quot;:0,&quot;2026-11-20T06:00:00Z&quot;:0,&quot;2026-11-20T07:00:00Z&quot;:0,&quot;2026-11-20T08:00:00Z&quot;:0,&quot;2026-11-20T09:00:00Z&quot;:0,&quot;2026-11-20T10:00:00Z&quot;:0,&quot;2026-11-20T11:00:00Z&quot;:0,&quot;2026-11-20T12:00:00Z&quot;:0,&quot;2026-11-20T13:00:00Z&quot;:1,&quot;2026-11-20T14:00:00Z&quot;:2,&quot;2026-11-20T15:00:00Z&quot;:0,&quot;2026-11-20T16:00:00Z&quot;:0,&quot;2026-11-20T17:00:00Z&quot;:4,&quot;2026-11-20T18:00:00Z&quot;:0,&quot;2026-11-20T19:00:00Z&quot;:0,&quot;2026-11-20T20:00:00Z&quot;:1,&quot;2026-11-20T21:00:00Z&quot;:2,&quot;2026-11-20T22:00:00Z&quot;:2,&quot;2026-11-20T23:00:00Z&quot;:0,&quot;2026-11-21T00:00:00Z&quot;:1,&quot;2026-11-21T01:00:00Z&quot;:0,&quot;2026-11-21T02:00:00Z&quot;:0,&quot;2026-11-21T03:00:00Z&quot;:1,&quot;2026-11-21T04:00:00Z&quot;:0,&quot;2026-11-21T05:00:00Z&quot;:0,&quot;2026-11-21T06:00:00Z&quot;:0,&quot;2026-11-21T07:00:00Z&quot;:0,&quot;2026-11-21T08:00:00Z&quot;:0,&quot;2026-11-21T09:00:00Z&quot;:0,&quot;2026-11-21T10:00:00Z&quot;:0,&quot;2026-11-21T11:00:00Z&quot;:0,&quot;2026-11-21T12:00:00Z&quot;:0,&quot;2026-11-21T13:00:00Z&quot;:0}},{&quot;name&quot;:&quot;Chicago, IL&quot;,&quot;data&quot;:{&quot;2026-11-19T14:00:00Z&quot;:146,&quot;2026-11-19T15:00:00Z&quot;:230,&quot;2026-11-19T16:00:00Z&quot;:206,&quot;2026-11-19T17:00:00Z&quot;:162,&quot;2026-11-19T18:00:00Z&quot;:236,&quot;2026-11-19T19:00:00Z&quot;:186,&quot;2026-11-19T20:00:00Z&quot;:172,&quot;2026-11-19T21:00:00Z&quot;:148,&quot;2026-11-19T22:00:00Z&quot;:146,&quot;2026-11-19T23:00:00Z&quot;:112,&quot;2026-11-20T00:00:00Z&quot;:94,&quot;2026-11-20T01:00:00Z&quot;:84,&quot;2026-11-20T02:00:00Z&quot;:57,&quot;2026-11-20T03:00:00Z&quot;:58,&quot;2026-11-20T04:00:00Z&quot;:34,&quot;2026-11-20T05:00:00Z&quot;:33,&quot;2026-11-20T06:00:00Z&quot;:15,&quot;2026-11-20T07:00:00Z&quot;:14,&quot;2026-11-20T08:00:00Z&quot;:15,&quot;2026-11-20T09:00:00Z&quot;:11,&quot;2026-11-20T10:00:00Z&quot;:5,&quot;2026-11-20T11:00:00Z&quot;:8,&quot;2026-11-20T12:00:00Z&quot;:47,&quot;2026-11-20T13:00:00Z&quot;:96,&quot;2026-11-20T14:00:00Z&quot;:164,&quot;2026-11-20T15:00:00Z&quot;:188,&quot;2026-11-20T16:00:00Z&quot;:198,&quot;2026-11-20T17:00:00Z&quot;:169,&quot;2026-11-20T18:00:00Z&quot;:164,&quot;2026-11-20T19:00:00Z&quot;:192,&quot;2026-11-20T20:00:00Z&quot;:182,&quot;2026-11-20T21:00:00Z&quot;:191,&quot;2026-11-20T22:00:00Z&quot;:143,&quot;2026-11-20T23:00:00Z&quot;:108,&quot;2026-11-21T00:00:00Z&quot;:90,&quot;2026-11-21T01:00:00Z&quot;:66,&quot;2026-11-21T02:00:00Z&quot;:97,&quot;2026-11-21T03:00:00Z&quot;:75,&quot;2026-11-21T04:00:00Z&quot;:75,&quot;2026-11-21T05:00:00Z&quot;:26,&quot;2026-11-21T06:00:00Z&quot;:23,&quot;2026-11-21T07:00:00Z&quot;:9,&quot;2026-11-21T08:00:00Z&quot;:8,&quot;2026-11-21T09:00:00Z&quot;:8,&quot;2026-11-21T10:00:00Z&quot;:9,&quot;2026-11-21T11:00:00Z&quot;:9,&quot;2026-11-21T12:00:00Z&quot;:31,&quot;2026-11-21T13:00:00Z&quot;:17}},{&quot;name&quot;:&quot;Köln / Cologne, Deutschland&quot;,&quot;data&quot;:{&quot;2026-11-19T14:00:00Z&quot;:0,&quot;2026-11-19T15:00:00Z&quot;:0,&quot;2026-11-19T16:00:00Z&quot;:0,&quot;2026-11-19T17:00:00Z&quot;:0,&quot;2026-11-19T18:00:00Z&quot;:0,&quot;2026-11-19T19:00:00Z&quot;:0,&quot;2026-11-19T20:00:00Z&quot;:0,&quot;2026-11-19T21:00:00Z&quot;:0,&quot;2026-11-19T22:00:00Z&quot;:0,&quot;2026-11-19T23:00:00Z&quot;:0,&quot;2026-11-20T00:00:00Z&quot;:0,&quot;2026-11-20T01:00:00Z&quot;:0,&quot;2026-11-20T02:00:00Z&quot;:0,&quot;2026-11-20T03:00:00Z&quot;:0,&quot;2026-11-20T04:00:00Z&quot;:0,&quot;2026-11-20T05:00:00Z&quot;:0,&quot;2026-11-20T06:00:00Z&quot;:0,&quot;2026-11-20T07:00:00Z&quot;:0,&quot;2026-11-20T08:00:00Z&quot;:0,&quot;2026-11-20T09:00:00Z&quot;:0,&quot;2026-11-20T10:00:00Z&quot;:0,&quot;2026-11-20T11:00:00Z&quot;:0,&quot;2026-11-20T12:00:00Z&quot;:0,&quot;2026-11-20T13:00:00Z&quot;:0,&quot;2026-11-20T14:00:00Z&quot;:0,&quot;2026-11-20T15:00:00Z&quot;:0,&quot;2026-11-20T16:00:00Z&quot;:0,&quot;2026-11-20T17:00:00Z&quot;:0,&quot;2026-11-20T18:00:00Z&quot;:0,&quot;2026-11-20T19:00:00Z&quot;:0,&quot;2026-11-20T20:00:00Z&quot;:0,&quot;2026-11-20T21:00:00Z&quot;:0,&quot;2026-11-20T22:00:00Z&quot;:0,&quot;2026-11-20T23:00:00Z&quot;:0,&quot;2026-11-21T00:00:00Z&quot;:0,&quot;2026-11-21T01:00:00Z&quot;:0,&quot;2026-11-21T02:00:00Z&quot;:0,&quot;2026-11-21T03:00:00Z&quot;:0,&quot;2026-11-21T04:00:00Z&quot;:0,&quot;2026-11-21T05:00:00Z&quot;:0,&quot;2026-11-21T06:00:00Z&quot;:0,&quot;2026-11-21T07:00:00Z&quot;:0,&quot;2026-11-21T08:00:00Z&quot;:0,&quot;2026-11-21T09:00:00Z&quot;:0,&quot;2026-11-21T10:00:00Z&quot;:0,&quot;2026-11-21T11:00:00Z&quot;:0,&quot;2026-11-21T12:00:00Z&quot;:0,&quot;2026-11-21T13:00:00Z&quot;:0}},{&quot;name&quot;:&quot;Rostock, Deutschland&quot;,&quot;data&quot;:{&quot;2026-11-19T14:00:00Z&quot;:0,&quot;2026-11-19T15:00:00Z&quot;:1,&quot;2026-11-19T16:00:00Z&quot;:0,&quot;2026-11-19T17:00:00Z&quot;:1,&quot;2026-11-19T18:00:00Z&quot;:3,&quot;2026-11-19T19:00:00Z&quot;:1,&quot;2026-11-19T20:00:00Z&quot;:9,&quot;2026-11-19T21:00:00Z&quot;:3,&quot;2026-11-19T22:00:00Z&quot;:1,&quot;2026-11-19T23:00:00Z&quot;:0,&quot;2026-11-20T00:00:00Z&quot;:0,&quot;2026-11-20T01:00:00Z&quot;:0,&quot;2026-11-20T02:00:00Z&quot;:0,&quot;2026-11-20T03:00:00Z&quot;:0,&quot;2026-11-20T04:00:00Z&quot;:0,&quot;2026-11-20T05:00:00Z&quot;:0,&quot;2026-11-20T06:00:00Z&quot;:9,&quot;2026-11-20T07:00:00Z&quot;:0,&quot;2026-11-20T08:00:00Z&quot;:4,&quot;2026-11-20T09:00:00Z&quot;:1,&quot;2026-11-20T10:00:00Z&quot;:1,&quot;2026-11-20T11:00:00Z&quot;:0,&quot;2026-11-20T12:00:00Z&quot;:0,&quot;2026-11-20T13:00:00Z&quot;:2,&quot;2026-11-20T14:00:00Z&quot;:5,&quot;2026-11-20T15:00:00Z&quot;:2,&quot;2026-11-20T16:00:00Z&quot;:2,&quot;2026-11-20T17:00:00Z&quot;:2,&quot;2026-11-20T18:00:00Z&quot;:3,&quot;2026-11-20T19:00:00Z&quot;:2,&quot;2026-11-20T20:00:00Z&quot;:0,&quot;2026-11-20T21:00:00Z&quot;:0,&quot;2026-11-20T22:00:00Z&quot;:0,&quot;2026-11-20T23:00:00Z&quot;:1,&quot;2026-11-21T00:00:00Z&quot;:0,&quot;2026-11-21T01:00:00Z&quot;:0,&quot;2026-11-21T02:00:00Z&quot;:0,&quot;2026-11-21T03:00:00Z&quot;:0,&quot;2026-11-21T04:00:00Z&quot;:0,&quot;2026-11-21T05:00:00Z&quot;:0,&quot;2026-11-21T06:00:00Z&quot;:0,&quot;2026-11-21T07:00:00Z&quot;:0,&quot;2026-11-21T08:00:00Z&quot;:3,&quot;2026-11-21T09:00:00Z&quot;:1,&quot;2026-11-21T10:00:00Z&quot;:1,&quot;2026-11-21T11:00:00Z&quot;:0,&quot;2026-11-21T12:00:00Z&quot;:3,&quot;2026-11-21T13:00:00Z&quot;:2}}]"></div>
+  </div>
+</div>
+
+<div class="card card-default mb-3 card-table">
+  <table class="table table-sm table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Services</th>
+        <th>Requests</th>
+        <th>Request Types</th>
+        <th data-sorter="false">
+          Submitted requests
+          <span class="badge badge-info">48 hours</span>
+        </th>
+        <th>Total</th>
+        <th>Min/Hour</th>
+        <th>Max/Hour</th>
+        <th>Avg/Hour</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr id="city_bloomington">
+          <td>
+  <strong>
+    <a href="/cities/bloomington">Bloomington, IN</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-205-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://bloomington.in.gov/crm/open311/v2/services.xml?jurisdiction_id=bloomington.in.gov" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 205 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        99.34% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-534-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://bloomington.in.gov/crm/open311/v2/requests.xml?jurisdiction_id=bloomington.in.gov" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 534 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        99.34% uptime
+      </small>
+    </div>
+  </td>
+
+<td>63 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[0,1,0,1,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,4,0,0,1,2,2,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0]"></span>
+</td>
+<td>20</td>
+<td>0</td>
+<td>4</td>
+<td>0.4</td>
+
+        </tr>
+        <tr id="city_chicago">
+          <td>
+  <strong>
+    <a href="/cities/chicago">Chicago, IL</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-1325-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-warning" href="http://311api.cityofchicago.org/open311/v2/services.xml" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server slow response of 1325 ms">Slow</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-267-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="http://311api.cityofchicago.org/open311/v2/requests.xml" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 267 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+<td>124 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[146,230,206,162,236,186,172,148,146,112,94,84,57,58,34,33,15,14,15,11,5,8,47,96,164,188,198,169,164,192,182,191,143,108,90,66,97,75,75,26,23,9,8,8,9,9,31,17]"></span>
+</td>
+<td>4557</td>
+<td>5</td>
+<td>236</td>
+<td>94.9</td>
+
+        </tr>
+        <tr id="city_koln">
+          <td>
+  <strong>
+    <a href="/cities/koln">Köln / Cologne, Deutschland</a>
+  </strong>
+</td>
+
+  <td data-sort-value="-1140-Faraday::Error::ParsingError: unexpected character: &#39;&lt;!DOCTYPE&#39; at line 3 column 1">
+    <div class="text-center">
+      <a class="btn btn-sm btn-danger" href="https://sags-uns.stadt-koeln.de/georeport/v2/services.xml?jurisdiction_id=stadt-koeln.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Error processing response after 1140 ms: &#39;Faraday::Error::ParsingError: unexpected character: &#39;&lt;!DOCTYPE&#39; at line 3 column 1&#39;">Error</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        0.0% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="-633-Faraday::Error::ParsingError: unexpected character: &#39;&lt;!DOCTYPE&#39; at line 3 column 1">
+    <div class="text-center">
+      <a class="btn btn-sm btn-danger" href="https://sags-uns.stadt-koeln.de/georeport/v2/requests.xml?jurisdiction_id=stadt-koeln.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Error processing response after 633 ms: &#39;Faraday::Error::ParsingError: unexpected character: &#39;&lt;!DOCTYPE&#39; at line 3 column 1&#39;">Error</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        0.0% uptime
+      </small>
+    </div>
+  </td>
+
+<td>42 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]"></span>
+</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.0</td>
+
+        </tr>
+        <tr id="city_rostok">
+          <td>
+  <strong>
+    <a href="/cities/rostok">Rostock, Deutschland</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-1107-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-warning" href="https://www.klarschiff-hro.de/backoffice/citysdk/services.xml?jurisdiction_id=rostock.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server slow response of 1107 ms">Slow</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-565-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://www.klarschiff-hro.de/backoffice/citysdk/requests.xml?jurisdiction_id=rostock.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 565 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+<td>166 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[0,1,0,1,3,1,9,3,1,0,0,0,0,0,0,0,9,0,4,1,1,0,0,2,5,2,2,2,3,2,0,0,0,1,0,0,0,0,0,0,0,0,3,1,1,0,3,2]"></span>
+</td>
+<td>63</td>
+<td>0</td>
+<td>9</td>
+<td>1.3</td>
+
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Recent Service Requests</h3>
+<div class="card card-default card-table">
+  <table class="table table-condensed table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Service Name</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Media</th>
+      <th>Requested At</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Einkaufskörbe/Einkaufswagen</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127684/redaktionelle-prufung-ausstehend">6 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sign Repair Request - Stop Sign</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333529">7 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333526">8 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Beleuchtung verändern</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127683/redaktionelle-prufung-ausstehend">11 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333516">12 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333515">12 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333509">14 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Dead Animal Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333505">16 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333500">17 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Alley Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333499">17 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Pole Damage Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333496">18 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333494">19 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333490">21 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333489">21 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Pole Damage Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333482">23 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sign Repair Request - All Other Signs</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333479">24 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Coyote Interaction Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333473">27 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Check for Leak</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333462">33 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333459">34 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Einkaufskörbe/Einkaufswagen</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127682/redaktionelle-prufung-ausstehend">38 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Emergency</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333438">42 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333432">44 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333423">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333422">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Bulk Pickup</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333421">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333419">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333417">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Inspect Public Way Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333407">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333405">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sewer Cleaning Inspection Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333395">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333393">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Cleaning Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333391">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Relocated Vehicle</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333372">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Yard Waste Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333367">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Relocated Vehicle</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333345">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Altfahrzeug/Schrottfahrrad</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127681/redaktionelle-prufung-ausstehend">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333336">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333332">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Recycling Pick Up</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333328">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333317">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Boiler Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333308">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Relocated Vehicle</td>
+        <td>closed</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333307">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Plumbing Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333306">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Emergency</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333302">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Debris Clean-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333287">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333285">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Wire Down</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333279">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Relocated Vehicle</td>
+        <td>closed</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333278">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Wire Down</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333274">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333271">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Yard Waste Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333270">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>dauerhaftes Falschparken</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127680/redaktionelle-prufung-ausstehend">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Cleaning Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333268">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Missed Garbage Pick-Up Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333262">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Clean Vacant Lot Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333260">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333257">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>closed</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333245">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Nuisance Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333244">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333242">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Plumbing Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333239">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333235">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Rodent Baiting/Rat Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333233">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Construction &amp; Demolition Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333232">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333230">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333226">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Coyote Interaction Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333221">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>closed</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333218">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333217">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333215">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333214">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Garbage Cart Maintenance</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333202">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Beschilderung/Markierung schadhaft</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127679/redaktionelle-prufung-ausstehend">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333186">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Altfahrzeug/Schrottfahrrad</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127678/redaktionelle-prufung-ausstehend">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333180">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333177">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Speed Camera</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333170">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333168">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333167">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333162">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333160">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Altfahrzeug/Schrottfahrrad</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127677/redaktionelle-prufung-ausstehend">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333144">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333139">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333127">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Crisis Referral</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333126">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>verbotener Streusalzeinsatz</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127676/redaktionelle-prufung-ausstehend">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333123">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333121">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Tierkadaver</td>
+        <td>pending</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/127675/redaktionelle-prufung-ausstehend">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333103">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Equipment Noise Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333102">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Equipment Noise Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333100">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333096">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333095">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sign Repair Request - All Other Signs</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333085">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333084">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Animal Abandoned</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333080">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333071">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02333068">about 6 hours ago</a></td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div class="text-center mt-3">
+  <a class="btn btn-outline-dark" href="/requests">View all Service Requests</a>
+</div>
+
+<p class="text-muted text-center mt-3"><small>Generated 2026-11-21 13:37 UTC</small></p>
+
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Open311 Status</strong> monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.</p>
+    </div>
+    <div class="col-md-6">
+      <ul>
+        <li>
+          Learn more about the <strong>Open311 API</strong> at
+          <a rel="noopener" href="http://www.open311.org/">
+            <i class="fa fa-bullhorn"></i>
+            Open311.org
+</a>        </li>
+        <li>
+          Help us <strong>improve the code</strong> at
+          <a rel="noopener" href="https://github.com/codeforamerica/open311status">
+            <i class="fa fa-github-alt"></i>
+            Github
+</a>        </li>
+        <li>
+          Send us an <strong>email</strong> at
+          <a href="mailto:bensheldon@gmail.com">
+            <i class="fa fa-paper-plane"></i>
+            bensheldon@gmail.com
+</a>        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </footer>
+  </body>
+</html>
