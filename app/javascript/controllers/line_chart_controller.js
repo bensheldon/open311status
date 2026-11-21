@@ -7,6 +7,8 @@ export default class extends Controller {
   static values = { series: Array }
 
   connect() {
+    this.element.style.position = "relative"
+    this.element.style.height = "250px"
     const canvas = document.createElement("canvas")
     this.element.appendChild(canvas)
 
@@ -32,6 +34,7 @@ export default class extends Controller {
       data: { labels: allLabels.map(formatLabel), datasets },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
           x: { ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 } },
           y: { beginAtZero: true },

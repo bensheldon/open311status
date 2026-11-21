@@ -12,18 +12,16 @@
       <link rel="canonical" href="<%= yield(:canonical_url) %>">
     <% end %>
   </head>
-  <body>
-    <div class="wrap-body">
-      <header>
-        <%= render 'layouts/navigation' %>
-      </header>
-      <main role="main">
-        <div class="container">
-          <%= yield %>
-        </div>
-      </main>
-    </div>
-    <footer class="page-footer wrap-footer">
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main" class="flex-grow-1">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
+    <footer class="page-footer">
       <%= render 'layouts/footer' %>
     </footer>
   </body>

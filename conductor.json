@@ -1,4 +1,0 @@
-{
-  "setup": "bin/setup",
-  "run": "bin/rails server"
-}
