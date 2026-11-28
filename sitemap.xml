@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://status.open311.org/sitemaps/static.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://status.open311.org/sitemaps/bloomington.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://status.open311.org/sitemaps/chicago.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://status.open311.org/sitemaps/koln.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://status.open311.org/sitemaps/rostok.xml</loc>
+  </sitemap>
+</sitemapindex>

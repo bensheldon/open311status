@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open311 Status - Chicago, IL</title>
+    <meta name="description" content="Open311 Status monitors the 311 API endpoint for Chicago, IL, providing benchmarks and insights.">
+    <link rel="stylesheet" href="/assets/application-45e5b11b619b5705bf263c519a28d2e8d3bf924969219c0eec2930067e356a5d.css" media="all" />
+    
+    <script src="/vite/assets/application-Br0s-MtQ.js" crossorigin="" type="module"></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="/">Open311 Status</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex ms-auto my-2 my-lg-0" action="/search" method="get" role="search">
+        <input id="navbar-search" class="form-control form-control-sm" type="search" name="q" placeholder="Search requests" aria-label="Search service requests" autocomplete="off">
+      </form>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">
+            <i class="fa fa-question-circle"></i>
+            About
+</a>        </li>
+        <li class="nav-item">
+          <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/codeforamerica/open311status">
+            <i class="fa fa-github-alt"></i>
+            Github
+</a>        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    </header>
+    <main role="main" class="flex-grow-1">
+      <div class="container">
+        
+<h1>Chicago, IL</h1>
+
+<div class="card card-default mb-3">
+  <div class="card-header">
+    <h3 class="card-title">Service Requests created during previous 48 hours</h3>
+  </div>
+  <div class="card-body">
+    <div data-controller="line-chart" data-line-chart-series-value="[{&quot;name&quot;:&quot;Chicago, IL&quot;,&quot;data&quot;:{&quot;2026-11-26T14:00:00Z&quot;:42,&quot;2026-11-26T15:00:00Z&quot;:41,&quot;2026-11-26T16:00:00Z&quot;:51,&quot;2026-11-26T17:00:00Z&quot;:46,&quot;2026-11-26T18:00:00Z&quot;:52,&quot;2026-11-26T19:00:00Z&quot;:28,&quot;2026-11-26T20:00:00Z&quot;:36,&quot;2026-11-26T21:00:00Z&quot;:22,&quot;2026-11-26T22:00:00Z&quot;:34,&quot;2026-11-26T23:00:00Z&quot;:25,&quot;2026-11-27T00:00:00Z&quot;:58,&quot;2026-11-27T01:00:00Z&quot;:32,&quot;2026-11-27T02:00:00Z&quot;:33,&quot;2026-11-27T03:00:00Z&quot;:8,&quot;2026-11-27T04:00:00Z&quot;:28,&quot;2026-11-27T05:00:00Z&quot;:30,&quot;2026-11-27T06:00:00Z&quot;:7,&quot;2026-11-27T07:00:00Z&quot;:12,&quot;2026-11-27T08:00:00Z&quot;:18,&quot;2026-11-27T09:00:00Z&quot;:5,&quot;2026-11-27T10:00:00Z&quot;:5,&quot;2026-11-27T11:00:00Z&quot;:21,&quot;2026-11-27T12:00:00Z&quot;:32,&quot;2026-11-27T13:00:00Z&quot;:75,&quot;2026-11-27T14:00:00Z&quot;:70,&quot;2026-11-27T15:00:00Z&quot;:119,&quot;2026-11-27T16:00:00Z&quot;:157,&quot;2026-11-27T17:00:00Z&quot;:121,&quot;2026-11-27T18:00:00Z&quot;:99,&quot;2026-11-27T19:00:00Z&quot;:132,&quot;2026-11-27T20:00:00Z&quot;:105,&quot;2026-11-27T21:00:00Z&quot;:108,&quot;2026-11-27T22:00:00Z&quot;:99,&quot;2026-11-27T23:00:00Z&quot;:55,&quot;2026-11-28T00:00:00Z&quot;:49,&quot;2026-11-28T01:00:00Z&quot;:45,&quot;2026-11-28T02:00:00Z&quot;:30,&quot;2026-11-28T03:00:00Z&quot;:55,&quot;2026-11-28T04:00:00Z&quot;:33,&quot;2026-11-28T05:00:00Z&quot;:24,&quot;2026-11-28T06:00:00Z&quot;:12,&quot;2026-11-28T07:00:00Z&quot;:6,&quot;2026-11-28T08:00:00Z&quot;:12,&quot;2026-11-28T09:00:00Z&quot;:8,&quot;2026-11-28T10:00:00Z&quot;:10,&quot;2026-11-28T11:00:00Z&quot;:12,&quot;2026-11-28T12:00:00Z&quot;:8,&quot;2026-11-28T13:00:00Z&quot;:24}}]"></div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="service-requests-tab" data-bs-toggle="tab" data-bs-target="#service-requests-contents" type="button" role="tab" aria-controls="service-requests-contents" aria-selected="false">
+          Service Requests
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="service-definitions-tab" data-bs-toggle="tab" data-bs-target="#service-definitions-contents" type="button" role="tab" aria-controls="service-definitions-contents" aria-selected="false">
+          Service Definitions
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body">
+    <div class="tab-content">
+      <div class="tab-pane show active" id="service-requests-contents" role="tabpanel" aria-labelledby="service-requests-tab" tabindex="0">
+        <table class="table table-condensed table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Service Name</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Media</th>
+      <th>Requested At</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Water in Basement Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371194">less than a minute ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371191">1 minute ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>E-Scooter Parking Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371189">2 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371184">3 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Paint Marking Maintenance</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371179">5 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Bulk Pickup</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371174">6 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Hydrant Check</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371170">8 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Boiler Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371168">10 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371163">12 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vicious Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371159">14 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Recycling Pick Up</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371152">18 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Garbage Cart Maintenance</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371148">21 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vicious Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371147">21 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371146">22 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Dead Animal Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371140">25 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Inspect Public Way Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371136">27 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371126">29 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371123">31 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Dead Animal Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371101">43 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371099">43 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vacant/Abandoned Building Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371097">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371094">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371092">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371090">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371081">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371076">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371074">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371063">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371046">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371036">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371032">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Missed Garbage Pick-Up Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371018">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371011">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Alley Pothole Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371008">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371004">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371003">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371001">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370999">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370994">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370993">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370992">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Crisis Referral</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370991">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Coyote Interaction Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370989">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370985">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370975">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Relocated Vehicle</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370974">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370969">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370966">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Equipment Noise Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370961">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370959">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Pole Damage Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370953">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370952">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sign Repair Request - All Other Signs</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370951">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Cleaning Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370950">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Debris Clean-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370948">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370945">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Equipment Noise Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370944">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370943">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370939">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370934">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Water in Basement Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370932">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370929">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370924">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370923">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370921">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>No Building Permit and Construction Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370920">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370919">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370918">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370917">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370914">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370909">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Plumbing Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370908">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370897">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370896">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Nuisance Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370894">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370888">about 6 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370874">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370871">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Animal Abandoned</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370868">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Business Complaints</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370864">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370860">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370859">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370856">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vacant/Abandoned Building Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370851">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Emergency</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370846">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light On During Day Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370842">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370840">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>No Water Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370839">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370834">about 7 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370819">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370816">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Alley Pothole Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370813">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370807">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370805">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370803">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Yard Waste Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370800">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370799">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pet Wellness Check Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370798">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370794">about 8 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370793">about 8 hours ago</a></td>
+      </tr>
+  </tbody>
+</table>
+
+      </div>
+      <div class="tab-pane" id="service-definitions-contents" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Service Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Air Pollution, Odor or Dust Complaint</td>
+        <td>Use this service request type to report dust, odors or other air pollution from commercial and industrial sites. This service request does not apply to privately owned barbecues and fireplaces.</td>
+      </tr>
+      <tr>
+        <td>Asbestos Complaint</td>
+        <td>Use this service request to report any asbestos-related complaints.</td>
+      </tr>
+      <tr>
+        <td>COVID-19 - Coronavirus</td>
+        <td>Use this code to inquire about  COVID-19 - Coronavirus.</td>
+      </tr>
+      <tr>
+        <td>Construction &amp; Demolition Complaint</td>
+        <td>Use this service request to report issues with construction or demolition sites. To report dust, odors or other air pollution from construction sites use the Air Pollution, Odor or Dust Complaint. If the complaint is related to noise and the work if occurring between 8PM and 8AM, call 311.</td>
+      </tr>
+      <tr>
+        <td>Daycare Center</td>
+        <td>Use this service request to report health or sanitary issues with daycare centers. If the issue is related to food, use “Restaurant Complaint” instead.</td>
+      </tr>
+      <tr>
+        <td>Equipment Noise Complaint</td>
+        <td>Use this service request report excessive noise coming from air conditioners, compressors, generators, or any other piece of industrial or commercial equipment. If the noise occurs between the hours of 8PM and 8AM, please call 311. If your complaint is regarding street musicians, bar noise, or loud music please refer to the Chicago Police Department.</td>
+      </tr>
+      <tr>
+        <td>Gas Station and Storage Tank Complaint</td>
+        <td>Use this service request to report issues related to under-ground storage tanks and above-ground storage tanks, pump malfunctions, odors, and fuel spills.</td>
+      </tr>
+      <tr>
+        <td>Groceries</td>
+        <td>This service request is used to report problems related to food safety at grocery stores. For problems relating to pricing, weights, expiration dates, or other business  issues (rather than health), use “Consumer Retail Store Complaint” instead. ’</td>
+      </tr>
+      <tr>
+        <td>Health Club</td>
+        <td>Used to report problems related to sanitation or health risks at health clubs. Problems relating to pricing or other business-related issues should be reported under &quot;Consumer Fraud Complaint.&quot;</td>
+      </tr>
+      <tr>
+        <td>Hotel/Motel - Health Department</td>
+        <td>Used to report problems related to sanitation or health risks at hotels or motels. Problems relating to pricing or other business-related issues should be reported under &quot;Consumer Fraud Complaint.&quot;</td>
+      </tr>
+      <tr>
+        <td>Lead Inspection Request</td>
+        <td>This service request is used to request an inspection of a building for lead paint or other lead hazards, especially when small children live in the dwelling. PLEASE NOTE:  This code should not be used for a Water Lead Test Kit Request or Water Lead Test Visit Request.</td>
+      </tr>
+      <tr>
+        <td>Licensed Pharmaceutical Representative Complaint</td>
+        <td>To report pharmaceutical representative&#39;s failure to show a license or comply with ethical standards.</td>
+      </tr>
+      <tr>
+        <td>Pushcart Food Vendor Complaint</td>
+        <td>This service request is used to report health or sanitary problems with pushcart  food vendors.</td>
+      </tr>
+      <tr>
+        <td>Restaurant Complaint</td>
+        <td>This service request is used to report problems related to food safety at restaurants. Do not use this type to report problems relating to pricing, weights, expiration dates, or other business issues. These complaints are to be entered as Consumer Retail Store Complaint.</td>
+      </tr>
+      <tr>
+        <td>Smokeless Tobacco at Sports Event Complaint</td>
+        <td>Use this Service Request Type to report violations of the No Smokeless Tobacco Use Ordinance passed by the Chicago City Council to protect the health of patrons and workers against the known dangers of smokeless tobacco. A photo or video is required to follow up on complaints of individuals using smokeless tobacco at sports venues.</td>
+      </tr>
+      <tr>
+        <td>Smoking: Non-Food Establishment</td>
+        <td>This code is used to report violations of the Chicago Clean Indoor Air Ordinance passed by the Chicago City Council to protect the health of patrons and workers against the known dangers of tobacco smoke, including second-hand smoke. This is specifically for a non-food establishment.</td>
+      </tr>
+      <tr>
+        <td>Spills or Dumping in Natural Water Ways</td>
+        <td>Use this service request to report pollution into rivers, lakes, canal, or sewers.</td>
+      </tr>
+      <tr>
+        <td>Tanning and Body Art Complaint</td>
+        <td>Use this Service Request type to report complaints related to the use of tanning equipment, receipt of a tattoo or other body art procedure including body piercing and permanent make up.</td>
+      </tr>
+      <tr>
+        <td>Test Type Code Follow-Up</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Alley Light Out Complaint</td>
+        <td>Report an alley light out (located on a wooden pole).  To report street lights that are not working, use Street Light Out.</td>
+      </tr>
+      <tr>
+        <td>Alley Pothole Complaint</td>
+        <td>Report alley potholes. To report a utility cut (usually a square cut made for utility repairs) or a sinkhole (a deep dip or void in the pavement) call 311 directly.</td>
+      </tr>
+      <tr>
+        <td>Bicycle Request/Complaint</td>
+        <td>Use this service request to report abandoned bikes (Except for Divvy or &#39;Lyft&#39; branded bikeshare bikes, instead, use service request &#39;Divvy Bike Parking Complaint&#39;). Bicycle Request Complaint can also be used to report damage to bike racks, report construction blocking bike lanes, request a new bike lane, bike program literature, and new bike rack or visit https://bikeparking-chicago.hub.arcgis.com/</td>
+      </tr>
+      <tr>
+        <td>Pothole in Street Complaint</td>
+        <td>Report locations of street potholes.  Use Alley Pot Hole to report potholes in alleys.</td>
+      </tr>
+      <tr>
+        <td>Protected Bike Lane - Debris Removal</td>
+        <td>This type code is for debris removal at protected bike lanes that cannot be picked up by Street Sweepers. If debris is located in the parkway, vacant lot or alley please submit a Street Cleaning Request.</td>
+      </tr>
+      <tr>
+        <td>Sidewalk Inspection Request</td>
+        <td>Use this service request to report the condition of City sidewalks or accessibility (ADA) ramp issues.
+
+If you are requesting sidewalk repair, please continue. The city will complete a sidewalk condition survey.</td>
+      </tr>
+      <tr>
+        <td>Sign Repair -  Base / Bolt Removal</td>
+        <td>Report empty sign bases or bolts sticking up from the sidewalk that need to be removed.</td>
+      </tr>
+      <tr>
+        <td>Sign Repair Request - All Other Signs</td>
+        <td>Report maintenance issues to miscellaneous missing, damaged or graffitied signs such as bike route, disabled parking, street name, and loading zone, parking restriction, pedestrian crossing, or speed limit signs.  Please note &quot;Do Not Enter&quot;, &quot;One-Way&quot;, and &quot;Stop&quot; signs have their own service request types.
+
+Requests to have new signs installed (meaning the sign has never existed at the location before) must be made directly to the alderman&#39;s office.</td>
+      </tr>
+      <tr>
+        <td>Sign Repair Request - Do Not Enter Sign</td>
+        <td>Report maintenance issues to damaged or missing &quot;Do Not Enter&quot; signs.</td>
+      </tr>
+      <tr>
+        <td>Sign Repair Request - One Way Sign</td>
+        <td>Report maintenance issues to damaged or missing &quot;One Way&quot; signs.</td>
+      </tr>
+      <tr>
+        <td>Sign Repair Request - Residential Permit Parking</td>
+        <td>Report missing, damaged, or faded residential parking permit signs that require maintenance. Refer new sign requests to Alderman for ordinance initiation.</td>
+      </tr>
+      <tr>
+        <td>Sign Repair Request - Stop Sign</td>
+        <td>Report maintenance issues to damaged or missing &quot;Stop&quot; signs.</td>
+      </tr>
+      <tr>
+        <td>Snow Removal - Protected Bike Lane or Bridge Sidewalk</td>
+        <td>This type code is for snow removal requests for protected bike lanes that require special snow removal equipment and cannot be plowed by typical snow removal trucks and for Bridge Sidewalks that need to be cleared of snow.</td>
+      </tr>
+      <tr>
+        <td>Snow – Uncleared Sidewalk Complaint</td>
+        <td>Use this service request to report sidewalks in the public way that have not been cleared (shoveled or salted) within 15 hours after a snow/sleet event.</td>
+      </tr>
+      <tr>
+        <td>Street Light On During Day Complaint</td>
+        <td>Report street lights that are on during the day.</td>
+      </tr>
+      <tr>
+        <td>Street Light Out Complaint</td>
+        <td>Report a street light outage on a residential or arterial street (street lights are located on metal poles).</td>
+      </tr>
+      <tr>
+        <td>Street Light Pole Damage Complaint</td>
+        <td>Report a street light pole that has been severely damaged and/or knocked down. To report traffic signal pole down, use Traffic Signal Out.  To report street or traffic pole access doors that are missing, use Street Light Pole Door Missing.</td>
+      </tr>
+      <tr>
+        <td>Street Light Pole Door Missing Complaint</td>
+        <td>Report a missing cover plate at the base of a street light or traffic signal pole.</td>
+      </tr>
+      <tr>
+        <td>Traffic Signal Out Complaint</td>
+        <td>Report traffic signals and/or pedestrian crosswalk signals that are not working or are flashing.</td>
+      </tr>
+      <tr>
+        <td>Viaduct Light Out Complaint</td>
+        <td>Report lights located under viaducts that are not working or are damaged.</td>
+      </tr>
+      <tr>
+        <td>Business Complaints</td>
+        <td>Use this service request to report an individual or business enterprise conducting business without proper City of Chicago business license or permit.</td>
+      </tr>
+      <tr>
+        <td>Cab Feedback</td>
+        <td>Use this service request to report problems with a taxicab related service. Complaints are investigated about the condition or safety of a cab, a driver refusing to pick up a passenger or take them to their destination, reckless driving, overcharge on the fare or discourtesy to passengers or fellow motorists. It is vital to have a complainant&#39;s name/contact info, as disciplinary action may be impossible without this vital information.</td>
+      </tr>
+      <tr>
+        <td>Cable TV Complaint</td>
+        <td>This service request is used to report billing, service or any other problems with cable television companies that operate under the City of  Chicago cable franchise agreement.</td>
+      </tr>
+      <tr>
+        <td>Consumer Fraud Complaint</td>
+        <td>Use this service request to report unscrupulous or possibly illegal practices by a business (i.e., Defective Merchandise; Paid for a service such as home repair that was not completed; Deceptive Immigration Service Tactics; Failure to Honor a Warranty; Unauthorized Charges added to purchase price, etc.).</td>
+      </tr>
+      <tr>
+        <td>Consumer Retail Business Complaint</td>
+        <td>Use this service request to report complaints against retail businesses in the City of Chicago (i.e., Refund Violation, Foodware Violation, Overcharged, False Advertisement, Outdated Merchandise).</td>
+      </tr>
+      <tr>
+        <td>Inaccurate Fuel Pump Complaint</td>
+        <td>Use this service request to report complaints about inaccurate/inappropriate charges for fuel, pumps dispensing contaminated fuel, and other fuel pump issues in the City of Chicago (i.e., Leaking nozzle or hose; Price counter continues to run after fuel stops dispensing, etc.).</td>
+      </tr>
+      <tr>
+        <td>Inaccurate Retail Scales Complaint</td>
+        <td>Use this service request to report problems with behind-the-counter scales used by retail businesses in the City of Chicago (i.e., scales used to weigh produce or deli items; scales used by private shipping services such as FedEx, UPS, and USPS). It does not include hanging scales used by consumers.</td>
+      </tr>
+      <tr>
+        <td>Liquor Establishment Complaint</td>
+        <td>This service request is used to report all complaints against  liquor license holders, including  sale of alcohol to minors, establishments that generate excessive noise, cash payouts on poker or other gambling machines, sale of single cigarettes or sale of cigarettes to minors.</td>
+      </tr>
+      <tr>
+        <td>No Solicitation Complaint</td>
+        <td>Use this service request to report a person or business distributing commercial advertising matter (e.g., coupons, menus, sales announcements, general advertisements) on private property.</td>
+      </tr>
+      <tr>
+        <td>Outdated Merchandise Complaint</td>
+        <td>Use this service request to report food or over-the-counter medication being sold after the sell-by date by retail businesses in the City of Chicago. Food and medication that has not expired, but the consumer believes to be unsafe, should be reported to the Chicago Department of Public Health.</td>
+      </tr>
+      <tr>
+        <td>Paid Sick Leave Violation</td>
+        <td>Use this service request to enter complaints regarding Paid Sick Leave Ordinance and Anti-Retaliation (COVID-19) violations from any employee who works at least 2 hours within a 2 week period within the City of Chicago, and is at least 18 years old.</td>
+      </tr>
+      <tr>
+        <td>Personal Delivery Device Complaint</td>
+        <td>Report issues regarding the operations of Personal Delivery Devices (PDD), which are defined as electric-powered devices that are intended to transport property primarily on areas normally designated for pedestrians. Report issues such parking on public way, operating in restricted areas, etc. For customer service issues, please contact the PDD company.</td>
+      </tr>
+      <tr>
+        <td>Public Vehicle/Valet Complaint</td>
+        <td>This service request is used to report complaints against any Charter Bus/Trolley, Horse-Drawn Carriage, Limousine Service, Pedicab, or Valet Parking Service.</td>
+      </tr>
+      <tr>
+        <td>Renters and Foreclosure Complaint</td>
+        <td>Use this service request to report if the property you live in was foreclosed and you did not receive proper notice regarding the option of renewing your lease or receiving relocation assistance (e.g., building is foreclosed and you are being forced out without any options).</td>
+      </tr>
+      <tr>
+        <td>Ridesharing Complaint</td>
+        <td>This service request is used to report complaints against Uber, Lyft, Via or other ride-share companies.</td>
+      </tr>
+      <tr>
+        <td>Shared Housing/Vacation Rental Complaint</td>
+        <td>Use this service request to report issues regarding vacation rental properties (e.g., VRBO (Vacation Rental by Owner)), Shared Housing (i.e., AirBNB) and Bed and Breakfasts. Complaint examples include, but are not limited to the following: service not provided, poor condition of property, excessive noise, etc.</td>
+      </tr>
+      <tr>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>Use this service request to report complaints against a restaurant&#39;s sidewalk café or outdoor dining area (i.e., not enough space for pedestrians to walk by; obstruction of sidewalk, etc.)</td>
+      </tr>
+      <tr>
+        <td>Tobacco - General Complaint</td>
+        <td>Use this service request to report sale of tobacco products or tobacco accessories without the required City of Chicago business license, and to report tobacco violations (i.e., Business selling unstamped or loose cigarettes).</td>
+      </tr>
+      <tr>
+        <td>Tobacco - Sale to Minors Complaint</td>
+        <td>Use this service request to report a business that may be selling tobacco products and/or tobacco accessories to children under 18 years of age.</td>
+      </tr>
+      <tr>
+        <td>Wage Complaint</td>
+        <td>Use this service request to submit a complaint regarding minimum wage and/or wage theft violations from any employee that works two or more hours within any two week period.</td>
+      </tr>
+      <tr>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>Use this service request to report an abandoned vehicle. (Car, truck, motorcycle, etc.)</td>
+      </tr>
+      <tr>
+        <td>Bee/Wasp Removal</td>
+        <td>This type code is for bee and wasp removal. Note: The City does not remove nests from private property/dwelling/back yards.</td>
+      </tr>
+      <tr>
+        <td>Blue Recycling Cart</td>
+        <td>Use this service request when a recycling container has been damaged or stolen and a replacement is needed.  Note:  This service request is for residents who are eligible for collection services with the Department of Streets &amp; Sanitation, for more information go here: https://www.chicago.gov/city/en/depts/streets.html</td>
+      </tr>
+      <tr>
+        <td>Clean Vacant Lot Request</td>
+        <td>This service request is used to report litter, trash or debris on vacant lots. If your request is regarding excessive debris or illegal dumping, please use the &quot;Fly Dumping Complaint&quot; instead. If your request is for Weed Removal, please call 311 to submit a &quot;Weed Removal Request&quot; instead.</td>
+      </tr>
+      <tr>
+        <td>Clean and Green Program Request</td>
+        <td>This service request is used to request supplies for neighborhood clean-up activities. Tools are loaned to community groups throughout the year. Requests for tools must be received 3-4 business days prior to date of clean up. Tools and bags will be picked up at the local Streets &amp; Sanitation Division. Groups wishing to have a  weekend clean-up must pick up the supplies on Friday.  (Tools may be picked up on Saturday only on the special citywide Clean and Green days.)</td>
+      </tr>
+      <tr>
+        <td>Dead Animal Pick-Up Request</td>
+        <td>This type service request to report a dead animal that needs to be picked-up and removed.</td>
+      </tr>
+      <tr>
+        <td>Dead Bird</td>
+        <td>This type code is for tracking dead birds, especially as they relate to the West Nile Virus.</td>
+      </tr>
+      <tr>
+        <td>Fly Dumping Complaint</td>
+        <td>This service request is used to report garbage or construction debris  that has been illegally dumped on the public way or on a vacant lot. If you are viewing the dumping in progress, call 911 with the license plate number and a description of the vehicle and/or individuals involved. If you are reporting the problem after the fact, please include  the license plate number and a description of the vehicle and/or individuals involved on this service request.</td>
+      </tr>
+      <tr>
+        <td>Garbage Cart Maintenance</td>
+        <td>If your black plastic City of Chicago garbage cart is missing, it may be replaced. You must let us know how many carts are missing, and how many carts you have remaining at the address.  We also need to know the approximate date when you first noticed the cart missing.</td>
+      </tr>
+      <tr>
+        <td>Graffiti Removal Request</td>
+        <td>Use this request to report graffiti that is on your property, public property or on someone else&#39;s property. Graffiti will be removed from public or private property by  Graffiti Program.  Graffiti will either be painted over (if the graffiti is on a painted surface) or blasted off with a high pressure baking soda and water solution (if it is on brick, cement or stone).</td>
+      </tr>
+      <tr>
+        <td>Ice and Snow Removal Request</td>
+        <td>This service request is for removal of ice and snow from city streets. Crews make every effort to remove snow and ice from streets as quickly as possible during the winter months. Certain answers are required to request snow/ice removal equipment (i.e., address of the problem, is the problem on a main street or side street and description of the problem). This request is not for uncleared sidewalks. To report uncleared sidewalks, use &quot;Snow - Uncleared Sidewalk/Bike Lane Complaint.&quot;</td>
+      </tr>
+      <tr>
+        <td>Missed Garbage Pick-Up Complaint</td>
+        <td>Use this service request to report the city truck that regularly picks up your garbage has not done so.  Let us know if only your garbage pickup was missed, or if the entire alley was missed.  If you do not know your garbage pickup schedule, then you may call 311 for information.
+The Department of Streets and Sanitation, Bureau of Sanitation is responsible for this service.</td>
+      </tr>
+      <tr>
+        <td>Recycling Inspection Request</td>
+        <td>Use this service request type to requests an inspection for compliance. Landlords, management companies and businesses who want more information on compliance can call  (312)744-2413.</td>
+      </tr>
+      <tr>
+        <td>Recycling Pick Up</td>
+        <td>Use this service request for requesting a missed recycling pick-up.  Note:  Prior to submitting your request, please confirm your collection day by visiting this link: https://www.recyclebycity.com/chicago/schedule</td>
+      </tr>
+      <tr>
+        <td>Rodent Baiting/Rat Complaint</td>
+        <td>Use this service request to report a rodent or rat problem.</td>
+      </tr>
+      <tr>
+        <td>Sanitation Code Violation</td>
+        <td>Use this service type to report unsanitary conditions on private property that should cause the owner to be cited for violating the City&#39;s sanitation codes. Certain questions must be answered to initiate an investigation: the location address and what type of problem exists. It is helpful to know who is responsible for the problem, if known. If you can leave your name and phone number, the inspectors sometimes need to contact the complainant in order to issue a citation to the violator.</td>
+      </tr>
+      <tr>
+        <td>Snow - Object/Dibs Removal Request</td>
+        <td>Use this service request to have items removed from parking spaces. (i.e., Chairs, Buckets, Cones, etc.).</td>
+      </tr>
+      <tr>
+        <td>Street Cleaning Request</td>
+        <td>This service request is used for curb to curb sweeping the debris off the street by a street sweeping machine (mechanical sweeper).</td>
+      </tr>
+      <tr>
+        <td>Tree Debris Clean-Up Request</td>
+        <td>Use this service request to request a pick-up of a pile of branches or bushes. The branches/bushes must be neatly stacked in the alley or City parkway near the curb. Blocking a street, sidewalk of alleyway may result in a sanitation code ticket being issued. Certain questions must be answered to complete this request: e.g., is the amount larger than a desk and where is the debris located.  
+
+The Department of Streets and Sanitation, Bureau of Forestry picks up large piles of branches.  Use this service request for all Debris Removal requests.</td>
+      </tr>
+      <tr>
+        <td>Tree Planting Request</td>
+        <td>Requests to plant a tree on the City parkway in front of your house are done through this service request. The parkway is the space between the curb and the city sidewalk.
+
+Certain answers are required to enter a work order: the address you want a tree planted at,  how many trees you want planted, and whether a tree has been planted at this address recently.
+
+The Department of Streets and Sanitation, Bureau of Forestry oversees tree planting for the City of Chicago.</td>
+      </tr>
+      <tr>
+        <td>Tree Removal Request</td>
+        <td>A City inspector will check trees on the public way to determine if they are dead or diseased. The inspector will order the removal of dead or dangerous trees.  If a tree is not dead or diseased the City will not remove it.  Certain answers are required to enter a work order to request removal of a tree from city property: the address at which the tree is located and the location of the tree to be inspected (parkway near the curb, in alley or City-owned vacant lot etc.).</td>
+      </tr>
+      <tr>
+        <td>Tree Trim Request (NO LONGER BEING ACCEPTED)</td>
+        <td>Starting Spring 2023, Chicago’s public parkway trees will be trimmed utilizing an Area Tree Trimming program; therefore, DSS is no longer accepting individual tree trimming requests.</td>
+      </tr>
+      <tr>
+        <td>Weed Removal Request</td>
+        <td>High weeds can be cut and removed from the public way by using this service request.  Certain answers are required to report high weeds: the address and the location(vacant lot, alley etc.) of the overgrown weeds. 
+
+The Department of Streets and Sanitation, Bureau of Sanitation cuts weeds for the City of Chicago.</td>
+      </tr>
+      <tr>
+        <td>Wire Basket Request</td>
+        <td>Use this service request for requesting a wire basket on a corner in front of a business or store front.</td>
+      </tr>
+      <tr>
+        <td>Yard Waste Pick-Up Request</td>
+        <td>Yard waste consists of leaves, grass clippings, branches, brush, clippings from shrubbery, and garden waste.  Yard waste does not include dirt, rocks, or gravel.  Piles of tree branches that are approximately the size of two garbage carts or smaller are picked up by the yard waste collection crews.  Piles that are larger should be entered into the system as Tree Debris.</td>
+      </tr>
+      <tr>
+        <td>Animal In Trap Complaint</td>
+        <td>Use this service request to report an animal in a trap. Do not use if the animal is loose inside a house or building. Do not use this service request to report animals confined in boxes or carriers – use Stray Animal call type instead.
+
+If the animal is in a private trap CACC will not pick it up. The caller must make arrangements via internet/email at visitcacc@cityofchicago.org to bring the animal to CACC. Callers without a valid state issued permit will have the trap confiscated (i.e., not returned) &amp; may be referred to the state for illegal trapping for possible fines.</td>
+      </tr>
+      <tr>
+        <td>Coyote Interaction Complaint</td>
+        <td>Use this service request to report coyote interaction. Sightings from a distance should not be reported as coyotes are state-protected wildlife.</td>
+      </tr>
+      <tr>
+        <td>Nuisance Animal Complaint</td>
+        <td>This service request is used to report complaints regarding unlicensed, unvaccinated animals, excessive noise or dog excrement issues on the public way. This does not pertain to wildlife that are commonly protected by state laws.
+
+If the animal is &quot;wildlife&quot; (non-domesticate animals) CACC does not remove/relocate wildlife unless it is either injured or vicious as it is protected by state wildlife codes/laws.</td>
+      </tr>
+      <tr>
+        <td>Pet Wellness Check Request</td>
+        <td>Use this service request to report the need of a wellness check, an animal being beaten or abused, or concerns for a pet such as no food, no water, unsanitary pet conditions, etc.</td>
+      </tr>
+      <tr>
+        <td>Report an Injured Animal</td>
+        <td>Use this service request to report any non-owned animal in the public way, public place, city park, on a pole, electrical wire, or train tracks that is injured or sick. 
+
+If the animal is deceased, CACC does not pick up any deceased animals, instead enter Service Request under Streets &amp; Sanitation, &quot;Dead Animal Pick-up Request Type Code&quot;.</td>
+      </tr>
+      <tr>
+        <td>Stray Animal Complaint</td>
+        <td>Use this service request to report a stray animal. A stray animal is an unleashed animal not in the presence of an owner and does not pertain to wildlife which cannot be defined as strays.
+
+If the animal is wildlife CACC will not respond unless the animal is injured or vicious as it is protected by state wildlife codes/laws.</td>
+      </tr>
+      <tr>
+        <td>Vicious Animal Complaint</td>
+        <td>Use this service request to report any animal that is exhibiting signs of being vicious, including attacking or attempting to bite. If you or your companion animal(s) has been bitten, report this to 911 who will generate a Bite Report for you and/or them.</td>
+      </tr>
+      <tr>
+        <td>Alley Sewer Inspection Request</td>
+        <td>Use this service request to report problems with alley sewers, such as  a caved-in sewer, a hole close to the sewer or standing water because the sewer is clogged. This service request can also be used to report persons illegally dumping something into an alley sewer. If you are viewing the dumping in progress, call 911 with the license plate number and a description of the vehicle and/or individuals involved. If you are reporting the problem after the fact, please include a name, address or other information.</td>
+      </tr>
+      <tr>
+        <td>Low Water Pressure Complaint</td>
+        <td>Use this service request to report low water pressure inside a building that you own. Please contact your landlord if there is a problem in a space that you are renting.</td>
+      </tr>
+      <tr>
+        <td>No Water Complaint</td>
+        <td>The service request is used to report no water to property. If there is a visible leak, call 311</td>
+      </tr>
+      <tr>
+        <td>Open Fire Hydrant Complaint</td>
+        <td>This service request is used to report illegally opened fire hydrants with water coming out of the nozzle.</td>
+      </tr>
+      <tr>
+        <td>Sewer Cave-In Inspection Request</td>
+        <td>This service request is to be used for the following reasons: cave-in by the sewer, sewer cave-in in the street.</td>
+      </tr>
+      <tr>
+        <td>Sewer Cleaning Inspection Request</td>
+        <td>This service request is used to request that the City sewers, located on or near the curb, be checked for cleaning. Certain questions must be answered to create a work order for an inspection: the address location, whether this sewer is in front of your home and the location of the sewer (street, curb line, alley etc.).
+
+Do not use this service type to request cleaning of a catch basin on private property. That is the property owner&#39;s responsibility.</td>
+      </tr>
+      <tr>
+        <td>Water On Street Complaint</td>
+        <td>This service request is used to report water that remains on the street following a rain storm. Certain questions need to be answered to dispatch a sewer crew: the address of the location, the location of the water (middle of street, curb line, alley etc.) Additional information that is helpful includes whether water is bubbling up in the street, and from where. Noting whether any construction has been done in the street lately, and by whom, can also help.</td>
+      </tr>
+      <tr>
+        <td>Water in Basement Complaint</td>
+        <td>Report a backup of water in your home or business under this service request. Certain questions need to be answered to dispatch a sewer crew: the address location, whether the water is dirty or clean, where the water is coming from (floor drain, toilet, shower etc.), how many inches of water have backed up and whether this is a basement, crawl space or ground level.
+
+Do not use this service request to report water that has entered your basement through the windows.</td>
+      </tr>
+      <tr>
+        <td>Buildings - Boiler Violation</td>
+        <td>This service request is used for comments and complaints about boilers in all residential buildings.</td>
+      </tr>
+      <tr>
+        <td>Buildings - Electrical Violation</td>
+        <td>This service request is used for comments and complaints regarding defective and dangerous electrical wiring systems in all types of buildings and occupancies throughout the city.</td>
+      </tr>
+      <tr>
+        <td>Buildings - Elevator Violation</td>
+        <td>This service request is used for comments and complaints regarding all types of elevators (both passenger and freight), escalators and other similar people movers.</td>
+      </tr>
+      <tr>
+        <td>Buildings - Furnace Violation</td>
+        <td>This code is used for comments and complaints for residential buildings equipped with gas combustion furnaces where a carbon monoxide hazard is suspected.</td>
+      </tr>
+      <tr>
+        <td>Buildings - Plumbing Violation</td>
+        <td>This code may be used for comments and complaints regarding defective plumbing systems and/or fixtures in all types in buildings. Calls may include complaints about low water pressure, no water, no hot water, backed-up or standing sewage, leaking or broken faucets/toilets/bathtubs/sinks or flooding due to defective gutters and downspouts on the outside of a building.</td>
+      </tr>
+      <tr>
+        <td>No Building Permit and Construction Violation</td>
+        <td>Use this service request to report persons or companies building or rehabilitating a structure without having a City Building Permit displayed. The permit is to be posted where it&#39;s visible from the public way.</td>
+      </tr>
+      <tr>
+        <td>Porch Inspection Request</td>
+        <td>This service request is used to report a porch that may be dangerous due to rot, damage, poor construction or any other conditions that may render it unsafe.</td>
+      </tr>
+      <tr>
+        <td>Vacant/Abandoned Building Complaint</td>
+        <td>Use this service request to report an abandoned building in your neighborhood. Please call 311 directly to report any building that is in danger of collapse or poses any other hazard that may cause imminent danger to nearby tenants or the public.</td>
+      </tr>
+      <tr>
+        <td>Aircraft Noise Complaint</td>
+        <td>Use this service request to report an airport or aircraft-related noise issue. Please note: in order to include your aircraft noise complaint in the Airport Noise Management System report, you must provide a verifiable Illinois address when completing your contact information for this request.</td>
+      </tr>
+      <tr>
+        <td>Aircraft Noise Monitor Request</td>
+        <td>Use this code to requests an Airport Noise Management System (&quot;ANMS&quot;)  - Device  to monitor the amount of noise generated from aircraft at “Midway” or “O’Hare”.  The portable noise monitors allow us to provide you with a specific report on aircraft noise levels at your home during a sample two-week monitoring period.</td>
+      </tr>
+      <tr>
+        <td>City Vehicle Sticker Violation</td>
+        <td>This service request is used to report vehicles that are registered to a Chicago address that are not displaying the City of Chicago Vehicle License on the windshield.</td>
+      </tr>
+      <tr>
+        <td>Vehicle Parked in Bike Lane Complaint</td>
+        <td>Report a vehicle parking in a bike lane.  This information will be used for analysis to target problem locations.</td>
+      </tr>
+      <tr>
+        <td>Divvy Bike Parking Complaint</td>
+        <td>Used to report improperly parked Divvy bike or &quot;Lyft&quot; branded bikeshare bike, so it can be retrieved and/or corrected by the Divvy Operator.</td>
+      </tr>
+      <tr>
+        <td>E-Scooter</td>
+        <td>Use this code to report an electric scooter (e-scooter) blocking the public way after a rider has finished his or her ride. We encourage the public to call the company labeled on the e-scooter. If it has been more than 2 hours after the call continue.</td>
+      </tr>
+      <tr>
+        <td>E-Scooter Parking Complaint</td>
+        <td>Report an electric scooter (e-scooter) blocking the public way after a rider has finished their ride. Residents can provide information on the e-scooter location and company, so it can be retrieved and or corrected by the Operator. Customer service issues (such as account questions) should be directed to the appropriate e-scooter company.
+Divvy/Lyft: divvybikes.com/contact or 1-855-553-4889
+Lime: https://www.li.me/ or support@li.me or 1-888-546-3345
+Superpedestrian: support@superpedestrian.com or https://superpedestrian.com/ or 1-844-701-8163
+Spin: support@spin.pm or www.spin.app or 1-888-249-9698</td>
+      </tr>
+      <tr>
+        <td>CHA - How&#39;s My Driving</td>
+        <td>CHA - How&#39;s My Driving&quot; needs to be configured and then activity outcome added for Chicago Housing Authority.</td>
+      </tr>
+      <tr>
+        <td>Extreme Weather Notification</td>
+        <td>In case of a Heat Warning or a Wind Chill Warning, the City will activate the Extreme Weather Notification System to provide weather information to those with special needs. Through its Emergency Telephone Notification System (or 911 Callback) the City will contact registered households with a recorded telephone message that will provide (1) weather forecasts and safety tips, (2) City services information (e.g. cooling/warming centers), and (3) how to register for an in-person well-being check.</td>
+      </tr>
+      <tr>
+        <td>Park Repair/Maintenance</td>
+        <td>This type code should be used to report facilities management issues , and all issues dealing with needed maintenance work at Chicago Park District Facilities and Grounds. In the description, please note the name of the park or park district facility.</td>
+      </tr>
+      <tr>
+        <td>Commercial Fire Safety Inspection  - FAC</td>
+        <td>This service request is used to ask the Fire Department to schedule an inspection to determine whether fire hazards exist in a commercial property.  If a residential inspection is needed enter a building violation instead.</td>
+      </tr>
+      <tr>
+        <td>Bungalow/Vintage Home Information Request</td>
+        <td>This service request is used to request the mailing of information on technical assistance to current and would-be owners of Historic Chicago Bungalows and Vintage Homes. Information will be sent to you that can guide you in the purchase, restoration, or modernization of these homes, and help you find the resources you need.</td>
+      </tr>
+      <tr>
+        <td>Home Buyer Program Info Request</td>
+        <td>Department of Housing offers different programs to assist homebuyers looking to purchase their primary residence in the City of Chicago. Programs are limited to funding availability and applicants must meet ALL eligibility requirements. Please provide name and email address or mailing address to receive additional information.</td>
+      </tr>
+      <tr>
+        <td>Small Accessible Repairs and Ramps for Seniors</td>
+        <td>Provides enabling devices to 1-to-4 unit residences occupied by low and moderate income seniors who are at least 60 years of age. The program addresses issues of accessibility, safety, and security by providing needed upgrades, including grab bars, ramps, and other needed repairs so seniors can maintain their independence.</td>
+      </tr>
+      <tr>
+        <td>Post Planting Inspection</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Tree Planting - Vendor</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>rodent</td>
+        <td></td>
+      </tr>
+  </tbody>
+</table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Open311 Status</strong> monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.</p>
+    </div>
+    <div class="col-md-6">
+      <ul>
+        <li>
+          Learn more about the <strong>Open311 API</strong> at
+          <a rel="noopener" href="http://www.open311.org/">
+            <i class="fa fa-bullhorn"></i>
+            Open311.org
+</a>        </li>
+        <li>
+          Help us <strong>improve the code</strong> at
+          <a rel="noopener" href="https://github.com/codeforamerica/open311status">
+            <i class="fa fa-github-alt"></i>
+            Github
+</a>        </li>
+        <li>
+          Send us an <strong>email</strong> at
+          <a href="mailto:bensheldon@gmail.com">
+            <i class="fa fa-paper-plane"></i>
+            bensheldon@gmail.com
+</a>        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </footer>
+  </body>
+</html>

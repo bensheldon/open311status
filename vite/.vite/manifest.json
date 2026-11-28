@@ -1,0 +1,8 @@
+{
+  "entrypoints/application.js": {
+    "file": "assets/application-Br0s-MtQ.js",
+    "name": "entrypoints/application.js",
+    "src": "entrypoints/application.js",
+    "isEntry": true
+  }
+}

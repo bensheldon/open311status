@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open311 Status - 311 API monitoring and analysis</title>
+    <meta name="description" content="Open311 Status monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.">
+    <link rel="stylesheet" href="/assets/application-45e5b11b619b5705bf263c519a28d2e8d3bf924969219c0eec2930067e356a5d.css" media="all" />
+    
+    <script src="/vite/assets/application-Br0s-MtQ.js" crossorigin="" type="module"></script>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="/">Open311 Status</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex ms-auto my-2 my-lg-0" action="/search" method="get" role="search">
+        <input id="navbar-search" class="form-control form-control-sm" type="search" name="q" placeholder="Search requests" aria-label="Search service requests" autocomplete="off">
+      </form>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">
+            <i class="fa fa-question-circle"></i>
+            About
+</a>        </li>
+        <li class="nav-item">
+          <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/codeforamerica/open311status">
+            <i class="fa fa-github-alt"></i>
+            Github
+</a>        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    </header>
+    <main role="main" class="flex-grow-1">
+      <div class="container">
+        <div class="well mb-3">
+  <strong>
+    Scanning 4 Open311 endpoints every hour.
+    For endpoint information visit the <a href="http://wiki.open311.org/GeoReport_v2/Servers" rel="noopener">Open311 Wiki</a>.
+  </strong>
+</div>
+
+<div class="card card-default mb-3">
+  <div class="card-header">
+    <h3 class="card-title">Service Requests created during previous 48 hours</h3>
+  </div>
+  <div class="card-body">
+    <div data-controller="line-chart" data-line-chart-series-value="[{&quot;name&quot;:&quot;Bloomington, IN&quot;,&quot;data&quot;:{&quot;2026-11-26T14:00:00Z&quot;:1,&quot;2026-11-26T15:00:00Z&quot;:0,&quot;2026-11-26T16:00:00Z&quot;:1,&quot;2026-11-26T17:00:00Z&quot;:0,&quot;2026-11-26T18:00:00Z&quot;:0,&quot;2026-11-26T19:00:00Z&quot;:0,&quot;2026-11-26T20:00:00Z&quot;:0,&quot;2026-11-26T21:00:00Z&quot;:0,&quot;2026-11-26T22:00:00Z&quot;:0,&quot;2026-11-26T23:00:00Z&quot;:0,&quot;2026-11-27T00:00:00Z&quot;:0,&quot;2026-11-27T01:00:00Z&quot;:0,&quot;2026-11-27T02:00:00Z&quot;:0,&quot;2026-11-27T03:00:00Z&quot;:0,&quot;2026-11-27T04:00:00Z&quot;:0,&quot;2026-11-27T05:00:00Z&quot;:0,&quot;2026-11-27T06:00:00Z&quot;:0,&quot;2026-11-27T07:00:00Z&quot;:0,&quot;2026-11-27T08:00:00Z&quot;:0,&quot;2026-11-27T09:00:00Z&quot;:0,&quot;2026-11-27T10:00:00Z&quot;:0,&quot;2026-11-27T11:00:00Z&quot;:0,&quot;2026-11-27T12:00:00Z&quot;:0,&quot;2026-11-27T13:00:00Z&quot;:0,&quot;2026-11-27T14:00:00Z&quot;:1,&quot;2026-11-27T15:00:00Z&quot;:1,&quot;2026-11-27T16:00:00Z&quot;:1,&quot;2026-11-27T17:00:00Z&quot;:1,&quot;2026-11-27T18:00:00Z&quot;:1,&quot;2026-11-27T19:00:00Z&quot;:2,&quot;2026-11-27T20:00:00Z&quot;:0,&quot;2026-11-27T21:00:00Z&quot;:0,&quot;2026-11-27T22:00:00Z&quot;:1,&quot;2026-11-27T23:00:00Z&quot;:0,&quot;2026-11-28T00:00:00Z&quot;:0,&quot;2026-11-28T01:00:00Z&quot;:0,&quot;2026-11-28T02:00:00Z&quot;:0,&quot;2026-11-28T03:00:00Z&quot;:0,&quot;2026-11-28T04:00:00Z&quot;:0,&quot;2026-11-28T05:00:00Z&quot;:0,&quot;2026-11-28T06:00:00Z&quot;:0,&quot;2026-11-28T07:00:00Z&quot;:0,&quot;2026-11-28T08:00:00Z&quot;:0,&quot;2026-11-28T09:00:00Z&quot;:0,&quot;2026-11-28T10:00:00Z&quot;:0,&quot;2026-11-28T11:00:00Z&quot;:0,&quot;2026-11-28T12:00:00Z&quot;:0,&quot;2026-11-28T13:00:00Z&quot;:0}},{&quot;name&quot;:&quot;Chicago, IL&quot;,&quot;data&quot;:{&quot;2026-11-26T14:00:00Z&quot;:42,&quot;2026-11-26T15:00:00Z&quot;:41,&quot;2026-11-26T16:00:00Z&quot;:51,&quot;2026-11-26T17:00:00Z&quot;:46,&quot;2026-11-26T18:00:00Z&quot;:52,&quot;2026-11-26T19:00:00Z&quot;:28,&quot;2026-11-26T20:00:00Z&quot;:36,&quot;2026-11-26T21:00:00Z&quot;:22,&quot;2026-11-26T22:00:00Z&quot;:34,&quot;2026-11-26T23:00:00Z&quot;:25,&quot;2026-11-27T00:00:00Z&quot;:58,&quot;2026-11-27T01:00:00Z&quot;:32,&quot;2026-11-27T02:00:00Z&quot;:33,&quot;2026-11-27T03:00:00Z&quot;:8,&quot;2026-11-27T04:00:00Z&quot;:28,&quot;2026-11-27T05:00:00Z&quot;:30,&quot;2026-11-27T06:00:00Z&quot;:7,&quot;2026-11-27T07:00:00Z&quot;:12,&quot;2026-11-27T08:00:00Z&quot;:18,&quot;2026-11-27T09:00:00Z&quot;:5,&quot;2026-11-27T10:00:00Z&quot;:5,&quot;2026-11-27T11:00:00Z&quot;:21,&quot;2026-11-27T12:00:00Z&quot;:32,&quot;2026-11-27T13:00:00Z&quot;:75,&quot;2026-11-27T14:00:00Z&quot;:70,&quot;2026-11-27T15:00:00Z&quot;:119,&quot;2026-11-27T16:00:00Z&quot;:157,&quot;2026-11-27T17:00:00Z&quot;:121,&quot;2026-11-27T18:00:00Z&quot;:99,&quot;2026-11-27T19:00:00Z&quot;:132,&quot;2026-11-27T20:00:00Z&quot;:105,&quot;2026-11-27T21:00:00Z&quot;:108,&quot;2026-11-27T22:00:00Z&quot;:99,&quot;2026-11-27T23:00:00Z&quot;:55,&quot;2026-11-28T00:00:00Z&quot;:49,&quot;2026-11-28T01:00:00Z&quot;:45,&quot;2026-11-28T02:00:00Z&quot;:30,&quot;2026-11-28T03:00:00Z&quot;:55,&quot;2026-11-28T04:00:00Z&quot;:33,&quot;2026-11-28T05:00:00Z&quot;:24,&quot;2026-11-28T06:00:00Z&quot;:12,&quot;2026-11-28T07:00:00Z&quot;:6,&quot;2026-11-28T08:00:00Z&quot;:12,&quot;2026-11-28T09:00:00Z&quot;:8,&quot;2026-11-28T10:00:00Z&quot;:10,&quot;2026-11-28T11:00:00Z&quot;:12,&quot;2026-11-28T12:00:00Z&quot;:8,&quot;2026-11-28T13:00:00Z&quot;:24}},{&quot;name&quot;:&quot;Köln / Cologne, Deutschland&quot;,&quot;data&quot;:{&quot;2026-11-26T14:00:00Z&quot;:8,&quot;2026-11-26T15:00:00Z&quot;:5,&quot;2026-11-26T16:00:00Z&quot;:10,&quot;2026-11-26T17:00:00Z&quot;:2,&quot;2026-11-26T18:00:00Z&quot;:4,&quot;2026-11-26T19:00:00Z&quot;:1,&quot;2026-11-26T20:00:00Z&quot;:2,&quot;2026-11-26T21:00:00Z&quot;:8,&quot;2026-11-26T22:00:00Z&quot;:2,&quot;2026-11-26T23:00:00Z&quot;:0,&quot;2026-11-27T00:00:00Z&quot;:0,&quot;2026-11-27T01:00:00Z&quot;:0,&quot;2026-11-27T02:00:00Z&quot;:0,&quot;2026-11-27T03:00:00Z&quot;:0,&quot;2026-11-27T04:00:00Z&quot;:0,&quot;2026-11-27T05:00:00Z&quot;:2,&quot;2026-11-27T06:00:00Z&quot;:2,&quot;2026-11-27T07:00:00Z&quot;:9,&quot;2026-11-27T08:00:00Z&quot;:8,&quot;2026-11-27T09:00:00Z&quot;:4,&quot;2026-11-27T10:00:00Z&quot;:6,&quot;2026-11-27T11:00:00Z&quot;:3,&quot;2026-11-27T12:00:00Z&quot;:5,&quot;2026-11-27T13:00:00Z&quot;:8,&quot;2026-11-27T14:00:00Z&quot;:6,&quot;2026-11-27T15:00:00Z&quot;:6,&quot;2026-11-27T16:00:00Z&quot;:5,&quot;2026-11-27T17:00:00Z&quot;:2,&quot;2026-11-27T18:00:00Z&quot;:3,&quot;2026-11-27T19:00:00Z&quot;:3,&quot;2026-11-27T20:00:00Z&quot;:1,&quot;2026-11-27T21:00:00Z&quot;:2,&quot;2026-11-27T22:00:00Z&quot;:2,&quot;2026-11-27T23:00:00Z&quot;:1,&quot;2026-11-28T00:00:00Z&quot;:0,&quot;2026-11-28T01:00:00Z&quot;:0,&quot;2026-11-28T02:00:00Z&quot;:0,&quot;2026-11-28T03:00:00Z&quot;:0,&quot;2026-11-28T04:00:00Z&quot;:0,&quot;2026-11-28T05:00:00Z&quot;:0,&quot;2026-11-28T06:00:00Z&quot;:0,&quot;2026-11-28T07:00:00Z&quot;:3,&quot;2026-11-28T08:00:00Z&quot;:6,&quot;2026-11-28T09:00:00Z&quot;:2,&quot;2026-11-28T10:00:00Z&quot;:5,&quot;2026-11-28T11:00:00Z&quot;:7,&quot;2026-11-28T12:00:00Z&quot;:4,&quot;2026-11-28T13:00:00Z&quot;:3}},{&quot;name&quot;:&quot;Rostock, Deutschland&quot;,&quot;data&quot;:{&quot;2026-11-26T14:00:00Z&quot;:3,&quot;2026-11-26T15:00:00Z&quot;:4,&quot;2026-11-26T16:00:00Z&quot;:1,&quot;2026-11-26T17:00:00Z&quot;:3,&quot;2026-11-26T18:00:00Z&quot;:5,&quot;2026-11-26T19:00:00Z&quot;:1,&quot;2026-11-26T20:00:00Z&quot;:1,&quot;2026-11-26T21:00:00Z&quot;:1,&quot;2026-11-26T22:00:00Z&quot;:4,&quot;2026-11-26T23:00:00Z&quot;:0,&quot;2026-11-27T00:00:00Z&quot;:0,&quot;2026-11-27T01:00:00Z&quot;:0,&quot;2026-11-27T02:00:00Z&quot;:0,&quot;2026-11-27T03:00:00Z&quot;:0,&quot;2026-11-27T04:00:00Z&quot;:0,&quot;2026-11-27T05:00:00Z&quot;:0,&quot;2026-11-27T06:00:00Z&quot;:3,&quot;2026-11-27T07:00:00Z&quot;:3,&quot;2026-11-27T08:00:00Z&quot;:6,&quot;2026-11-27T09:00:00Z&quot;:4,&quot;2026-11-27T10:00:00Z&quot;:1,&quot;2026-11-27T11:00:00Z&quot;:2,&quot;2026-11-27T12:00:00Z&quot;:0,&quot;2026-11-27T13:00:00Z&quot;:1,&quot;2026-11-27T14:00:00Z&quot;:1,&quot;2026-11-27T15:00:00Z&quot;:1,&quot;2026-11-27T16:00:00Z&quot;:1,&quot;2026-11-27T17:00:00Z&quot;:0,&quot;2026-11-27T18:00:00Z&quot;:1,&quot;2026-11-27T19:00:00Z&quot;:1,&quot;2026-11-27T20:00:00Z&quot;:3,&quot;2026-11-27T21:00:00Z&quot;:6,&quot;2026-11-27T22:00:00Z&quot;:0,&quot;2026-11-27T23:00:00Z&quot;:0,&quot;2026-11-28T00:00:00Z&quot;:0,&quot;2026-11-28T01:00:00Z&quot;:0,&quot;2026-11-28T02:00:00Z&quot;:0,&quot;2026-11-28T03:00:00Z&quot;:0,&quot;2026-11-28T04:00:00Z&quot;:0,&quot;2026-11-28T05:00:00Z&quot;:0,&quot;2026-11-28T06:00:00Z&quot;:0,&quot;2026-11-28T07:00:00Z&quot;:1,&quot;2026-11-28T08:00:00Z&quot;:2,&quot;2026-11-28T09:00:00Z&quot;:1,&quot;2026-11-28T10:00:00Z&quot;:1,&quot;2026-11-28T11:00:00Z&quot;:1,&quot;2026-11-28T12:00:00Z&quot;:0,&quot;2026-11-28T13:00:00Z&quot;:0}}]"></div>
+  </div>
+</div>
+
+<div class="card card-default mb-3 card-table">
+  <table class="table table-sm table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Services</th>
+        <th>Requests</th>
+        <th>Request Types</th>
+        <th data-sorter="false">
+          Submitted requests
+          <span class="badge badge-info">48 hours</span>
+        </th>
+        <th>Total</th>
+        <th>Min/Hour</th>
+        <th>Max/Hour</th>
+        <th>Avg/Hour</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr id="city_bloomington">
+          <td>
+  <strong>
+    <a href="/cities/bloomington">Bloomington, IN</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-250-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://bloomington.in.gov/crm/open311/v2/services.xml?jurisdiction_id=bloomington.in.gov" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 250 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-350-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://bloomington.in.gov/crm/open311/v2/requests.xml?jurisdiction_id=bloomington.in.gov" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 350 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+<td>63 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]"></span>
+</td>
+<td>10</td>
+<td>0</td>
+<td>2</td>
+<td>0.2</td>
+
+        </tr>
+        <tr id="city_chicago">
+          <td>
+  <strong>
+    <a href="/cities/chicago">Chicago, IL</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-1380-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-warning" href="http://311api.cityofchicago.org/open311/v2/services.xml" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server slow response of 1380 ms">Slow</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-243-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="http://311api.cityofchicago.org/open311/v2/requests.xml" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 243 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        100.0% uptime
+      </small>
+    </div>
+  </td>
+
+<td>124 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[42,41,51,46,52,28,36,22,34,25,58,32,33,8,28,30,7,12,18,5,5,21,32,75,70,119,157,121,99,132,105,108,99,55,49,45,30,55,33,24,12,6,12,8,10,12,8,24]"></span>
+</td>
+<td>2134</td>
+<td>5</td>
+<td>157</td>
+<td>44.5</td>
+
+        </tr>
+        <tr id="city_koln">
+          <td>
+  <strong>
+    <a href="/cities/koln">Köln / Cologne, Deutschland</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-1192-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-warning" href="https://sags-uns.stadt-koeln.de/georeport/v2/services.xml?jurisdiction_id=stadt-koeln.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server slow response of 1192 ms">Slow</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        88.77% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-645-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://sags-uns.stadt-koeln.de/georeport/v2/requests.xml?jurisdiction_id=stadt-koeln.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 645 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        88.77% uptime
+      </small>
+    </div>
+  </td>
+
+<td>42 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[8,5,10,2,4,1,2,8,2,0,0,0,0,0,0,2,2,9,8,4,6,3,5,8,6,6,5,2,3,3,1,2,2,1,0,0,0,0,0,0,0,3,6,2,5,7,4,3]"></span>
+</td>
+<td>150</td>
+<td>0</td>
+<td>10</td>
+<td>3.1</td>
+
+        </tr>
+        <tr id="city_rostok">
+          <td>
+  <strong>
+    <a href="/cities/rostok">Rostock, Deutschland</a>
+  </strong>
+</td>
+
+  <td data-sort-value="200-862-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://www.klarschiff-hro.de/backoffice/citysdk/services.xml?jurisdiction_id=rostock.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 862 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        95.72% uptime
+      </small>
+    </div>
+  </td>
+
+  <td data-sort-value="200-464-">
+    <div class="text-center">
+      <a class="btn btn-sm btn-success" href="https://www.klarschiff-hro.de/backoffice/citysdk/requests.xml?jurisdiction_id=rostock.de" rel="noopener nofollow" data-bs-toggle="tooltip" title="Server responded in 464 ms">Okay</a>
+      <br>
+      <small>
+        less than a minute ago
+        <br>
+        95.72% uptime
+      </small>
+    </div>
+  </td>
+
+<td>166 types</td>
+<td>
+  <span class="sparkline" data-controller="sparkline" data-sparkline-values-value="[3,4,1,3,5,1,1,1,4,0,0,0,0,0,0,0,3,3,6,4,1,2,0,1,1,1,1,0,1,1,3,6,0,0,0,0,0,0,0,0,0,1,2,1,1,1,0,0]"></span>
+</td>
+<td>63</td>
+<td>0</td>
+<td>6</td>
+<td>1.3</td>
+
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Recent Service Requests</h3>
+<div class="card card-default card-table">
+  <table class="table table-condensed table-bordered table-striped table-responsive">
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>Service Name</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th>Media</th>
+      <th>Requested At</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Water in Basement Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371194">less than a minute ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371191">1 minute ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>E-Scooter Parking Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371189">2 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371184">3 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Paint Marking Maintenance</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371179">5 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Bulk Pickup</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371174">6 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Hydrant Check</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371170">8 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Boiler Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371168">10 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Stray Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371163">12 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vicious Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371159">14 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Recycling Pick Up</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371152">17 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Garbage Cart Maintenance</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371148">21 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vicious Animal Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371147">21 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371146">22 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Betreff: Illegale Elektroschrott-Ablagerung auf Gehweg / vor Hochspannungs-Verteilerkasten (Wiederholungs-Hotspot)
+
+Guten Tag,
+auf dem Gehweg vor der Bachemer Str. 184 wurde eine ausgebaute Einbau-Spülmaschine (mit „Zu verschenken“-Zettel) illegal abgestellt. Das Gerät ragt in den Gehweg hinein und steht direkt vor der Tür eines Hochspannungs-Verteilerkastens (RheinEnergie), sodass der Zugang im Störungsfall blockiert ist. Aufgrund der aktuellen Minusgrade dürfte das Gerät zudem durch Restwasser bereits einen Frostschaden erlitten haben.
+An diesem Stromverteiler wird leider regelmäßig illegal Müll und Schrott abgelagert.
+Bitte veranlassen Sie die zeitnahe Abholung des Elektroaltgeräts durch die AWB und prüfen Sie seitens des Ordnungsamtes eine verstärkte Beobachtung dieses Brennpunkts. Ein Foto der aktuellen Situation ist beigefügt.
+Vielen Dank!</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0104.jpeg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_0104.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28048-2026/betreff-illegale-elektroschrott-ablagerung-auf-gehweg-vor-hochspannungs-verteilerkasten-wiederholung">23 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Dead Animal Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371140">25 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Inspect Public Way Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371136">27 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371126">29 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371123">30 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Dead Animal Pick-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371101">43 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371099">43 minutes ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Abfalleimer auf dem Alt Poller Friedhof ist voll/ läuft über</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/1795871139423.jpg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/1795871139423.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28046-2026/abfalleimer-auf-dem-alt-poller-friedhof-ist-voll-lauft-uber">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Vacant/Abandoned Building Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371097">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371094">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Kölner Grün</td>
+        <td>open</td>
+        <td>
+Vermüllung im Gebüsch von Volksgarten paralell zu Volksgartenstraße -  gegenüber der Hardefuststraße gibt es einen Heckendurchgang von dort führt ein kleiner Pfad - wenige Meter nach links - Müllhalde befindet sich hinter dem großen Baum! 
+
+</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/1000088323.jpg">
+              <img class="img-responsive" alt="Kölner Grün" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/1000088323.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28047-2026/vermullung-im-gebusch-von-volksgarten-paralell-zu-volksgartenstrasse-gegenuber-der-hardefuststrasse">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371092">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371090">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28045-2026">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371081">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Wilder Müll </td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/image_97.jpg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/image_97.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28044-2026/wilder-mull">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371076">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371074">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371063">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td></td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/1000039372.jpg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/1000039372.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28043-2026">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371046">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Straße komplett voller Papierreste. Nach Leerung der blauem Tonne! </td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28042-2026/strasse-komplett-voller-papierreste-nach-leerung-der-blauem-tonne">about 1 hour ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371036">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371032">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Missed Garbage Pick-Up Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371018">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Straßenbaustellen</td>
+        <td>open</td>
+        <td>Hier fehlt nach den Baumaßnahmen das Zeichen 325.1. Schön wäre, wenn es unmittelbar nach der Kurve direkt am Beginn der Alten Forststr. aufgestellt würde.</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_2528.jpeg">
+              <img class="img-responsive" alt="Straßenbaustellen" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_2528.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28041-2026/hier-fehlt-nach-den-baumassnahmen-das-zeichen-3251-schon-ware-wenn-es-unmittelbar-nach-der-kurve-dir">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Defekte Oberfläche</td>
+        <td>open</td>
+        <td>Sehr geehrte Damen und Herren,
+melden möchte ich einen Fahrbahnschaden, der langsam größer wird auf der Hardtstraße vor Haus Nr. 2.
+
+Mit freundlichem Gruß
+
+Wilfried Görgen</td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28040-2026/sehr-geehrte-damen-und-herren-melden-mochte-ich-einen-fahrbahnschaden-der-langsam-grosser-wird-auf-d">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371011">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Alley Pothole Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371008">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Defekte Oberfläche</td>
+        <td>open</td>
+        <td>Stolperfalle für Fußgänger auf dem Gehweg, da Straßenschild wurde umgefahren, liegt dort im Vorgarten.
+Vom Mast ragen circa 3 cm aus dem Gehweg, für Fußgänger fast gar nicht sichtbar.</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_1019.jpeg">
+              <img class="img-responsive" alt="Defekte Oberfläche" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_1019.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28039-2026/stolperfalle-fur-fussganger-auf-dem-gehweg-da-strassenschild-wurde-umgefahren-liegt-dort-im-vorgarte">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371004">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Cab Feedback</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371003">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Abandoned Vehicle Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02371001">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370999">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>dauerhaftes Falschparken</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/128049/redaktionelle-prufung-ausstehend">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Lichtmast defekt</td>
+        <td>open</td>
+        <td>Beim Fußweg / Durchgang neben dem Haus Gleuler Str. 124 zur Bitburger Straße, ist seit über einem Jahr die Straßenbeleuchtung defekt. Dadurch entsteht ein sehr dunkler Raum, durch den man sich mitten in Lindenthal nicht sicher fühlt.
+Vielen Dank für die Beseitigung des Problems!</td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28038-2026/beim-fussweg-durchgang-neben-dem-haus-gleuler-str-124-zur-bitburger-strasse-ist-seit-uber-einem-jahr">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370994">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370993">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370992">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Hier liegt wie immer auf beiden Seiten Sperrmüll rum </td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28037-2026/hier-liegt-wie-immer-auf-beiden-seiten-sperrmull-rum">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Crisis Referral</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370991">about 2 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Coyote Interaction Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370989">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sanitation Code Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370985">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Leuchtmittel defekt</td>
+        <td>open</td>
+        <td>Die Straßenleuchte blinkt.</td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28036-2026/die-strassenleuchte-blinkt">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Zu lange Rotzeit</td>
+        <td>open</td>
+        <td>Die Fußgänger- und Fahrradfahrerampel springt manchmal sehr sehr lange nicht auf grün. Aufgrund des Krankenhauses und der autofreien Siedlung gibt es sehr viele Fußgänger uns FahrradfahrerInnen, die lange warten müssen, obwohl keine Autos fahren. Das ist frustrierend und verleitet schnell dazu, die Straße bei rot zu überqueren. </td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28035-2026/die-fussganger-und-fahrradfahrerampel-springt-manchmal-sehr-sehr-lange-nicht-auf-grun-aufgrund-des-k">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Mülltonne/Abfallbehälter überfüllt</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/128048/redaktionelle-prufung-ausstehend">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Defekte Oberfläche</td>
+        <td>open</td>
+        <td>Schlagloch linke Fahrspur, Fahrtrichtung Vorgebirgsstr. </td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28034-2026/schlagloch-linke-fahrspur-fahrtrichtung-vorgebirgsstr">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370975">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Relocated Vehicle</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370974">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Defekte Oberfläche</td>
+        <td>open</td>
+        <td>Lose Abdeckplatte und Bodenabsenkung. Direkt an der KVB Haltestelle Hertastrasse.  Fahrtrichtung Süd. </td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_7963.jpeg">
+              <img class="img-responsive" alt="Defekte Oberfläche" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_7963.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28033-2026/lose-abdeckplatte-und-bodenabsenkung-direkt-an-der-kvb-haltestelle-hertastrasse-fahrtrichtung-sud">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370969">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>City Vehicle Sticker Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370966">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Equipment Noise Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370961">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Straßenbaustellen</td>
+        <td>open</td>
+        <td>Im öffentlichen Straßenraum wurden mehrere Kabeltrommeln ungesichert und ohne ausreichende Sicherung gegen Wegrollen abgestellt. Dadurch besteht eine potenzielle Gefährdung für den Straßenverkehr und Passanten. Zusätzlich wird durch die Lagerung der Kabeltrommeln ohnehin bereits knapper öffentlicher Parkraum weiter eingeschränkt. Eine derartige Nutzung des öffentlichen Straßenlandes ist weder ordnungsgemäß noch hinnehmbar.</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_1969.jpeg">
+              <img class="img-responsive" alt="Straßenbaustellen" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_1969.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28032-2026/im-offentlichen-strassenraum-wurden-mehrere-kabeltrommeln-ungesichert-und-ohne-ausreichende-sicherun">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370959">about 3 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Schrott-Kfz</td>
+        <td>open</td>
+        <td>Im öffentlichen Verkehrsraum abgestelltes Kraftfahrzeug ohne gültige Zulassung bzw. amtliche Kennzeichen.</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_1968.jpeg">
+              <img class="img-responsive" alt="Schrott-Kfz" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_1968.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28031-2026/im-offentlichen-verkehrsraum-abgestelltes-kraftfahrzeug-ohne-gultige-zulassung-bzw-amtliche-kennzeic">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Defekte Verkehrszeichen</td>
+        <td>open</td>
+        <td>Schildermast ist um 90 Grad verdreht. </td>
+        <td>
+        </td>
+        <td><a href="/cities/koln/requests/28030-2026/schildermast-ist-um-90-grad-verdreht">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Pole Damage Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370953">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Traffic Signal Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370952">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sign Repair Request - All Other Signs</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370951">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Cleaning Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370950">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Tree Debris Clean-Up Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370948">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370945">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Equipment Noise Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370944">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370943">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Graffiti Removal Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370939">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Kölner Grün</td>
+        <td>open</td>
+        <td>Radikale Klimaidioten zerstören den Stadtgarten und bauen dort 2 nutzlose Gräber. </td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/590.jpg">
+              <img class="img-responsive" alt="Kölner Grün" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/590.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28029-2026/radikale-klimaidioten-zerstoren-den-stadtgarten-und-bauen-dort-2-nutzlose-graber">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Street Light Out Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370934">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Schrottfahrräder</td>
+        <td>open</td>
+        <td>5 Schrottfahrräder an der Seite der Fahrradständer, zum Elektrohäuschen</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_5111.jpeg">
+              <img class="img-responsive" alt="Schrottfahrräder" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_5111.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28028-2026/5-schrottfahrrader-an-der-seite-der-fahrradstander-zum-elektrohauschen">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Water in Basement Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370932">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Rostock, Deutschland</td>
+        <td>Wegereinigung fehlt</td>
+        <td>received</td>
+        <td>redaktionelle Prüfung ausstehend</td>
+        <td>
+        </td>
+        <td><a href="/cities/rostok/requests/128047/redaktionelle-prufung-ausstehend">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370929">about 4 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370924">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Pothole in Street Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370923">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370921">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Erneut liegen große Mengen Müll rund um das Rondell am Rautenstrauchkanal.</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4314.jpeg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/IMG_4314.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28027-2026/erneut-liegen-grosse-mengen-mull-rund-um-das-rondell-am-rautenstrauchkanal">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>No Building Permit and Construction Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370920">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370919">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370918">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Sidewalk Café/Outdoor Dining Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370917">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Abladung von Garenschnitt auf dem Am Blutberg Weg</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/JPEG_20261128_094603_3782058454064788994.jpg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/JPEG_20261128_094603_3782058454064788994.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28026-2026/abladung-von-garenschnitt-auf-dem-am-blutberg-weg">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Shelter Request</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370914">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Defekte Oberfläche</td>
+        <td>open</td>
+        <td>Die Pflastersteine wurden von den Drogenabhängigen wieder mal ausgebuddelt. Dankeschön fürs erledigen. </td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/E1EDAD65-4D09-4FF1-A34E-810769E86372.jpeg">
+              <img class="img-responsive" alt="Defekte Oberfläche" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/E1EDAD65-4D09-4FF1-A34E-810769E86372.jpeg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28025-2026/die-pflastersteine-wurden-von-den-drogenabhangigen-wieder-mal-ausgebuddelt-dankeschon-furs-erledigen">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Köln / Cologne, Deutschland</td>
+        <td>Wilder Müll</td>
+        <td>open</td>
+        <td>Hausmüllentsorgung im Wald nur Fußläufig vom Blutsbergweg erreichbar, den Trampelpfad rein und nach ca 50m auf der rechten Seite</td>
+        <td>
+            <a rel="noopener nofollow" href="https://sags-uns.stadt-koeln.de/system/files/2026-11/20261128_093942.jpg">
+              <img class="img-responsive" alt="Wilder Müll" src="https://sags-uns.stadt-koeln.de/system/files/2026-11/20261128_093942.jpg" />
+</a>        </td>
+        <td><a href="/cities/koln/requests/28024-2026/hausmullentsorgung-im-wald-nur-fusslaufig-vom-blutsbergweg-erreichbar-den-trampelpfad-rein-und-nach">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Fly Dumping Complaint</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370909">about 5 hours ago</a></td>
+      </tr>
+      <tr>
+        <td>Chicago, IL</td>
+        <td>Buildings - Plumbing Violation</td>
+        <td>open</td>
+        <td></td>
+        <td>
+        </td>
+        <td><a href="/cities/chicago/requests/SR26-02370908">about 5 hours ago</a></td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div class="text-center mt-3">
+  <a class="btn btn-outline-dark" href="/requests">View all Service Requests</a>
+</div>
+
+<p class="text-muted text-center mt-3"><small>Generated 2026-11-28 13:50 UTC</small></p>
+
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Open311 Status</strong> monitors and aggregates the status of dozens of Open311 API endpoints, providing benchmarks and comparative insights.</p>
+    </div>
+    <div class="col-md-6">
+      <ul>
+        <li>
+          Learn more about the <strong>Open311 API</strong> at
+          <a rel="noopener" href="http://www.open311.org/">
+            <i class="fa fa-bullhorn"></i>
+            Open311.org
+</a>        </li>
+        <li>
+          Help us <strong>improve the code</strong> at
+          <a rel="noopener" href="https://github.com/codeforamerica/open311status">
+            <i class="fa fa-github-alt"></i>
+            Github
+</a>        </li>
+        <li>
+          Send us an <strong>email</strong> at
+          <a href="mailto:bensheldon@gmail.com">
+            <i class="fa fa-paper-plane"></i>
+            bensheldon@gmail.com
+</a>        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+    </footer>
+  </body>
+</html>
