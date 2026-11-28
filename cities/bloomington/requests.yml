@@ -1,0 +1,886 @@
+---
+- service_request_id: 215671
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-21T11:18:36-05:00'
+  updated_datetime: '2026-11-21T11:18:36-05:00'
+  expected_datetime: '2026-11-30T11:18:36-05:00'
+  address: 3428 S Oaklawn CIR
+  address_id: 25145
+  zipcode: '47401'
+  lat: 39.12968444824219
+  long: -86.5007095336914
+  description: Rental property not following HOA or city ordinance on trash.  Pls contact owner of this condo at this point
+  media_url: https://bloomington.in.gov/crm/media/2026/11/21/6b01c45d67255
+- service_request_id: 215672
+  status: open
+  service_name: Street Trees
+  service_code: 89
+  agency_responsible: Parks and Recreation
+  requested_datetime: '2026-11-21T13:56:00-05:00'
+  updated_datetime: '2026-11-21T13:56:01-05:00'
+  expected_datetime:
+  address: 914 E University ST
+  address_id: 15154
+  zipcode: '47401'
+  lat: 39.16000747680664
+  long: -86.5215072631836
+  description: A tree in the verge has a large branch that is broken and stuck as well as a number of smaller branches. The view in the picture is to the west.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/21/6b01e9418fbff
+- service_request_id: 215673
+  status: open
+  service_name: Parks & Playgrounds
+  service_code: 33
+  agency_responsible: Parks and Recreation
+  requested_datetime: '2026-11-21T15:05:36-05:00'
+  updated_datetime: '2026-11-21T15:05:37-05:00'
+  expected_datetime:
+  address: 900 S Harvey DR
+  address_id: 30569
+  zipcode: '47403'
+  lat: 39.15803146362305
+  long: -86.5880126953125
+  description: Highland Park playground. At the highland Park playground, there as a series of suspended platforms for kids to play on. They are suspended by a pole and connected to the ground with a chain. I'm not sure what they are called so I hope that is specific enough. The chain connecting the one closest to the playground has disconnected from the ground anchor so it is swinging freely. I am worried that a child could not realize this and get hurt jumping on it.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/21/6b01f99193e3f
+- service_request_id: 215674
+  status: open
+  service_name: City Performance
+  service_code: 39
+  agency_responsible: Mayor's Office
+  requested_datetime: '2026-11-21T15:30:17-05:00'
+  updated_datetime: '2026-11-21T15:30:17-05:00'
+  expected_datetime:
+  address: 727 W 6th ST
+  address_id: 22944
+  zipcode: '47404'
+  lat: 39.16755676269531
+  long: -86.54203796386719
+  description: "I had an unpleasant interaction with construction workers at the intersection of Maple Street and Kirkwood Avenue. There was no visible signage indicating a road closure, detour, or required direction of travel. When I attempted to continue straight on Kirkwood, several workers began yelling and using profanity toward me, insisting that I could only travel in one direction.\r\n\r\nThere were no visible barriers preventing me from continuing straight, and the lack of signage made the traffic restrictions unclear. I found the workers’ behavior unnecessarily aggressive and unprofessional.\r\n\r\nI understand that construction requires temporary traffic restrictions, but those restrictions should be clearly communicated through proper signage, and workers should treat members of the public respectfully. I hope the City will address both the lack of traffic guidance and the conduct of the workers involved."
+- service_request_id: 215675
+  status: open
+  service_name: Utilities Yardwork
+  service_code: 58
+  agency_responsible: Utilities T & D
+  requested_datetime: '2026-11-21T15:34:34-05:00'
+  updated_datetime: '2026-11-21T15:34:34-05:00'
+  expected_datetime:
+  address: 2008 S Ramsey DR
+  address_id: 39535
+  zipcode: '47401'
+  lat: 39.14502334594727
+  long: -86.5034408569336
+  description: Iron water meter has a crack and hole in it.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/21/6b02005b013a3
+- service_request_id: 215676
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-22T06:31:04-05:00'
+  updated_datetime: '2026-11-22T06:31:04-05:00'
+  expected_datetime: '2026-12-01T06:31:04-05:00'
+  address: 2219 E 7th ST
+  address_id: 5934
+  zipcode: '47408'
+  lat: 39.16843032836914
+  long: -86.50653839111328
+  description: "The vacant house at the stated address has apparently rebranded as the neighborhood’s newest open-air landfill. Someone is actively dumping trash on the property, and the current residents—mostly raccoons and stray winds—are failing to keep the yard up to Bloomington code.\r\nPlease send HAND to inspect the site, cite the property owner, and shut down this unofficial waste facility before it earns a five-star rating on Yelp."
+  media_url: https://bloomington.in.gov/crm/media/2026/11/22/6b02d27962019
+- service_request_id: 215677
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-22T14:49:35-05:00'
+  updated_datetime: '2026-11-22T14:49:35-05:00'
+  expected_datetime: '2026-12-01T14:49:35-05:00'
+  address: 412 E Laurelwood CT
+  address_id: 17037
+  zipcode: '47401'
+  lat: 39.14080047607422
+  long: -86.52371978759766
+  description: 'Re: My report 215654 about the old frig on Ms Jones’ porch for 2 weeks, she finally had it removed over the weekend.'
+- service_request_id: 215678
+  status: open
+  service_name: Recycling
+  service_code: 36
+  agency_responsible: Sanitation Department
+  requested_datetime: '2026-11-22T15:02:26-05:00'
+  updated_datetime: '2026-11-22T15:02:26-05:00'
+  expected_datetime:
+  address: 2214 S Sweetbriar DR
+  address_id: 23116
+  zipcode: '47401'
+  lat: 39.14138793945312
+  long: -86.52571105957031
+  description: We got our recycling bin broken after trash collection last Thursday 11/19
+  media_url: https://bloomington.in.gov/crm/media/2026/11/22/6b034a52cb1f0
+- service_request_id: 215679
+  status: open
+  service_name: Other
+  service_code: 4
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-22T16:01:02-05:00'
+  updated_datetime: '2026-11-22T16:01:02-05:00'
+  expected_datetime:
+  address: 507 W. Dixie Street
+  address_id: 12533
+  zipcode: '47403'
+  lat: 39.15636444091797
+  long: -86.53951263427734
+  description: Jeep with no plate on it has been parked more than 72 hours on street. Parked there by homeless person Eugene George who is living in basement of home at 507. Owner of home Al Hines does not want him there or on the property. There is outside access to the basement so owner often does not see him come and leave.
+- service_request_id: 215680
+  status: open
+  service_name: Smoking Violation
+  service_code: 81
+  agency_responsible: Legal Department
+  requested_datetime: '2026-11-22T17:01:15-05:00'
+  updated_datetime: '2026-11-22T17:01:15-05:00'
+  expected_datetime:
+  address: 301 S Walnut ST
+  address_id: 13106
+  zipcode: '47401'
+  lat: 39.1644172668457
+  long: -86.5333251953125
+  description: Why are the transit drivers permitted to smoke at the station right by the employee door and the buses
+- service_request_id: 215681
+  status: open
+  service_name: City Performance
+  service_code: 39
+  agency_responsible: Mayor's Office
+  requested_datetime: '2026-11-22T18:28:36-05:00'
+  updated_datetime: '2026-11-22T18:28:36-05:00'
+  expected_datetime:
+  address: City Hall, Bloomington, IN
+  description: "The City of Bloomington’s uReport system is being weaponized as a tool of harassment, intimidation, and retaliation intended to silence my constitutionally protected speech. False allegations are being publicly circulated through an official municipal platform by friends of city employees to discredit me and intimidate me into silence.\r\n\r\nMy religion was publicly disclosed without my permission. I do not disclose my religion publicly. My family’s faith was then subjected to public scrutiny as though our religious identity were a matter of city business. The location of my private home was also publicly disclosed. The Monroe County Sheriff’s Office is now involved in addressing concerns for my family’s safety.\r\n\r\nThis is intimidation, not legitimate civic reporting. I allege religious discrimination, viewpoint discrimination, and First Amendment retaliation.\r\n\r\nThe City of Bloomington is responsible for how it administers its own reporting system. Its continued facilitation of a platform being used to intimidate a private citizen, expose her family, and suppress protected speech raises serious questions of municipal liability under federal civil-rights law."
+- service_request_id: 215682
+  status: open
+  service_name: Animal Control & Neglected Pets
+  service_code: 32
+  agency_responsible: Animal Control
+  requested_datetime: '2026-11-22T18:50:14-05:00'
+  updated_datetime: '2026-11-22T18:50:14-05:00'
+  expected_datetime:
+  address: 1724 E Hillside DR
+  address_id: 20703
+  zipcode: '47401'
+  lat: 39.15016174316406
+  long: -86.5116195678711
+  description: Probable dead deer against fence line on apartment side that is against backyards of Nancy Street. My understanding is it’s been there at least a week. Was dropping off a family member and the smell was terrible. It is on the property of the apartment complex.
+- service_request_id: 215683
+  status: open
+  service_name: Blocked Sidewalk
+  service_code: 78
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-22T21:34:27-05:00'
+  updated_datetime: '2026-11-22T21:34:27-05:00'
+  expected_datetime:
+  description: sidepath on north side of 17th between washington and lincoln has been becoming progressively more blocked over the last couple weeks.  they now leave barrels in the path over the weekend and the fence has been pushed over to claim 3ft of the path in one spot.  thanks!
+  media_url: https://bloomington.in.gov/crm/media/2026/11/22/6b03a63390dca
+- service_request_id: 215684
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T08:04:29-05:00'
+  updated_datetime: '2026-11-23T08:04:29-05:00'
+  expected_datetime: '2026-11-30T08:04:29-05:00'
+  address: 2703 S Rogers ST
+  address_id: 12003
+  zipcode: '47403'
+  lat: 39.13711166381836
+  long: -86.5381088256836
+  description: Large, deep pothole on Watson St about 20yds east of Rogers St.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/23/6b0439de2bfe6
+- service_request_id: 215685
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T09:36:42-05:00'
+  updated_datetime: '2026-11-23T09:36:42-05:00'
+  expected_datetime: '2026-11-30T09:36:42-05:00'
+  address: Near W 17th on Bypass
+  lat: 39.16992568969727
+  long: -86.53680419921875
+  description: "Significant pothole\r\n50-75 yards southeast of W 17th traffic light on Bypass\r\nIn left turning lane"
+- service_request_id: 215687
+  status: open
+  service_name: Other
+  service_code: 4
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T11:13:46-05:00'
+  updated_datetime: '2026-11-23T11:13:46-05:00'
+  expected_datetime:
+  address: 4012 E 10th ST
+  address_id: 805
+  zipcode: '47408'
+  lat: 39.17204666137695
+  long: -86.48332214355469
+  description: Dead deer in the road. Coyotes eating it last night it’s been dragged into the road
+- service_request_id: 215688
+  status: open
+  service_name: City Performance
+  service_code: 39
+  agency_responsible: Mayor's Office
+  requested_datetime: '2026-11-23T12:59:15-05:00'
+  updated_datetime: '2026-11-23T12:59:15-05:00'
+  expected_datetime:
+  description: I am writing in response to this morning's Herald-Times article, and regarding allegations made by Kathryn Coers Rossman against the Bloomington Arts Commission and Bloomington’s arts scene at large. I have received several communications from Rossman via my workplace email in the past week (unaffiliated with the city), specifically targeting Indiana University employees who serve in a volunteer capacity with the BAC or otherwise engage in arts programming. In effect, she has asked the university to investigate all arts affiliated staff, particularly in the Cook Center, suggesting there is a greater conspiracy to "silence" her on the basis of her Jewish faith. I know this claim to be fundamentally untrue. Per Rossman’s requests, I reviewed CATS footage from both of last week’s city meetings and have spent considerable time attempting to make sense of her reaching, ranging claims disseminated into the community via email, as well as online via Instagram and Facebook, and now via the attention of the press. I do not believe that Rossman is acting in good faith and am concerned to learn that her husband works as a staff attorney for the city, with potential access to privileged communications regarding this matter. Further, I have become concerned for the safety and wellbeing of former city staff, Holly Warren and Chaz Mottinger, who are facing continued harassment from Rossman despite no longer being employed with the city. Screenshotted images from Warren’s personal and private Instagram account, including images of her body, have been publicized by Rossman like exhibits in an imaginary public trial that she’s executing herself, playing the role of defendant and defense counsel. She appears to be on a defamation campaign with no intention of stopping. And to me, her behavior appears to be increasingly erratic. In a letter addressed to IU President Pam Whitten, she claimed that she’s needed to take her young son out of school to console her; I am deeply concerned for the wellbeing of that young boy and ask that appropriate measures are taken to ensure his safety while she is assessed for help. Further, I write to express my deep appreciation for the BAC and its present members, as well as Christina Elem and Paige Sharp. A disbanding of the BAC, which Rossman has called for, would be severely detrimental to the public health of this community.
+- service_request_id: 215690
+  status: open
+  service_name: City Performance
+  service_code: 39
+  agency_responsible: Mayor's Office
+  requested_datetime: '2026-11-23T14:36:31-05:00'
+  updated_datetime: '2026-11-23T14:36:31-05:00'
+  expected_datetime:
+  address: 401 N Morton ST
+  address_id: 4501
+  zipcode: '47404'
+  lat: 39.17032241821289
+  long: -86.5369644165039
+  description: Elletsville resident Kathryn Coers Rossman continues to publicly harass current and former city employees and volunteers with a yearlong campaign against Christina Elem, Chaz Mottinger, Holly Warren, Elliot Reichert, Nada Abdelrahim, Paige Sharp and others. She asserts discrimination against her despite a clear record of the City, ESD, and Bloomington Arts Commission supporting her artistic work over the years with grants and promotion. She has made false and defamatory statements online and in person on record at City Hall about many of the figures listed above. Recently she has begun to call for the disbanding of the art commission, which would be harmful to the cultural  community. As a member of the arts community living in Bloomington I am afraid for my safety and the safety of my community members.
+- service_request_id: 215691
+  status: closed
+  service_name: Temporary Signage w/o permit
+  service_code: 9
+  agency_responsible: Planning and Transportation
+  requested_datetime: '2026-11-23T14:58:54-05:00'
+  updated_datetime: '2026-11-23T15:06:11-05:00'
+  expected_datetime:
+  address: S College Mall Rd
+  lat: 39.15783309936523
+  long: -86.49790954589844
+  description: "Intersection of College Mall Road and  the Access Drive to Eastland Plaza. Three out of the four corners now have an (illegal?) temporary sign on them: \r\n1) Brew House corner has a Lawn Care sign;\r\n2) IHOP corner has a We Hang Christmas Lights sign\r\n3) Dunkin' Donuts corner has a sign that offers a service for $29."
+- service_request_id: 215692
+  status: open
+  service_name: Blocked Sidewalk
+  service_code: 78
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-23T16:30:24-05:00'
+  updated_datetime: '2026-11-23T16:30:24-05:00'
+  expected_datetime:
+  address: 640 N Morton ST
+  address_id: 50882
+  zipcode: '47404'
+  lat: 39.17333602905273
+  long: -86.53567504882812
+  description: Dumpster blocking sidewalk
+  media_url: https://bloomington.in.gov/crm/media/2026/11/23/6b04b07099ad9
+- service_request_id: 215693
+  status: open
+  service_name: Traffic Related Complaints
+  service_code: 12
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T17:03:12-05:00'
+  updated_datetime: '2026-11-23T17:03:12-05:00'
+  expected_datetime:
+  address: 1185 W 2nd ST
+  address_id: 18249
+  zipcode: '47403'
+  lat: 39.16077041625977
+  long: -86.5484848022461
+  description: Traffic in the left turn lane on E 2nd Street, facing west, is unable to turn (southeast onto Patterson) during to construction/road closure. There was one city employee trying to redirect traffic, but cars are already in lanes they cannot use by the time they get up to the intersection and can see her. Please add a barricade to block lanes where cars cannot follow that direction of traffic so they are in the correct lane ahead of time.
+- service_request_id: 215694
+  status: open
+  service_name: Nuisance Lights
+  service_code: 94
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T17:50:32-05:00'
+  updated_datetime: '2026-11-23T17:50:33-05:00'
+  expected_datetime:
+  address: 1115 S Walnut ST
+  address_id: 20345
+  zipcode: '47401'
+  lat: 39.15379333496094
+  long: -86.5336685180664
+  description: On the southwest side of Circle K at Walnut & Grimes, the street light is flashing, not solid. It looks like a strobe light.
+- service_request_id: 215695
+  status: open
+  service_name: Traffic Related Complaints
+  service_code: 12
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T18:31:06-05:00'
+  updated_datetime: '2026-11-23T18:31:06-05:00'
+  expected_datetime:
+  address: 1126 S Fairview ST
+  address_id: 12662
+  zipcode: '47403'
+  lat: 39.15464019775391
+  long: -86.54232788085938
+  description: "Driving down Grimes as it turns to Patterson. There are no visible traffic control signs, however, at the entrance to Catalent there is a pickup truck blocking the road with a guy telling everyone to turn around. I ask him why there is not signage he states \"Not my problem\". He has a visible walkie talkie on his vest. I tell him to inform someone there is no signage and he's closing the road. Again I'm told \"Not my problem\". Then proceed down Rogers to 2nd St, see a wall of barricades, it is not obvious there is anywhere to go so proceed to Kirkwood. Kirkwood is a 4-way stop as it has been for weeks on end. Finally am able to head west to complete my trip. \r\n\r\nHeading home the same way I see on Rogers a \"one lane ahead\" sign followed by an \"end of construction\" sign followed by a flagger sign. Obviously none of this makes sense and completely negates any signage and places the public and the construction works at unnecessary risk. The city needs to manage their project better. This is dangerous and unacceptable."
+- service_request_id: 215696
+  status: open
+  service_name: Blocked Street
+  service_code: 17
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-23T18:32:31-05:00'
+  updated_datetime: '2026-11-23T18:32:31-05:00'
+  expected_datetime:
+  address: 1126 S Fairview ST
+  address_id: 12662
+  zipcode: '47403'
+  lat: 39.15446472167969
+  long: -86.54232788085938
+  description: "Driving down Grimes as it turns to Patterson. There are no visible traffic control signs, however, at the entrance to Catalent there is a pickup truck blocking the road with a guy telling everyone to turn around. I ask him why there is not signage he states \"Not my problem\". He has a visible walkie talkie on his vest. I tell him to inform someone there is no signage and he's closing the road. Again I'm told \"Not my problem\". Then proceed down Rogers to 2nd St, see a wall of barricades, it is not obvious there is anywhere to go so proceed to Kirkwood. Kirkwood is a 4-way stop as it has been for weeks on end. Finally am able to head west to complete my trip. \r\n\r\nHeading home the same way I see on Rogers a \"one lane ahead\" sign followed by an \"end of construction\" sign followed by a flagger sign. Obviously none of this makes sense and completely negates any signage and places the public and the construction works at unnecessary risk. The city needs to manage their project better. This is dangerous and unacceptable."
+- service_request_id: 215697
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T18:35:37-05:00'
+  updated_datetime: '2026-11-23T18:35:37-05:00'
+  expected_datetime: '2026-11-30T18:35:37-05:00'
+  address: 1201 S Walnut ST
+  address_id: 12434
+  zipcode: '47401'
+  lat: 39.1533203125
+  long: -86.53363037109375
+  description: "There are recent road cuts at this intersection. All of the road cuts are sunken and creating a pothole hazard. I noticed the hazard almost immediately after the work was completed. This is dangerous and unacceptable work. They city should manage this work better and ensure it is completed to industry standards. \r\n\r\nWe have enough potholes on our roads! Don't allow new ones to be added! Please care about your citizens."
+- service_request_id: 215698
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-23T18:44:37-05:00'
+  updated_datetime: '2026-11-23T18:44:37-05:00'
+  expected_datetime: '2026-11-30T18:44:37-05:00'
+  description: There is excessive street damage and deterioration along the south side of the street from 615 w 12th st to 611 W 12th st/ the end of the road. The road has huge ruts along the side and causes damage to cars, and creates both a safety hazard during parking and an eyesore. The difference in surface height ranges from 1” to 4” in some places. Many houses in the neighborhood have been frustrated by how impossible it is to park evenly on the block.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/23/6b04cfe54d023
+- service_request_id: 215699
+  status: open
+  service_name: Blocked Sidewalk
+  service_code: 78
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-23T19:07:25-05:00'
+  updated_datetime: '2026-11-23T19:07:26-05:00'
+  expected_datetime:
+  address: 640 N Morton ST
+  address_id: 50882
+  zipcode: '47404'
+  lat: 39.17332458496094
+  long: -86.53567504882812
+  description: Dumpster still blocking the sidewalk
+  media_url: https://bloomington.in.gov/crm/media/2026/11/23/6b04d53e7981f
+- service_request_id: 215700
+  status: open
+  service_name: Animal Control & Neglected Pets
+  service_code: 32
+  agency_responsible: Animal Control
+  requested_datetime: '2026-11-24T00:17:38-05:00'
+  updated_datetime: '2026-11-24T00:17:39-05:00'
+  expected_datetime:
+  address: 1513 S Walnut ST
+  address_id: 20595
+  zipcode: '47401'
+  lat: 39.14984512329102
+  long: -86.53349304199219
+  description: "If not exactly on that corner then in the immediate range of within approximately 2 street blocks when heading northbound on the northeast side of the street on top of the storm water rollover drain grate I noticed what looked like at a glance what might be a deceased animal in which was most likely an all grey cat (Blue Russian), or quite possibly an adolescent badger, not identifiable with its head down in between the rails of the drain as if it may have been searching for water and or was possibly dropped off there and  was noticed to be on the northeast side of the street corner of Walnut and E Southern Dr when headed northbound on Walnut from Country Club Blvd, otherwise it was at the next storm drain on Walnut St heading northbound at the next block is my best recollection of where I had noticed it there and not moving although appeared to be unscathed at only a moments glance was the day before yesterday. \r\n\r\n\r\n(By the time I had found the website I had forgotten why I had been searching for it in the first place, sorry for the delay). \r\n\r\nThanks, I sure hope it's not the badger playing dead because it wasn't his head getting caught between the rails is why i suspect that it were placed there as to imply whoever may have dropped its best guess as to why the animal died...like clue?  \r\nI wonder that often which can't be helped all the way. Why not after the storm drain or up on the curb? \r\nAnimals do do that although the name of the road  adjacent to there if and when navigating unconfident as best."
+- service_request_id: 215701
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-24T00:22:15-05:00'
+  updated_datetime: '2026-11-24T00:22:15-05:00'
+  expected_datetime: '2026-12-01T00:22:15-05:00'
+  address: 5404 W Cobblestone ST
+  address_id: 43368
+  zipcode: '47403'
+  lat: 39.16102600097656
+  long: -86.59944915771484
+  description: Large pothole
+- service_request_id: 215702
+  status: closed
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-24T00:23:35-05:00'
+  updated_datetime: '2026-11-24T07:42:40-05:00'
+  expected_datetime: '2026-12-01T00:23:35-05:00'
+  address: 225 S Cave Creek DR
+  address_id: 43394
+  zipcode: '47403'
+  lat: 39.16092300415039
+  long: -86.60044860839844
+  description: Several potholes on S Cave Creek Dr near the intersection of W Cobblestone St.
+- service_request_id: 215703
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-24T09:51:17-05:00'
+  updated_datetime: '2026-11-24T09:51:17-05:00'
+  expected_datetime: '2026-12-03T09:51:17-05:00'
+  address: 905 E 13th ST
+  address_id: 7933
+  zipcode: '47408'
+  lat: 39.17545318603516
+  long: -86.52316284179688
+  description: Upholstered furniture on the porch and in the yard,   Fire pit in the yard and wooden tables
+- service_request_id: 215705
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-24T10:20:22-05:00'
+  updated_datetime: '2026-11-24T10:29:30-05:00'
+  expected_datetime: '2026-12-03T10:20:22-05:00'
+  address: 2520 S Rogers ST
+  address_id: 12178
+  zipcode: '47403'
+  lat: 39.13906478881836
+  long: -86.53882598876953
+  description: Someone regularly leaves bags of dog poop by the utility pole here. Previously reported in uReport 211022 and you responded that “the responsible party for removal is the property owner". Yes, that’s what we’re asking. Hold the property owner responsible for removing this hazardous waste.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05ab36b1221
+- service_request_id: 215706
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-24T11:14:29-05:00'
+  updated_datetime: '2026-11-24T11:14:29-05:00'
+  expected_datetime: '2026-12-01T11:14:29-05:00'
+  address: 303 E Kirkwood AVE
+  address_id: 26647
+  zipcode: '47408'
+  lat: 39.16747283935547
+  long: -86.5298080444336
+  description: The lid has shifted on this hole creating a hazard for vehicles and pedestrians
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05b7e667d8b
+- service_request_id: 215707
+  status: open
+  service_name: Accessibility Problem
+  service_code: 82
+  agency_responsible: Community and Family Resources
+  requested_datetime: '2026-11-24T11:36:05-05:00'
+  updated_datetime: '2026-11-24T11:36:05-05:00'
+  expected_datetime:
+  address: 1255 W Allen ST
+  address_id: 20845
+  zipcode: '47403'
+  lat: 39.15422058105469
+  long: -86.54661560058594
+  description: Accessible parking spaces permitted for specific residents in new apartment construction
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05bcf62f064
+- service_request_id: 215708
+  status: open
+  service_name: Yard Waste
+  service_code: 35
+  agency_responsible: Sanitation Department
+  requested_datetime: '2026-11-24T15:12:50-05:00'
+  updated_datetime: '2026-11-24T15:12:50-05:00'
+  expected_datetime:
+  address: 1902 E Second Street, Bloomington
+  description: For weeks now a bunch of tree debris has been sitting at the curb. The tenants need to be told that they need to bundle the branches, otherwise it never will be picked up.
+- service_request_id: 215709
+  status: open
+  service_name: Temporary Signage w/o permit
+  service_code: 9
+  agency_responsible: Planning and Transportation
+  requested_datetime: '2026-11-24T15:15:37-05:00'
+  updated_datetime: '2026-11-24T15:15:37-05:00'
+  expected_datetime:
+  address: Corner of N Pete Ellis and E John Hinkle Pl
+  description: Close to the post office parking lot. Next to the STOP sign is a 'Junk Removal' sign in the grass.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05f06a2267a
+- service_request_id: 215710
+  status: open
+  service_name: City Performance
+  service_code: 39
+  agency_responsible: Mayor's Office
+  requested_datetime: '2026-11-24T15:17:36-05:00'
+  updated_datetime: '2026-11-24T15:17:36-05:00'
+  expected_datetime:
+  address: Across from 301 N Pete Ellis Drive
+  description: AT@T dilapidated junction box. Wires visible.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05f0e11b4d3
+- service_request_id: 215711
+  status: open
+  service_name: City Performance
+  service_code: 39
+  agency_responsible: Mayor's Office
+  requested_datetime: '2026-11-24T15:20:03-05:00'
+  updated_datetime: '2026-11-24T15:20:03-05:00'
+  expected_datetime:
+  address: 415 S Clarizz BLVD
+  address_id: 29253
+  zipcode: '47401'
+  lat: 39.16272735595703
+  long: -86.4903564453125
+  description: 'Across from the Amp Way apartments, in the grass, close to Insights Optical:  another dilapidated junction box.'
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05f173bfd05
+- service_request_id: 215712
+  status: open
+  service_name: Abandoned Vehicle
+  service_code: 52
+  agency_responsible: Police Department
+  requested_datetime: '2026-11-24T15:29:03-05:00'
+  updated_datetime: '2026-11-24T15:29:03-05:00'
+  expected_datetime:
+  address: 619 S Eastside DR
+  address_id: 6655
+  zipcode: '47401'
+  lat: 39.16024398803711
+  long: -86.512451171875
+  description: "Ref. #209974 (Open)\r\n\r\nVehicle still regularly is not being moved for 3 days or longer. License plate sticker expired in Nov. 2025. \r\n\r\nA bike rack recently was installed on the vehicle. License plate now is no longer 'in a place and position that are clearly visible'. IN Law quote."
+- service_request_id: 215713
+  status: open
+  service_name: Website & Web Services Feedback
+  service_code: 53
+  agency_responsible: Information and Technology Services
+  requested_datetime: '2026-11-24T15:49:52-05:00'
+  updated_datetime: '2026-11-24T15:49:52-05:00'
+  expected_datetime: '2026-11-26T15:49:52-05:00'
+  address: 521 West Fourth Street 47404-5128
+  description: Hello, I keep trying to upload my images and drivers license for the RFP of artwork for the new Convention Center.  I get an error message every time I try.  The page indicates not greater than 10MB.  My images are below this threshold. I don't know if there is something wrong with the website, but I cannot move forward with my submission.  Any suggestions? Just now, I was able to upload one image file below Thank you Anita Bracalente
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b05f87093daa
+- service_request_id: 215714
+  status: open
+  service_name: Street Lights
+  service_code: 69
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-24T16:03:28-05:00'
+  updated_datetime: '2026-11-24T16:03:28-05:00'
+  expected_datetime:
+  address: 4112 E Pembrook CT
+  address_id: 16866
+  zipcode: '47401'
+  lat: 39.15838623046875
+  long: -86.47645568847656
+  description: The streetlamp at the corner of Bennington and Smith Road is broken and bent to the ground.
+- service_request_id: 215715
+  status: open
+  service_name: Blocked Street
+  service_code: 17
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-24T16:29:20-05:00'
+  updated_datetime: '2026-11-24T16:30:34-05:00'
+  expected_datetime:
+  address: 1126 S Fairview ST
+  address_id: 12662
+  zipcode: '47403'
+  lat: 39.1544189453125
+  long: -86.54212951660156
+  description: "Construction truck blocking eastbound Patterson, no detours set up, people getting stuck on dead end streets\r\n\r\nVery poor planning"
+- service_request_id: 215716
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-24T16:32:29-05:00'
+  updated_datetime: '2026-11-24T16:32:29-05:00'
+  expected_datetime: '2026-12-03T16:32:29-05:00'
+  address: 813 W Rosewood DR
+  address_id: 11679
+  zipcode: '47404'
+  lat: 39.2049560546875
+  long: -86.54165649414062
+  description: Recycling and yard waste were collected early Tuesday morning.  As of 430pm Tuesday, trash was not picked up.  Looks like several houses near mine were also skipped.  Please pick up asap
+- service_request_id: 215717
+  status: open
+  service_name: Traffic Related Complaints
+  service_code: 12
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-24T17:21:43-05:00'
+  updated_datetime: '2026-11-24T17:21:43-05:00'
+  expected_datetime:
+  address: 2500 W 3rd ST
+  address_id: 11324
+  zipcode: '47404'
+  lat: 39.16483688354492
+  long: -86.5682601928711
+  description: The chickfila construction crew is taking up over half the road and causing there to be only a narrow sliver of road to drive on and it is near impossible to turn onto kimble from 3rd street now. If there are any cars trying to leave kimble onto 3rd street, you cannot turn onto kimble. There are no flaggers or direction at all. Setting up for a head on collision easily.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b060df7aed0d
+- service_request_id: 215718
+  status: open
+  service_name: Blocked Street
+  service_code: 17
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-24T17:22:28-05:00'
+  updated_datetime: '2026-11-24T17:22:28-05:00'
+  expected_datetime:
+  address: 2500 W 3rd ST
+  address_id: 11324
+  zipcode: '47404'
+  lat: 39.16482925415039
+  long: -86.56816864013672
+  description: The chickfila construction crew is taking up over half the road and causing there to be only a narrow sliver of road to drive on and it is near impossible to turn onto kimble from 3rd street now. If there are any cars trying to leave kimble onto 3rd street, you cannot turn onto kimble. There are no flaggers or direction at all. Setting up for a head on collision easily.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b060e252b605
+- service_request_id: 215719
+  status: open
+  service_name: Traffic Signals
+  service_code: 70
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-24T17:45:32-05:00'
+  updated_datetime: '2026-11-24T17:45:33-05:00'
+  expected_datetime:
+  address: 100 E Kirkwood Ave
+  address_id: 28537
+  zipcode: '47408'
+  lat: 39.16652297973633
+  long: -86.53369903564453
+  description: The pedestrian signal is stuck at 11 seconds
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b06138d791e8
+- service_request_id: 215720
+  status: open
+  service_name: City Construction Projects
+  service_code: 11
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-24T18:32:58-05:00'
+  updated_datetime: '2026-11-24T18:32:58-05:00'
+  expected_datetime:
+  address: 320 W 8th ST
+  address_id: 23379
+  zipcode: '47404'
+  lat: 39.16992568969727
+  long: -86.53680419921875
+  description: There are several holes in the bottom of the fence where small- medium dogs can escape. There are 3-5 holes on the north east corner of the park, because of deer/ animal activity towards the forest it should be fixed promptly.
+- service_request_id: 215721
+  status: open
+  service_name: City Construction Projects
+  service_code: 11
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-24T18:34:01-05:00'
+  updated_datetime: '2026-11-24T18:34:01-05:00'
+  expected_datetime:
+  address: 4300 N Stone Mill RD
+  address_id: 48642
+  zipcode: '47408'
+  lat: 39.20940017700195
+  long: -86.53217315673828
+  description: There are several holes in the bottom of the fence where small- medium dogs can escape. There are 3-5 holes on the north east corner of the park, because of deer/ animal activity towards the forest it should be fixed promptly.
+- service_request_id: 215722
+  status: open
+  service_name: Drainage or Runoff
+  service_code: 74
+  agency_responsible: Utilities Engineering
+  requested_datetime: '2026-11-24T23:40:52-05:00'
+  updated_datetime: '2026-11-24T23:40:52-05:00'
+  expected_datetime:
+  description: If you have a problem contact this person
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b0666d4c1b7c
+- service_request_id: 215723
+  status: open
+  service_name: Website & Web Services Feedback
+  service_code: 53
+  agency_responsible: Information and Technology Services
+  requested_datetime: '2026-11-24T23:51:08-05:00'
+  updated_datetime: '2026-11-24T23:51:08-05:00'
+  expected_datetime: '2026-11-26T23:51:08-05:00'
+  description: I am a hammerhea survivor and have a deviated encephlogram and mesioloma cancer and punctured lung cancer and new brain injury and in Federal United States of America Witness Protection Program and not receiving proper care especially in aerospace medicine thry are poisoning me
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b06693c6eff6
+- service_request_id: 215724
+  status: open
+  service_name: Line of Sight
+  service_code: 19
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-24T23:56:51-05:00'
+  updated_datetime: '2026-11-24T23:56:51-05:00'
+  expected_datetime:
+  description: In missing Lauren Spierer case there were 8 people involved and I dont know who has been poisoning me since 2007 however you are not supposed to attack a person in Federal United States of America Witness Protection Program. Part of my agreement is no jails ever.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/24/6b066a9364ac9
+- service_request_id: 215725
+  status: open
+  service_name: Website & Web Services Feedback
+  service_code: 53
+  agency_responsible: Information and Technology Services
+  requested_datetime: '2026-11-25T00:00:44-05:00'
+  updated_datetime: '2026-11-25T00:00:44-05:00'
+  expected_datetime: '2026-11-27T00:00:44-05:00'
+  description: They aren't allowed to run my name like a criminal
+  media_url: https://bloomington.in.gov/crm/media/2026/11/25/6b066b7d04809
+- service_request_id: 215726
+  status: open
+  service_name: Sidewalk & Curb Complaints
+  service_code: 34
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-25T06:20:04-05:00'
+  updated_datetime: '2026-11-25T06:20:04-05:00'
+  expected_datetime:
+  address: 830 S Hawthorne DR
+  address_id: 15115
+  zipcode: '47401'
+  lat: 39.15839767456055
+  long: -86.52022552490234
+  description: "Sidewalk on Wylie (side yard of 830 S. Hawthorne) is in the worst condition i have seen.\r\n\r\nWhen I last reported this I got the reply that it's on a list for repair.  Isn't it a private residence? Isn't that the owner's responsibility?  Have they been notified?  Maybe because it's not in front of their main entrance they just don't notice.  Maybe the owners don't live there.\r\n\r\nI urge,the City to resume the program i took advantage of in the 1990s.  I got on a list and eventually paid for materials (labor provided by Public Works, I think).  My sidewalk was nothing like as bad as this, and is still in excellent condition."
+  media_url: https://bloomington.in.gov/crm/media/2026/11/25/6b06c464b3223
+- service_request_id: 215727
+  status: open
+  service_name: Sidewalk Requests
+  service_code: 76
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-25T06:26:38-05:00'
+  updated_datetime: '2026-11-25T08:10:38-05:00'
+  expected_datetime:
+  address: 503 S Ballantine RD
+  address_id: 15540
+  zipcode: '47401'
+  lat: 39.16197204589844
+  long: -86.51910400390625
+  description: "Several sections of cracked sidewalk.  Not very bad but till needs to be fixed.  Notify the owner of 503 S. Ballantine, maybe?\r\n\r\nThanks!"
+  media_url: https://bloomington.in.gov/crm/media/2026/11/25/6b06c5eec5267
+- service_request_id: 215728
+  status: open
+  service_name: Other
+  service_code: 4
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-25T08:44:35-05:00'
+  updated_datetime: '2026-11-25T08:44:35-05:00'
+  expected_datetime:
+  address: 4109 E Cadbury CT
+  address_id: 16870
+  zipcode: '47401'
+  lat: 39.15788269042969
+  long: -86.47681427001953
+  description: There is a City tree nearest to the street hanging over the driveway.  It is scratching the top of my vehicles and it is blocking my basketball goal.  Could you please trim the tree back.  Thank you.
+- service_request_id: 215729
+  status: open
+  service_name: Animal Control & Neglected Pets
+  service_code: 32
+  agency_responsible: Animal Control
+  requested_datetime: '2026-11-25T17:10:38-05:00'
+  updated_datetime: '2026-11-25T17:10:38-05:00'
+  expected_datetime:
+  address: 4111 W Vernal Pike
+  address_id: 23057
+  zipcode: '47404'
+  lat: 39.1754264831543
+  long: -86.57905578613281
+  description: 'Lot #136, a mastiff puppy is being left out all night in the cold with no shelter or food or water behind the trailer. The dog is currently out there and has been out there all day in the cold with no food water or shelter. This puppy is being neglected. They had it in the front yard but neighbors were complaining so they moved it behind the trailer so you can’t see it from the road. I would grab it but they have cameras and make meth over there and I don’t want them burning my place down out of retaliation.'
+- service_request_id: 215731
+  status: open
+  service_name: Other
+  service_code: 4
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-26T09:15:10-05:00'
+  updated_datetime: '2026-11-26T09:15:10-05:00'
+  expected_datetime:
+  address: S Olive St
+  lat: 39.14849853515625
+  long: -86.51880645751953
+  description: I am not sure if you can help. I have communication lines laying on my property. Both myself and neighbors have tried to find the responsible company to take care of them. Duke Energy said they are not responsible. Nor is AT&T. Can you help? I would much appreciate any help. Thank you.
+- service_request_id: 215732
+  status: open
+  service_name: Blocked Street
+  service_code: 17
+  agency_responsible: Engineering
+  requested_datetime: '2026-11-26T11:51:19-05:00'
+  updated_datetime: '2026-11-26T11:51:19-05:00'
+  expected_datetime:
+  address: 5560 S Rockport RD
+  address_id: 64346
+  zipcode: '47403'
+  lat: 39.10028839111328
+  long: -86.57896423339844
+  description: Downed tree blocking road
+- service_request_id: 215733
+  status: open
+  service_name: Sidewalk Requests
+  service_code: 76
+  agency_responsible: Planning and Transportation
+  requested_datetime: '2026-11-27T09:48:48-05:00'
+  updated_datetime: '2026-11-27T09:48:48-05:00'
+  expected_datetime:
+  address: 821 S Park AVE
+  address_id: 27670
+  zipcode: '47401'
+  lat: 39.15837860107422
+  long: -86.52362060546875
+  description: The entire curb in front of 821 S. Park Ave. is broken, some parts worse than others.  I may have reported this before.  If so, I may have got a reply saying it was on a list for repair.  This is in front of 821 S. Park Ave.  Isn't the owner responsible?  If so, please reply that you have mailed the owner a reminder with a deadline for repair.  It seems to me that the City is passive about insisting on compliance.  When a damaged sidewalk or curb is reported by uReport, why isn't the first step on the City's part an in-person confirmation, followed immediately by a letter reminding the owner of their responsibility with a deadline for repair?  And then, a later check to confirm that the work has been done?  What are the consequences of failure to comply?
+  media_url: https://bloomington.in.gov/crm/media/2026/11/27/6b09985106f86
+- service_request_id: 215734
+  status: open
+  service_name: Trails
+  service_code: 47
+  agency_responsible: Parks and Recreation
+  requested_datetime: '2026-11-27T10:14:06-05:00'
+  updated_datetime: '2026-11-27T10:14:07-05:00'
+  expected_datetime:
+  address: 4690 S Victor PIKE
+  address_id: 11799
+  zipcode: '47403'
+  lat: 39.11235046386719
+  long: -86.54805755615234
+  description: The crossing signal on the north side of where the Clear Creek Trail crosses Victor Pike is not working. The signal on the south side was functioning properly.
+- service_request_id: 215735
+  status: open
+  service_name: Sidewalk & Curb Complaints
+  service_code: 34
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-27T11:41:55-05:00'
+  updated_datetime: '2026-11-27T11:41:55-05:00'
+  expected_datetime:
+  address: 903 W 6th ST
+  address_id: 3692
+  zipcode: '47404'
+  lat: 39.16757202148438
+  long: -86.54381561279297
+  description: Mud from the from lawn has silted into the sidewalk creating a slippery hazard.
+  media_url: https://bloomington.in.gov/crm/media/2026/11/27/6b09b2d3bfc42
+- service_request_id: 215736
+  status: open
+  service_name: Trash
+  service_code: 5
+  agency_responsible: HAND
+  requested_datetime: '2026-11-27T12:05:22-05:00'
+  updated_datetime: '2026-11-27T12:05:22-05:00'
+  expected_datetime: '2026-12-06T12:05:22-05:00'
+  address: 312 W 3rd St
+  lat: 39.16471099853516
+  long: -86.53670501708984
+  description: Excessive trash and partial sidewalk blocking
+  media_url: https://bloomington.in.gov/crm/media/2026/11/27/6b09b852b4c19
+- service_request_id: 215738
+  status: open
+  service_name: Animal Control & Neglected Pets
+  service_code: 32
+  agency_responsible: Animal Control
+  requested_datetime: '2026-11-27T13:09:55-05:00'
+  updated_datetime: '2026-11-27T13:09:55-05:00'
+  expected_datetime:
+  address: 2003 S High ST
+  address_id: 6202
+  zipcode: '47401'
+  lat: 39.14495086669922
+  long: -86.5079574584961
+  description: Dead deer on south side of the home, can it please be removed? Thank you!
+- service_request_id: 215739
+  status: open
+  service_name: Biking & Walking
+  service_code: 66
+  agency_responsible: Planning and Transportation
+  requested_datetime: '2026-11-27T14:13:58-05:00'
+  updated_datetime: '2026-11-27T14:13:58-05:00'
+  expected_datetime:
+  description: branches hanging into eastbound bike lane on smith ave about 100ft east of walnut st.  i hit my head or face on these every time i go by.  thanks!
+  media_url: https://bloomington.in.gov/crm/media/2026/11/27/6b09d6770e976
+- service_request_id: 215740
+  status: open
+  service_name: Potholes, Other Street Repair
+  service_code: 25
+  agency_responsible: Street Department
+  requested_datetime: '2026-11-27T14:17:33-05:00'
+  updated_datetime: '2026-11-27T14:17:33-05:00'
+  expected_datetime: '2026-12-04T14:17:33-05:00'
+  address: N Willis Dr
+  lat: 39.18051147460938
+  long: -86.54409790039062
+  description: The entire length of Willis, from 17th St. to Arlington Valley entrance, has about ten different cracks and potholes, long and short, deep and shallow. I thought of including photos, but there would be too many. All summer 2026, I kept thinking, surely someone else will report this horror show; but no one did. It is a candidate for the currently worst maintained street in Bloomington. There is an unpleasant wide and shallow pothole near the entrance to Arlington Valley, which I asked the Street Department to fill with concrete years ago when it first turned into a pit; they didn't do it, and now it has failed again. Since the asphalt plant will close Dec. 1, what kind of desperate street repair measures can you take so this won't go on getting worse all winter? Thank you for working on this.
+- service_request_id: 215741
+  status: open
+  service_name: Wildlife Conflict
+  service_code: 90
+  agency_responsible: Animal Control
+  requested_datetime: '2026-11-27T17:18:25-05:00'
+  updated_datetime: '2026-11-27T17:18:25-05:00'
+  expected_datetime:
+  address: 1927 S High ST
+  address_id: 26850
+  zipcode: '47401'
+  lat: 39.14519882202148
+  long: -86.50800323486328
+  description: "There is a dead deer, likely hit by a car on High St, in our neighbors yard- they are out of town for the holiday until tomorrow morning.\r\n\r\nThe deer is between 2003 and 2005 S High St almost beside the house; a yard sign in 2003 yard right by high st was also knocked over."

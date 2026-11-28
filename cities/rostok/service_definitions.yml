@@ -1,0 +1,1495 @@
+---
+- description:
+  group: Barrierefreiheit
+  group_id: 115
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '86'
+  service_name: Ampel behindertengerecht gestalten
+  type: realtime
+- description:
+  group: Barrierefreiheit
+  group_id: 115
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '87'
+  service_name: Ampelschaltung ändern
+  type: realtime
+- description:
+  group: Barrierefreiheit
+  group_id: 115
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '88'
+  service_name: Bordstein absenken
+  type: realtime
+- description:
+  group: Barrierefreiheit
+  group_id: 115
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '89'
+  service_name: Zugang rollstuhlgerecht gestalten
+  type: realtime
+- description:
+  group: Fahrradverkehr
+  group_id: 120
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '90'
+  service_name: Ampelschaltung ändern
+  type: realtime
+- description:
+  group: Fahrradverkehr
+  group_id: 120
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '91'
+  service_name: Beleuchtung verändern
+  type: realtime
+- description:
+  group: Fahrradverkehr
+  group_id: 120
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '94'
+  service_name: Bordstein absenken
+  type: realtime
+- description:
+  group: Fahrradverkehr
+  group_id: 120
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '95'
+  service_name: Fahrradständer aufstellen
+  type: realtime
+- description:
+  group: Fußgänger
+  group_id: 127
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '96'
+  service_name: Ampelschaltung ändern
+  type: realtime
+- description:
+  group: Fußgänger
+  group_id: 127
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '97'
+  service_name: Beleuchtung verändern
+  type: realtime
+- description:
+  group: Fußgänger
+  group_id: 127
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '100'
+  service_name: Bordstein absenken
+  type: realtime
+- description:
+  group: Fußgänger
+  group_id: 127
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '135'
+  service_name: Papierkorb/Abfalleimer aufstellen
+  type: realtime
+- description:
+  group: Fußgänger
+  group_id: 127
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '101'
+  service_name: Sitzgelegenheit aufstellen
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '1'
+  service_name: Ampel schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '2'
+  service_name: bauliche Gefahrenstelle
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '173'
+  service_name: Baustelle
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '3'
+  service_name: Beleuchtung schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '4'
+  service_name: Beschilderung/Markierung schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '5'
+  service_name: Brücke/Tunnel/Mauer/Treppe schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '6'
+  service_name: Fahrradständer schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '7'
+  service_name: Gully schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '8'
+  service_name: Hundekot
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '127'
+  service_name: Papierkorb/Abfalleimer schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '128'
+  service_name: Papierkorb/Abfalleimer überfüllt
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '9'
+  service_name: Poller/Planke/Absperrelement schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '10'
+  service_name: Sitzgelegenheit schadhaft
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '162'
+  service_name: Wahlplakat/Plakat
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '11'
+  service_name: Wegereinigung fehlt
+  type: realtime
+- description:
+  group: Gehweg/Radweg/Straße
+  group_id: 1
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '12'
+  service_name: Wildwuchs
+  type: realtime
+- description:
+  group: Gewerberecht
+  group_id: 161
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '140'
+  service_name: Alkoholverkauf an Jugendliche
+  type: realtime
+- description:
+  group: Gewerberecht
+  group_id: 161
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '141'
+  service_name: Baustellen ohne Firmenschilder
+  type: realtime
+- description:
+  group: Gewerberecht
+  group_id: 161
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '161'
+  service_name: fehlende Preisangaben
+  type: realtime
+- description:
+  group: Gewerberecht
+  group_id: 161
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '142'
+  service_name: Rauchen in Gaststätten
+  type: realtime
+- description:
+  group: Gewerberecht
+  group_id: 161
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '143'
+  service_name: Spielhallen mit Jugendlichen
+  type: realtime
+- description:
+  group: Gewerberecht
+  group_id: 161
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '144'
+  service_name: Verdacht auf Schwarzarbeit
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '160'
+  service_name: Altfahrzeug/Schrottfahrrad
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '13'
+  service_name: Bauabfall
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '14'
+  service_name: Beutel in Hundetoilette fehlen
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '172'
+  service_name: Einkaufskörbe/Einkaufswagen
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '15'
+  service_name: Elektroschrott
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '16'
+  service_name: Grünschnitt/Weihnachtsbäume
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '17'
+  service_name: Hausmüll
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '18'
+  service_name: Hundekot
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '138'
+  service_name: Mülltonne/Abfallbehälter überfüllt
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '19'
+  service_name: Nebenablagerungen an Recycling-Container
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '129'
+  service_name: Papierkorb/Abfalleimer überfüllt
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '20'
+  service_name: Recycling-Container überfüllt
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '21'
+  service_name: Sondermüll
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '22'
+  service_name: Sperrmüll
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '175'
+  service_name: Verstoß gegen Einwegpfandpflicht/Verpackungsgesetz
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '174'
+  service_name: Verstoß gegen Mehrwegangebotspflicht/Verpackungsgesetz
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '163'
+  service_name: Wahlplakat/Plakat
+  type: realtime
+- description:
+  group: Müll/Schmutz
+  group_id: 16
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '23'
+  service_name: Wegereinigung fehlt
+  type: realtime
+- description:
+  group: Öffentlicher Nahverkehr
+  group_id: 135
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '102'
+  service_name: Fahrplan ändern
+  type: realtime
+- description:
+  group: Öffentlicher Nahverkehr
+  group_id: 135
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '103'
+  service_name: Haltestelle verlegen
+  type: realtime
+- description:
+  group: Öffentlicher Nahverkehr
+  group_id: 135
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '104'
+  service_name: Linienführung ändern
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '24'
+  service_name: Baum schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '25'
+  service_name: Baumscheibe ungepflegt
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '26'
+  service_name: Beleuchtung schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '27'
+  service_name: Beschilderung/Markierung schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '28'
+  service_name: Beutel in Hundetoilette fehlen
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '29'
+  service_name: Brunnen schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '30'
+  service_name: Fahrradständer schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '31'
+  service_name: Grünanlage ungepflegt
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '32'
+  service_name: Hundekot
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '33'
+  service_name: Hundetoilette schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '151'
+  service_name: Kunst im öffentlichen Raum schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '168'
+  service_name: Öffentliche Toilette schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '130'
+  service_name: Papierkorb/Abfalleimer schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '131'
+  service_name: Papierkorb/Abfalleimer überfüllt
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '122'
+  service_name: Poller/Planke/Absperrelement schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '34'
+  service_name: Sitzgelegenheit schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '35'
+  service_name: Spielgerät schadhaft
+  type: realtime
+- description:
+  group: Öffentliches Grün/Spielplatz
+  group_id: 31
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '36'
+  service_name: Wegereinigung fehlt
+  type: realtime
+- description:
+  group: Parken
+  group_id: 49
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '120'
+  service_name: dauerhaftes Falschparken
+  type: realtime
+- description:
+  group: Parken
+  group_id: 49
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '37'
+  service_name: Parkautomat schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '38'
+  service_name: Beschilderung schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '39'
+  service_name: Beutel in Hundetoilette fehlen
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '40'
+  service_name: Brunnen schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '41'
+  service_name: Fahrradständer schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '42'
+  service_name: Hundetoilette schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '152'
+  service_name: Kunst im öffentlichen Raum schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '169'
+  service_name: Öffentliche Toilette schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '132'
+  service_name: Papierkorb/Abfalleimer schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '133'
+  service_name: Papierkorb/Abfalleimer überfüllt
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '43'
+  service_name: Parkautomat schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '123'
+  service_name: Poller/Planke/Absperrelement schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '44'
+  service_name: Sitzgelegenheit schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '45'
+  service_name: Spielgerät schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '125'
+  service_name: Verteilerkasten schadhaft
+  type: realtime
+- description:
+  group: Stadtmöbel
+  group_id: 52
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '164'
+  service_name: Wahlplakat/Plakat
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '105'
+  service_name: Beleuchtung verändern
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '106'
+  service_name: Fahrradständer aufstellen
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '107'
+  service_name: Hundetoilette aufstellen
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '136'
+  service_name: Papierkorb/Abfalleimer aufstellen
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '108'
+  service_name: Recycling-Container aufstellen
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '109'
+  service_name: Sitzgelegenheit aufstellen
+  type: realtime
+- description:
+  group: Stadtmöbel/Beleuchtung
+  group_id: 139
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '110'
+  service_name: Spielplatz verändern
+  type: realtime
+- description:
+  group: Straßenverkehr
+  group_id: 147
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '111'
+  service_name: Ampelschaltung ändern
+  type: realtime
+- description:
+  group: Tiere
+  group_id: 178
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '171'
+  service_name: Tierkadaver
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '46'
+  service_name: Ampel schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '47'
+  service_name: Baum schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '48'
+  service_name: Beleuchtung schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '49'
+  service_name: Beschilderung/Markierung schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '50'
+  service_name: Brücke/Tunnel/Mauer/Treppe schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '51'
+  service_name: Brunnen schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '52'
+  service_name: Fahrradständer schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '53'
+  service_name: Gully schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '54'
+  service_name: Haltestelle schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '55'
+  service_name: Hundetoilette schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '150'
+  service_name: Kunst im öffentlichen Raum schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '139'
+  service_name: Mülltonne/Abfallbehälter schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '170'
+  service_name: Öffentliche Toilette schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '134'
+  service_name: Papierkorb/Abfalleimer schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '56'
+  service_name: Parkautomat schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '57'
+  service_name: Poller/Planke/Absperrelement schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '58'
+  service_name: Recycling-Container schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '59'
+  service_name: Schutzhütte schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '60'
+  service_name: Sitzgelegenheit schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '61'
+  service_name: Spielgerät schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '126'
+  service_name: Verteilerkasten schadhaft
+  type: realtime
+- description:
+  group: Vandalismus/Schmiererei
+  group_id: 65
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '165'
+  service_name: Wahlplakat/Plakat
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '62'
+  service_name: Ampel schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '63'
+  service_name: Beleuchtung schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '64'
+  service_name: Beschilderung/Markierung schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '65'
+  service_name: Fahrradständer schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '66'
+  service_name: Gully schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '67'
+  service_name: Haltestelle schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '68'
+  service_name: Parkautomat schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '69'
+  service_name: Poller/Planke/Absperrelement schadhaft
+  type: realtime
+- description:
+  group: Verkehrseinrichtung/Beleuchtung
+  group_id: 85
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '166'
+  service_name: Wahlplakat/Plakat
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '70'
+  service_name: Baum schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '114'
+  service_name: Beschilderung/Markierung ändern
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '115'
+  service_name: Beschilderung/Markierung einführen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '71'
+  service_name: Beschilderung/Markierung schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '121'
+  service_name: dauerhaftes Falschparken
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '116'
+  service_name: Fahrradständer aufstellen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '72'
+  service_name: Fahrradständer schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '153'
+  service_name: Kunst im öffentlichen Raum schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '73'
+  service_name: Müllablagerung
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '137'
+  service_name: Papierkorb/Abfalleimer aufstellen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '124'
+  service_name: Poller/Planke/Absperrelement schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '74'
+  service_name: Reiten abseits der Reitwege
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '118'
+  service_name: Schutzhütte aufstellen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '75'
+  service_name: Schutzhütte schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '119'
+  service_name: Sitzgelegenheit aufstellen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '76'
+  service_name: Sitzgelegenheit schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '77'
+  service_name: Spielgerät schadhaft
+  type: realtime
+- description:
+  group: Wald
+  group_id: 151
+  keywords: idea
+  metadata: false
+  photo_requested: false
+  service_code: '117'
+  service_name: Spielplatz verändern
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '78'
+  service_name: verbotenes Campen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '79'
+  service_name: verbotenes Fahren mit Kfz
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '80'
+  service_name: verbotenes Feuermachen
+  type: realtime
+- description:
+  group: Wald
+  group_id: 94
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '81'
+  service_name: Wegereinigung fehlt
+  type: realtime
+- description:
+  group: Wasser
+  group_id: 168
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '145'
+  service_name: Gehweg/Radweg/Straße überflutet
+  type: realtime
+- description:
+  group: Wasser
+  group_id: 168
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '146'
+  service_name: Gewässerverschmutzung
+  type: realtime
+- description:
+  group: Wasser
+  group_id: 168
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '147'
+  service_name: Grabenpflege
+  type: realtime
+- description:
+  group: Wasser
+  group_id: 168
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '148'
+  service_name: Grünanlage überflutet
+  type: realtime
+- description:
+  group: Wasser
+  group_id: 168
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '149'
+  service_name: Gully verstopft
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 177
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '156'
+  service_name: Gehweg nicht geräumt
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 110
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '82'
+  service_name: Gehweg nicht geräumt
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 110
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '83'
+  service_name: Radweg nicht geräumt
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 177
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '157'
+  service_name: Radweg nicht geräumt
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 177
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '158'
+  service_name: Straße nicht geräumt
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 110
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '84'
+  service_name: Straße nicht geräumt
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 110
+  keywords: problem
+  metadata: false
+  photo_requested: false
+  service_code: '85'
+  service_name: verbotener Streusalzeinsatz
+  type: realtime
+- description:
+  group: Winterdienst
+  group_id: 177
+  keywords: tip
+  metadata: false
+  photo_requested: false
+  service_code: '159'
+  service_name: verbotener Streusalzeinsatz
+  type: realtime

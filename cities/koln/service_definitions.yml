@@ -1,0 +1,1219 @@
+---
+- service_code: '1'
+  service_name: Stadtbild
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '35'
+    uuid: 692bc113-a40f-417d-a5f3-3a80bfdf6f09
+    revision_id: '92'
+    langcode: en
+    vid:
+    revision_created: '1750591102'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Stadtbild
+    description:
+    weight: '37'
+    parent:
+    changed: '1756366203'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '1'
+    field_category_hex:
+    field_category_icon: fa-star
+    field_service_code: '1'
+- service_code: '1.1'
+  service_name: Wilder Müll
+  metadata: 'false'
+  type: realtime
+  description: <p>Leider kommt es immer häufiger vor, dass Haus- und Sperrmüll und sogar gefährliche Abfälle (Schadstoffe) im Freiland, an Sammelcontainern für Glas oder Altkleider und auf öffentlichen Straßen und Plätzen achtlos abgelegt werden.</p><p>Die Beseitigung von wildem Müll ist teuer. Außerdem stellen illegale Müllablagerungen eine Ordnungswidrigkeit dar und werden je nach Schwere mit hohen Strafen geahndet.</p><p>Melden Sie bitte die Stellen unter Angabe der Straße mit einer Hausnummer, an denen wilder Müll liegt, damit der Abfall durch die Abfallwirtschaftsbetriebe Köln GmbH entfernt werden kann.</p><p><a href="https://www.awbkoeln.de/wilder-muell/"><strong>Weitere Informationen zum Thema Wilder Müll auf der Internetseite der Abfallwirtschaftsbetriebe Köln GmbH</strong></a></p>
+  keywords: ''
+  extended_attributes:
+    tid: '36'
+    uuid: 338bf240-b322-4379-a17a-58347042f648
+    revision_id: '36'
+    langcode: en
+    vid:
+    revision_created: '1634053580'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Wilder Müll
+    description: <p>Leider kommt es immer häufiger vor, dass Haus- und Sperrmüll und sogar gefährliche Abfälle (Schadstoffe) im Freiland, an Sammelcontainern für Glas oder Altkleider und auf öffentlichen Straßen und Plätzen achtlos abgelegt werden.</p><p>Die Beseitigung von wildem Müll ist teuer. Außerdem stellen illegale Müllablagerungen eine Ordnungswidrigkeit dar und werden je nach Schwere mit hohen Strafen geahndet.</p><p>Melden Sie bitte die Stellen unter Angabe der Straße mit einer Hausnummer, an denen wilder Müll liegt, damit der Abfall durch die Abfallwirtschaftsbetriebe Köln GmbH entfernt werden kann.</p><p><a href="https://www.awbkoeln.de/wilder-muell/"><strong>Weitere Informationen zum Thema Wilder Müll auf der Internetseite der Abfallwirtschaftsbetriebe Köln GmbH</strong></a></p>
+    weight: '0'
+    parent:
+    changed: '1702285134'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '25'
+    field_category_hex:
+    field_category_icon: fa-trash-o
+    field_service_code: '1.1'
+- service_code: '1.2'
+  service_name: Graffiti
+  metadata: 'false'
+  type: realtime
+  description: <p>Illegale Graffiti und Farbsprühereien auf öffentlichen Gebäuden. Bitte helfen Sie uns hier mit einem Foto, um das Ausmaß einzuschätzen.&nbsp;</p><p>Leider werden immer wieder städtische Gebäude und Flächen beschmiert, wodurch der Eindruck der Verwahrlosung entstehen kann. Wenn Sie besprühte oder beschmierte Flächen auf öffentlichen Gebäuden, im öffentlichen Straßenland oder sonstigen öffentlichen Eigentum finden, melden Sie dies bitte, am besten mit einem Foto. Die KASA, "Kölner Anti Spray Aktion", kümmert sich umgehend um die Beseitigung. Zum Schutz des öffentlichen Eigentums und um Nachahmung zu verhindern stellt die KASA eine schnellstmögliche Reinigung sicher.</p><p>Bis zur vollständigen Reinigung vergehen in der Regel maximal zehn Tage. Bitte haben Sie Verständnis dafür, dass je nach Ort und Größe der Schmiererei, verwendete Farbe und Art des beschmierten Untergrundes, die Entfernung auch länger dauern kann. Ihr Anliegen ist aber fest beauftragt und wird an die Abfallwirtschaftsbetriebe Köln zur Reinigung der Fläche weitergeben.</p><p>Gleichzeitig wird Strafantrag wegen Sachbeschädigung bei der Polizei Köln gestellt.</p><p>Sollte das betroffene Objekt nicht im Zuständigkeitsbereich der Stadt Köln liegen stellt die KASA sicher das die Meldung an die tatsächlich zuständige Stelle weitergegeben wird.</p><p><a href="https://www.stadt-koeln.de/artikel/65363/index.html"><strong>Weitere Informationen zur Kölner Anti Spray Aktion (KASA)</strong></a></p>
+  keywords: ''
+  extended_attributes:
+    tid: '37'
+    uuid: 18803c24-0e61-4a47-ad68-d45125c74c59
+    revision_id: '37'
+    langcode: en
+    vid:
+    revision_created: '1634053625'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Graffiti
+    description: <p>Illegale Graffiti und Farbsprühereien auf öffentlichen Gebäuden. Bitte helfen Sie uns hier mit einem Foto, um das Ausmaß einzuschätzen.&nbsp;</p><p>Leider werden immer wieder städtische Gebäude und Flächen beschmiert, wodurch der Eindruck der Verwahrlosung entstehen kann. Wenn Sie besprühte oder beschmierte Flächen auf öffentlichen Gebäuden, im öffentlichen Straßenland oder sonstigen öffentlichen Eigentum finden, melden Sie dies bitte, am besten mit einem Foto. Die KASA, "Kölner Anti Spray Aktion", kümmert sich umgehend um die Beseitigung. Zum Schutz des öffentlichen Eigentums und um Nachahmung zu verhindern stellt die KASA eine schnellstmögliche Reinigung sicher.</p><p>Bis zur vollständigen Reinigung vergehen in der Regel maximal zehn Tage. Bitte haben Sie Verständnis dafür, dass je nach Ort und Größe der Schmiererei, verwendete Farbe und Art des beschmierten Untergrundes, die Entfernung auch länger dauern kann. Ihr Anliegen ist aber fest beauftragt und wird an die Abfallwirtschaftsbetriebe Köln zur Reinigung der Fläche weitergeben.</p><p>Gleichzeitig wird Strafantrag wegen Sachbeschädigung bei der Polizei Köln gestellt.</p><p>Sollte das betroffene Objekt nicht im Zuständigkeitsbereich der Stadt Köln liegen stellt die KASA sicher das die Meldung an die tatsächlich zuständige Stelle weitergegeben wird.</p><p><a href="https://www.stadt-koeln.de/artikel/65363/index.html"><strong>Weitere Informationen zur Kölner Anti Spray Aktion (KASA)</strong></a></p>
+    weight: '1'
+    parent:
+    changed: '1702284840'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '2'
+    field_category_hex:
+    field_category_icon: fa-paint-brush
+    field_service_code: '1.2'
+- service_code: '1.3'
+  service_name: Altkleidercontainer
+  metadata: 'false'
+  type: realtime
+  description: "<p>Finden Sie auf öffentlichem Straßenland Altkleider-Container, die nicht von den Abfallwirtschaftsbetrieben Köln aufgestellt wurden und nicht gekennzeichnet sind, melden Sie bitte diese illegale Altkleidersammlung. Um sich gegen illegale, gewerbliche Sammlungen zu wehren und die gemeinnützigen Sammlungen zu schützen werden diese illegalen Container aus dem Stadtgebiet entfernt.</p><p>Aufgrund von gesetzlichen Vorgaben des Verwaltungsverfahrensgesetzes bringen wir am Container einen Hinweis an. Wir geben somit der Eigentümerin und dem Eigentümer die Möglichkeit den Container selbst zu entfernen. Erst nach Ablauf einer Frist von mindestens&nbsp;<strong>zwei Wochen</strong> beziehungsweise Klärung der Eigentümerverhältnisse dürfen wir tätig werden. Wir bitten daher um Verständnis, dass&nbsp;die illegal aufgestellten Altkleidercontainer nicht sofort entfernt werden können.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '38'
+    uuid: 07c1878b-ef8f-4923-9c61-8239524dc433
+    revision_id: '38'
+    langcode: en
+    vid:
+    revision_created: '1634053731'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Altkleidercontainer
+    description: "<p>Finden Sie auf öffentlichem Straßenland Altkleider-Container, die nicht von den Abfallwirtschaftsbetrieben Köln aufgestellt wurden und nicht gekennzeichnet sind, melden Sie bitte diese illegale Altkleidersammlung. Um sich gegen illegale, gewerbliche Sammlungen zu wehren und die gemeinnützigen Sammlungen zu schützen werden diese illegalen Container aus dem Stadtgebiet entfernt.</p><p>Aufgrund von gesetzlichen Vorgaben des Verwaltungsverfahrensgesetzes bringen wir am Container einen Hinweis an. Wir geben somit der Eigentümerin und dem Eigentümer die Möglichkeit den Container selbst zu entfernen. Erst nach Ablauf einer Frist von mindestens&nbsp;<strong>zwei Wochen</strong> beziehungsweise Klärung der Eigentümerverhältnisse dürfen wir tätig werden. Wir bitten daher um Verständnis, dass&nbsp;die illegal aufgestellten Altkleidercontainer nicht sofort entfernt werden können.</p>"
+    weight: '2'
+    parent:
+    changed: '1702284758'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-male
+    field_service_code: '1.3'
+- service_code: '1.4'
+  service_name: Glascontainer
+  metadata: 'false'
+  type: realtime
+  description: "<p>Hin und wieder kann es vorkommen, dass ein Glascontainer überfüllt ist. Trotz regelmäßiger Leerung können die Wertstoffcontainer die dort abgelieferten Mengen nicht aufnehmen. Auch werden Glasabfälle nicht in die Container entsorgt, sondern unerlaubter Weise neben die Container gestellt.</p><p>Stellen Sie solche Mängel fest, dann melden Sie bitte die Standorte der Container unter Angabe der Straße mit einer Hausnummer, an denen Sie die Überfüllung der Container feststellen. Wir werden umgehend die Leerung oder die Beseitigung der beauftragen.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '39'
+    uuid: d8e03351-db32-4300-91ab-f3e38cbc903c
+    revision_id: '39'
+    langcode: en
+    vid:
+    revision_created: '1634053834'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Glascontainer
+    description: "<p>Hin und wieder kann es vorkommen, dass ein Glascontainer überfüllt ist. Trotz regelmäßiger Leerung können die Wertstoffcontainer die dort abgelieferten Mengen nicht aufnehmen. Auch werden Glasabfälle nicht in die Container entsorgt, sondern unerlaubter Weise neben die Container gestellt.</p><p>Stellen Sie solche Mängel fest, dann melden Sie bitte die Standorte der Container unter Angabe der Straße mit einer Hausnummer, an denen Sie die Überfüllung der Container feststellen. Wir werden umgehend die Leerung oder die Beseitigung der beauftragen.</p>"
+    weight: '3'
+    parent:
+    changed: '1702284823'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-glass
+    field_service_code: '1.4'
+- service_code: '1.5'
+  service_name: Schrottfahrräder
+  metadata: 'false'
+  type: realtime
+  description: "<p>Wenn Ihnen auf öffentlichen Flächen abgestellte Fahrräder auffallen, die aufgrund ihres Zustandes als Abfall zu bewerten sind, weil beispielsweise wesentliche Teile, wie Rahmen oder Räder fehlen, melden Sie diese bitte.</p><p>Wir nehmen Ihr Anliegen direkt in die Bearbeitung der Kommunalen Ordnungsdienste auf. Von dort wird geprüft, ob das Fahrrad sofort entsorgt werden kann, oder der Eigentümerin oder dem Eigentümer innerhalb einer gesetzlich vorgegebenen Frist die Möglichkeit gegeben werden muss, das Fahrrad selbst zu entfernen. Erst nach Ablauf der Frist&nbsp;dürfen wir&nbsp;tätig werden.</p><p>Wir bitten um Verständnis, dass die abschließende Bearbeitung aus diesem Grund nicht sofort erfolgen kann. Ihr Anliegen ist aber fest beauftragt und wird vom Kommunalen Ordnungsdienst weiter bearbeitet.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '40'
+    uuid: 249af694-c0a9-4ea8-b66f-ccc2878c7492
+    revision_id: '40'
+    langcode: en
+    vid:
+    revision_created: '1634053872'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Schrottfahrräder
+    description: "<p>Wenn Ihnen auf öffentlichen Flächen abgestellte Fahrräder auffallen, die aufgrund ihres Zustandes als Abfall zu bewerten sind, weil beispielsweise wesentliche Teile, wie Rahmen oder Räder fehlen, melden Sie diese bitte.</p><p>Wir nehmen Ihr Anliegen direkt in die Bearbeitung der Kommunalen Ordnungsdienste auf. Von dort wird geprüft, ob das Fahrrad sofort entsorgt werden kann, oder der Eigentümerin oder dem Eigentümer innerhalb einer gesetzlich vorgegebenen Frist die Möglichkeit gegeben werden muss, das Fahrrad selbst zu entfernen. Erst nach Ablauf der Frist&nbsp;dürfen wir&nbsp;tätig werden.</p><p>Wir bitten um Verständnis, dass die abschließende Bearbeitung aus diesem Grund nicht sofort erfolgen kann. Ihr Anliegen ist aber fest beauftragt und wird vom Kommunalen Ordnungsdienst weiter bearbeitet.</p>"
+    weight: '4'
+    parent:
+    changed: '1779780229'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '3'
+    field_category_hex:
+    field_category_icon: fa-bicycle
+    field_service_code: '1.5'
+- service_code: '1.6'
+  service_name: Gully verstopft
+  metadata: 'false'
+  type: realtime
+  description: "<p>Sie haben einen Straßengully gesehen, an dem das Wasser nicht abläuft und es kommt zu Wasserpfützen oder Überschwemmungen auf der Fahrbahn? Entweder ist der Gully verstopft oder der Anschlusskanal defekt.</p><p>Die Stadtentwässerungsbetriebe Köln, AöR (StEB), kümmern sich schnellstmöglich, in der Regel innerhalb von zwei Wochen, um die Reinigung des Gullys. In Einzelfällen kann es aufgrund besonderer Wetterlagen und der daraus folgenden Vielzahl von Meldungen zu Verzögerungen bei der Beseitigung des Schadens kommen.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '41'
+    uuid: 6dbb9c24-1415-4fa5-a9e3-13d3cb611316
+    revision_id: '41'
+    langcode: en
+    vid:
+    revision_created: '1634054020'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Gully verstopft
+    description: "<p>Sie haben einen Straßengully gesehen, an dem das Wasser nicht abläuft und es kommt zu Wasserpfützen oder Überschwemmungen auf der Fahrbahn? Entweder ist der Gully verstopft oder der Anschlusskanal defekt.</p><p>Die Stadtentwässerungsbetriebe Köln, AöR (StEB), kümmern sich schnellstmöglich, in der Regel innerhalb von zwei Wochen, um die Reinigung des Gullys. In Einzelfällen kann es aufgrund besonderer Wetterlagen und der daraus folgenden Vielzahl von Meldungen zu Verzögerungen bei der Beseitigung des Schadens kommen.</p>"
+    weight: '5'
+    parent:
+    changed: '1702284855'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '27'
+    field_category_hex:
+    field_category_icon: fa-circle-o
+    field_service_code: '1.6'
+- service_code: '2'
+  service_name: Straßen und Verkehrsanlagen
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '42'
+    uuid: e93514ce-c02c-4396-a288-d386229b4792
+    revision_id: '42'
+    langcode: en
+    vid:
+    revision_created: '1634054265'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Straßen und Verkehrsanlagen
+    description:
+    weight: '38'
+    parent:
+    changed: '1756366203'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid:
+    field_category_hex:
+    field_category_icon: fa-car
+    field_service_code: '2'
+- service_code: '2.1'
+  service_name: Ampelanlage
+  metadata: 'false'
+  type: realtime
+  description: <p>Eine einzelne Lampe ist defekt oder die Ampel "springt" dauerhaft nicht um. Die Ampeltaste für Fußgängerinnen und Fußgänger funktioniert nicht und ist vermutlich defekt.</p><p>Die Instandsetzung wird direkt fest beauftragt und in der Regel innerhalb von <strong>zwei&nbsp;Tagen</strong> durch einen Dienstleister durchgeführt.</p>
+  keywords: ''
+  extended_attributes:
+    tid: '43'
+    uuid: 884c107f-daba-484c-8496-50660a9b0585
+    revision_id: '43'
+    langcode: en
+    vid:
+    revision_created: '1634054313'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Ampelanlage
+    description: <p>Eine einzelne Lampe ist defekt oder die Ampel "springt" dauerhaft nicht um. Die Ampeltaste für Fußgängerinnen und Fußgänger funktioniert nicht und ist vermutlich defekt.</p><p>Die Instandsetzung wird direkt fest beauftragt und in der Regel innerhalb von <strong>zwei&nbsp;Tagen</strong> durch einen Dienstleister durchgeführt.</p>
+    weight: '0'
+    parent:
+    changed: '1702284783'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: '2.1'
+- service_code: '2.2'
+  service_name: Parkscheinautomat defekt
+  metadata: 'false'
+  type: realtime
+  description: "<p>Sie können am Parkscheinautomat kein Parkticket ziehen? Nach dem Münzeinwurf gibt es keinen Parkschein oder keine Münzrückgabe, die EC-Karte / Geldkarte steckt im Automaten fest oder die eingeworfenen Münzen fallen durch? Bitte melden Sie uns defekte oder nicht richtig funktionierende Parkscheinautomaten.</p><p>Neben der Angabe der Straße mit einer Hausnummer, vor welcher der Automat steht, ist die Angabe der Parkscheinautomaten-Nummer sehr hilfreich.</p><p>Die Instandsetzung wird kurzfristig direkt von unserem&nbsp;Parkbetriebsservice durchgeführt.</p><p><em><strong>Was sollten Sie tun, wenn ein Parkscheinautomat defekt ist?</strong></em><br><em>Stellen Sie bitte Ihre Ankunftszeit auf einer Parkscheibe ein und legen Sie diese gut sichtbar hinter die Windschutzscheibe. Sie können dann bis zu der auf dem Parkscheinautomaten angegebenen Höchstparkdauer auch ohne Ticket parken. Sie müssen Ihr Fahrzeug nicht umparken oder an einem anderen Automaten einen weiteren Parkschein lösen.</em></p>"
+  keywords: ''
+  extended_attributes:
+    tid: '44'
+    uuid: 6b6bf332-7482-46f2-8ad2-ae4b674c48e5
+    revision_id: '44'
+    langcode: en
+    vid:
+    revision_created: '1634054426'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Parkscheinautomat defekt
+    description: "<p>Sie können am Parkscheinautomat kein Parkticket ziehen? Nach dem Münzeinwurf gibt es keinen Parkschein oder keine Münzrückgabe, die EC-Karte / Geldkarte steckt im Automaten fest oder die eingeworfenen Münzen fallen durch? Bitte melden Sie uns defekte oder nicht richtig funktionierende Parkscheinautomaten.</p><p>Neben der Angabe der Straße mit einer Hausnummer, vor welcher der Automat steht, ist die Angabe der Parkscheinautomaten-Nummer sehr hilfreich.</p><p>Die Instandsetzung wird kurzfristig direkt von unserem&nbsp;Parkbetriebsservice durchgeführt.</p><p><em><strong>Was sollten Sie tun, wenn ein Parkscheinautomat defekt ist?</strong></em><br><em>Stellen Sie bitte Ihre Ankunftszeit auf einer Parkscheibe ein und legen Sie diese gut sichtbar hinter die Windschutzscheibe. Sie können dann bis zu der auf dem Parkscheinautomaten angegebenen Höchstparkdauer auch ohne Ticket parken. Sie müssen Ihr Fahrzeug nicht umparken oder an einem anderen Automaten einen weiteren Parkschein lösen.</em></p>"
+    weight: '2'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '23'
+    field_category_hex:
+    field_category_icon: fa-clock-o
+    field_service_code: '2.2'
+- service_code: '2.3'
+  service_name: Schrott-Kfz
+  metadata: 'false'
+  type: realtime
+  description: "<p>Wenn Ihnen auf öffentlichen Flächen abgestellte abgemeldete (Schrott-)Fahrzeuge mit entsiegelten oder ganz ohne Nummernschilder auffallen, melden Sie diese bitte.</p><p>Wir nehmen Ihr Anliegen direkt in die Bearbeitung der Kommunalen Ordnungsdienste auf. Von dort wird geprüft, ob das Fahrzeug sofort entsorgt entfernt kann, oder der Eigentümerin oder dem Eigentümer innerhalb einer gesetzlich vorgegebenen Frist die Möglichkeit gegeben werden muss, das Fahrzeug selbst zu entfernen. Erst nach Ablauf der Frist&nbsp;dürfen wir&nbsp;tätig werden.</p><p>Wir bitten um Verständnis, dass die abschließende Bearbeitung aus diesem Grund nicht sofort erfolgen kann. Ihr Anliegen ist aber fest beauftragt und wird vom Kommunalen Ordnungsdienst weiter bearbeitet.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '45'
+    uuid: 75c2588e-9583-4ed5-a5c5-1b349dc76b37
+    revision_id: '45'
+    langcode: en
+    vid:
+    revision_created: '1634054450'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Schrott-Kfz
+    description: "<p>Wenn Ihnen auf öffentlichen Flächen abgestellte abgemeldete (Schrott-)Fahrzeuge mit entsiegelten oder ganz ohne Nummernschilder auffallen, melden Sie diese bitte.</p><p>Wir nehmen Ihr Anliegen direkt in die Bearbeitung der Kommunalen Ordnungsdienste auf. Von dort wird geprüft, ob das Fahrzeug sofort entsorgt entfernt kann, oder der Eigentümerin oder dem Eigentümer innerhalb einer gesetzlich vorgegebenen Frist die Möglichkeit gegeben werden muss, das Fahrzeug selbst zu entfernen. Erst nach Ablauf der Frist&nbsp;dürfen wir&nbsp;tätig werden.</p><p>Wir bitten um Verständnis, dass die abschließende Bearbeitung aus diesem Grund nicht sofort erfolgen kann. Ihr Anliegen ist aber fest beauftragt und wird vom Kommunalen Ordnungsdienst weiter bearbeitet.</p>"
+    weight: '3'
+    parent:
+    changed: '1779780198'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '3'
+    field_category_hex:
+    field_category_icon: fa-car
+    field_service_code: '2.3'
+- service_code: '2.4'
+  service_name: Straßen-, Geh- und Radwegschäden
+  metadata: 'false'
+  type: realtime
+  description: "<p>Haben Sie ein Schlagloch entdeckt? Ist Ihnen eine defekte oder lose Gehwegplatte aufgefallen? Sind Ihnen Schäden auf einem Radweg aufgefallen?</p><p>Bitte geben Sie den Ort der Schadstelle so genau wie möglich an und nutzen Sie hierfür auch das Textfeld. Ein aussagekräftiges Foto des Schadens hilft uns bei der gezielten Bearbeitung Ihrer Meldung.</p><p>Um die Verkehrssicherheit aufrecht zu erhalten, werden alle öffentlichen Straßen, Wege und Plätze regelmäßig kontrolliert.</p><p><strong>Bitte beachten Sie:</strong> Die Beseitigung von Schadstellen wird nach der Erfassung unter Berücksichtigung der rechtlichen Rahmenbedingungen priorisiert. Hieraus ergeben sich unterschiedliche Reaktionszeiten für die zu ergreifenden Maßnahmen:</p><ul><li>Maßnahmen zur Beseitigung von Unfallgefahren im Rahmen der Verkehrssicherungspflicht</li><li>Straßeninstandsetzungs- und Straßenunterhaltungsmaßnahmen</li><li>Maßnahmen im Rahmen der Stadtbildpflege (Schönheitsreparaturen)</li></ul><p>Schäden, die eine akute Unfallgefahr darstellen, werden unmittelbar beseitigt beziehungsweise abgesichert. Bei sich entwickelnden Schäden, die unter Straßeninstandsetzungs- und -unterhaltungsmaßnahmen fallen, besteht keine unmittelbare Gefahr. Solche Schwachstellen werden verstärkt beobachtet und mittelfristig beseitigt. Schönheitsreparaturen werden umgesetzt, wenn die personellen Kapazitäten dies ermöglichen.</p><p>Wir bitten um Verständnis, dass aktuell nur Maßnahmen im Zuständigkeitsbereich des Amtes für Verkehrsmanagement abschließend bearbeitet werden können.</p><p>Gerne können Sie Straßenschäden auch telefonisch&nbsp;über die „Schlagloch-Hotline“ unter (0221) 221-38141 oder über das Bürgertelefon (0221) 221-0 melden.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '46'
+    uuid: 6e6eb546-484a-4193-99f1-7a652223777a
+    revision_id: '46'
+    langcode: en
+    vid:
+    revision_created: '1634054486'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Straßen-, Geh- und Radwegschäden
+    description: "<p>Haben Sie ein Schlagloch entdeckt? Ist Ihnen eine defekte oder lose Gehwegplatte aufgefallen? Sind Ihnen Schäden auf einem Radweg aufgefallen?</p><p>Bitte geben Sie den Ort der Schadstelle so genau wie möglich an und nutzen Sie hierfür auch das Textfeld. Ein aussagekräftiges Foto des Schadens hilft uns bei der gezielten Bearbeitung Ihrer Meldung.</p><p>Um die Verkehrssicherheit aufrecht zu erhalten, werden alle öffentlichen Straßen, Wege und Plätze regelmäßig kontrolliert.</p><p><strong>Bitte beachten Sie:</strong> Die Beseitigung von Schadstellen wird nach der Erfassung unter Berücksichtigung der rechtlichen Rahmenbedingungen priorisiert. Hieraus ergeben sich unterschiedliche Reaktionszeiten für die zu ergreifenden Maßnahmen:</p><ul><li>Maßnahmen zur Beseitigung von Unfallgefahren im Rahmen der Verkehrssicherungspflicht</li><li>Straßeninstandsetzungs- und Straßenunterhaltungsmaßnahmen</li><li>Maßnahmen im Rahmen der Stadtbildpflege (Schönheitsreparaturen)</li></ul><p>Schäden, die eine akute Unfallgefahr darstellen, werden unmittelbar beseitigt beziehungsweise abgesichert. Bei sich entwickelnden Schäden, die unter Straßeninstandsetzungs- und -unterhaltungsmaßnahmen fallen, besteht keine unmittelbare Gefahr. Solche Schwachstellen werden verstärkt beobachtet und mittelfristig beseitigt. Schönheitsreparaturen werden umgesetzt, wenn die personellen Kapazitäten dies ermöglichen.</p><p>Wir bitten um Verständnis, dass aktuell nur Maßnahmen im Zuständigkeitsbereich des Amtes für Verkehrsmanagement abschließend bearbeitet werden können.</p><p>Gerne können Sie Straßenschäden auch telefonisch&nbsp;über die „Schlagloch-Hotline“ unter (0221) 221-38141 oder über das Bürgertelefon (0221) 221-0 melden.</p>"
+    weight: '4'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '22'
+    field_category_hex:
+    field_category_icon: fa-road
+    field_service_code: '2.4'
+- service_code: '2.5'
+  service_name: Straßenbaustellen
+  metadata: 'false'
+  type: realtime
+  description: <p>Hier können Sie aber&nbsp;alle "Probleme" mit <strong>Straßenbaustellen</strong> melden.</p><p>Teilen Sie uns mit, wenn die Baustelle&nbsp;von&nbsp;offensichtlich zu langer Dauer&nbsp;ist bis hin zu Ihrer Meinung nach zu gefährlicher Verkehrsführung. Wir interessieren uns aber auch für sogenannte "Schlafbaustellen" im Straßenbau, an denen offensichtlich nicht mehr gearbeitet wird. Möglicherweise sind auch Baustellen- oder Verkehrsschilder nach Beendigung der Straßenbaustelle nicht entfernt worden.<br>Wichtig ist nur, dass es sich um<strong> Straßenbaumaßnahmen </strong>und nicht um Hochbaumaßnahmen handelt.</p><p>Nicht immer können wir die durch die Straßenbaustelle entstehenden Unannehmlichkeiten beseitigen, aber wir nehmen uns der Sache an und werden wenn möglich Abhilfe schaffen.</p>
+  keywords: ''
+  extended_attributes:
+    tid: '47'
+    uuid: 4b635695-f23b-42e6-8705-6e0cc396d0ad
+    revision_id: '47'
+    langcode: en
+    vid:
+    revision_created: '1634054520'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Straßenbaustellen
+    description: <p>Hier können Sie aber&nbsp;alle "Probleme" mit <strong>Straßenbaustellen</strong> melden.</p><p>Teilen Sie uns mit, wenn die Baustelle&nbsp;von&nbsp;offensichtlich zu langer Dauer&nbsp;ist bis hin zu Ihrer Meinung nach zu gefährlicher Verkehrsführung. Wir interessieren uns aber auch für sogenannte "Schlafbaustellen" im Straßenbau, an denen offensichtlich nicht mehr gearbeitet wird. Möglicherweise sind auch Baustellen- oder Verkehrsschilder nach Beendigung der Straßenbaustelle nicht entfernt worden.<br>Wichtig ist nur, dass es sich um<strong> Straßenbaumaßnahmen </strong>und nicht um Hochbaumaßnahmen handelt.</p><p>Nicht immer können wir die durch die Straßenbaustelle entstehenden Unannehmlichkeiten beseitigen, aber wir nehmen uns der Sache an und werden wenn möglich Abhilfe schaffen.</p>
+    weight: '5'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '21'
+    field_category_hex:
+    field_category_icon: fa-road
+    field_service_code: '2.5'
+- service_code: '2.6'
+  service_name: Straßenbeleuchtung
+  metadata: 'false'
+  type: realtime
+  description: "<p>Ist eine Leuchte an einer Straße, einem Geh- oder Radweg defekt? Ist der Leuchtenmast oder das Leuchtenglas beschädigt?</p><p>Neben der Angabe der Straße mit einer Hausnummer, vor welcher die Straßenlaterne steht, ist die Angabe der <strong>Laternen-Nummer </strong>(kleines Schild auf dem Mast) sehr hilfreich.</p><p>Die Instandsetzung wird direkt vom Amt für&nbsp;Verkehrsmanagement fest beauftragt und in der Regel innerhalb von <strong>zwei Wochen </strong>durch die RheinEnergie Köln durchgeführt.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '48'
+    uuid: 93e2a1ca-b9c7-4d07-a18d-b6bc13e5ff91
+    revision_id: '48'
+    langcode: en
+    vid:
+    revision_created: '1634054548'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Straßenbeleuchtung
+    description: "<p>Ist eine Leuchte an einer Straße, einem Geh- oder Radweg defekt? Ist der Leuchtenmast oder das Leuchtenglas beschädigt?</p><p>Neben der Angabe der Straße mit einer Hausnummer, vor welcher die Straßenlaterne steht, ist die Angabe der <strong>Laternen-Nummer </strong>(kleines Schild auf dem Mast) sehr hilfreich.</p><p>Die Instandsetzung wird direkt vom Amt für&nbsp;Verkehrsmanagement fest beauftragt und in der Regel innerhalb von <strong>zwei Wochen </strong>durch die RheinEnergie Köln durchgeführt.</p>"
+    weight: '6'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '19'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: '2.6'
+- service_code: '3'
+  service_name: Spielplätze und Grünanlagen
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '49'
+    uuid: 1b54b876-1a80-490a-ae4d-33e06b2bd73c
+    revision_id: '49'
+    langcode: en
+    vid:
+    revision_created: '1634054642'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Spielplätze und Grünanlagen
+    description:
+    weight: '39'
+    parent:
+    changed: '1756366203'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid:
+    field_category_hex:
+    field_category_icon: fa-leaf
+    field_service_code: '3'
+- service_code: '3.1'
+  service_name: Brunnen
+  metadata: 'false'
+  type: realtime
+  description: "<p>Ein städtischer Brunnen sprudelt trotz der Brunnensaison (01.April - 31.Oktober) nicht? Es befindet sich Müll im Brunnenbecken oder der Brunnen ist anderweitig verschmutzt oder verunreinigt? Bitte teilen Sie uns dies mit! Die Gebäudewirtschaft der Stadt Köln wird schnellstmöglich nach dem Rechten sehen. Teilen Sie uns dafür den Standort des Brunnens mit und beschreiben Sie den beobachteten Mangel möglichst genau.</p><p><strong>Bitte beachten Sie, dass städtische Zierbrunnen nicht als Trinkwasserbrunnen dienen!</strong></p>"
+  keywords: ''
+  extended_attributes:
+    tid: '50'
+    uuid: 2823926e-35ff-4438-a9ed-a794368491ca
+    revision_id: '50'
+    langcode: en
+    vid:
+    revision_created: '1634054710'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Brunnen
+    description: "<p>Ein städtischer Brunnen sprudelt trotz der Brunnensaison (01.April - 31.Oktober) nicht? Es befindet sich Müll im Brunnenbecken oder der Brunnen ist anderweitig verschmutzt oder verunreinigt? Bitte teilen Sie uns dies mit! Die Gebäudewirtschaft der Stadt Köln wird schnellstmöglich nach dem Rechten sehen. Teilen Sie uns dafür den Standort des Brunnens mit und beschreiben Sie den beobachteten Mangel möglichst genau.</p><p><strong>Bitte beachten Sie, dass städtische Zierbrunnen nicht als Trinkwasserbrunnen dienen!</strong></p>"
+    weight: '0'
+    parent:
+    changed: '1702284801'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '24'
+    field_category_hex:
+    field_category_icon: fa-leaf
+    field_service_code: '3.1'
+- service_code: '3.2'
+  service_name: Kölner Grün
+  metadata: 'false'
+  type: realtime
+  description: "<p>Sollten Sie feststellen, dass eine städtische Grünfläche vermüllt, das Gras vermeintlich zu hoch ist, Löcher im Rasen sind oder Sie andere Gefahrstellen erkennen, dann bitten wir um Mitteilung. Hierfür ist der genaue Standort sehr wichtig und ein Foto hilft uns, die Situation einzuschätzen. Unsere Mitarbeiterinnen und Mitarbeiter werden die Gefahrstellen so schnell wie möglich beseitigen und Pflegedefizite im Rahmen der nächsten Pflegedurchgänge beheben.</p><p>Berücksichtigen Sie bitte, dass der Pflegerhythmus von der Zweckbestimmung und der Nutzungsintensität abhängt. Zweckbestimmung kann sein: Sport und Spiel, Parkanlage oder z.B. Naturschutzgebiet.</p><p>Bitte beachten Sie ebenfalls, dass das Amt für Landschaftspflege und Grünflächen nur gärtnerisch tätig werden kann und keine Ordnungswidrigkeiten verfolgt.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '51'
+    uuid: 668dbdc4-eaa0-42fa-a1ce-c9ee95f45341
+    revision_id: '51'
+    langcode: en
+    vid:
+    revision_created: '1634054743'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Kölner Grün
+    description: "<p>Sollten Sie feststellen, dass eine städtische Grünfläche vermüllt, das Gras vermeintlich zu hoch ist, Löcher im Rasen sind oder Sie andere Gefahrstellen erkennen, dann bitten wir um Mitteilung. Hierfür ist der genaue Standort sehr wichtig und ein Foto hilft uns, die Situation einzuschätzen. Unsere Mitarbeiterinnen und Mitarbeiter werden die Gefahrstellen so schnell wie möglich beseitigen und Pflegedefizite im Rahmen der nächsten Pflegedurchgänge beheben.</p><p>Berücksichtigen Sie bitte, dass der Pflegerhythmus von der Zweckbestimmung und der Nutzungsintensität abhängt. Zweckbestimmung kann sein: Sport und Spiel, Parkanlage oder z.B. Naturschutzgebiet.</p><p>Bitte beachten Sie ebenfalls, dass das Amt für Landschaftspflege und Grünflächen nur gärtnerisch tätig werden kann und keine Ordnungswidrigkeiten verfolgt.</p>"
+    weight: '1'
+    parent:
+    changed: '1702284882'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '24'
+    field_category_hex:
+    field_category_icon: fa-tree
+    field_service_code: '3.2'
+- service_code: '3.3'
+  service_name: Spiel- und Bolzplätze
+  metadata: 'false'
+  type: realtime
+  description: "<p>Alle öffentlichen Kölner Spiel- und Bolzplätze werden regelmäßig gereinigt und kontrolliert – zur Sicherheit von Kindern, Jugendlichen und Eltern. Leider kommt es trotzdem immer wieder vor, dass Müll und Verunreinigungen auf den öffentlichen Kölner Spiel- und Bolzplätzen hinterlassen werden. Auch können Spielgeräte im Laufe der Zeit nicht mehr funktionstüchtig sein.</p><p>Sofern Ihnen solche Zustände oder Abnutzungen auffallen, melden Sie diese bitte mit der Angabe des Spiel-/Bolzplatznamens und falls vorhanden der Spielplatznummer, damit wir Ihre Mitteilung genau zuordnen können.</p><p>Grundsätzlich sollten aber die Hinweise auf den Beschilderungen der Spielplätze befolgt werden. Ihr Anliegen wird kurzfristig durch die Stadt Köln durchgeführt.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '52'
+    uuid: 43414bb6-f8bc-4b04-a213-acf373100d3e
+    revision_id: '52'
+    langcode: en
+    vid:
+    revision_created: '1634054780'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Spiel- und Bolzplätze
+    description: "<p>Alle öffentlichen Kölner Spiel- und Bolzplätze werden regelmäßig gereinigt und kontrolliert – zur Sicherheit von Kindern, Jugendlichen und Eltern. Leider kommt es trotzdem immer wieder vor, dass Müll und Verunreinigungen auf den öffentlichen Kölner Spiel- und Bolzplätzen hinterlassen werden. Auch können Spielgeräte im Laufe der Zeit nicht mehr funktionstüchtig sein.</p><p>Sofern Ihnen solche Zustände oder Abnutzungen auffallen, melden Sie diese bitte mit der Angabe des Spiel-/Bolzplatznamens und falls vorhanden der Spielplatznummer, damit wir Ihre Mitteilung genau zuordnen können.</p><p>Grundsätzlich sollten aber die Hinweise auf den Beschilderungen der Spielplätze befolgt werden. Ihr Anliegen wird kurzfristig durch die Stadt Köln durchgeführt.</p>"
+    weight: '2'
+    parent:
+    changed: '1702285077'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '18'
+    field_category_hex:
+    field_category_icon: fa-soccer-ball-o
+    field_service_code: '3.3'
+- service_code: 1.3.1
+  service_name: Altkleidercontainer voll
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '70'
+    uuid: 94125c44-3a2f-43b2-aa98-1d347ad226a3
+    revision_id: '70'
+    langcode: en
+    vid:
+    revision_created: '1695374588'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Altkleidercontainer voll
+    description:
+    weight: '0'
+    parent:
+    changed: '1701945915'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-male
+    field_service_code: 1.3.1
+- service_code: 1.3.2
+  service_name: Altkleidercontainer defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '71'
+    uuid: 518db86d-a66f-42e9-b56c-1065ab64af1a
+    revision_id: '71'
+    langcode: en
+    vid:
+    revision_created: '1695374736'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Altkleidercontainer defekt
+    description:
+    weight: '1'
+    parent:
+    changed: '1701945932'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-male
+    field_service_code: 1.3.2
+- service_code: 1.3.3
+  service_name: Altkleidercontainer nicht von AWB
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '72'
+    uuid: b91e6920-6bb1-4284-a5af-ed425a57ba04
+    revision_id: '72'
+    langcode: en
+    vid:
+    revision_created: '1695374891'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Altkleidercontainer nicht von AWB
+    description:
+    weight: '2'
+    parent:
+    changed: '1701945941'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-male
+    field_service_code: 1.3.3
+- service_code: 1.3.4
+  service_name: Altkleidercontainer-Standort vermüllt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '73'
+    uuid: 0ac71ab6-de4c-45bf-a7c0-f6213d0eb7b8
+    revision_id: '73'
+    langcode: en
+    vid:
+    revision_created: '1695374934'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Altkleidercontainer-Standort vermüllt
+    description:
+    weight: '3'
+    parent:
+    changed: '1701945991'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-male
+    field_service_code: 1.3.4
+- service_code: 1.4.1
+  service_name: Glascontainer voll
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '74'
+    uuid: ffe665db-08f0-4915-b1e5-ff6cecb89bab
+    revision_id: '74'
+    langcode: en
+    vid:
+    revision_created: '1695375103'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Glascontainer voll
+    description:
+    weight: '0'
+    parent:
+    changed: '1701945959'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-glass
+    field_service_code: 1.4.1
+- service_code: 1.4.2
+  service_name: Glascontainer defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '75'
+    uuid: 0e1a2128-b49a-418b-8ba1-8beb16197ff6
+    revision_id: '75'
+    langcode: en
+    vid:
+    revision_created: '1695375156'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Glascontainer defekt
+    description:
+    weight: '1'
+    parent:
+    changed: '1701945969'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-glass
+    field_service_code: 1.4.2
+- service_code: 1.4.3
+  service_name: Glascontainer-Standort vermüllt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '76'
+    uuid: 470d3203-9ad8-4545-9087-d6a78309dcca
+    revision_id: '76'
+    langcode: en
+    vid:
+    revision_created: '1695375205'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Glascontainer-Standort vermüllt
+    description:
+    weight: '2'
+    parent:
+    changed: '1701946003'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '28'
+    field_category_hex:
+    field_category_icon: fa-glass
+    field_service_code: 1.4.3
+- service_code: 2.1.1
+  service_name: Fußgängerampel defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '77'
+    uuid: ad383b5c-7084-4897-a2d8-fa3d0a82229b
+    revision_id: '77'
+    langcode: en
+    vid:
+    revision_created: '1695375472'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Fußgängerampel defekt
+    description:
+    weight: '0'
+    parent:
+    changed: '1701290838'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.1
+- service_code: 2.1.2
+  service_name: Radfahrerampel defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '78'
+    uuid: ab9d8d43-3cbe-41f9-8aa1-8d13a0126875
+    revision_id: '78'
+    langcode: en
+    vid:
+    revision_created: '1695375559'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Radfahrerampel defekt
+    description:
+    weight: '1'
+    parent:
+    changed: '1701290869'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.2
+- service_code: 2.1.3
+  service_name: Kfz-Ampel defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '79'
+    uuid: 9701890f-e0d9-43ea-b0c6-10bac835ea21
+    revision_id: '79'
+    langcode: en
+    vid:
+    revision_created: '1695375607'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Kfz-Ampel defekt
+    description:
+    weight: '2'
+    parent:
+    changed: '1701290896'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.3
+- service_code: 2.1.4
+  service_name: Zu lange Rotzeit
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '80'
+    uuid: f58f6032-ab19-4b72-a8d4-2b6d7c413a66
+    revision_id: '80'
+    langcode: en
+    vid:
+    revision_created: '1695375652'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Zu lange Rotzeit
+    description:
+    weight: '3'
+    parent:
+    changed: '1701291039'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.4
+- service_code: 2.1.5
+  service_name: Zu kurze Grünzeit
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '81'
+    uuid: 2df943c2-434d-4f4d-8a79-e8de5ab58560
+    revision_id: '81'
+    langcode: en
+    vid:
+    revision_created: '1695375701'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Zu kurze Grünzeit
+    description:
+    weight: '4'
+    parent:
+    changed: '1701291080'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.5
+- service_code: 2.1.6
+  service_name: Schutzzeit zu kurz
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '82'
+    uuid: e778d568-e3ab-47a6-b436-9044ffb81a20
+    revision_id: '82'
+    langcode: en
+    vid:
+    revision_created: '1695375744'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Schutzzeit zu kurz
+    description:
+    weight: '5'
+    parent:
+    changed: '1701291106'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.6
+- service_code: 2.1.7
+  service_name: Keine grüne Welle
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '83'
+    uuid: b64ea84d-273d-4407-809a-f209e62a53f6
+    revision_id: '83'
+    langcode: en
+    vid:
+    revision_created: '1695375784'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Keine grüne Welle
+    description:
+    weight: '6'
+    parent:
+    changed: '1701291136'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '20'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.1.7
+- service_code: 2.4.1
+  service_name: Straßenmarkierung
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '84'
+    uuid: bde6dacf-10d0-4ede-ad82-d3cdaba28201
+    revision_id: '84'
+    langcode: en
+    vid:
+    revision_created: '1695375946'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Straßenmarkierung
+    description:
+    weight: '0'
+    parent:
+    changed: '1701291429'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '22'
+    field_category_hex:
+    field_category_icon: fa-road
+    field_service_code: 2.4.1
+- service_code: 2.4.2
+  service_name: Defekte Verkehrszeichen
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '85'
+    uuid: 4688030d-2016-4c3e-8a54-948e95b25931
+    revision_id: '85'
+    langcode: en
+    vid:
+    revision_created: '1695375976'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Defekte Verkehrszeichen
+    description:
+    weight: '1'
+    parent:
+    changed: '1701945897'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '22'
+    field_category_hex:
+    field_category_icon: fa-road
+    field_service_code: 2.4.2
+- service_code: 2.6.1
+  service_name: Leuchtmittel defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '86'
+    uuid: e2779250-9f32-4b1d-8ced-ad434f744777
+    revision_id: '86'
+    langcode: en
+    vid:
+    revision_created: '1695376253'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Leuchtmittel defekt
+    description:
+    weight: '0'
+    parent:
+    changed: '1701292046'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '19'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.6.1
+- service_code: 2.6.2
+  service_name: Leuchtmittel tagsüber in Betrieb
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '87'
+    uuid: 7350c81e-addb-4e6c-8620-520b2071f330
+    revision_id: '87'
+    langcode: en
+    vid:
+    revision_created: '1695376292'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Leuchtmittel tagsüber in Betrieb
+    description:
+    weight: '1'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '19'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.6.2
+- service_code: 2.6.3
+  service_name: Lichtmast defekt
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '88'
+    uuid: 21f830ce-b43a-4d25-b006-3ea312cae6d3
+    revision_id: '88'
+    langcode: en
+    vid:
+    revision_created: '1695376332'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Lichtmast defekt
+    description:
+    weight: '2'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '19'
+    field_category_hex:
+    field_category_icon: fa-lightbulb-o
+    field_service_code: 2.6.3
+- service_code: '2.7'
+  service_name: Umlaufsperren / Drängelgitter
+  metadata: 'false'
+  type: realtime
+  description: "<p>Umlaufsperren oder Umlaufgitter (umgangssprachlich häufig auch Drängelgitter) werden als Hindernis am Ende von Wegen oder vor Bahnübergängen gesetzt, um die Verkehrsteilnehmer*innen zu bremsen und zu gewährleisten, dass sie Straßen bzw. Bahnübergänge aufmerksam und sicher überqueren können.</p><p>Grundsätzlich werden alle Umlaufsperren im Hinblick auf ihre Notwendigkeit und Verkehrssicherheit durch die Straßenverkehrsbehörde überprüft, eventueller Handlungsbedarf identifiziert und priorisiert &nbsp;Notwendige Veränderungen werden sukzessive umgesetzt.</p><p>Eine Umlaufsperre ist defekt oder bereitet aufgrund der Anordnung der baulichen Elemente Schwierigkeiten bei der Durchquerung? Bestehende Umlaufsperren sollten hinsichtlich einer alternativen Lösung überprüft werden?</p><p>Sollten Sie eine Umlaufsperre kennen, die problematisch ist, geben Sie bitte den Ort so genau wie möglich an und nutzen Sie hierfür auch das Textfeld. Ein aussagekräftiges Foto des Mangels hilft uns bei der Einschätzung der Situation und der gezielten Bearbeitung Ihrer Meldung.</p><p>Wir bitten um Verständnis, dass wir nur die Umlaufsperren überprüfen und bei Bedarf verändern können, die im Zuständigkeitsbereich der Stadt Köln liegen.</p>"
+  keywords: ''
+  extended_attributes:
+    tid: '89'
+    uuid: ab7d763c-7bad-4998-926c-4948e1ea356e
+    revision_id: '89'
+    langcode: en
+    vid:
+    revision_created: '1695376622'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Umlaufsperren / Drängelgitter
+    description: "<p>Umlaufsperren oder Umlaufgitter (umgangssprachlich häufig auch Drängelgitter) werden als Hindernis am Ende von Wegen oder vor Bahnübergängen gesetzt, um die Verkehrsteilnehmer*innen zu bremsen und zu gewährleisten, dass sie Straßen bzw. Bahnübergänge aufmerksam und sicher überqueren können.</p><p>Grundsätzlich werden alle Umlaufsperren im Hinblick auf ihre Notwendigkeit und Verkehrssicherheit durch die Straßenverkehrsbehörde überprüft, eventueller Handlungsbedarf identifiziert und priorisiert &nbsp;Notwendige Veränderungen werden sukzessive umgesetzt.</p><p>Eine Umlaufsperre ist defekt oder bereitet aufgrund der Anordnung der baulichen Elemente Schwierigkeiten bei der Durchquerung? Bestehende Umlaufsperren sollten hinsichtlich einer alternativen Lösung überprüft werden?</p><p>Sollten Sie eine Umlaufsperre kennen, die problematisch ist, geben Sie bitte den Ort so genau wie möglich an und nutzen Sie hierfür auch das Textfeld. Ein aussagekräftiges Foto des Mangels hilft uns bei der Einschätzung der Situation und der gezielten Bearbeitung Ihrer Meldung.</p><p>Wir bitten um Verständnis, dass wir nur die Umlaufsperren überprüfen und bei Bedarf verändern können, die im Zuständigkeitsbereich der Stadt Köln liegen.</p>"
+    weight: '1'
+    parent:
+    changed: '1746522546'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '22'
+    field_category_hex:
+    field_category_icon: fa-users
+    field_service_code: '2.7'
+- service_code: 2.4.3
+  service_name: Defekte Oberfläche
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '90'
+    uuid: 4ce40b11-e9be-416c-8b58-80ac501536e1
+    revision_id: '90'
+    langcode: en
+    vid:
+    revision_created: '1701945714'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Defekte Oberfläche
+    description:
+    weight: '2'
+    parent:
+    changed: '1701946053'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '22'
+    field_category_hex:
+    field_category_icon: fa-road
+    field_service_code: 2.4.3
+- service_code: '1.7'
+  service_name: Sexistische Werbung
+  metadata: 'false'
+  type: realtime
+  description: <p>Sexistische Werbung diskriminiert Menschen auf Grund ihres Geschlecht.</p><p>Oft werden Menschen – vor allem Frauen – ganz auf ihren Körper reduziert und als reines Dekorationsobjekt eingesetzt. Diese Art von Werbedarstellung setzt die Person zu einem Gegenstand herab und kann die Würde eines Menschen verletzen.</p><p>Sollten Sie sexistische Werbung in Köln entdecken, haben Sie hier die Möglichkeit, diese zu melden.<br>Werbung für Prostitution ist nicht generell verboten, muss sich aber an Richtlinien halten. Das Ordnungsamt entscheidet im Einzelfall, ob die Werbung entfernt werden kann.</p><p>Alle Informationen zur sexistischen Werbung finden Sie auf unserer Artikelseite <span>zum Thema </span><a href="https://www.stadt-koeln.de/leben-in-koeln/soziales/gleichstellung/frauenbilder-i-maennerbilder-i-koerperbilder"><span>Frauenbilder I Männerbilder I Körperbilder</span></a><span>.</span></p>
+  keywords: ''
+  extended_attributes:
+    tid: '92'
+    uuid: d09fc0ab-f82a-4887-a9ca-35b00120ccca
+    revision_id: '93'
+    langcode: en
+    vid:
+    revision_created: '1756366123'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Sexistische Werbung
+    description: <p>Sexistische Werbung diskriminiert Menschen auf Grund ihres Geschlecht.</p><p>Oft werden Menschen – vor allem Frauen – ganz auf ihren Körper reduziert und als reines Dekorationsobjekt eingesetzt. Diese Art von Werbedarstellung setzt die Person zu einem Gegenstand herab und kann die Würde eines Menschen verletzen.</p><p>Sollten Sie sexistische Werbung in Köln entdecken, haben Sie hier die Möglichkeit, diese zu melden.<br>Werbung für Prostitution ist nicht generell verboten, muss sich aber an Richtlinien halten. Das Ordnungsamt entscheidet im Einzelfall, ob die Werbung entfernt werden kann.</p><p>Alle Informationen zur sexistischen Werbung finden Sie auf unserer Artikelseite <span>zum Thema </span><a href="https://www.stadt-koeln.de/leben-in-koeln/soziales/gleichstellung/frauenbilder-i-maennerbilder-i-koerperbilder"><span>Frauenbilder I Männerbilder I Körperbilder</span></a><span>.</span></p>
+    weight: '6'
+    parent:
+    changed: '1757061192'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '31'
+    field_category_hex:
+    field_category_icon: fa-image
+    field_service_code: '1.7'
+- service_code: 1.7.1
+  service_name: Sexistische Werbung
+  metadata: 'false'
+  type: realtime
+  description: <p>Sexistische Werbung diskriminiert Menschen auf Grund ihres Geschlecht.</p><p>Oft werden Menschen – vor allem Frauen – ganz auf ihren Körper reduziert und als reines Dekorationsobjekt eingesetzt. Diese Art von Werbedarstellung setzt die Person zu einem Gegenstand herab und kann die Würde eines Menschen verletzen.</p><p>Sollten Sie sexistische Werbung in Köln entdecken, haben Sie hier die Möglichkeit, diese zu melden.<br>Werbung für Prostitution ist nicht generell verboten, muss sich aber an Richtlinien halten. Das Ordnungsamt entscheidet im Einzelfall, ob die Werbung entfernt werden kann.</p><p>Alle Informationen zur sexistischen Werbung finden Sie auf unserer Artikelseite <span>zum Thema&nbsp;</span><a href="https://www.stadt-koeln.de/leben-in-koeln/soziales/gleichstellung/frauenbilder-i-maennerbilder-i-koerperbilder"><span> Frauenbilder I Männerbilder I Körperbilder</span></a><span>.</span></p>
+  keywords: ''
+  extended_attributes:
+    tid: '93'
+    uuid: a9750d47-20ea-4c23-82db-b6c47dc0e725
+    revision_id: '94'
+    langcode: en
+    vid:
+    revision_created: '1756367684'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Sexistische Werbung
+    description: <p>Sexistische Werbung diskriminiert Menschen auf Grund ihres Geschlecht.</p><p>Oft werden Menschen – vor allem Frauen – ganz auf ihren Körper reduziert und als reines Dekorationsobjekt eingesetzt. Diese Art von Werbedarstellung setzt die Person zu einem Gegenstand herab und kann die Würde eines Menschen verletzen.</p><p>Sollten Sie sexistische Werbung in Köln entdecken, haben Sie hier die Möglichkeit, diese zu melden.<br>Werbung für Prostitution ist nicht generell verboten, muss sich aber an Richtlinien halten. Das Ordnungsamt entscheidet im Einzelfall, ob die Werbung entfernt werden kann.</p><p>Alle Informationen zur sexistischen Werbung finden Sie auf unserer Artikelseite <span>zum Thema&nbsp;</span><a href="https://www.stadt-koeln.de/leben-in-koeln/soziales/gleichstellung/frauenbilder-i-maennerbilder-i-koerperbilder"><span> Frauenbilder I Männerbilder I Körperbilder</span></a><span>.</span></p>
+    weight: '0'
+    parent:
+    changed: '1757061090'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '31'
+    field_category_hex:
+    field_category_icon: fa-image
+    field_service_code: 1.7.1
+- service_code: 1.7.2
+  service_name: Werbung für Bordelle
+  metadata: 'false'
+  type: realtime
+  description:
+  keywords: ''
+  extended_attributes:
+    tid: '94'
+    uuid: f5d92999-f1cd-45de-a9d0-db4fac046f00
+    revision_id: '95'
+    langcode: en
+    vid:
+    revision_created: '1756367711'
+    revision_user:
+    revision_log_message:
+    status: '1'
+    name: Werbung für Bordelle
+    description:
+    weight: '1'
+    parent:
+    changed: '1757061093'
+    default_langcode: '1'
+    revision_default: '1'
+    revision_translation_affected: '1'
+    path:
+    field_category_gid: '31'
+    field_category_hex:
+    field_category_icon: fa-image
+    field_service_code: 1.7.2
